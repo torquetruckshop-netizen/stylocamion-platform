@@ -1,0 +1,53 @@
+{
+  "updated_at": "2026-08-10T16:02:00+00:00",
+  "items": [
+    {
+      "title": "Agenda del transporte de cargas en Argentina",
+      "summary": "Acceso directo a información oficial vinculada con transporte automotor de cargas, normativa y operación.",
+      "category": "Argentina",
+      "source": "Argentina.gob.ar",
+      "url": "https://www.argentina.gob.ar/transporte",
+      "time": "Fuente oficial"
+    },
+    {
+      "title": "Economía del transporte: costos, actividad y decisiones de flota",
+      "summary": "Seguimiento sectorial para interpretar costos operativos, financiación, actividad y renovación de unidades.",
+      "category": "Economía",
+      "source": "FADEEAC",
+      "url": "https://www.fadeeac.org.ar/",
+      "time": "Fuente sectorial"
+    },
+    {
+      "title": "Logística argentina: tendencias, capacitación y operación",
+      "summary": "Información institucional y técnica para empresas vinculadas a logística, supply chain y transporte.",
+      "category": "Logística",
+      "source": "ARLOG",
+      "url": "https://arlog.org/",
+      "time": "Fuente sectorial"
+    },
+    {
+      "title": "Camiones: novedades de producto con foco en la región",
+      "summary": "Espacio preparado para concentrar lanzamientos, actualizaciones de gama y noticias de vehículos pesados disponibles en Sudamérica.",
+      "category": "Camiones",
+      "source": "Stylo Camión",
+      "url": "#ultimas",
+      "time": "Radar editorial"
+    },
+    {
+      "title": "Remolques y semirremolques: industria, producción y novedades",
+      "summary": "Un eje editorial propio para fabricantes, carroceros, implementos y novedades relevantes para el transporte regional.",
+      "category": "Remolques",
+      "source": "Stylo Camión",
+      "url": "#ultimas",
+      "time": "Radar editorial"
+    },
+    {
+      "title": "Rutas y normativa: cambios que impactan en la operación",
+      "summary": "Normas, corredores, restricciones y novedades oficiales que modifican la circulación o la planificación de cargas.",
+      "category": "Rutas y normativa",
+      "source": "Stylo Camión",
+      "url": "https://www.argentina.gob.ar/transporte",
+      "time": "Seguimiento permanente"
+    }
+  ]
+}
