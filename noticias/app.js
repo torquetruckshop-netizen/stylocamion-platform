@@ -23,6 +23,21 @@ function escapeHtml(value = '') {
   return String(value).replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 }
 
+function clientId(item) {
+  if (item.id) return String(item.id);
+  return String(item.title || 'noticia')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 90);
+}
+
+function articleHref(item) {
+  return `noticia.html?id=${encodeURIComponent(clientId(item))}`;
+}
+
 function displayTime(item) {
   const raw = item.published_at || item.time;
   const parsed = raw ? new Date(raw) : null;
@@ -37,30 +52,23 @@ function displayTime(item) {
   return new Intl.DateTimeFormat('es-AR', { day: '2-digit', month: 'short', year: 'numeric' }).format(parsed);
 }
 
-function safeUrl(value) {
-  const url = String(value || '');
-  if (/^https?:\/\//i.test(url) || url.startsWith('#')) return url;
-  return '#ultimas';
-}
-
 function articleMarkup(item, type = 'card') {
   const title = escapeHtml(item.title);
   const summary = escapeHtml(item.summary || '');
   const category = escapeHtml(item.category || 'Actualidad');
   const source = escapeHtml(item.source || 'Fuente identificada');
   const time = escapeHtml(displayTime(item));
-  const url = safeUrl(item.url);
-  const safeTarget = /^https?:\/\//i.test(url) ? ' target="_blank" rel="noopener"' : '';
+  const href = articleHref(item);
 
   if (type === 'lead') {
-    return `<div class="story-ribbon"><span class="tag">${category}</span><span>RADAR REGIONAL</span></div><div class="story-content"><div class="meta"><span>${source}</span><span>·</span><span>${time}</span></div><h2>${title}</h2><p>${summary}</p><a class="story-link" href="${url}"${safeTarget}>Leer noticia →</a></div>`;
+    return `<div class="story-ribbon"><span class="tag">${category}</span><span>RADAR REGIONAL</span></div><div class="story-content"><div class="meta"><span>${source}</span><span>·</span><span>${time}</span></div><h2><a class="headline-link" href="${href}">${title}</a></h2><p>${summary}</p><a class="story-link" href="${href}">Leer en Stylo Camión →</a></div>`;
   }
 
   if (type === 'secondary') {
-    return `<article class="secondary-story"><div class="meta"><span class="tag">${category}</span><span>${source}</span><span>·</span><span>${time}</span></div><h3>${title}</h3><a class="story-link" href="${url}"${safeTarget}>Leer noticia →</a></article>`;
+    return `<article class="secondary-story"><div class="meta"><span class="tag">${category}</span><span>${source}</span><span>·</span><span>${time}</span></div><h3><a class="headline-link" href="${href}">${title}</a></h3><a class="story-link" href="${href}">Leer en Stylo Camión →</a></article>`;
   }
 
-  return `<article class="news-card"><div class="meta"><span class="tag">${category}</span><span>${source}</span><span>·</span><span>${time}</span></div><h3>${title}</h3><p>${summary}</p><a class="story-link" href="${url}"${safeTarget}>Leer noticia →</a></article>`;
+  return `<article class="news-card"><div class="meta"><span class="tag">${category}</span><span>${source}</span><span>·</span><span>${time}</span></div><h3><a class="headline-link" href="${href}">${title}</a></h3><p>${summary}</p><a class="story-link" href="${href}">Leer en Stylo Camión →</a></article>`;
 }
 
 function pickTopStories() {
