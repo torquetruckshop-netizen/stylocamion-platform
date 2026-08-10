@@ -23,25 +23,70 @@ function escapeHtml(value = '') {
   return String(value).replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 }
 
+function displayTime(item) {
+  const raw = item.published_at || item.time;
+  const parsed = raw ? new Date(raw) : null;
+  if (!parsed || Number.isNaN(parsed.getTime())) return item.time || 'Reciente';
+
+  const diffMs = Date.now() - parsed.getTime();
+  const diffHours = Math.max(0, Math.floor(diffMs / 3600000));
+  if (diffHours < 1) return 'Hace menos de 1 h';
+  if (diffHours < 24) return `Hace ${diffHours} h`;
+  const diffDays = Math.floor(diffHours / 24);
+  if (diffDays <= 7) return `Hace ${diffDays} ${diffDays === 1 ? 'día' : 'días'}`;
+  return new Intl.DateTimeFormat('es-AR', { day: '2-digit', month: 'short', year: 'numeric' }).format(parsed);
+}
+
+function safeUrl(value) {
+  const url = String(value || '');
+  if (/^https?:\/\//i.test(url) || url.startsWith('#')) return url;
+  return '#ultimas';
+}
+
 function articleMarkup(item, type = 'card') {
   const title = escapeHtml(item.title);
   const summary = escapeHtml(item.summary || '');
   const category = escapeHtml(item.category || 'Actualidad');
   const source = escapeHtml(item.source || 'Fuente identificada');
-  const time = escapeHtml(item.time || 'Reciente');
-  const url = /^https?:\/\//i.test(item.url || '') || String(item.url || '').startsWith('#') ? item.url : '#ultimas';
+  const time = escapeHtml(displayTime(item));
+  const url = safeUrl(item.url);
   const safeTarget = /^https?:\/\//i.test(url) ? ' target="_blank" rel="noopener"' : '';
+
   if (type === 'lead') {
-    return `<div class="story-media"><span class="tag">${category}</span></div><div class="story-content"><div class="meta"><span class="tag">${category}</span><span>${source}</span><span>·</span><span>${time}</span></div><h2>${title}</h2><p>${summary}</p><a class="story-link" href="${url}"${safeTarget}>Leer noticia →</a></div>`;
+    return `<div class="story-ribbon"><span class="tag">${category}</span><span>RADAR REGIONAL</span></div><div class="story-content"><div class="meta"><span>${source}</span><span>·</span><span>${time}</span></div><h2>${title}</h2><p>${summary}</p><a class="story-link" href="${url}"${safeTarget}>Leer noticia →</a></div>`;
   }
+
   if (type === 'secondary') {
-    return `<article class="secondary-story"><div class="meta"><span class="tag">${category}</span><span>${source}</span></div><h3>${title}</h3><a class="story-link" href="${url}"${safeTarget}>Leer noticia →</a></article>`;
+    return `<article class="secondary-story"><div class="meta"><span class="tag">${category}</span><span>${source}</span><span>·</span><span>${time}</span></div><h3>${title}</h3><a class="story-link" href="${url}"${safeTarget}>Leer noticia →</a></article>`;
   }
-  return `<article class="news-card"><div class="meta"><span class="tag">${category}</span><span>${source}</span></div><h3>${title}</h3><p>${summary}</p><a class="story-link" href="${url}"${safeTarget}>Leer noticia →</a></article>`;
+
+  return `<article class="news-card"><div class="meta"><span class="tag">${category}</span><span>${source}</span><span>·</span><span>${time}</span></div><h3>${title}</h3><p>${summary}</p><a class="story-link" href="${url}"${safeTarget}>Leer noticia →</a></article>`;
+}
+
+function pickTopStories() {
+  if (!news.length) return fallbackNews.slice(0, 3);
+  const selected = [news[0]];
+  const usedCategories = new Set([news[0].category]);
+
+  for (const item of news.slice(1)) {
+    if (!usedCategories.has(item.category)) {
+      selected.push(item);
+      usedCategories.add(item.category);
+    }
+    if (selected.length === 3) break;
+  }
+
+  if (selected.length < 3) {
+    for (const item of news) {
+      if (!selected.includes(item)) selected.push(item);
+      if (selected.length === 3) break;
+    }
+  }
+  return selected;
 }
 
 function renderTop() {
-  const top = news.slice(0, 3);
+  const top = pickTopStories();
   leadStory.innerHTML = articleMarkup(top[0] || fallbackNews[0], 'lead');
   secondaryStories.innerHTML = top.slice(1, 3).map(item => articleMarkup(item, 'secondary')).join('');
 }
@@ -53,6 +98,7 @@ function renderGrid() {
     const haystack = `${item.title} ${item.summary} ${item.category} ${item.source}`.toLowerCase();
     return matchesCategory && (!term || haystack.includes(term));
   });
+
   newsGrid.innerHTML = filtered.map(item => articleMarkup(item)).join('');
   resultCount.textContent = `${filtered.length} ${filtered.length === 1 ? 'resultado' : 'resultados'}`;
   emptyState.hidden = filtered.length !== 0;
