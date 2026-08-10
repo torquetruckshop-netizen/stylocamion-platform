@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Noticia de Stylo Camión® sobre transporte, logística, camiones, remolques, economía y rutas en Argentina y Sudamérica." />
+  <meta name="theme-color" content="#08111b" />
+  <title>Stylo Camión® Noticias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Volver a Stylo Camión Noticias">
+      <span class="brand-mark">SC</span>
+      <span>STYLO CAMIÓN<sup>®</sup> <b>NOTICIAS</b></span>
+    </a>
+    <nav class="menu article-menu" aria-label="Navegación de la noticia">
+      <a href="index.html">← Portada</a>
+      <a href="https://cargas.stylocamion.com">Cargas</a>
+      <a href="https://ventas.stylocamion.com">Ventas</a>
+      <a href="/">Plataforma</a>
+    </nav>
+  </header>
+
+  <main class="article-shell">
+    <article class="article-page" id="articlePage" aria-live="polite">
+      <p class="eyebrow">STYLO CAMIÓN · RADAR REGIONAL</p>
+      <h1>Cargando noticia…</h1>
+    </article>
+
+    <aside class="article-side" id="articleSide">
+      <section class="source-box">
+        <span class="side-label">CRITERIO EDITORIAL</span>
+        <strong>Información útil, fuente visible.</strong>
+        <p>Stylo Camión organiza y contextualiza información relevante para el transporte regional. La fuente original queda identificada en cada artículo.</p>
+      </section>
+    </aside>
+
+    <section class="related-section">
+      <div class="section-heading article-related-heading">
+        <div>
+          <p class="eyebrow">SEGUIR LEYENDO</p>
+          <h2>Noticias relacionadas</h2>
+        </div>
+        <a class="back-link" href="index.html">Ver todas →</a>
+      </div>
+      <div class="news-grid" id="relatedNews"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>STYLO CAMIÓN<sup>®</sup> NOTICIAS</strong><p>Argentina + Sudamérica. Información para decidir mejor.</p></div>
+    <p>© <span id="year"></span> Stylo Camión. Marca registrada.</p>
+  </footer>
+
+  <script src="noticia.js"></script>
+</body>
+</html>
