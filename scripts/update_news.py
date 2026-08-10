@@ -1,8 +1,9 @@
+import hashlib
 import html
 import json
 import re
 import urllib.parse
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 import feedparser
@@ -30,6 +31,7 @@ TRUSTED_SOURCE_TERMS = [
     'argentina.gob.ar', 'boletín oficial', 'boletin oficial', 'fadeeac', 'arlog',
 ]
 
+MAX_AGE_DAYS = 75
 OUT = Path(__file__).resolve().parents[1] / 'noticias' / 'data' / 'news.json'
 
 
@@ -56,6 +58,11 @@ def clean_title(title, source):
     return title
 
 
+def article_id(title, source):
+    seed = f'{normalize(title)}|{normalize(source)}'.encode('utf-8')
+    return hashlib.sha1(seed).hexdigest()[:14]
+
+
 def published_datetime(entry):
     parsed = entry.get('published_parsed') or entry.get('updated_parsed')
     if not parsed:
@@ -64,6 +71,12 @@ def published_datetime(entry):
         return datetime(*parsed[:6], tzinfo=timezone.utc)
     except (TypeError, ValueError):
         return None
+
+
+def is_recent(published_at):
+    if not published_at:
+        return True
+    return published_at >= datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS)
 
 
 def is_relevant(title, summary):
@@ -77,15 +90,18 @@ def regional_score(title, summary, source, published_at):
     haystack = f'{title} {summary}'.lower()
     source_l = source.lower()
     score = 0
+
     if 'argentina' in haystack:
         score += 18
     if any(term in haystack for term in REGIONAL_TERMS):
         score += 10
     if any(term in source_l for term in TRUSTED_SOURCE_TERMS):
         score += 14
+
     if published_at:
         age_hours = max(0, (datetime.now(timezone.utc) - published_at).total_seconds() / 3600)
-        score += max(0, 72 - min(age_hours / 12, 72))
+        score += max(0, 80 - min(age_hours / 10, 80))
+
     return round(score, 2)
 
 
@@ -95,7 +111,10 @@ def useful_summary(title, summary, source, category):
     summary_norm = normalize(summary)
     source_norm = normalize(source)
 
-    if not summary or summary_norm == title_norm or summary_norm in {f'{title_norm} {source_norm}'.strip(), f'{title_norm} {source_norm} '.strip()}:
+    if not summary or summary_norm == title_norm or summary_norm in {
+        f'{title_norm} {source_norm}'.strip(),
+        f'{title_norm} {source_norm} '.strip(),
+    }:
         return f'Información reciente de {category.lower()} seleccionada por el radar regional de Stylo Camión.'
 
     if title_norm and title_norm in summary_norm and len(summary_norm) <= len(title_norm) + len(source_norm) + 20:
@@ -125,11 +144,14 @@ def main():
 
             if not title or not link or not key or key in seen_titles:
                 continue
+            if not is_recent(published_at):
+                continue
             if not is_relevant(title, summary):
                 continue
 
             seen_titles.add(key)
             items.append({
+                'id': article_id(title, source),
                 'title': title,
                 'summary': useful_summary(title, summary, source, category),
                 'category': category,
@@ -148,6 +170,7 @@ def main():
         'updated_at': datetime.now(timezone.utc).isoformat(),
         'items': items[:60],
     }
+
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
     print(f'Noticias guardadas: {len(payload["items"])}')
