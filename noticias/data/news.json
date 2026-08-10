@@ -1,53 +1,485 @@
 {
-  "updated_at": "2026-08-10T16:02:00+00:00",
+  "updated_at": "2026-08-10T19:44:21.829858+00:00",
   "items": [
     {
-      "title": "Agenda del transporte de cargas en Argentina",
-      "summary": "Acceso directo a información oficial vinculada con transporte automotor de cargas, normativa y operación.",
+      "title": "Nuevas reglas para el transporte de cargas en Argentina - LA17",
+      "summary": "Nuevas reglas para el transporte de cargas en Argentina &nbsp;&nbsp; LA17",
+      "category": "Argentina",
+      "source": "LA17",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNT3NwNWM3R1AzdVAtd3lvQjVsRlFpTUdnWEJHQVIwUmh6TmNyTjFtQlRUMndPbXlxTWEwbjBOcFRad2NQSHFLc0NNeFRKS2Y2STcyVzVDblJzcE5OMTlhWnNFWGNEb1hTT1ppcVZCWDBLdGFDYTNFcHFnblI0dk82LTFKNi11Yk9NY1FiWmRBOTgxMmNyYnZFTUcwVi1KeFZCRzJwcWJRYlFHZzdqaGJkM1Q3V1RUQTA2TDY3NnRZak9EbV9hX3ZJcjh4UQ?oc=5",
+      "time": "Mon, 10 Aug 2026 17:28:00 GMT"
+    },
+    {
+      "title": "Camiones y micros deberán respetar el carril derecho obligatorio - Argentina.gob.ar",
+      "summary": "Camiones y micros deberán respetar el carril derecho obligatorio &nbsp;&nbsp; Argentina.gob.ar",
       "category": "Argentina",
       "source": "Argentina.gob.ar",
-      "url": "https://www.argentina.gob.ar/transporte",
-      "time": "Fuente oficial"
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNOUJyRlZ2T1JBbzFmbENlWGlRQzZrN3h0LV9Mbk1ubmV6WDVEb3RsMVU0OXVOMUZnTnJHcHRqRzJ2d05IUGx1MlladklOOVZNSENCOElmVFpRQkgwX0NJUlNxQzFMVmNRekg4eVl0YTVKdTI5N0Y0WURlemRiZ05kUXVOSEJ5Z3ZtRmdvN0RtR3FrRTYxb0lFUTJMVi1haXFseUg0eA?oc=5",
+      "time": "Wed, 24 Jun 2026 07:00:00 GMT"
     },
     {
-      "title": "Economía del transporte: costos, actividad y decisiones de flota",
-      "summary": "Seguimiento sectorial para interpretar costos operativos, financiación, actividad y renovación de unidades.",
-      "category": "Economía",
-      "source": "FADEEAC",
-      "url": "https://www.fadeeac.org.ar/",
-      "time": "Fuente sectorial"
+      "title": "Actualizan las reglas para camiones y bitrenes y amplían las configuraciones permitidas - Infobae",
+      "summary": "Actualizan las reglas para camiones y bitrenes y amplían las configuraciones permitidas &nbsp;&nbsp; Infobae",
+      "category": "Argentina",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQzZjemZKbHVVQjNlV3B1eXBEUUFYNXJzVTFLVEliRmt6akFpQXRNemZweUhvTGhnaEhhVzN2Y1JHX2ZQS2JUaDFRdlBNTXhsOGZDUGRoZG84d2NsZGFkRzBVRUNuRjBqR0VJYUZzb3dNSGRxeUdqX2dDUU83bGo0REtFeWpOWGFJS3pfQWZSQ1pyT1N6dzRfWkV2ZkZsNjZVTkljVFJtQ2RCWGNXN1gzVHRYUWs3Y2xucXdUUkdPRHNCZDRNdF9mc1p30gHkAUFVX3lxTE9wbldvS2w4d3ZuSXk1V2xTU0VJZjJaRXZETFgxRkhwcVhFcUQ3dDVVREdVMXQ3SFpjcmVTTkc3WlBvV0V0ekRtM29RNjBzM0RvOVpBa09nNmhfTFBrWmN1b3libW15S0NrSkg0QmNlV3VwWDNLTVBVM3hhMGlsdm1XUzZiVXVfcENabGZoV2k3c05UVFYzRy03QWdDcmxGazBLMzNTS1oxUEZlei1rRDlHVmJCdi1uTlZaYks5czV1MnJmcV9Gb2t4MnQ3dTU0MHR6c3pscnUxd3VWbjhFSzA2a2gwOQ?oc=5",
+      "time": "Fri, 31 Jul 2026 07:00:00 GMT"
     },
     {
-      "title": "Logística argentina: tendencias, capacitación y operación",
-      "summary": "Información institucional y técnica para empresas vinculadas a logística, supply chain y transporte.",
-      "category": "Logística",
-      "source": "ARLOG",
-      "url": "https://arlog.org/",
-      "time": "Fuente sectorial"
+      "title": "Paro de transportistas: exportadores aseguran que los buques dejaron de venir a cargar a la Argentina - Agrofy News",
+      "summary": "Paro de transportistas: exportadores aseguran que los buques dejaron de venir a cargar a la Argentina &nbsp;&nbsp; Agrofy News",
+      "category": "Argentina",
+      "source": "Agrofy News",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQMUtNTTFaaTgyS3MwdE9LUGdaSU5JZmFTa1E0QTc3UHRNSS1GN2lUVzlfLWExSS1HaUdlNUcyRk8zWl9YWDJHNUgza01vd28tdW5kWnhoSjNzU2ZXMUhEd0lnUjlCSjkycWVoUjdjU2FvV0VvaHVhNzc5OHVQcjFNSDg3SzE4YWljblV1aHdYcmVMQmdFdGZINzBEMFlrMkc4dktNQVV3bkMxalZmajN3R01UVDR1WWEtLTJEdlBIaUdocmc?oc=5",
+      "time": "Wed, 15 Apr 2026 07:00:00 GMT"
     },
     {
-      "title": "Camiones: novedades de producto con foco en la región",
-      "summary": "Espacio preparado para concentrar lanzamientos, actualizaciones de gama y noticias de vehículos pesados disponibles en Sudamérica.",
+      "title": "Más control, mismo riesgo: por qué el robo de cargas no baja en Argentina - Dinamicarg",
+      "summary": "Más control, mismo riesgo: por qué el robo de cargas no baja en Argentina &nbsp;&nbsp; Dinamicarg",
+      "category": "Argentina",
+      "source": "Dinamicarg",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQaEUwZDFuTGt3aksyNHRFclFONFFWaWpoV0dwSGttVmluNUIyQ0lDR2ptTkt1RzJ3Sk1iVnFhSzRacWxCdzBuWXlzMXdhbDZfcGV3RVhxRW1XNUZaY3Ayc21IQkNjdlFPWEx0OFJmNWwtZW42Ym5lbEhtZzdhLTVqYzFPM0JUR1YtVnc?oc=5",
+      "time": "Fri, 10 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Conquistando más segmentos: Foton ingresa al transporte de cargas peligrosas en Argentina con el Auman R 2443 - 16 Valvulas",
+      "summary": "Conquistando más segmentos: Foton ingresa al transporte de cargas peligrosas en Argentina con el Auman R 2443 &nbsp;&nbsp; 16 Valvulas",
+      "category": "Argentina",
+      "source": "16 Valvulas",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNNW5wazRzbGt0TV9TVWphNUtaNVNoa3dMbFJfVHM4aFB0UnN5TFdrbXJ4VHRPY2ZaUk9SQ180dW5sdi1qUW9HVmFUS0hRelhjX1llek1LSHMwdGNTNldJZnNURG9NMWJtWkVPM1NQRk5DQlBjam9MSzBJTjB1YlFtQnZUTXJraFlKam5RUVNCWFhVZHFZZ2c1bTFWTzhYZWtOUzBxZEF5dkxpcW5zS285bk5RZ0JNWWVGNERneDk5R2xsZVVDN1RwUkhxbU5BT0RUS3NGY3pn?oc=5",
+      "time": "Thu, 23 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Transportistas autoconvocados bloquearon los accesos de los puertos bonaerenses en reclamo de una recomposición de las tarifas de fletes - bichosdecampo.com",
+      "summary": "Transportistas autoconvocados bloquearon los accesos de los puertos bonaerenses en reclamo de una recomposición de las tarifas de fletes &nbsp;&nbsp; bichosdecampo.com",
+      "category": "Argentina",
+      "source": "bichosdecampo.com",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPN3N5cjZGaDhIMmNQLUFJbHFUaHFPeEZPaVVlX09ScjZ2bDR4S0ZRdGY5cWx3WEZyaXVDVGxrVUtILWhXWDUzTVFNZ0RZajNvejdNZzhsTTUxbzVDSHR5eVE0ZXlMVzlIcmlGYm1xU3ozdDdoQUk1cDkzVzJDTGIzNDEwbmFmTmJBT3hqUjFyNllWdVUxV2k0b1I2Qzh6UGdjYXg0ZktjTzVXdXMtVmFNcTEzVTdKZmJlSWpjQnU5ZmlBeXFTaFp5XzJVLXJIN045OUQxcHEwMTZiSC1YOFRsMVp1VkVEckdmTjdyT1lJTmJUQ1IwNkE?oc=5",
+      "time": "Tue, 07 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Por la fuerte suba del gasoil, el transporte de cargas alerta que peligra toda la cadena de abastecimiento nacional - Ambito",
+      "summary": "Por la fuerte suba del gasoil, el transporte de cargas alerta que peligra toda la cadena de abastecimiento nacional &nbsp;&nbsp; Ambito",
+      "category": "Argentina",
+      "source": "Ambito",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNbUNMNkFrOVM1eG5EQTE4VFVVRXhjYU04WlFBS2NkYmJaTWM0dFhSdlU4RTV6Q19GTFFSTEFsYWRHNUF3OENsMnF5eWpWT0I2Nl9ad01DdExicWJwMlBhYVhReHdmZnNiMHA4Ym81YXp6SlRZRWhxY3hGRXdYVGplczZjSnRDWFVNamYtR0NnQ0FGcEsxNTlOTWU2cDhoR3ZTVjZZbzB0eEljUkNzUXZ2c2FQcXpndy1IY1NiZ1MyVDI1eHdtTUlONHNHVFRQakp4MEhENlNwZzVPRlFHYzB6TUhlONIB6AFBVV95cUxONUk3a1J1QUJ0bXI3MGREeXJ3RGExQjFBR2JiVUVmZHdGNE5aVXFUZF9QLWlSanRPWUViNGJwUk5qY1dyR0czNlhBaXRmSUswTm5UWmc0akl3aDRXc2dIS2g2Zm9VMTkyR19CYkZvMFJJamh5X29MZnpWamRyZU4wQXRpMFcyV0NmRFZvZ0pFMlpORGF2QWhBdzNaYUhPNTQwY3FwWmJfMTZiOTlJc29DTjdNVWdvNGhEZGIzN2stWVdxR1JuaHpqMWlMd19veUZmR0NGZXJRTEVFNzRZM0xtMEJJV0ljZnEx?oc=5",
+      "time": "Fri, 27 Mar 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Crisis en el transporte: camioneros autoconvocados salen a las rutas por el aumento del Gasoil y los neumáticos - portaleltoro.com",
+      "summary": "Crisis en el transporte: camioneros autoconvocados salen a las rutas por el aumento del Gasoil y los neumáticos &nbsp;&nbsp; portaleltoro.com",
+      "category": "Argentina",
+      "source": "portaleltoro.com",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPT2FIWHFmUmg3RFpxUkZ0UjZwZWMwYWl4UHNGQzRwVFY4Z24xaG5ENXB2dkhQRWE3cmptZGE0anlvSFJvakttTVVrUF9qLVBoTk90WFpGWkl5eDRSVFBsWmNkMnNULUFka1Zrd1daandGdk45Wng3XzB3QmNXV1lkR1BWYTNHUjhfQnZMSG44UVhPbW4xOXUtVDdZcGhxckVHNGVjOXd6Rzk1REN5UU16MU16MXhaRklKU2Vjd1NvZ2N0dV9fRWJaeURLUjNPWkl1eVZXZjJFcVFob3dtbjFRRA?oc=5",
+      "time": "Mon, 06 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Mujeres al volante de camiones: lanzan en Argentina una academia para conductoras - Cba24n",
+      "summary": "Mujeres al volante de camiones: lanzan en Argentina una academia para conductoras &nbsp;&nbsp; Cba24n",
+      "category": "Argentina",
+      "source": "Cba24n",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxORUttVWtLbHRuOHlYVko5cFhvb0QtUHc4VlBmTFJhc2lBZjV3ZXRTVU5WMXQ2NTBkWmNXSDFZZXVSSXRWRXU5c1VMbGotTGlIc0R5VlNwWG5SZnh4ak1BblJ3NEVIdk42eEVfQllSbTBZUWFhcGFNNDZGa3RJMzNWalNodnhEOU1WTVJXRDFMSjdOUm5JdV9pSEtBTWRteEtqM1FFYlpweEZuQkxZRFI4NjVxSjQtUEdrRjNodVB5eVpfenAtMGhLM1FqajNoNjlRSEs1UzQ2S3ZjQy1JbkthVQ?oc=5",
+      "time": "Tue, 10 Mar 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Paro de transporte en toda la Argentina: la postura del Gobierno por la posible medida de fuerza - El Destape",
+      "summary": "Paro de transporte en toda la Argentina: la postura del Gobierno por la posible medida de fuerza &nbsp;&nbsp; El Destape",
+      "category": "Argentina",
+      "source": "El Destape",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNdXhfdlphSENua0VBeGVMN3h3RFBUUk5VemdvN3RxN3REZkNaRktJRmdWOWhiSU42UF9UVkVueDlhVmpfLUhJYjZqZ1ZOaXlNNjFxcjZCcWdUMmRXOU41WlExYmVfd3BDQkZGMzc3Q0g0TVJwOG9qNHBkMFRzUVc4b0g2d3JoRlJpLUprbFJQT2VtVlA3UXVVdTNJRDJ5MHVJakNEZHN4TWtPZ2FxVENDSmpKUE9RRVI3VXdJR1QxY1JESFlLdERzczFsSmtuQnItTkFTQ3QxT3JiMzg4VVFYWFVoODLSAeQBQVVfeXFMTXV4X3ZaYUhDbmtFQXhlTDd4d0RQVFJOVXpnbzd0cTd0RGZDWkZLSUZnVjloYklONlBfVFZFbng5YVZqXy1ISWI2amdWTml5TTYxcXI2QnFnVDJkVzlONVpRMWJlX3dwQ0JGRjM3N0NINE1ScDhvajRwZDBUc1FXOG9INndyaEZSaS1Ka2xSUE9lbVZQN1F1VXUzSUQyeTB1SWpDRGRzeE1rT2dhcVRDQ0pqSlBPUUVSN1V3SUdUMWNSREhZS3REc3MxbEprbkJyLU5BU0N0MU9yYjM4OFVRWFhVaDgy?oc=5",
+      "time": "Fri, 10 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Foton desembarca en el transporte de cargas peligrosas - motormagazine.com.ar",
+      "summary": "Foton desembarca en el transporte de cargas peligrosas &nbsp;&nbsp; motormagazine.com.ar",
+      "category": "Argentina",
+      "source": "motormagazine.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOcDNWcnVWdlZhMktxbUNxaGdVN0hDZ3hRaGNKLWVZUHZERVVsZmZUOXFuQlpkaVZQMjBtcjVUdm8tRGNDS0lqTkVKbWlNbW1XZl92aUJYT0JnNFBQeWx0ZlJDXzVZai1jM09uMTJVaTBOWWR2ZlJZZW9tejNCVXRGQVMycHM0NVB6bHJ2Zw?oc=5",
+      "time": "Mon, 20 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Economía extiende un año más la operación de vehículos que transportan cargas peligrosas - economis.com.ar",
+      "summary": "Economía extiende un año más la operación de vehículos que transportan cargas peligrosas &nbsp;&nbsp; economis.com.ar",
+      "category": "Argentina",
+      "source": "economis.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ibFFuR00yWXRub3JndTI5TFdBS2FuckVFNlRSYWFmVG9IbVpSdlN4WXh6eXVydkM5a3ZxbS1iQkVTS1BKb2lCTTRUVkJReFZoZENCVlVJc0JiTl8waTFNX0QwU1ZQWDVaeVFRS0d3?oc=5",
+      "time": "Fri, 28 Nov 2025 21:59:20 GMT"
+    },
+    {
+      "title": "Transportar carga en Argentina entre infraestructura, costos y adaptación - Infobae",
+      "summary": "Transportar carga en Argentina entre infraestructura, costos y adaptación &nbsp;&nbsp; Infobae",
+      "category": "Argentina",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZ29vQ2VQdjYwNk1oMUFpYWNnSzFINk85SlpUVmk5UHV5RFp6WmF1QlJvaXk1TE0xQk9WeHFDNUdoNjUwS1ZDRlVPVDRNRzVRYnhqdE54c1hSeXE2VUhYemhxcXBvZ25uaGNOcU1rcmtjSjRUOHpDSnNES21KV0VCb2RXRUxYQWsyT1NMRTRBTlA4bjRsNjNjdjVTQ0VZLUgzejBuUTZKM3BHc3FiUUJJbTBmS2hKQdIB0AFBVV95cUxQcEFwdDktcVdWNk05blpOb2F5WGpwWWs4bGJmSG9JcEhidWZqWkozSmcwWms5VE44b3JRbGhRZ2haUVZ5czhNMV90cU9PbUYyTThfUUxVTXlNc1J3V18tSFZybUpIUkxnV2NoTms2NUtpdW84dWNmNTNzZGNnd3l0T1gtcDVXMS16SlpxMkh2bHBTc1FaQ2J3MXF0VGdpMVY4ZmtpMHFkN3V1VGxWV2dnMGdXV0RHc1k1YUxreFlxcGlmd0s5TkZyUFR3VVVyNFJs?oc=5",
+      "time": "Sun, 15 Mar 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Patentamientos abril 2026: Sorpresa entre los más vendidos con dos marcas chinas en el “top 10” - SuperTruck.com.ar",
+      "summary": "Patentamientos abril 2026: Sorpresa entre los más vendidos con dos marcas chinas en el “top 10” &nbsp;&nbsp; SuperTruck.com.ar",
       "category": "Camiones",
-      "source": "Stylo Camión",
-      "url": "#ultimas",
-      "time": "Radar editorial"
+      "source": "SuperTruck.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1UVFAwdm1YVVZJNW1UNm9vdlp2UTUwM2lMVkdEYVhqX1BwV1ItWnFfLXNCRWRGWmVIOHN5VXgwTFVNU2tMVUpoWmpZZmFtOWlWOGdrZ2NxLWlHb1JYbHM5aGpJS2VTVXBGOHFweEl1RElYeEc3YkdCM3piSQ?oc=5",
+      "time": "Mon, 04 May 2026 07:00:00 GMT"
     },
     {
-      "title": "Remolques y semirremolques: industria, producción y novedades",
-      "summary": "Un eje editorial propio para fabricantes, carroceros, implementos y novedades relevantes para el transporte regional.",
+      "title": "Iveco tiene el camión más vendido de abril: ¿cómo quedó el top 5 de los pesados? - autotest.com.ar",
+      "summary": "Iveco tiene el camión más vendido de abril: ¿cómo quedó el top 5 de los pesados? &nbsp;&nbsp; autotest.com.ar",
+      "category": "Camiones",
+      "source": "autotest.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPclFWQnlvczZ3WFV2ZUlhVmM4XzlZekpNaVJnd3A5MW0tLTA4QmdlaWhVZ05PaGpVb3NxbHl0aGpxVXN1LUI5UXhMU3V3dmRMeGluQjNRektZY2pzXzZfMU5hLTRlRFU4RFVDVnNGdVpadklibFgySVZrejhZOG00NFNfZU5jNlpTRk1DZGxHa1lGdWFVMWt4N1JuV3UwSzMwNTI0WkNWNGhXdWMxZTRGeXVuNzI?oc=5",
+      "time": "Wed, 13 May 2026 07:00:00 GMT"
+    },
+    {
+      "title": "El camión más vendido de abril fue un Iveco: ¿cómo quedó el top 5? - transportemundial.com.ar",
+      "summary": "El camión más vendido de abril fue un Iveco: ¿cómo quedó el top 5? &nbsp;&nbsp; transportemundial.com.ar",
+      "category": "Camiones",
+      "source": "transportemundial.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBvZ0NjbGdOX0I0aWE4TXQ5SWdnNUJsR1R4MDFUVTNWUG9sY1YzcUZFTmRmMlQtWHowb3IzVVlRWFVIY3BleXlVX2E3MHlHd1l4OFByMmd3RG5zQ3FXc3lsVVdlRU1BNUplZEtlc3g1eW5CR0hjLUlRNTJHeDV4R2c?oc=5",
+      "time": "Tue, 12 May 2026 07:00:00 GMT"
+    },
+    {
+      "title": "El transporte pesado a GNC ya cuenta con un corredor que atraviesa toda la Argentina - Surtidores.com.ar",
+      "summary": "El transporte pesado a GNC ya cuenta con un corredor que atraviesa toda la Argentina &nbsp;&nbsp; Surtidores.com.ar",
+      "category": "Camiones",
+      "source": "Surtidores.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQTnh2OEF2clkzMWF6cVVxRHJDSlRFOTNXYXA4QlNsbUhvTWtpRk43bllzYTh0MnMySUZBcnBRYnhqc2dlelZaeXlSU0I1STRQTW5GRWxkOG5KUk1CaktQd284d0hjb3FFQ0txTmEzcHc3U2owUDZYMk9aZjhsLTNrUHMzVUNOV1gwbEZDbWZ1cmJkWkk5dm5EYlRTbF9iM1lCT0NlVGNhZW93cXNMbHdxSA?oc=5",
+      "time": "Fri, 10 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "¿Cómo son los camiones que funcionan con GNL y que llegaron a la región? - Ambito",
+      "summary": "¿Cómo son los camiones que funcionan con GNL y que llegaron a la región? &nbsp;&nbsp; Ambito",
+      "category": "Camiones",
+      "source": "Ambito",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPNFFmbHIyZ3NsZVhSRXAzTjk3bzNnR3pudHdkamZ0UWF5Ql8yWjM4d24wTGk3QkhuT1YwREozV2x3VnN4aDVpUHdTQURQektiMGJYU25qcFBzY1ZGNWN5a1lEUmRHbl9vMGtUQXhjN1pweTVneHZoOEJva1NDdzBLMFBUNldza2VUS1NhNUtQRzIwOGk2UmhvVjZLWVMzbFczdWQ5QjBmbw?oc=5",
+      "time": "Mon, 16 Mar 2026 07:00:00 GMT"
+    },
+    {
+      "title": "El Ejército Argentino licitó la compra de camiones 6×6 para ser equipados con el nuevo radar RMF-200V de INVAP - Zona Militar",
+      "summary": "El Ejército Argentino licitó la compra de camiones 6×6 para ser equipados con el nuevo radar RMF-200V de INVAP &nbsp;&nbsp; Zona Militar",
+      "category": "Camiones",
+      "source": "Zona Militar",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQY25iMWNjZVNrNzNhRktuejRkOEZLdEZ6Z2VfZjhaNGNyYnVad2hzWk4wdFMxY21JRnRaVXZQWjI3TWxxRUpacEhCVUdETlZKRnYxcUVOaXNaYkM2SkZ2YVpMc1UzZnFSYXN5MW5iQnVCZ1lvdHVtNUdRY1I1RFRuRkQ0dlVGSTZVV0xpVTM5ZFRkUGlEMGJrZmk5V0Rvdnp0Z1BCSUxGY3dUMHZFSmtuUFo2VUxwXzlZMTlZZDdpRl96SDc2MkZ1UHdqUm1fNUlwbGpLSmJuWGJ6clRBVG94M2lxQ0VWQQ?oc=5",
+      "time": "Tue, 23 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Cómo es el nuevo peso pesado que acaba de lanzar en Argentina la marca líder en camiones - Clarin.com",
+      "summary": "Cómo es el nuevo peso pesado que acaba de lanzar en Argentina la marca líder en camiones &nbsp;&nbsp; Clarin.com",
+      "category": "Camiones",
+      "source": "Clarin.com",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQbktMSkpOLUN4enlxX2cwa2NINkxoN2EtbDhhM2U4eS1wRmtJZG1IdF9VekpWdVlrSlQwbi01QnlUa1pPRkR5dFlWNEFNOWVMNmlDek9TMDhsS09Rc3hHMWtOdnhYT3BhUVVTbDM3UlAwZWoyWlY0QndjcjhiNFdwdlM5ZjBVeTRONVVwU25ON05wX2pGbFh4cHhpdjljUTEyVUJ2a2RZTnFoN00w0gGyAUFVX3lxTFBGaW9ZWklUdHIxWXA5NUVnMXBNNGF4WndCOEdPYzBvOVBSLUFjdFNZUUZGYmZ0THF3ekFBSl9GcW9CQWhBUldwYW03eUEtUVlQLVlUOE9tNWk5MHFzVFhlWEVsRHIyOTJ6ZVNZazUwRE56a21Lam84dXRobkJLVkpWOHhsV0RQa3Y0Y1hMUC05eUU0QjdYeDZsXzdhOUFUS3BNT1lJRWtNd1RrUE5zZzhMRnc?oc=5",
+      "time": "Mon, 09 Mar 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Cayeron también las venta de camionetas y camiones 26% pese a Vaca Muerta, el campo y la minería - infoberdigital.com",
+      "summary": "Cayeron también las venta de camionetas y camiones 26% pese a Vaca Muerta, el campo y la minería &nbsp;&nbsp; infoberdigital.com",
+      "category": "Camiones",
+      "source": "infoberdigital.com",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPVnRUNFdWYjFYR3hxNzFxSnFfWF93bHBGczk2TmFzejZkZWhYVlo2b1JkNzdGdTdwcUpFd1F1S29Tc1FSeVdaQ042dWppZVNSWGNPeldkRlBjTGtlZWhpb2hyZFdIUkxvV3FxMWhoWEdNZUF0cnFVSGdSd0JtVnk5YWxQdnRZd0tadlVFb2NWTGxPdTRodDlGTDlxbHNnaTBtcTdIbGhQeWcyZjRBb0NKdHJIWW9BbzFkMlF1Z0ZfZ3BMcDRBalprZTBIcDZlZw?oc=5",
+      "time": "Fri, 19 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Lowe acelera en el segmento pesado: presentó nuevos modelos de camiones Volkswagen - economis.com.ar",
+      "summary": "Lowe acelera en el segmento pesado: presentó nuevos modelos de camiones Volkswagen &nbsp;&nbsp; economis.com.ar",
+      "category": "Camiones",
+      "source": "economis.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQOE0wbVQtdmt4Rmhray1KcmtlaG85eVMzSTJVeEtKdmMyOXRPSFYycU1YWHhGLTRUczFVT1plMkNXNEVfV1FaN3lBLUFfcUxaVVlRaUlRRmVuMTRhajFpaFVOT3ZUSDNXV3BFTExQcUoxTFpJTzJTSWQxQ3NDbDBwX3UwMWhzOXpIc3pwRGhHZUVjbWRSRWUta29kckExNVJ3Q1dUS3VsbjNhQQ?oc=5",
+      "time": "Sat, 18 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Volvo mejora previsiones para el mercado de camiones en Brasil y Europa tras repunte de pedidos - Bloomberg Línea",
+      "summary": "Volvo mejora previsiones para el mercado de camiones en Brasil y Europa tras repunte de pedidos &nbsp;&nbsp; Bloomberg Línea",
+      "category": "Camiones",
+      "source": "Bloomberg Línea",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQRDZ3d3d6RHRocWFvbXZRLU9LdmpHdnA4R0xJaThXVWdQTEVpSE5hRHdkTEhuTzQwaHJYeDNWN0h2QTJlaG41dy1OaGFwUnRLYU96aURxZExxUlhJMmwwOGNGc0QwQ2V4SWJkbG9kb1dzdmlkbUMxR3FJR25FT2M4ZGNHbEJ6X0pUZDRZUmJ0Mjg4RDhJNDVPSWpSVEhHaUpZOFdsMmVIWElIQlFHRU1YbEpkd0tmYnJ1b28zNVNOWWtvZlItWkhiMGVjeWdPUVJNZHfSAeYBQVVfeXFMTUFiSGJqUnVzMVFyRVFqWjNSTi1yM1BxMWlGcl90SXFfUHVhOC11SjNJUGduLU5rRVJfb3JJY1FxZ2Z1clNpYU9hRE9CdFdQSHhFNzg2dmFSVkc5Tmk3TTFYaGJyNEpGTHBVYWxWWW9QR0VNY0lzLUxDaWFreVA0QWNiRi1MakRDUFU2UEp0cW5kRUhjWG10YTJjaW9Nb2I4NnZhQkFJb1ZEbGpkWUdLZVlyWFY0VERTMUQyNVRpMzBYT2RBb05jWlRtMGV3STRYNmVENTBwWFVuWDRzQmRCbFJ1cVFxeVE?oc=5",
+      "time": "Fri, 24 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Hyundai despliega en Uruguay ocho camiones de hidrógeno XCIENT para el proyecto Kahirós - pv magazine Latinoamérica",
+      "summary": "Hyundai despliega en Uruguay ocho camiones de hidrógeno XCIENT para el proyecto Kahirós &nbsp;&nbsp; pv magazine Latinoamérica",
+      "category": "Camiones",
+      "source": "pv magazine Latinoamérica",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNVnA2anVVaTZycUp4VF9iT2FqeHItaXp5OUg2YUhSNEVUNWFEazNxdU9lMzc1TVJzbjZ4UkRjNFl5dERScE1RQmpHSkk1bTdLaGNSb3N4VlpSYk5pdEowTUp0QU9WQldGRktlSUhGOUdxQmdadkM2LXgxeXk0aTB1RnhmZVNGT2VVSTRsSl9xR3JBdWVIVVZ5VndCeVFjTktLckd1cEdQRFVDSGxCZ2Z5cGRsUkw0bE54Ml9BRGc5TUtyVldhcF8wOXpPZ3plZw?oc=5",
+      "time": "Fri, 20 Mar 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Mercedes-Benz Camiones y Buses lanza la nueva línea Axor en Argentina - Parabrisas / Perfil",
+      "summary": "Mercedes-Benz Camiones y Buses lanza la nueva línea Axor en Argentina &nbsp;&nbsp; Parabrisas / Perfil",
+      "category": "Camiones",
+      "source": "Parabrisas / Perfil",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxObGlqV2pEVFRWX0RLRHZ3bzJUOFUydjVWbXV6TV9pcUs2TlphRExkbUliWWQ1b19mNWVNekF4bGZRVnhhNkZLYXNRVzgxQ2ZzdjI1TDFvckpQV0w1WmlzdUlTb25NRGlrZUl6YkhjdDg1QXRSbmxYdWRDTWJPeTVHVC04cHpuRDdJNF94ZnRIX1BramIxa3l4VG1jOHpaVDJtZlZwci12QUI3SjdaYWFiNG5lUE5OTnNPVlBNZUxROHVxMmFNSm1oTmdzSVctS1XSAdQBQVVfeXFMTllUcXJid1VRMG5CbnJUaGp3b1VFVU93NThuXy1xc0d6elJZSm9FaEdXbE04UE9nQmYxQjJmOERvNzh4MTNzMHliZjFCUW5rY3J0aTBkbzhfZ0hrS29zZWlyc1hiS29UQ3pVcGZ5YXdoS2VoN2FuWTMtMnJDNVl5LVFaVkw1Wm45c2xweGJFUlZZdkVxVXI0c1Z6VmtpOXJxbmdUM2xDMkNCbGh6VkdJN1lINi1FTXZOYnMwcmtfQ3g2alpDWHVGdGZXZmc4M0JDeUJCLVc?oc=5",
+      "time": "Fri, 06 Mar 2026 08:00:00 GMT"
+    },
+    {
+      "title": "Venta de autos crece 19% en América Latina durante junio; Brasil y México, los mercados más grandes de la región - eluniversal.com.mx",
+      "summary": "Venta de autos crece 19% en América Latina durante junio; Brasil y México, los mercados más grandes de la región &nbsp;&nbsp; eluniversal.com.mx",
+      "category": "Camiones",
+      "source": "eluniversal.com.mx",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPU2dnMzdzR08wTnhYS2VtLTR4YmtmbXNOalFOSGlodVVuYWxnWExuandsQzJ2Z3h2LVNfMG84R0dhbHBWMGJQWmxONUhjM3dvcVNQU29uR1JsRFAwUjM3bFNyV1MtTUxuUWQ3aU1kNElUeFZmUVRRTk5YU1hOZE50dWw1WnBkSzNMd1hQR0xrQTJzNHpyVFZUVzhucFROSVVPcTRQTDNtNGhfejctNjhaLXJKZDFNNGZodzRacmJEUlkzamtlOVdVcERNR3liaG9MNTM2TE1HVHV2ZW9VQVgyU1BmdVA4Y1RkdlFwOHVwaGpDUdIBhgJBVV95cUxNTjcybEp2Wm0xU1Juc1RlUlpjX1d5OUNLcjZZQjJ2OU9BSktFYzdQQTZIRGw1VXZNbS1jQXdaa2xsZWtrWGZsRUxpY1RGaDBxYzU1NUVTUmhXel9ueDh1Yk9MdlJfTUliRlBBbFBEdF81YzQ2N3ZlckNZM1UtOVo0OVdGTVloT1lrXzBYVEc5c1IyQUwwTWdkTnVGZGtXVDYtOGpTZE5kNFRBV3NzSXZXd0x0ZUNkcUJsaHpkbDM4TDY1RmttZkJidGpIOFRJc210bF9MZ0ZYRG1ieTd5cHNEdDFEVEZkeEtSaXdrNGZ5cnQxcThOckFFcFFZUlFNMVk0ZGRQOHJB?oc=5",
+      "time": "Wed, 29 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "title": "XCMG fabricará camiones eléctricos en Brasil y acelera su ofensiva industrial en Sudamérica - SuperTruck.com.ar",
+      "summary": "XCMG fabricará camiones eléctricos en Brasil y acelera su ofensiva industrial en Sudamérica &nbsp;&nbsp; SuperTruck.com.ar",
+      "category": "Camiones",
+      "source": "SuperTruck.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOYkZUczBCekJ1cFhnYkNidUptSWpkVWY2a1VwVG5uRlBzV0Y2Q09RcnR0NVlvajhZbGIwTGpoMUktMXY5UGgtT2hJWkVmRkdjSzh6Vm05V21EUEkyOEstSkZNeVgwOVJYM0lyS1ZZU2lIZWsySXNuSmJrbUVwY3U2Y3FyejYxLWs?oc=5",
+      "time": "Tue, 26 May 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Bertotto Boglione gana posiciones con el semirremolque Heil - Maquinac",
+      "summary": "Bertotto Boglione gana posiciones con el semirremolque Heil &nbsp;&nbsp; Maquinac",
       "category": "Remolques",
-      "source": "Stylo Camión",
-      "url": "#ultimas",
-      "time": "Radar editorial"
+      "source": "Maquinac",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTGlMRk5FdzUtZ05JcHdDNG5jU1k3ZXZPeVY1WmswdHh0b2ZsU2c0UWRzTmt4NDlfVlVqbmNDekxvZDNhZVd4ZVZiLUdWSW5oWVhwdXVneG9JVTA4YThUbEs0alY5dm5RQnNXUHEzd21JN2VCT1BmM3pDRDVZTXZFSjlIdm5USUpUbXlxTVlIMmstUFk?oc=5",
+      "time": "Wed, 08 Apr 2026 07:00:00 GMT"
     },
     {
-      "title": "Rutas y normativa: cambios que impactan en la operación",
-      "summary": "Normas, corredores, restricciones y novedades oficiales que modifican la circulación o la planificación de cargas.",
-      "category": "Rutas y normativa",
-      "source": "Stylo Camión",
-      "url": "https://www.argentina.gob.ar/transporte",
-      "time": "Seguimiento permanente"
+      "title": "Lambert Remolques fabricó en Concepción del Uruguay el primer bitrén térmico de la Argentina - cuestionentrerriana.com.ar",
+      "summary": "Lambert Remolques fabricó en Concepción del Uruguay el primer bitrén térmico de la Argentina &nbsp;&nbsp; cuestionentrerriana.com.ar",
+      "category": "Remolques",
+      "source": "cuestionentrerriana.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQU2hqd29nd0QwY1BPVllzbjktQmJHa1Q3SFU4ZzVZSWxSQWtSZEtjQmZMLWt1aUNpX2ROelh5b1hWdnduX2VaYXNYclBKbW1WQ3BzTG44bV80aXY3cEZ5SXdWT3NVWUxNUnhlc3hZWTJYanRXMkRGRUdrdjAwdTRkdVd4cHdfNDgyeDJfVVVOVnV1QmlQZ3hBbHdVVGU5SUhQd0l0Y3g3SngxRnI5anJQQ01pQlRlMzFGU21UY01QLXNPaDgtQUZz?oc=5",
+      "time": "Thu, 25 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Patentes para trailers y remolques: qué es la normativa 101 y a quiénes alcanza - perfil.com",
+      "summary": "Patentes para trailers y remolques: qué es la normativa 101 y a quiénes alcanza &nbsp;&nbsp; perfil.com",
+      "category": "Remolques",
+      "source": "perfil.com",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPcl9ULXBNdHVyTGh6Q0RQN2h6bWpQaEhZdExuTXpWM2tQVDA1LVZEQTFqd0luNGZTdTlQUlpRMlNXd2MtTGM4dXBrUEFyN2lCdXdTclFxcW1tWHQ3a3NBbmlzWnlmTWdwLU9DeDhYR1dVdFdKU2ljdmxQSXl6Y29aTHB5NzFJWUdaM0U0M0NFVHZybkxiODhJSUpiazFqY0ZDSGlZLU9CZl9KX1JwbWM0aTIxZlNSQzdRQnJvZXFoTm5aLWI0dHNUctIBzgFBVV95cUxNa3ZTQ1BKaGREQ2NaaDhueGZ6bHFrejhSU0JlTlJ3NHRMUFk5Zk52QlNuczFEYUVYV0Z0R0NGZDhLdTBob2dMNG9DN2tsWS1meV9sc2VnSmY5RVdlREdhYTRxbFNBNllIMmxUS0hBdUdMMF8zd19ueUxDMkZ4WHAyaU0yeUxtQzVzbUNLTWZLN1l6UnF5WlZlUTV3OVZkSU1XOXc4MDF0b19IbWRvSzcxeEwwcmwzeF90bTJoc2I2ekdUWUhWMEhnOE9DNzJZUQ?oc=5",
+      "time": "Tue, 10 Feb 2026 08:00:00 GMT"
+    },
+    {
+      "title": "Duplicaron un negocio que marcha sobre ruedas por la ruta del petróleo - Punto Biz",
+      "summary": "Duplicaron un negocio que marcha sobre ruedas por la ruta del petróleo &nbsp;&nbsp; Punto Biz",
+      "category": "Remolques",
+      "source": "Punto Biz",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOUHY1Sy1jcVBHdUo2YmJGdW9pQm90akJaT1paZVVyU24zOTU1WVo0bXFpSUM4MjFLejFacmZqNTF6bG9PR2E2cU9oOVdoTmxHY3ZZUkhwYXR1amZONEhnSXBSNlFXcVZIa2ZnS0YzYUNIcDlFRGwtek9oNDVqQ3RpX3MzZHp2b25fTjMtNlZDdnYwbVUxRU5pbXh3Tk9rMUtHYk1kSUlEbWxBb0lsWUI1ZkV3RzB2QQ?oc=5",
+      "time": "Fri, 19 Dec 2025 08:00:00 GMT"
+    },
+    {
+      "title": "¿Quién es Heil Trailer?: La socia americana de Bertotto Boglione - Maquinac",
+      "summary": "¿Quién es Heil Trailer?: La socia americana de Bertotto Boglione &nbsp;&nbsp; Maquinac",
+      "category": "Remolques",
+      "source": "Maquinac",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPdjBUUXVMdmRoZ1lnMmpXV0dXTGV1aWVSMnlSd1BOdVg5NUhCN2FWZkt4bnR1OGhDWjVMWm5lTjU1N1lST0g3TTlHR1BtNHlteU52VlUzeWMwOFdNUTBmc3BvRFQ0SkZVRXZGSVhPdHZCMENQX2NhLTk4Uzg3SkFzdmZodzdFRXZaVXZLak5pWVFTVkkwdmc?oc=5",
+      "time": "Sun, 24 May 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Autorizan la libre circulación de camiones bitrenes en Argentina y se vienen nuevas modalidades - SuperTruck.com.ar",
+      "summary": "Autorizan la libre circulación de camiones bitrenes en Argentina y se vienen nuevas modalidades &nbsp;&nbsp; SuperTruck.com.ar",
+      "category": "Remolques",
+      "source": "SuperTruck.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPTkNLY2NwWjdJU0NfMUd5bjAwRzZvb0x0bGRieVBNQXpidHg0Z1lUTkwyQ1lCSVdTWjFpMGUycXRYWkY2X2RiMG90VDhMWDI3RHVyazFIWFh6alR6bnRmQ0Fwc0J5SzFwYklUQzFXRG1qMlMxZTRKWXQyc2NidG14ZFVaanBWSXRxUnVLYWM2d2lfXzNGSTAzLUtMZHVnMmtaMUp6WkR3NW93Z0tW?oc=5",
+      "time": "Wed, 20 Aug 2025 07:00:00 GMT"
+    },
+    {
+      "title": "Qué es un bitrén, cuántos hay en el país, qué tiene que ver San Luis y dónde se fabrican - Memo.com.ar",
+      "summary": "Qué es un bitrén, cuántos hay en el país, qué tiene que ver San Luis y dónde se fabrican &nbsp;&nbsp; Memo.com.ar",
+      "category": "Remolques",
+      "source": "Memo.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPb2Y3enllU1BtU0RvQ2pkRE5YMDMteldGd1hqUzNqSlV2MllpZmNmQ29CU09YOTRGWHQ2SjR6OVh1UEJPTUUxTFNSUi1FRXZZODdLNTNTbm1KQmZqeVhEc1liTUNtemxZWWtDcTFfZkFSbFVwTnlaZDR6QmtWSkRWM212YWltemVGS2RvbkU3OGxabkRBUUp5RmdNbFlxajdYdUVKNVhMd09YSVV5ZTJxcm1HY0s?oc=5",
+      "time": "Wed, 20 Aug 2025 07:00:00 GMT"
+    },
+    {
+      "title": "Quién es quién en el mercado de acoplados y \"semis\": las 11 familias que mueven un negocio de US$ 300 millones - Agrofy News",
+      "summary": "Quién es quién en el mercado de acoplados y \"semis\": las 11 familias que mueven un negocio de US$ 300 millones &nbsp;&nbsp; Agrofy News",
+      "category": "Remolques",
+      "source": "Agrofy News",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQeEQyOF80M0hjU0VfdHB0UXFWS2twTjc4T3ZQdUJNMXdtMWNwRHRGVzVpMURqcE5LLUdpTTJNMWlLS0ZxaVBUVTZoSmF3SEZCcGY4ZjQ0RVNYcG5UR25jbFBWMnhHN3R5QkJpSjMySDBaVTJpOFZGcGlYYm81dmF5blNnX2pvSFYzUlFSZEh6ZExwbnlMWTVRNjRVaUhuWHd3Y0JDMVlLclFnZ1U1cXdsYm9iVEFHMF82UHA0Tg?oc=5",
+      "time": "Thu, 07 Jul 2022 07:00:00 GMT"
+    },
+    {
+      "title": "Del transporte a las naftas y peajes: uno por uno, todos los aumentos que llegan en enero de 2026 - TN",
+      "summary": "Del transporte a las naftas y peajes: uno por uno, todos los aumentos que llegan en enero de 2026 &nbsp;&nbsp; TN",
+      "category": "Remolques",
+      "source": "TN",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPWmFnaE1fZVExMTJYTVpaQ3Y4cVFvdGhTeWxuNUJkN1dKYkxxSm1EaUZMUVRTX0FoNUVLTGR2V1RRbFhaZjNHQmVfNEJkakE3UzU2elBIRWNPRC1tWFVtN0I5WmVCZW4tNlpINFRTUnduamN0aElITHFmSFdhR1VkcEZMZ2xqMVJyaHJ5ay11QVNmX1FjMld2WThFR1dLMUdrOVozcGlITnBDdkVGNmtSc0xkbmVvMVHSAcsBQVVfeXFMUE9sVllOTFotUTVoRE5DX243cklLbkwzOEhDcnQ1MUFFTmg4dWIwWEpreV9ycFhtQUE2X1Z6REhSLTI0S2xaM2JnbnNEcFlvNDA4MVFsV28waThyLXdhVDdBd0xjdU8yNjF0NFB6OGxjbnVGX3hBUmJOdUxkTzZfc2t0MkI1ZjZtMnQwcEFfYWZnbUkxZDZEeVAybGtVWkJ2WDIzWjQzR091andiQURPNnhQYnhIYW1Pbk15MUZvTHBUOEk2NC16dzhKdHc?oc=5",
+      "time": "Thu, 01 Jan 2026 08:00:00 GMT"
+    },
+    {
+      "title": "Di Gilio REAC: Cuando el remolque piensa - EspacioT",
+      "summary": "Di Gilio REAC: Cuando el remolque piensa &nbsp;&nbsp; EspacioT",
+      "category": "Remolques",
+      "source": "EspacioT",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1qRTVjR1E0d095RGRKalBuZS1KYmtjaG5nTlFfU2R6ZG0wWW1zUkpvLVRKRFFLQkV3a0FZVVRnajFOLV8yN2lOYTk3MjNKcDJzeU1CeUptUkR2c1ZHVjJydWhvRVVMV0kwTTRONg?oc=5",
+      "time": "Tue, 26 May 2026 07:00:00 GMT"
+    },
+    {
+      "title": "El Gobierno simplificó la homologación de trailers: qué beneficios tendrán los usuarios - Infobae",
+      "summary": "El Gobierno simplificó la homologación de trailers: qué beneficios tendrán los usuarios &nbsp;&nbsp; Infobae",
+      "category": "Remolques",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPRzFwYVpyQzJaR1VVanZGQnUtQVRiZjJibW1GVFkzM0M5bUk5UUJIdjdlYks1T0FiODJKU1poenY3M29aYUVwVl8yTGVnc2FCVlNPdGJNQUhLUnlhamtvUlhHS3RpcnZJbkJmVUJqYlM1MHN2VXliUHFmU012QlBxMjhDOUhjcVJkNl9aOGlYeHRkRGVpSjFRc1ZyR2tRdG1pZkQ5T3QxdmtTR210aDBobjJObnVZVUdDLVJ1SVFHc29xN0pKY3NKTkFfSdIB5gFBVV95cUxNY1YweVFsQ1VuaW0wWng4Tk9TWTdtX1FOekZsb0RUVUx0dmlWRjBheDlhSjZhVGR5aHJXaEd3dUZjUHFRVERrUkxkMVhfOHBTTEhLZ2hkS3lBNHMxV1picWxhRWhMdEtGQWh6c0otY3NIanRfaEg5am9oOTdpejF5bXF2VWlva19PWUdCWHZ0RUJzUUNka18xa1RYN1Z5aDNFMFQzMHFBOFFGU2pkVF84MDFIRXhBdExnaWNKSXNQZnlucGlZTllhY2E5T0I3d0E1QS1qTklUMjIzdEllNWdNM3BUcG95QQ?oc=5",
+      "time": "Tue, 11 Mar 2025 07:00:00 GMT"
+    },
+    {
+      "title": "Rosario: Randon no cumple y la UOM amenaza - Urgente24",
+      "summary": "Rosario: Randon no cumple y la UOM amenaza &nbsp;&nbsp; Urgente24",
+      "category": "Remolques",
+      "source": "Urgente24",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNT1ZaYm90ZUpxSjRQd0NhRG10V3NGM1k2bmpSYU1RNUdVYzZyd0J3TDFseWRRZUxFQUNkcUhkbE9ZckFGVExmLU5USk5xaXJ6MHBNVDdRekxBdTRCb2NUOVFvNmFGSnJTTFhHaTU0ZjNvNWl4RkswMnFBdUM0UldOaEZYOG7SAYoBQVVfeXFMT1pUV3ZVUGx4S25zcDRTSGpoWUNoVHY4T2h6azBPN0c3elc1UDU0cDZmV3UxeXpaZ3RFWUl0ckxLaHg0bS1hQmUta1FyQ2J0QWRFVWNSaWxEQ1VmbTcteG5zX1V3elZCZ0FiblhzTUkzc1pQTjN1YjhnNGUycE1tWkNlTE1LUG92NEd3?oc=5",
+      "time": "Thu, 16 Jan 2025 08:00:00 GMT"
+    },
+    {
+      "title": "Bull Trailer avanza en una asociación con la estadounidense Hendrickson - InfoCañuelas",
+      "summary": "Bull Trailer avanza en una asociación con la estadounidense Hendrickson &nbsp;&nbsp; InfoCañuelas",
+      "category": "Remolques",
+      "source": "InfoCañuelas",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOMGl0TzZnNGlxbDFvTlFYOEtkdE5CaU9TZTdjdFBjTmdBbDF0d3kyRWtKa2E4b1VfQmM4NTNRLWZNRFB4bXRYenlpSUdOdmV0cDc1amhVTWUwbzN2cFZkTVFVT001MHY2WVZxYUpBS3F3eUtZVzJQOTlnY25jakVhYlEycEZ5S1ZJZnlscFh5cGQ3WHlUQlQ3T2dfTWo3ZWc0cUtkYkczclBjaTFGSWc?oc=5",
+      "time": "Thu, 04 Jul 2024 07:00:00 GMT"
+    },
+    {
+      "title": "Randon lanza nuevos productos y apuesta al networking en la Cumbre de Estaciones de Servicio - Surtidores.com.ar",
+      "summary": "Randon lanza nuevos productos y apuesta al networking en la Cumbre de Estaciones de Servicio &nbsp;&nbsp; Surtidores.com.ar",
+      "category": "Remolques",
+      "source": "Surtidores.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQMlNBNVdWYUF5bWZyYThDNkVSeG4wdzV3dl9rdkd5X29EMVk3S1RwYmVCYzVyTHpwYmJGX3RkSjNVY2NmNEMxY0h5OUZtRmVabU5aUnJpejV2dnlPd2VOV0djVVF5R0ZBSC00M1ZOa1MxcU5SRjdQdC1KcXh2dTlYcVdPN2NrdGt3YTM3U0NuTDc3X3M1Z0lGNFRZZTdMVVBDSXRTZTdNSkdabDdsUVZJVUxjNUcyR21iY2Rn?oc=5",
+      "time": "Wed, 23 Apr 2025 07:00:00 GMT"
+    },
+    {
+      "title": "Volvo Trucks Argentina refuerza su presencia en una región clave para el transporte de cargas - SuperTruck.com.ar",
+      "summary": "Volvo Trucks Argentina refuerza su presencia en una región clave para el transporte de cargas &nbsp;&nbsp; SuperTruck.com.ar",
+      "category": "Logística",
+      "source": "SuperTruck.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcWtpMlZmWEZEN0FxbVhwTTFCUHVPNkZnZXhRUEMyZzlWT2FITXVEYzR3NWYtRGtweHZITlc5ZUhYWU1DRDlFZU0xZWc4R0RPbW9EU3J0RjVVVW5fU1dNMVY1WlQ4cGd5TDRNZXlPZUhxd1ZTUF96Vm03VE9XRFlMbzFjVF96QmpuSVIzVTZaZEs1T2ZUS09CNk9yWGprV3YxZ2xYci1xNWJDV1U?oc=5",
+      "time": "Fri, 31 Jul 2026 17:35:37 GMT"
+    },
+    {
+      "title": "La 30° Intermodal South America refleja la transformación de la cadena logística - webpicking.com",
+      "summary": "La 30° Intermodal South America refleja la transformación de la cadena logística &nbsp;&nbsp; webpicking.com",
+      "category": "Logística",
+      "source": "webpicking.com",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOdG5zNTJPQWVhcEItT2c1VGVxX1FfQVg5Q1hRYkpEZ2ZSV211a2RHZ3hfcUplOXA1Xy1LaFc5ZEVzb25mQ2U4RFJyODNEeVQ5ejhqeUZPbDdRclRJX1ZlVFlsUmRkd1ZFSlNraXRxbVdIMWVHakFUNFluZ0pXMzNMMmlwR1RCRklqb0xWdGxnekhYOG56Wm5zTm94cFRoUFgyRnpyNllR?oc=5",
+      "time": "Tue, 17 Mar 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Servicios. DHL evalúa en Córdoba armar un hub logístico y traer vuelos de carga directos - lavoz.com.ar",
+      "summary": "Servicios. DHL evalúa en Córdoba armar un hub logístico y traer vuelos de carga directos &nbsp;&nbsp; lavoz.com.ar",
+      "category": "Logística",
+      "source": "lavoz.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTUh3UDNKN3ZsYWVUem5VT0pocFJCTnV5ZkVGdUpyb0RmWkxEb0ZQZTIxYXJCMVpaQi03amRDaWRDNldXRFBpWDVjWThCaS0xOE9rQWxyWU1qRzlDdlFmU2lYZ2poYUpvX3dILVBpRGllb2dDYkJadVdzUG9tZFRBT1RGZmE1NEtqamtWcHF6RWxKQWlVaWJiM2NhQnZDaFZibG01ZEZ3QlJtZHF1X2ZJSDRDRDM3eG5DRHFRcA?oc=5",
+      "time": "Fri, 10 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Sudamérica simplifica las reglas para el transporte internacional terrestre - Infobae",
+      "summary": "Sudamérica simplifica las reglas para el transporte internacional terrestre &nbsp;&nbsp; Infobae",
+      "category": "Logística",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNa05DUWkxbTNIZUNEVEdWLWZQTzZtbGNkeTZtdXBpcmhsQ29CVUNDV0pvWWp5MjB6QXBFRlJaMzVhMGYwdUxlRFczaUlKQXdTRTA4UTdJZ3d4eHU0ZmI2MWFleEdfVHZOM05QVnNSZmF0LWVpcW50bXFBemNIWmpSU0QxdTdqRFV5ZTFHWW8zek5sckUxSXhxcEtzVzk0U1pqajBWRVV4R3czU3NoSEE2Sms0ZEdwOVFDWXfSAdQBQVVfeXFMT2FpVlJOMFBpbkZFUVpIUzZlbkNJNGFUY0ZzN0syZFFLYzFkT1BJTXp6Y1pPWF9WUFlpOUtDZ09JZVhXLVN6MGFmU3QtWTBvNzU1a3puWnVHWlFXdWFGZWRwakhXR0hma2kweDA3QWI5T0F1c3dsUVJubkJOQkkzeVlKTXc4REZMLUtkeFhfTTJIbERmNEJ1c29DRmVYNFVsQjJEelh0MDdMV0VmTTI0RnFkSWN6UDJ3b3ZlTFlaY3c0YjhHQWh1SXR0VFF0V3NLemZlajg?oc=5",
+      "time": "Mon, 13 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "title": "El Corredor Bioceánico de Capricornio: Paraguay en el centro de la integración sudamericana - Inter-American Development Bank",
+      "summary": "El Corredor Bioceánico de Capricornio: Paraguay en el centro de la integración sudamericana &nbsp;&nbsp; Inter-American Development Bank",
+      "category": "Logística",
+      "source": "Inter-American Development Bank",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNQk1ULTcwby1KLXhzcV9PZHd6MzJHU3lIRU5fNElBQUFHN2RRcHJ4NEFrU19KajRKMndXTGkteUFLcERKa3Jqd1llcVp4ck1oNmVXUkxmLUJsRzFFbWpaYzhtZXFhUllyUFd2RG51TFVlclhGM3ZpQkVnV3dhcGRUcWhoX3g5Y3dDMGxEZDdXWlJHMThZTUwwYmVWYy1oVjFqVTFBOHdWX182Mzh0eGRoMlp1NU02TWFLNC15OC0tY1JRTGM4Zl9SRW5MYTZoeGdYT1FCQll3cw?oc=5",
+      "time": "Tue, 09 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "title": "El paso fronterizo que une a dos países de Sudamérica y es parte de un corredor bioceánico clave para la economía regional - Canal26",
+      "summary": "El paso fronterizo que une a dos países de Sudamérica y es parte de un corredor bioceánico clave para la economía regional &nbsp;&nbsp; Canal26",
+      "category": "Logística",
+      "source": "Canal26",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOczktV0RqT2dlVkNrOW0tbUl4dnRNWVR6MzdEWWMtNHMzRnNtanZUXzRLa0lGRXgxUnVMN2VYQmdxdGJLRVNVUVJhMjFMaGg1OGRjbGxXd0JRdkZNQ21Ic0V0TXNBQWxaSjZwVmVwYVdOOEdGaldlX3RYWnB4UWV5b2VNN2RKMHhZMWJQdkZDQkxaejVRclZ3THNhTzFXeEdYVGdicWo3bkhLcVM5a250c1h4QldJalFhbVlIZWJQQlJDT3NFR0RPR0ZRUUIzRVFUdXIwSzJ5Ny00LUJRV2VpM1NDSFdtTHFJTmpiMnFQMTc2TU9fbjBMTFFB?oc=5",
+      "time": "Fri, 29 May 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Grupo México Transportes y Wabtec van por licitación de una red ferroviaria de Argentina - EL CEO",
+      "summary": "Grupo México Transportes y Wabtec van por licitación de una red ferroviaria de Argentina &nbsp;&nbsp; EL CEO",
+      "category": "Logística",
+      "source": "EL CEO",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPenZfVVljdTNZY1VILXJHMkdQcFRDZ3VtRXRWblVjdFhuSXdzSTU2Zi00RzZiUndZVlhpNFYwTi1semVHaURMR3UyNmdKM1FDamo5MzJsa0k5UlhXTTZGUWF5T3kyZ2ZDVzU4NGx6Z3piQzZRV2JOYV9abUxDWFdfOWRVc1JEMVh2NkdnWEpSZjJsWlVzdDl6SnJPWTZpRW1mMXpKcHpMQzU5cExNYUU0NkltcnY4dmM?oc=5",
+      "time": "Thu, 11 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Adani Ports firma acuerdo para adquirir 51% de empresa argentina Meridian Transportes Marítimos - PortalPortuario",
+      "summary": "Adani Ports firma acuerdo para adquirir 51% de empresa argentina Meridian Transportes Marítimos &nbsp;&nbsp; PortalPortuario",
+      "category": "Logística",
+      "source": "PortalPortuario",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQWmlEQjN6c2p4MVFXb1JZeXBnM3JpcWhMUFdRUWRMbzgwQ3pGTXBycDNXUWVfeV83TmtSMXZ1QWhqdVRycUdZLWVoaWxBajJicVM0bUJtZXA4amVicEpPTFhnbERMZ2pYTnliWS0yQWtvZEZ1U24yS3dERW1DWEt6WWMxVjROaVBfZ3g4S09VQ2F3dm1wdWJBWmNsckFhcUNweElGTnZ5dnNUQzMxWXlVTnUzQ19Jd3dja1daUE4zWQ?oc=5",
+      "time": "Fri, 22 May 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Investigarán cómo la altura afecta a los conductores del Corredor Bioceánico - Diario Huarpe",
+      "summary": "Investigarán cómo la altura afecta a los conductores del Corredor Bioceánico &nbsp;&nbsp; Diario Huarpe",
+      "category": "Logística",
+      "source": "Diario Huarpe",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQR0phdVdOZm9rTTJIcXRPRlYxOHVNbEY2aVFja1E4ODZiTENfV2NSZWpGODRqd2IxOWtKVVk5MXhycnV5MlRoUU4zblFrRHl2a1NZRmd5cndGckNTRGFsR09sOHlIX1pjbUp3Z19xTnJldVNKR3RrMXV1QWY0TkJCRkE3RWQ2LVFIZnhOVUdKQ0JDYTVVMmp4WlVFNHpTcWF5YzdNMFIwMmhPU3l3blZtbXl6TG1aa2RtV3c?oc=5",
+      "time": "Sun, 05 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Región de Antofagasta y el corredor bioceánico: de la carga al desarrollo - Agenda Logística",
+      "summary": "Región de Antofagasta y el corredor bioceánico: de la carga al desarrollo &nbsp;&nbsp; Agenda Logística",
+      "category": "Logística",
+      "source": "Agenda Logística",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNcEp2QVN1eUJrX2ZXb0ZsWlVZYkd1ZzlXOGJBR2VHMnRjS1dmUmlKendJT2wyY0J6MmdCOUo4TGFNU1hPUnhTVi1DajhJaGZJeWt0LXNMeFhiU1p2U21xRVFWMFhIOUh2Nm5WNGlwdzk0N0tqTUtqdHdla2RPb3FxNEZLd3k3M0NJelRLeUU0V0tReWxlX0pHbTFqaHU1bF8wUGlRLW51VnBSalJBbUJDUGhSaVcyQ1JqR1BFck9uOGtVYXBNZmJmLW1KUG15YjBUSXNndnAxTEppRTNSM1Y4WHZnTHVYekJDb3pj?oc=5",
+      "time": "Wed, 10 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Prosegur Cash acelera su expansión en transporte internacional con un \"notable aumento\" en Latinoamérica - Bolsamania",
+      "summary": "Prosegur Cash acelera su expansión en transporte internacional con un \"notable aumento\" en Latinoamérica &nbsp;&nbsp; Bolsamania",
+      "category": "Logística",
+      "source": "Bolsamania",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOZUJFZjFuUXNLTHRrQ1ktakoxUWk3TTVNcnc1SENTclVXeER3Si1SS3BEeEdVTWd4MEJVbWRiVmtYaHRPdjc5ZjVSQjFwRzZqX0pXNWZRbjRJYWpZU0tUQ3hVdHA1dUY3WWxIRk80LUhQdWNOOUNvdFB6YXBlRVpicGtUTGpRbHI0WWtKVHh6cjltYXlnRGFNbkNTWXI0RzVtVmtNV0w1VWNLNzJ0cDhRbGI5Q2l0M0dfTkotN214N3V4WjV6S3RwRjNfS1B0aGtEdnfSAdcBQVVfeXFMTkllbF9PMFpsMzZhelMtYk15V3pYWFVHWHRoR2RTNTNmNzh4dG9vc2JDV2d5bFJ2RlJnbWc5Yk5yRm53SnB3YkctNmJJUUo2V21ZTUJXV01aaEtxVWFtWU9JM2hwRWlzbDVhMjhsdTZVdUVQeVdJU0hHbUdNTkpDVXRGZFc5WDAyVzdNSFcyZVVIb2Juc3Yta2IzM05EWFF0U19tMTJNelJFQy1aeVdPMHJ6Q2hRandmWEFTMEctTklERlpVLUF4bHQ0bzhTQy14SjZYQUxBc0E?oc=5",
+      "time": "Tue, 21 Oct 2025 07:00:00 GMT"
+    },
+    {
+      "title": "Antofagasta busca posicionarse como corredor logístico con conexión ferroviaria entre noroeste de Argentina y sus puertos - madero.cl",
+      "summary": "Antofagasta busca posicionarse como corredor logístico con conexión ferroviaria entre noroeste de Argentina y sus puertos &nbsp;&nbsp; madero.cl",
+      "category": "Logística",
+      "source": "madero.cl",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxON0pwSGhuc1UtMHpqdHBEUl9fTmxqVjAzMGc5bV9DUndFUnhidU1lRVFuR2ZWWnh4REtsU3BtNDhHTG55T29wM3NsQkxOUHFHTEFnbTcyY2JHM0ZJc1RWTVB0ZlM1TVUzbjlDeE1pN0N1aklfRDlHbGtlbGQ5UHp2eG5ubWptbXhwZFlQbjByOTZoaDMtbC1VZHdmOXppY284a2RpaG45bTMtaWNLY1dCM19NR2FLakpLTmtsSV9JdlgzRkdFNE8tOUlYVFZ1RWp1V3hEdnBjZw?oc=5",
+      "time": "Thu, 30 Jul 2026 14:45:30 GMT"
+    },
+    {
+      "title": "Un nuevo corredor transpacífico ya conecta China y Sudamérica con menor tiempo de vuelo - Infobae",
+      "summary": "Un nuevo corredor transpacífico ya conecta China y Sudamérica con menor tiempo de vuelo &nbsp;&nbsp; Infobae",
+      "category": "Logística",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNVHhENGhkRlVZUnpDdlFKY2w3NUcySXJsV1JDMjJHQVd2ZHMwRHNjVzVfTkowaGhnb3M4UFFLRG9VZ3lGLWNvOTY0QjlKWnVHVlg1bEROUjB5aFFvTXAtZmlXbXczamhQTThydVlXOG5BdmpSWm5aRzJsUzZmRzdYRFQ3MTlTSTc0WmdwMnBmYXo5bzMxMWtlZVdOZTJQQTdpa2NsWHdXczZ4R3hIOHY4akE0eENjMk55SkUxMTlveWRtdnFXNURUTFRB0gHkAUFVX3lxTE9jT0FvalFsd3RiNFkxNi1RNXliZ2l0Z0J1cldKU1FPVXlnMFNHb1VtSjBCUzM2M1dCLVEySGRBN2I0X05BelpBa2FnUXB5Mjd3cW9MYlBmOVRuaVVqczJqczg0Q0hpcklNMGdzdklqNVpVM0hCUFVUNkJ2RWI1NFRXNkxERUw3VGxXNWt1UjRSRkNtMHdNQWc1eVpWWkhid25jNFNvVkJNMFdxZnd1YUdNTVNycGVtbkZuODZkb2lQdXhoMVFYVWtsMzN0Y0pQWXc0c0tkX2ZpN05xUlA5M3J5Nk9CQg?oc=5",
+      "time": "Thu, 04 Dec 2025 08:00:00 GMT"
+    },
+    {
+      "title": "Grupo México pone sus ojos en Argentina: el gran salto de los trenes de carga - Transporte.mx",
+      "summary": "Grupo México pone sus ojos en Argentina: el gran salto de los trenes de carga &nbsp;&nbsp; Transporte.mx",
+      "category": "Logística",
+      "source": "Transporte.mx",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPSVdEa3ZjZ3VPVUhZTTEwMGo2OXIzcEdBdzFYbUwtVlhiX0cwNm9EWmdIUjJHOG5EQVd4V3g4cXdzZ3BOTHRJTzJWOWxsMVl2U0lTeDc0Y0ZpSGxKWXhXN3lCYWI3YzQzZk16VGhmNjZGcVNUeGc1cVhlOFRsaThvRXY2WHdULWlJcVJpQXpKLXBYY3pfdFhYMXdaSG44R3Fn?oc=5",
+      "time": "Fri, 07 Nov 2025 08:00:00 GMT"
+    },
+    {
+      "title": "El transporte de cargas volvió a acelerar sus costos durante julio - Infobae",
+      "summary": "El transporte de cargas volvió a acelerar sus costos durante julio &nbsp;&nbsp; Infobae",
+      "category": "Economía",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZ2xDY2JreGhzeHEzb25lc0J6ZUl2ZTRiU1dEWlo1NENMN3VKb1p2djZOc1VMSF84RFZITVIwNjBoX09pbkloSURER1otNnpYZGdoM0JScTdreGtwUElvZkswa1N2czhtTDN5R0VHSFBUcW5MbHRKbURpUU5CdlJTXzlFTHRRQzBWQW0xUzdOY1cyQVVnWG1MZGR0SVdBczdOeG9MTVdDQnhCZEh6dXfSAcgBQVVfeXFMUGEySU5xeHBYRGRfT0h0MnBiS1ZGQk1xNnp1Nk52SW16VEJwUEVnWXNyTk5tSnJfdFkwSll3VUJndVZaS0NYYnJCX3M5bmFnMHdnS1BNUnJpWFJVYmpYMGUtVFJuU2Y5U19wZ3lQVktEbWlpZzFXT0padGZxVEs5aGQ1c0ljQWJkTHdiTVFpRFdzdFQ5U0NRSGJBenA2cVF4X1Z1bEc5MnFtQ0lFVThPUUxYWk1BQ2ZxTW9MMjJuT3ZXRm5WNml0WWo?oc=5",
+      "time": "Mon, 03 Aug 2026 20:25:23 GMT"
+    },
+    {
+      "title": "La disparada del precio del gasoil pone en alerta a los transportistas y tensan la salida de la producción - Página|12",
+      "summary": "La disparada del precio del gasoil pone en alerta a los transportistas y tensan la salida de la producción &nbsp;&nbsp; Página|12",
+      "category": "Economía",
+      "source": "Página|12",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNcW5OM0d1V3FtQzVYM0U2OFBYUm9LMko5c01oRUZUbGdvV3NlSmVrU0lNWDlBNnEtXzRVdjBVeURwLUt5SlZ1M0p2NkhrUnVZc19GUTV0ODNmMGRJb2pyaGxKbk1pOWpzcm5hTUtlZ0NmQ2tmYkNMX2pDakFOak5OWG85elBvUllpXzZGOS1Ib09KczgwNmExSWtjbHVfX2dRVElDVUJzMWFVUUx6N1lKS3RQaXRObG5KaXVtdVdLYWlyTGtVY19aUXJ4T2lLbm1UZ1hGMnJrUE5YM1k1?oc=5",
+      "time": "Tue, 07 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Pesca, petróleo, combustible y logística: las empresas que sostienen la presencia británica en las Islas Malvinas - Escenario Mundial",
+      "summary": "Pesca, petróleo, combustible y logística: las empresas que sostienen la presencia británica en las Islas Malvinas &nbsp;&nbsp; Escenario Mundial",
+      "category": "Economía",
+      "source": "Escenario Mundial",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOZjJhUVRQTDdpTWZ4VWVlWDY0ZmFjQzdqUl8yeGkwbUROMG5TX0RRbGFjdHJXMDYwYUpkN0FtZFpIVmxxeXZhNzROZzdrSEEwby1kVXR1UFVOUzdtbDNKMWd4M3RHOVRDaVpDRUFvcG5DWHltOGw2eXp0VDRWRlJ0YlpJS2dCT2lCQnNYN1k2UmZMNE9LQVVVbHRNRHNKMTd1OTFfWXB4MlhPUkFDMlVSNW9yR042eXF1TzRBS1pucUY4SzhVczBBTkpjNTB4NEt2RzVBWFdqamk3ZGJ5RG1KRXZfQWlGeXZqb0RB0gHzAUFVX3lxTE5QV3A2SzFpZkJBaVl1YXpodFB6b0dQRG9zdnVtMHNydmpiYkFid19TVFVpaFk5djRzZ0ZwX0lQYnoxQU1HZ0huSUVEVUZtWVpQNVZvQ1JtZ0k4S1NxdGxUU3ZaREYyMW90Z0N3dnFoWHd6dnBfeS0yZ01UazUxSVlGakxKNlBNRTdpOFFIalVuMWFFWVdhRHdEc00xNVNSLXVuR2VZRUpHVGRaS2REVmE1Tkd5T2R1NjFuZnRHa19yMlNCdTlCWXc1aWM4U3lVaEtMRVhwdVk0OFBEWEhZY3pnZWl6QWtpZlZnYVozVTc0TDllOA?oc=5",
+      "time": "Thu, 30 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Logística en alerta: el transporte de cargas siente el impacto de la guerra y el gasoil - iProfesional",
+      "summary": "Logística en alerta: el transporte de cargas siente el impacto de la guerra y el gasoil &nbsp;&nbsp; iProfesional",
+      "category": "Economía",
+      "source": "iProfesional",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNOUNfYXhveXJhcGoxZWRpYVJXSkhNaVNEX1Q0US1CX1owOHRlRU9kYms4eTV1VXVscGVXVHhndklXWnRINUs1Y0lvOUphanhWZFFpTDQxc1B5WlpQQi1rZmR4VVZBNGZxT3VsbjBmYmhsSlFFa1BHNEhkNjYwcHlCTnFaOV80Rk5Yc0N3bTZ0NFdTYXZ5ODBIbjdfOU1RZnNaMGVpSWtkeE01OFNQb1p6MDJYODRjZ051dU1DZVNLRDE1NTlWeUs3WjJ30gHPAUFVX3lxTFBTTTl6NU9RaWZRbjJHMmhnNzJORlk4T2FvMHJhdzU3RmpCbkd1eGZlLXFMbHJfZndFV1RqaDBQQ3VuV0lPdV8xSENVTG96aXBXTksxSVZ5QzRmaHBiMUtfcTJvX3pDYl9sS3hib1JuUFNyS3dzUU5vZ1pKc01ONFBiX0Q0V18xOF9yeE5RX21HR0hfZFZDLWxVcmF5NGZ1YVQ3cnFPaThka0RRdGVFVWtLLU5GdVg0V0hIMFBfai1BVkZlcmFoUno2b2tIbTQxSQ?oc=5",
+      "time": "Mon, 06 Apr 2026 07:00:00 GMT"
     }
   ]
 }
