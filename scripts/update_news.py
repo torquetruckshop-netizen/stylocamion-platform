@@ -1,3 +1,4 @@
+import html
 import json
 import re
 import urllib.parse
@@ -7,13 +8,13 @@ from pathlib import Path
 import feedparser
 
 QUERIES = [
-    ("Argentina", 'transporte cargas camiones Argentina'),
-    ("Camiones", 'camiones pesados Argentina OR Brasil OR Chile OR Uruguay OR Paraguay'),
-    ("Remolques", 'remolques semirremolques Argentina OR Brasil OR Uruguay'),
-    ("Logística", 'logística transporte cargas Argentina Sudamérica'),
-    ("Economía", 'transporte cargas combustible tarifas crédito Argentina'),
-    ("Rutas y normativa", 'rutas transporte cargas normativa Argentina'),
-    ("Región", 'transporte cargas Sudamérica fronteras puertos corredores'),
+    ("Argentina", 'transporte cargas camiones Argentina when:45d'),
+    ("Camiones", 'camiones pesados Argentina OR Brasil OR Chile OR Uruguay OR Paraguay when:45d'),
+    ("Remolques", 'remolques semirremolques Argentina OR Brasil OR Uruguay when:60d'),
+    ("Logística", 'logística transporte cargas Argentina Sudamérica when:45d'),
+    ("Economía", 'transporte cargas combustible tarifas crédito tasas Argentina when:45d'),
+    ("Rutas y normativa", 'rutas transporte cargas normativa Argentina bitrenes pesos dimensiones when:60d'),
+    ("Región", 'transporte cargas Sudamérica fronteras puertos corredores Mercosur when:45d'),
 ]
 
 BLOCKED_TERMS = [
@@ -25,13 +26,44 @@ REGIONAL_TERMS = [
     'colombia', 'sudamérica', 'sudamerica', 'mercosur', 'latinoamérica', 'latinoamerica'
 ]
 
+TRUSTED_SOURCE_TERMS = [
+    'argentina.gob.ar', 'boletín oficial', 'boletin oficial', 'fadeeac', 'arlog',
+]
+
 OUT = Path(__file__).resolve().parents[1] / 'noticias' / 'data' / 'news.json'
 
 
 def clean(text):
-    text = re.sub(r'<[^>]+>', ' ', text or '')
+    text = html.unescape(text or '')
+    text = re.sub(r'<[^>]+>', ' ', text)
     text = re.sub(r'\s+', ' ', text).strip()
     return text
+
+
+def normalize(text):
+    text = clean(text).lower()
+    text = re.sub(r'[^a-záéíóúüñ0-9 ]+', ' ', text)
+    return re.sub(r'\s+', ' ', text).strip()
+
+
+def clean_title(title, source):
+    title = clean(title)
+    source = clean(source)
+    if source:
+        suffix = f' - {source}'
+        if title.lower().endswith(suffix.lower()):
+            title = title[:-len(suffix)].strip()
+    return title
+
+
+def published_datetime(entry):
+    parsed = entry.get('published_parsed') or entry.get('updated_parsed')
+    if not parsed:
+        return None
+    try:
+        return datetime(*parsed[:6], tzinfo=timezone.utc)
+    except (TypeError, ValueError):
+        return None
 
 
 def is_relevant(title, summary):
@@ -41,6 +73,37 @@ def is_relevant(title, summary):
     return True
 
 
+def regional_score(title, summary, source, published_at):
+    haystack = f'{title} {summary}'.lower()
+    source_l = source.lower()
+    score = 0
+    if 'argentina' in haystack:
+        score += 18
+    if any(term in haystack for term in REGIONAL_TERMS):
+        score += 10
+    if any(term in source_l for term in TRUSTED_SOURCE_TERMS):
+        score += 14
+    if published_at:
+        age_hours = max(0, (datetime.now(timezone.utc) - published_at).total_seconds() / 3600)
+        score += max(0, 72 - min(age_hours / 12, 72))
+    return round(score, 2)
+
+
+def useful_summary(title, summary, source, category):
+    summary = clean(summary)
+    title_norm = normalize(title)
+    summary_norm = normalize(summary)
+    source_norm = normalize(source)
+
+    if not summary or summary_norm == title_norm or summary_norm in {f'{title_norm} {source_norm}'.strip(), f'{title_norm} {source_norm} '.strip()}:
+        return f'Información reciente de {category.lower()} seleccionada por el radar regional de Stylo Camión.'
+
+    if title_norm and title_norm in summary_norm and len(summary_norm) <= len(title_norm) + len(source_norm) + 20:
+        return f'Información reciente de {category.lower()} seleccionada por el radar regional de Stylo Camión.'
+
+    return summary[:260]
+
+
 def google_news_rss(query):
     encoded = urllib.parse.quote(query)
     return f'https://news.google.com/rss/search?q={encoded}&hl=es-419&gl=AR&ceid=AR:es-419'
@@ -48,27 +111,38 @@ def google_news_rss(query):
 
 def main():
     items = []
-    seen = set()
+    seen_titles = set()
+
     for category, query in QUERIES:
         feed = feedparser.parse(google_news_rss(query))
-        for entry in feed.entries[:14]:
-            title = clean(entry.get('title', ''))
+        for entry in feed.entries[:20]:
+            source = clean((entry.get('source') or {}).get('title', 'Fuente externa'))
+            title = clean_title(entry.get('title', ''), source)
             summary = clean(entry.get('summary', ''))
             link = entry.get('link', '')
-            source = clean((entry.get('source') or {}).get('title', 'Fuente externa'))
-            if not title or not link or title.lower() in seen:
+            published_at = published_datetime(entry)
+            key = normalize(title)
+
+            if not title or not link or not key or key in seen_titles:
                 continue
             if not is_relevant(title, summary):
                 continue
-            seen.add(title.lower())
+
+            seen_titles.add(key)
             items.append({
                 'title': title,
-                'summary': summary[:320] if summary else 'Información reciente seleccionada para el radar regional de Stylo Camión.',
+                'summary': useful_summary(title, summary, source, category),
                 'category': category,
                 'source': source,
                 'url': link,
+                'published_at': published_at.isoformat() if published_at else None,
                 'time': entry.get('published', 'Reciente'),
+                '_score': regional_score(title, summary, source, published_at),
             })
+
+    items.sort(key=lambda item: (item['_score'], item.get('published_at') or ''), reverse=True)
+    for item in items:
+        item.pop('_score', None)
 
     payload = {
         'updated_at': datetime.now(timezone.utc).isoformat(),
