@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stylo Camión® Noticias: actualidad del transporte, camiones, remolques, logística, rutas y economía con foco en Argentina y Sudamérica." />
+  <meta name="theme-color" content="#08111b" />
+  <title>Stylo Camión® Noticias | Transporte y logística regional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Stylo Camión, plataforma">
+      <span class="brand-mark">SC</span>
+      <span>STYLO CAMIÓN<sup>®</sup> <b>NOTICIAS</b></span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav id="menu" class="menu" aria-label="Navegación">
+      <a href="#portada">Portada</a>
+      <a href="#ultimas">Últimas</a>
+      <a href="#secciones">Secciones</a>
+      <a href="/">Plataforma</a>
+      <a href="https://cargas.stylocamion.com">Cargas</a>
+      <a href="https://ventas.stylocamion.com">Ventas</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="masthead" id="portada">
+      <div>
+        <p class="eyebrow">EDICIÓN REGIONAL · ACTUALIZACIÓN AUTOMÁTICA</p>
+        <h1>Noticias que sirven para <span>tomar decisiones.</span></h1>
+        <p class="deck">Información del transporte con prioridad argentina, mirada sudamericana y foco en camiones, remolques, rutas, logística, economía y negocios.</p>
+      </div>
+      <div class="edition-status" aria-live="polite">
+        <span class="live-dot"></span>
+        <div><small>ÚLTIMA ACTUALIZACIÓN</small><strong id="lastUpdated">Cargando…</strong></div>
+      </div>
+    </section>
+
+    <section class="toolbar" id="secciones" aria-label="Filtros de noticias">
+      <div class="filters" id="filters">
+        <button class="filter active" data-category="Todas">Todas</button>
+        <button class="filter" data-category="Argentina">Argentina</button>
+        <button class="filter" data-category="Región">Región</button>
+        <button class="filter" data-category="Camiones">Camiones</button>
+        <button class="filter" data-category="Remolques">Remolques</button>
+        <button class="filter" data-category="Logística">Logística</button>
+        <button class="filter" data-category="Economía">Economía</button>
+        <button class="filter" data-category="Rutas y normativa">Rutas y normativa</button>
+      </div>
+      <label class="searchbox">
+        <span>Buscar</span>
+        <input id="search" type="search" placeholder="Camiones, rutas, combustible…" autocomplete="off" />
+      </label>
+    </section>
+
+    <section class="lead-layout" aria-label="Noticias destacadas">
+      <article class="lead-story" id="leadStory"></article>
+      <div class="secondary-stack" id="secondaryStories"></div>
+    </section>
+
+    <section class="news-section" id="ultimas">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">RADAR STYLO CAMIÓN</p>
+          <h2>Últimas noticias</h2>
+        </div>
+        <p id="resultCount">Cargando noticias…</p>
+      </div>
+      <div class="news-grid" id="newsGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <strong>No encontramos noticias con ese filtro.</strong>
+        <span>Probá otra sección o una búsqueda diferente.</span>
+      </div>
+    </section>
+
+    <section class="utility-strip" aria-label="Herramientas de Stylo Camión">
+      <div>
+        <p class="eyebrow">DEL DATO A LA ACCIÓN</p>
+        <h2>La noticia termina donde empieza tu operación.</h2>
+      </div>
+      <div class="utility-links">
+        <a href="https://cargas.stylocamion.com"><span>Cargas</span><strong>Publicar o encontrar cargas →</strong></a>
+        <a href="https://ventas.stylocamion.com"><span>Ventas</span><strong>Ver camiones, remolques y unidades →</strong></a>
+        <a href="/"><span>Plataforma</span><strong>Volver a Stylo Camión →</strong></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>STYLO CAMIÓN<sup>®</sup> NOTICIAS</strong><p>Selección editorial y fuentes identificadas. Argentina + Sudamérica.</p></div>
+    <p>© <span id="year"></span> Stylo Camión. Marca registrada.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
