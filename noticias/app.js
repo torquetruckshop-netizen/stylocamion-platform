@@ -20,7 +20,7 @@ const lastUpdated = document.querySelector('#lastUpdated');
 let activeCategory = 'Todas';
 
 function escapeHtml(value = '') {
-  return String(value).replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+  return String(value).replace(/[&<>'\"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','\"':'&quot;'}[char]));
 }
 
 function clientId(item) {
@@ -52,6 +52,10 @@ function displayTime(item) {
   return new Intl.DateTimeFormat('es-AR', { day: '2-digit', month: 'short', year: 'numeric' }).format(parsed);
 }
 
+function storyActions(href) {
+  return `<div class="story-actions"><a class="story-link" href="${href}">Leer →</a><a class="story-link listen-link" href="${href}#escuchar">Escuchar →</a></div>`;
+}
+
 function articleMarkup(item, type = 'card') {
   const title = escapeHtml(item.title);
   const summary = escapeHtml(item.summary || '');
@@ -61,14 +65,14 @@ function articleMarkup(item, type = 'card') {
   const href = articleHref(item);
 
   if (type === 'lead') {
-    return `<div class="story-ribbon"><span class="tag">${category}</span><span>RADAR REGIONAL</span></div><div class="story-content"><div class="meta"><span>${source}</span><span>·</span><span>${time}</span></div><h2><a class="headline-link" href="${href}">${title}</a></h2><p>${summary}</p><a class="story-link" href="${href}">Leer en Stylo Camión →</a></div>`;
+    return `<div class="story-ribbon"><span class="tag">${category}</span><span>RADAR REGIONAL</span></div><div class="story-content"><div class="meta"><span>${source}</span><span>·</span><span>${time}</span></div><h2><a class="headline-link" href="${href}">${title}</a></h2><p>${summary}</p>${storyActions(href)}</div>`;
   }
 
   if (type === 'secondary') {
-    return `<article class="secondary-story"><div class="meta"><span class="tag">${category}</span><span>${source}</span><span>·</span><span>${time}</span></div><h3><a class="headline-link" href="${href}">${title}</a></h3><a class="story-link" href="${href}">Leer en Stylo Camión →</a></article>`;
+    return `<article class="secondary-story"><div class="meta"><span class="tag">${category}</span><span>${source}</span><span>·</span><span>${time}</span></div><h3><a class="headline-link" href="${href}">${title}</a></h3>${storyActions(href)}</article>`;
   }
 
-  return `<article class="news-card"><div class="meta"><span class="tag">${category}</span><span>${source}</span><span>·</span><span>${time}</span></div><h3><a class="headline-link" href="${href}">${title}</a></h3><p>${summary}</p><a class="story-link" href="${href}">Leer en Stylo Camión →</a></article>`;
+  return `<article class="news-card"><div class="meta"><span class="tag">${category}</span><span>${source}</span><span>·</span><span>${time}</span></div><h3><a class="headline-link" href="${href}">${title}</a></h3><p>${summary}</p>${storyActions(href)}</article>`;
 }
 
 function pickTopStories() {
