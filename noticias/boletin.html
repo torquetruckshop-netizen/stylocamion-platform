@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Boletín de Ruta de Stylo Camión®: noticias del transporte para escuchar en formato continuo." />
+  <meta name="theme-color" content="#07111b" />
+  <title>Boletín de Ruta | Stylo Camión® Noticias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="ruta.css" />
+</head>
+<body class="route-page">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Volver a Stylo Camión Noticias">
+      <span class="brand-mark">SC</span>
+      <span>STYLO CAMIÓN<sup>®</sup> <b>NOTICIAS</b></span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav id="menu" class="menu article-menu" aria-label="Navegación">
+      <a href="index.html">← Noticias</a>
+      <a href="https://cargas.stylocamion.com">Cargas</a>
+      <a href="https://ventas.stylocamion.com">Ventas</a>
+      <a href="/">Plataforma</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="route-hero">
+      <a class="back-link" href="index.html">← Volver a Noticias</a>
+      <p class="eyebrow">MODO RUTA · RESUMEN AUTOMÁTICO</p>
+      <h1>Boletín de Ruta <span>Stylo Camión</span></h1>
+      <p>Una selección breve y continua de las noticias más relevantes para el transporte. Tocá una vez antes de salir y escuchá el resumen sin tener que recorrer la pantalla.</p>
+    </section>
+
+    <section class="route-player" aria-label="Reproductor del Boletín de Ruta">
+      <div class="route-console">
+        <span class="route-now-label">AHORA EN EL BOLETÍN</span>
+        <h2 class="route-now" id="routeNow">Preparando noticias…</h2>
+        <div class="route-meta" id="routeMeta"></div>
+        <p class="route-summary" id="routeSummary">Cargando la selección automática del radar regional.</p>
+
+        <div class="route-controls">
+          <button type="button" class="route-primary" id="routePlay">▶ Iniciar boletín</button>
+          <button type="button" id="routePause">Pausar</button>
+          <button type="button" id="routeStop">Detener</button>
+        </div>
+        <div class="route-progress" aria-hidden="true"><span id="routeProgress"></span></div>
+        <div class="route-status" id="routeStatus" aria-live="polite">Listo para iniciar.</div>
+      </div>
+
+      <aside class="route-side">
+        <section class="route-card">
+          <span class="route-label">EDICIÓN ACTUAL</span>
+          <strong id="routeEdition">Cargando…</strong>
+          <p id="routeDuration">Calculando duración aproximada.</p>
+        </section>
+        <section class="route-card">
+          <span class="route-label">PENSADO PARA LA RUTA</span>
+          <strong>Un toque y sigue solo.</strong>
+          <p>El boletín reproduce las noticias consecutivamente y anuncia cada cambio de tema.</p>
+          <small>La disponibilidad de voz y el comportamiento con la pantalla bloqueada dependen del navegador y del teléfono.</small>
+        </section>
+      </aside>
+    </section>
+
+    <section class="route-safety" aria-label="Uso seguro">
+      <div class="route-safety-inner"><strong>Uso seguro:</strong> iniciá, pausá o configurá el boletín antes de comenzar a conducir. Durante la marcha, utilizá únicamente controles manos libres o los controles de audio del vehículo cuando estén disponibles.</div>
+    </section>
+
+    <section class="route-playlist">
+      <p class="eyebrow">SELECCIÓN DE HOY</p>
+      <h2>Noticias del boletín</h2>
+      <div class="route-list" id="routeList"><div class="route-loading">Cargando selección…</div></div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>STYLO CAMIÓN<sup>®</sup> NOTICIAS</strong><p>Boletín de Ruta · Argentina + Sudamérica.</p></div>
+    <p>© <span id="year"></span> Stylo Camión. Marca registrada.</p>
+  </footer>
+
+  <script src="boletin.js"></script>
+</body>
+</html>
