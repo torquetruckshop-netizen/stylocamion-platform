@@ -60,5 +60,12 @@
   </footer>
 
   <script src="noticia.js"></script>
+  <script>
+    document.querySelector('.menu-button')?.addEventListener('click', event => {
+      const menu = document.querySelector('#menu');
+      const open = menu.classList.toggle('open');
+      event.currentTarget.setAttribute('aria-expanded', String(open));
+    });
+  </script>
 </body>
 </html>
