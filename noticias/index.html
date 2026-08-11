@@ -18,14 +18,21 @@
       <span class="brand-mark">SC</span>
       <span>STYLO CAMIÓN<sup>®</sup> <b>NOTICIAS</b></span>
     </a>
-    <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+    <div class="topbar-actions">
+      <div class="language-switch" aria-label="Idioma de la interfaz">
+        <button type="button" class="lang-button active" data-lang="es">ES</button>
+        <button type="button" class="lang-button" data-lang="pt">PT</button>
+        <button type="button" class="lang-button" data-lang="en">EN</button>
+      </div>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+    </div>
     <nav id="menu" class="menu" aria-label="Navegación">
-      <a href="#portada">Portada</a>
-      <a href="boletin.html">Modo Ruta</a>
-      <a href="#antes-de-salir">Antes de salir</a>
-      <a href="#ultimas">Últimas</a>
-      <a href="#secciones">Secciones</a>
-      <a href="/">Plataforma</a>
+      <a href="#portada" data-i18n="navHome">Portada</a>
+      <a href="boletin.html" data-i18n="navRoute">Modo Ruta</a>
+      <a href="#antes-de-salir" data-i18n="navBefore">Antes de salir</a>
+      <a href="#ultimas" data-i18n="navLatest">Últimas</a>
+      <a href="#secciones" data-i18n="navSections">Secciones</a>
+      <a href="/" data-i18n="navPlatform">Plataforma</a>
       <a href="https://cargas.stylocamion.com">Cargas</a>
       <a href="https://ventas.stylocamion.com">Ventas</a>
     </nav>
@@ -34,66 +41,81 @@
   <main>
     <section class="masthead" id="portada">
       <div>
-        <p class="eyebrow">EDICIÓN REGIONAL · ACTUALIZACIÓN AUTOMÁTICA</p>
-        <h1>Noticias que sirven para <span>tomar decisiones.</span></h1>
-        <p class="deck">Información del transporte con prioridad argentina, mirada sudamericana y foco en camiones, remolques, rutas, logística, economía y negocios.</p>
+        <p class="eyebrow" data-i18n="edition">EDICIÓN REGIONAL · ACTUALIZACIÓN AUTOMÁTICA</p>
+        <h1 data-i18n-html="heroTitle">Noticias que sirven para <span>tomar decisiones.</span></h1>
+        <p class="deck" data-i18n="heroDeck">Información del transporte con prioridad argentina, mirada sudamericana y foco en camiones, remolques, rutas, logística, economía y negocios.</p>
       </div>
       <div class="edition-status" aria-live="polite">
         <span class="live-dot"></span>
-        <div><small>ÚLTIMA ACTUALIZACIÓN</small><strong id="lastUpdated">Cargando…</strong></div>
+        <div><small data-i18n="lastUpdate">ÚLTIMA ACTUALIZACIÓN</small><strong id="lastUpdated">Cargando…</strong></div>
       </div>
     </section>
 
     <section class="trust-strip" aria-label="Criterios editoriales">
-      <span><b>01</b> Fuentes identificadas</span>
-      <span><b>02</b> Actualización automática</span>
-      <span><b>03</b> Prioridad Argentina + Sudamérica</span>
-      <span><b>04</b> Lectura + audio · Modo Ruta</span>
+      <span><b>01</b> <span data-i18n="trust1">Fuentes identificadas</span></span>
+      <span><b>02</b> <span data-i18n="trust2">Actualización automática</span></span>
+      <span><b>03</b> <span data-i18n="trust3">Prioridad Argentina + Sudamérica</span></span>
+      <span><b>04</b> <span data-i18n="trust4">Lectura + audio · Modo Ruta</span></span>
     </section>
 
     <section class="route-feature" aria-label="Boletín de Ruta Stylo Camión">
       <div class="route-feature-copy">
-        <span class="route-label">MODO RUTA · BOLETÍN AUTOMÁTICO</span>
-        <h2>Escuchá las noticias importantes del día, una detrás de otra.</h2>
-        <p>Un resumen continuo de transporte, rutas, economía, camiones, remolques y logística. Preparado para iniciar antes de salir y escuchar con el teléfono conectado al vehículo.</p>
+        <span class="route-label" data-i18n="routeLabel">MODO RUTA · BOLETÍN AUTOMÁTICO</span>
+        <h2 data-i18n="routeTitle">Escuchá las noticias importantes del día, una detrás de otra.</h2>
+        <p data-i18n="routeText">Un resumen continuo de transporte, rutas, economía, camiones, remolques y logística. Preparado para iniciar antes de salir y escuchar con el teléfono conectado al vehículo.</p>
       </div>
       <div class="route-feature-action">
-        <a class="route-button" href="boletin.html">▶ Escuchar Boletín de Ruta</a>
-        <small>Activá la reproducción antes de iniciar la marcha o mediante controles manos libres.</small>
+        <a class="route-button" href="boletin.html" data-i18n="routeButton">▶ Escuchar Boletín de Ruta</a>
+        <small data-i18n="routeSafety">Activá la reproducción antes de iniciar la marcha o mediante controles manos libres.</small>
       </div>
     </section>
 
     <section class="road-tools" id="antes-de-salir" aria-labelledby="roadToolsTitle">
       <div class="road-tools-heading">
         <div>
-          <p class="eyebrow">ANTES DE SALIR</p>
-          <h2 id="roadToolsTitle">Información operativa oficial</h2>
-          <p>Accesos directos para revisar pasos fronterizos, rutas nacionales y alertas meteorológicas antes de iniciar un viaje.</p>
+          <p class="eyebrow" data-i18n="beforeLabel">ANTES DE SALIR</p>
+          <h2 id="roadToolsTitle" data-i18n="beforeTitle">Información operativa oficial</h2>
+          <p data-i18n="beforeText">Accesos directos para revisar pasos fronterizos, rutas nacionales y alertas meteorológicas antes de iniciar un viaje.</p>
         </div>
-        <span class="official-badge">FUENTES OFICIALES</span>
+        <span class="official-badge" data-i18n="officialSources">FUENTES OFICIALES</span>
       </div>
       <div class="road-tool-grid">
         <a class="road-tool-card" href="https://www.argentina.gob.ar/seguridad/pasosinternacionales" target="_blank" rel="noopener">
           <span class="road-tool-index">01</span>
           <span class="road-tool-source">ARGENTINA.GOB.AR</span>
-          <strong>Pasos internacionales</strong>
-          <p>Estado de los pasos que conectan Argentina con los países limítrofes.</p>
-          <span class="road-tool-link">Consultar estado oficial ↗</span>
+          <strong data-i18n="borderTitle">Pasos internacionales</strong>
+          <p data-i18n="borderText">Estado de los pasos que conectan Argentina con los países limítrofes.</p>
+          <span class="road-tool-link" data-i18n="borderLink">Consultar estado oficial ↗</span>
         </a>
         <a class="road-tool-card" href="https://www.argentina.gob.ar/transporte/vialidad-nacional/estado-de-rutas" target="_blank" rel="noopener">
           <span class="road-tool-index">02</span>
           <span class="road-tool-source">VIALIDAD NACIONAL</span>
-          <strong>Rutas nacionales</strong>
-          <p>Consulta del estado actualizado de las rutas nacionales y observaciones de transitabilidad.</p>
-          <span class="road-tool-link">Ver estado de rutas ↗</span>
+          <strong data-i18n="roadsTitle">Rutas nacionales</strong>
+          <p data-i18n="roadsText">Consulta del estado actualizado de las rutas nacionales y observaciones de transitabilidad.</p>
+          <span class="road-tool-link" data-i18n="roadsLink">Ver estado de rutas ↗</span>
         </a>
         <a class="road-tool-card" href="https://ws2.smn.gob.ar/alertas" target="_blank" rel="noopener">
           <span class="road-tool-index">03</span>
           <span class="road-tool-source">SMN</span>
-          <strong>Alertas meteorológicas</strong>
-          <p>Sistema de Alerta Temprana del Servicio Meteorológico Nacional.</p>
-          <span class="road-tool-link">Ver alertas vigentes ↗</span>
+          <strong data-i18n="weatherTitle">Alertas meteorológicas</strong>
+          <p data-i18n="weatherText">Sistema de Alerta Temprana del Servicio Meteorológico Nacional.</p>
+          <span class="road-tool-link" data-i18n="weatherLink">Ver alertas vigentes ↗</span>
         </a>
+      </div>
+    </section>
+
+    <section class="ephemeris-strip" aria-labelledby="ephemerisTitle">
+      <div>
+        <p class="eyebrow" data-i18n="ephemerisLabel">EFEMÉRIDES DEL TRANSPORTE</p>
+        <h2 id="ephemerisTitle" data-i18n="ephemerisTitle">Hoy en la ruta</h2>
+      </div>
+      <div class="ephemeris-card">
+        <span class="ephemeris-date" id="ephemerisDate">—</span>
+        <div>
+          <strong id="ephemerisHeadline">Cargando efeméride…</strong>
+          <p id="ephemerisText"></p>
+          <a id="ephemerisSource" href="#" target="_blank" rel="noopener" hidden data-i18n="ephemerisSource">Ver fuente oficial ↗</a>
+        </div>
       </div>
     </section>
 
@@ -122,7 +144,7 @@
         <button class="filter" data-category="Rutas y normativa">Rutas y normativa</button>
       </div>
       <label class="searchbox">
-        <span>Buscar</span>
+        <span data-i18n="searchLabel">Buscar</span>
         <input id="search" type="search" placeholder="Camiones, rutas, combustible…" autocomplete="off" />
       </label>
     </section>
@@ -136,32 +158,32 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">RADAR STYLO CAMIÓN</p>
-          <h2>Últimas noticias</h2>
+          <h2 data-i18n="latestTitle">Últimas noticias</h2>
         </div>
         <p id="resultCount">Cargando noticias…</p>
       </div>
       <div class="news-grid" id="newsGrid"></div>
       <div class="empty-state" id="emptyState" hidden>
-        <strong>No encontramos noticias con ese filtro.</strong>
-        <span>Probá otra sección o una búsqueda diferente.</span>
+        <strong data-i18n="emptyTitle">No encontramos noticias con ese filtro.</strong>
+        <span data-i18n="emptyText">Probá otra sección o una búsqueda diferente.</span>
       </div>
     </section>
 
     <section class="utility-strip" aria-label="Herramientas de Stylo Camión">
       <div>
-        <p class="eyebrow">DEL DATO A LA ACCIÓN</p>
-        <h2>La noticia termina donde empieza tu operación.</h2>
+        <p class="eyebrow" data-i18n="actionLabel">DEL DATO A LA ACCIÓN</p>
+        <h2 data-i18n="actionTitle">La noticia termina donde empieza tu operación.</h2>
       </div>
       <div class="utility-links">
-        <a href="https://cargas.stylocamion.com"><span>Cargas</span><strong>Publicar o encontrar cargas →</strong></a>
-        <a href="https://ventas.stylocamion.com"><span>Ventas</span><strong>Ver camiones, remolques y unidades →</strong></a>
-        <a href="/"><span>Plataforma</span><strong>Volver a Stylo Camión →</strong></a>
+        <a href="https://cargas.stylocamion.com"><span>Cargas</span><strong data-i18n="loadsLink">Publicar o encontrar cargas →</strong></a>
+        <a href="https://ventas.stylocamion.com"><span>Ventas</span><strong data-i18n="salesLink">Ver camiones, remolques y unidades →</strong></a>
+        <a href="/"><span data-i18n="navPlatform">Plataforma</span><strong data-i18n="platformLink">Volver a Stylo Camión →</strong></a>
       </div>
     </section>
   </main>
 
   <footer>
-    <div><strong>STYLO CAMIÓN<sup>®</sup> NOTICIAS</strong><p>Selección editorial y fuentes identificadas. Argentina + Sudamérica.</p></div>
+    <div><strong>STYLO CAMIÓN<sup>®</sup> NOTICIAS</strong><p data-i18n="footerText">Selección editorial y fuentes identificadas. Argentina + Sudamérica.</p></div>
     <p>© <span id="year"></span> Stylo Camión. Marca registrada.</p>
   </footer>
 
