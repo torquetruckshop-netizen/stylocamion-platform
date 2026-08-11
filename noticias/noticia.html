@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="ruta.css" />
 </head>
 <body>
   <header class="topbar">
@@ -17,8 +18,10 @@
       <span class="brand-mark">SC</span>
       <span>STYLO CAMIÓN<sup>®</sup> <b>NOTICIAS</b></span>
     </a>
-    <nav class="menu article-menu" aria-label="Navegación de la noticia">
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav id="menu" class="menu article-menu" aria-label="Navegación de la noticia">
       <a href="index.html">← Portada</a>
+      <a href="boletin.html">Modo Ruta</a>
       <a href="https://cargas.stylocamion.com">Cargas</a>
       <a href="https://ventas.stylocamion.com">Ventas</a>
       <a href="/">Plataforma</a>
