@@ -3,9 +3,10 @@ const articleSide = document.querySelector('#articleSide');
 const relatedNews = document.querySelector('#relatedNews');
 const params = new URLSearchParams(window.location.search);
 const requestedId = params.get('id') || '';
+let activeUtterance = null;
 
 function escapeHtml(value = '') {
-  return String(value).replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+  return String(value).replace(/[&<>'\"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','\"':'&quot;'}[char]));
 }
 
 function clientId(item) {
@@ -58,6 +59,72 @@ function relatedMarkup(item) {
   </article>`;
 }
 
+function speechText(item, category, source) {
+  return [
+    'Stylo Camión Noticias.',
+    item.title,
+    item.summary || '',
+    'Por qué importa.',
+    contextText(category),
+    `Fuente: ${source}.`
+  ].filter(Boolean).join(' ');
+}
+
+function setupAudioReader(item, category, source) {
+  const play = document.querySelector('#listenPlay');
+  const pause = document.querySelector('#listenPause');
+  const stop = document.querySelector('#listenStop');
+  const status = document.querySelector('#listenStatus');
+
+  if (!play || !status) return;
+
+  if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
+    play.disabled = true;
+    if (pause) pause.disabled = true;
+    if (stop) stop.disabled = true;
+    status.textContent = 'La lectura por voz no está disponible en este navegador.';
+    return;
+  }
+
+  function setStatus(text) {
+    status.textContent = text;
+  }
+
+  play.addEventListener('click', () => {
+    if (window.speechSynthesis.paused) {
+      window.speechSynthesis.resume();
+      setStatus('Reproduciendo');
+      return;
+    }
+
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(speechText(item, category, source));
+    const voices = window.speechSynthesis.getVoices();
+    utterance.voice = voices.find(voice => voice.lang.toLowerCase() === 'es-ar') || voices.find(voice => voice.lang.toLowerCase().startsWith('es')) || null;
+    utterance.lang = utterance.voice?.lang || 'es-AR';
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+    utterance.onstart = () => setStatus('Reproduciendo');
+    utterance.onend = () => setStatus('Lectura finalizada');
+    utterance.onerror = () => setStatus('No se pudo reproducir la lectura en este dispositivo.');
+    activeUtterance = utterance;
+    window.speechSynthesis.speak(utterance);
+  });
+
+  pause?.addEventListener('click', () => {
+    if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+      window.speechSynthesis.pause();
+      setStatus('Pausado');
+    }
+  });
+
+  stop?.addEventListener('click', () => {
+    window.speechSynthesis.cancel();
+    activeUtterance = null;
+    setStatus('Detenido');
+  });
+}
+
 function renderArticle(item, allItems) {
   const category = item.category || 'Actualidad';
   const source = item.source || 'Fuente identificada';
@@ -75,6 +142,19 @@ function renderArticle(item, allItems) {
     <div class="article-kicker"><span class="tag">${escapeHtml(category)}</span><span>${escapeHtml(source)}</span><span>·</span><span>${escapeHtml(displayTime(item))}</span></div>
     <h1>${escapeHtml(item.title)}</h1>
     <p class="article-lead">${escapeHtml(item.summary || '')}</p>
+    <section class="listen-box" id="escuchar" aria-label="Escuchar esta noticia">
+      <div class="listen-copy">
+        <span class="listen-label">MODO RUTA</span>
+        <strong>Escuchar esta noticia</strong>
+        <p>Título, resumen y contexto leídos en voz alta. Activá la reproducción antes de iniciar la marcha o mediante controles manos libres.</p>
+      </div>
+      <div class="listen-controls">
+        <button type="button" class="listen-primary" id="listenPlay">Escuchar</button>
+        <button type="button" id="listenPause">Pausar</button>
+        <button type="button" id="listenStop">Detener</button>
+        <span id="listenStatus" aria-live="polite">Listo para escuchar</span>
+      </div>
+    </section>
     <div class="article-divider"></div>
     <section class="article-context">
       <p class="eyebrow">POR QUÉ IMPORTA</p>
@@ -106,6 +186,8 @@ function renderArticle(item, allItems) {
     .sort((a, b) => Number(b.category === category) - Number(a.category === category))
     .slice(0, 3);
   relatedNews.innerHTML = related.map(relatedMarkup).join('');
+
+  setupAudioReader(item, category, source);
 
   document.querySelector('#copyLink')?.addEventListener('click', async () => {
     const status = document.querySelector('#copyStatus');
@@ -140,6 +222,10 @@ async function init() {
     renderMissing();
   }
 }
+
+window.addEventListener('beforeunload', () => {
+  if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+});
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 init();
