@@ -6,7 +6,7 @@ const requestedId = params.get('id') || '';
 let activeUtterance = null;
 
 function escapeHtml(value = '') {
-  return String(value).replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+  return String(value).replace(/[&<>'\"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','\"':'&quot;'}[char]));
 }
 
 function clientId(item) {
@@ -47,7 +47,7 @@ function actionFor(category) {
   if (['Logística', 'Argentina', 'Región', 'Rutas y normativa'].includes(category)) {
     return { label: 'Explorar Stylo Cargas', text: 'Cargas y oportunidades para la operación logística.', url: 'https://cargas.stylocamion.com' };
   }
-  return { label: 'Volver a la plataforma', text: 'Acceder al ecosistema completo de Stylo Camión.', url: '/' };
+  return { label: 'Volver a la plataforma', text: 'Acceder al ecosistema completo de Stylo Camión.', url: 'https://stylocamion.com/' };
 }
 
 function relatedMarkup(item) {
