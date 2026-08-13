@@ -23,15 +23,15 @@ export function normalizeSource(source='OTHER') {
 export function normalizeIntake(input, now = new Date()) {
   const raw = String(input.raw_text || '').trim();
   const source = normalizeSource(input.source);
-  const arrow = raw.match(/([A-ZÁÉÍÓÚÑ][\p{L} .'-]{2,40}?)\s*(?:→|->|\bhasta\b|\ba\b)\s*([A-ZÁÉÍÓÚÑ][\p{L} .'-]{2,40}?)(?=,|\.|\b\d+\s*(?:t|tn|ton)|\b(?:hoy|mañana|manana)\b|$)/iu);
+  const arrow = extractRoute(raw);
   const weight = raw.match(/(\d+(?:[.,]\d+)?)\s*(?:t|tn|ton|toneladas?)/i);
   const equipment = EQUIPMENT.find(([, rx]) => rx.test(raw))?.[0] ?? null;
   const cargo = CARGO.find(([, rx]) => rx.test(raw))?.[0] ?? 'carga general';
-  const pickupAt = inferPickupAt(raw, now);
+  const pickupAt = inferPickupAt(raw, input.received_at ?? now.toISOString());
 
   const missing = [];
-  if (!arrow?.[1]) missing.push('origin');
-  if (!arrow?.[2]) missing.push('destination');
+  if (!arrow?.origin) missing.push('origin');
+  if (!arrow?.destination) missing.push('destination');
   if (!equipment) missing.push('equipment_required');
 
   return {
@@ -39,8 +39,8 @@ export function normalizeIntake(input, now = new Date()) {
     source,
     sender_id: input.sender_id ?? null,
     raw_text: raw,
-    origin: arrow?.[1]?.trim() ?? null,
-    destination: arrow?.[2]?.trim() ?? null,
+    origin: arrow?.origin ?? null,
+    destination: arrow?.destination ?? null,
     cargo_type: cargo,
     weight_tn: weight ? Number(weight[1].replace(',', '.')) : null,
     equipment_required: equipment,
@@ -54,13 +54,33 @@ export function normalizeIntake(input, now = new Date()) {
   };
 }
 
-function inferPickupAt(raw, now) {
-  const d = new Date(now);
-  if (/\bma(?:ñ|n)ana\b/i.test(raw)) d.setDate(d.getDate() + 1);
-  else if (!/\bhoy\b/i.test(raw)) return null;
+function extractRoute(raw) {
+  const patterns = [
+    /\ben\s+([A-ZÁÉÍÓÚÑ][\p{L} .'-]{2,40}?)\s+para\s+([A-ZÁÉÍÓÚÑ][\p{L} .'-]{2,40}?)(?=,|\.|\b\d+\s*(?:t|tn|ton)|\b(?:hoy|mañana|manana)\b|$)/iu,
+    /(?:^|\b)(?:desde|de)\s+([A-ZÁÉÍÓÚÑ][\p{L} .'-]{2,40}?)\s+(?:a|hasta)\s+([A-ZÁÉÍÓÚÑ][\p{L} .'-]{2,40}?)(?=,|\.|\b\d+\s*(?:t|tn|ton)|\b(?:hoy|mañana|manana)\b|$)/iu,
+    /([A-ZÁÉÍÓÚÑ][\p{L} .'-]{2,40}?)\s*(?:→|->|\bhasta\b|\ba\b)\s*([A-ZÁÉÍÓÚÑ][\p{L} .'-]{2,40}?)(?=,|\.|\b\d+\s*(?:t|tn|ton)|\b(?:hoy|mañana|manana)\b|$)/iu
+  ];
+  for (const rx of patterns) {
+    const m = raw.match(rx);
+    if (m) return {origin:m[1].trim(), destination:m[2].trim()};
+  }
+  return null;
+}
+
+function inferPickupAt(raw, receivedAt) {
+  if (!/\b(?:hoy|ma(?:ñ|n)ana)\b/i.test(raw)) return null;
+  const dateMatch = String(receivedAt).match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!dateMatch) return null;
+  const offsetMatch = String(receivedAt).match(/(Z|[+-]\d{2}:\d{2})$/);
+  const offset = offsetMatch?.[1] || '-03:00';
+  const base = new Date(Date.UTC(Number(dateMatch[1]), Number(dateMatch[2])-1, Number(dateMatch[3]), 12));
+  if (/\bma(?:ñ|n)ana\b/i.test(raw)) base.setUTCDate(base.getUTCDate()+1);
+  const datePart = base.toISOString().slice(0,10);
   const hour = raw.match(/\b([01]?\d|2[0-3])(?::([0-5]\d))?\s*(?:h|hs|horas)?\b/);
-  if (hour) d.setHours(Number(hour[1]), Number(hour[2] || 0), 0, 0);
-  return d.toISOString();
+  const hh = String(hour ? Number(hour[1]) : 0).padStart(2,'0');
+  const mm = String(hour ? Number(hour[2] || 0) : 0).padStart(2,'0');
+  const suffix = offset === 'Z' ? 'Z' : offset;
+  return new Date(`${datePart}T${hh}:${mm}:00${suffix}`).toISOString();
 }
 
 export function documentTrafficLight(checks=[]) {
