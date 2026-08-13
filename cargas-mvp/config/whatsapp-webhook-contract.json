@@ -1,0 +1,33 @@
+{
+  "version": "0.1.0",
+  "incoming_message": {
+    "required": ["provider_message_id", "phone_number_id", "sender", "received_at", "message_type"],
+    "fields": {
+      "provider_message_id": "string",
+      "phone_number_id": "string",
+      "sender": "string",
+      "received_at": "datetime",
+      "message_type": "text|audio|image|document|interactive|unknown",
+      "text": "string|null",
+      "media_id": "string|null",
+      "interactive_reply_id": "string|null",
+      "raw_payload": "object"
+    }
+  },
+  "message_status": {
+    "required": ["provider_message_id", "status", "updated_at"],
+    "fields": {
+      "provider_message_id": "string",
+      "status": "sent|delivered|read|failed",
+      "updated_at": "datetime",
+      "recipient": "string|null",
+      "raw_payload": "object"
+    }
+  },
+  "stylo_mapping": {
+    "text_message": "POST /intake/messages",
+    "interactive_accept": "POST /loads/{loadId}/assign",
+    "interactive_reject": "record match decision and contact next candidate",
+    "status_event": "append load event when linked to an active operation"
+  }
+}
