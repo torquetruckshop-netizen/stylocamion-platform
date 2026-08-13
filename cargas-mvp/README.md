@@ -1,93 +1,89 @@
 # Stylo Cargas · MVP autónomo
 
-Primera base funcional para probar el flujo operativo antes de integrar servicios externos.
+Este módulo vive aislado de producción en la rama `agent/cargas-mvp-autonomo`.
 
 ## Objetivo
 
-Convertir mensajes de cargas y ofertas de camiones en operaciones estructuradas que puedan avanzar de forma autónoma cuando todas las reglas estén en verde.
+Probar el circuito operativo completo antes de conectar servicios externos:
 
-## Flujo MVP
-
-1. Entrada de mensaje desde WhatsApp directo, reenvío o operador.
-2. Clasificación IA: carga, camión disponible, consulta o ruido.
-3. Normalización: origen, destino, mercadería, peso, equipo, fecha, tarifa y contacto.
-4. Validación documental.
-5. Búsqueda y ranking de transportistas.
-6. Adjudicación.
-7. Seguimiento.
-8. Descarga y cierre.
-9. Auditoría e informe.
-
-## Estados principales
-
-- DETECTADA
-- EN_VALIDACION
-- PUBLICADA
-- BUSCANDO
-- PREASIGNADA
-- ADJUDICADA
-- EN_CAMINO_A_CARGA
-- EN_CARGA
-- EN_TRANSITO
-- EN_DESTINO
-- DESCARGANDO
-- ENTREGADA
-- A_EVALUAR
-- CERRADA
-- BLOQUEADA
-
-## Semáforo
-
-### Verde
-Todo obligatorio está validado. La operación puede avanzar sin intervención Stylo.
-
-### Amarillo
-Existe una inconsistencia recuperable. La IA intenta resolverla: pedir dato, actualizar ubicación, solicitar confirmación, etc.
-
-### Rojo
-Existe una falla crítica. La operación se bloquea y queda visible en la torre de control Stylo.
-
-## Scoring inicial
-
-La demo usa una fórmula simple para validar el recorrido:
-
-- compatibilidad de equipo
-- documentación vigente
-- disponibilidad
-- distancia al origen
-- reputación histórica
-
-La fórmula se reemplazará por un motor configurable en backend.
-
-## Integraciones previstas
-
-### Etapa 1
-- WhatsApp Business Cloud API
-- base de datos de transportistas/unidades
-- geolocalización de teléfono
-- motor de IA para extracción estructurada
-
-### Etapa 2
-- GPS / telemática / GESTYA si existe acceso técnico autorizado
-- pasaporte documental con vencimientos
-- mensajería automática y escalamiento
-- reputación operativa
-
-### Etapa 3
-- integraciones documentales oficiales disponibles, incluida Carta de Porte cuando corresponda
-- reglas por tipo de mercadería y país
-- operación autónoma por excepción
-- reporting comercial y auditoría
-
-## Principio de diseño
-
-Stylo no debe aprobar cada paso. El sistema debe trabajar con reglas:
-
-- TODO VERDE -> AVANZA
-- AMARILLO -> IA INTENTA RESOLVER
-- ROJO -> BLOQUEA
-- CASO NO PREVISTO -> INTERVENCION STYLO
+1. recibir una carga desde WhatsApp/reenvío/formulario;
+2. estructurarla;
+3. marcar faltantes;
+4. validar reglas de compliance;
+5. buscar unidades compatibles;
+6. rankear candidatos;
+7. adjudicar;
+8. registrar eventos y excepciones.
 
 ## Estado actual
 
-El archivo `index.html` es un MVP frontend autónomo y ejecutable que permite probar el flujo conceptual y el scoring. No utiliza todavía datos productivos ni APIs externas.
+### Ya implementado
+
+- interfaz funcional aislada;
+- modelo de dominio;
+- contrato OpenAPI inicial;
+- backend Node.js sin dependencias externas;
+- endpoint de ingesta `/intake/messages`;
+- listado de cargas `/loads`;
+- matching `/loads/{loadId}/match`;
+- adjudicación `/loads/{loadId}/assign`;
+- actualización de ubicación `/vehicles/{vehicleId}/location`;
+- registro de eventos `/loads/{loadId}/events`;
+- listado de excepciones `/exceptions`;
+- parser heurístico inicial para mensajes de prueba;
+- scoring por equipo, documentación, disponibilidad, distancia y reputación;
+- semáforo GREEN / YELLOW / RED;
+- datos piloto de transportistas y unidades;
+- tests automáticos del motor;
+- workflow de CI para el MVP.
+
+### Pruebas verificadas
+
+La cadena fue ejecutada localmente de punta a punta:
+
+`mensaje natural -> carga estructurada -> matching -> ranking -> adjudicación -> unidad BUSY`
+
+También se corrigieron casos de:
+
+- frases del tipo `en Rafaela para Rosario`;
+- horario argentino `-03:00`;
+- transición inmediata de la unidad a ocupada tras adjudicación.
+
+## Cómo ejecutar la API
+
+```bash
+cd cargas-mvp/api
+npm test
+npm start
+```
+
+Servidor local por defecto: `http://localhost:8787`.
+
+## Limitaciones intencionales de esta fase
+
+- almacenamiento en memoria;
+- parser heurístico en lugar de OpenAI;
+- coordenadas de algunas ciudades embebidas sólo para demo;
+- sin WhatsApp Business real;
+- sin Supabase;
+- sin GESTYA/telemática real;
+- sin integración documental externa.
+
+Estas limitaciones permiten validar el flujo sin bloquear el proyecto por integraciones de terceros.
+
+## Próximo bloque
+
+1. persistencia real en Supabase/Postgres;
+2. adaptador de normalización con OpenAI Structured Outputs;
+3. webhook de WhatsApp Business;
+4. catálogo real de transportistas/unidades piloto;
+5. geolocalización real;
+6. reglas de compliance persistentes;
+7. motor autónomo de contacto/escalamiento;
+8. tablero conectado a datos reales.
+
+## Regla operativa objetivo
+
+- **GREEN**: avanza sin autorización humana;
+- **YELLOW**: la IA intenta resolver;
+- **RED**: bloquea y deriva a Stylo.
