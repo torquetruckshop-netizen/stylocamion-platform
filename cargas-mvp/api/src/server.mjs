@@ -74,9 +74,9 @@ const server = http.createServer(async (req,res)=>{
       if (vehicle.document_state==='RED' || load.traffic_light==='RED') return send(res,422,{error:'Falló una regla crítica de compliance'});
       const carrier=store.getCarrier(vehicle.carrier_id);
       const updated=store.updateLoad(load.id,{status:'ADJUDICADA',assigned_vehicle_id:vehicle.id,assigned_carrier_id:carrier.id});
-      store.updateVehicle(vehicle.id,{availability:'BUSY'});
+      const updatedVehicle=store.updateVehicle(vehicle.id,{availability:'BUSY'});
       store.addEvent({load_id:load.id,type:'LOAD_ASSIGNED',actor:input.mode==='MANUAL'?'STYLO':'SYSTEM',created_at:new Date().toISOString(),payload:{vehicle_id:vehicle.id,carrier_id:carrier.id,mode:input.mode || 'ASSISTED'}});
-      return send(res,200,{load:updated,vehicle,carrier});
+      return send(res,200,{load:updated,vehicle:updatedVehicle,carrier});
     }
 
     const eventPath=url.pathname.match(/^\/loads\/([^/]+)\/events$/);
