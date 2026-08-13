@@ -9,6 +9,7 @@ test('normaliza una carga típica de WhatsApp',()=>{
   assert.equal(load.weight_tn,28);
   assert.equal(load.cargo_type,'maíz');
   assert.equal(load.equipment_required,'chasis + acoplado');
+  assert.equal(load.pickup_at,'2026-08-14T11:00:00.000Z');
   assert.equal(load.status,'PUBLICADA');
   assert.equal(load.traffic_light,'GREEN');
 });
@@ -26,4 +27,10 @@ test('ranking premia compatibilidad documental y cercanía',()=>{
   const vehicle={id:'V1',carrier_id:'C1',equipment_type:'sider',availability:'AVAILABLE',document_state:'GREEN'};
   const m=scoreVehicle(load,vehicle,carrier,10);
   assert.ok(m.total_score>=90);
+});
+
+test('entiende texto natural en X para Y',()=>{
+  const load=normalizeIntake({source:'WHATSAPP_DIRECT',raw_text:'Tengo 28 tn de maíz en Rafaela para Rosario mañana 08:00, chasis + acoplado',received_at:'2026-08-13T02:00:00-03:00'});
+  assert.equal(load.origin,'Rafaela');
+  assert.equal(load.destination,'Rosario');
 });
