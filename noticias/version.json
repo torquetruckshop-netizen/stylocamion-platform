@@ -1,0 +1,20 @@
+{
+  "product": "Stylo Camion Noticias",
+  "release": "2026-08-14-noticias-v2",
+  "status": "ready-for-deploy",
+  "features": [
+    "navegacion-ecosistema",
+    "logo-limpio",
+    "hitos-stylo-camion",
+    "infobae-movant",
+    "vorterix-litoral",
+    "expoagro-2026",
+    "feria-usado-nuevo-2027",
+    "modo-ruta",
+    "boletin-ruta",
+    "informacion-operativa-oficial",
+    "efemerides",
+    "idiomas-es-pt-en",
+    "radar-automatico"
+  ]
+}
