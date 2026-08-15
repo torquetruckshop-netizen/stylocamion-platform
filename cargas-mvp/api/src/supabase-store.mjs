@@ -246,6 +246,17 @@ export class SupabaseStore {
     return mapIntakeRow(data);
   }
 
+  async claimIntakeMessage(id, expectedStatuses = ['RECEIVED','AWAITING_TRANSCRIPTION','FAILED']) {
+    const { data, error } = await this.db.from('intake_messages')
+      .update({ processing_status:'PROCESSING', processing_error:null, updated_at:new Date().toISOString() })
+      .eq('id', id)
+      .in('processing_status', expectedStatuses)
+      .select('*')
+      .maybeSingle();
+    if (error) throw error;
+    return mapIntakeRow(data);
+  }
+
   async listIntakeMessages(filters = {}) {
     let q = this.db.from('intake_messages').select('*').order('received_at', { ascending: true });
     if (filters.processing_status) q = q.eq('processing_status', filters.processing_status);
@@ -264,6 +275,13 @@ export class SupabaseStore {
 
   async getLoad(publicId) {
     const { data, error } = await this.db.from('loads').select('*').eq('public_id', publicId).maybeSingle();
+    if (error) throw error;
+    return data ? mapLoadRow(data) : null;
+  }
+
+  async getLoadByIntakeMessageId(intakeMessageId) {
+    if (!intakeMessageId) return null;
+    const { data, error } = await this.db.from('loads').select('*').eq('intake_message_id', intakeMessageId).maybeSingle();
     if (error) throw error;
     return data ? mapLoadRow(data) : null;
   }
