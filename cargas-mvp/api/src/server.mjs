@@ -2,7 +2,8 @@ import http from 'node:http';
 import { URL } from 'node:url';
 import { MemoryStore, seed } from './store.mjs';
 import { normalizeIntake, scoreVehicle, haversineKm } from './engine.mjs';
-import { createAutomaticRegistration, applyAdminReview, normalizePhone } from './registration-engine.mjs';
+import { createAutomaticRegistration, applyAdminReview, normalizePhone, linkAuthMethod } from './registration-engine.mjs';
+import { verifyGoogleCredential, googlePatch } from './google-identity.mjs';
 
 const store = new MemoryStore(seed);
 const PORT = Number(process.env.PORT || 8787);
@@ -37,7 +38,7 @@ const server = http.createServer(async (req,res)=>{
   if (req.method==='OPTIONS') return send(res,204,{});
   const url=new URL(req.url,`http://${req.headers.host || 'localhost'}`);
   try {
-    if (req.method==='GET' && url.pathname==='/health') return send(res,200,{ok:true,service:'stylo-cargas-mvp-api',version:'0.2.0'});
+    if (req.method==='GET' && url.pathname==='/health') return send(res,200,{ok:true,service:'stylo-cargas-mvp-api',version:'0.3.0'});
 
     if (req.method==='POST' && url.pathname==='/users/register'){
       const input=await body(req);
@@ -45,10 +46,53 @@ const server = http.createServer(async (req,res)=>{
       const phone=normalizePhone(input.phone);
       const existing=store.getUserByPhone(phone);
       if (existing) return send(res,200,{user:existing,already_registered:true});
-      const user=createAutomaticRegistration({...input,phone});
+      const user=createAutomaticRegistration({...input,phone,auth_methods:['PHONE']});
       store.addUser(user);
-      store.addEvent({user_id:user.id,type:'USER_REGISTERED_AUTOMATICALLY',actor:'SYSTEM',created_at:new Date().toISOString(),payload:{review_status:user.review_status,access_status:user.access_status}});
+      store.addEvent({user_id:user.id,type:'USER_REGISTERED_AUTOMATICALLY',actor:'SYSTEM',created_at:new Date().toISOString(),payload:{review_status:user.review_status,access_status:user.access_status,method:'PHONE'}});
       return send(res,201,{user,already_registered:false,access_granted:true});
+    }
+
+    if (req.method==='POST' && url.pathname==='/users/register/google'){
+      const input=await body(req);
+      if (!input.phone) return send(res,400,{error:'phone es obligatorio para Cargas'});
+      const phone=normalizePhone(input.phone);
+      const profile=await verifyGoogleCredential(input.credential);
+      const byGoogle=store.getUserByGoogleSub(profile.subject);
+      const byPhone=store.getUserByPhone(phone);
+
+      if (byGoogle && byPhone && byGoogle.id!==byPhone.id) {
+        store.addEvent({type:'USER_IDENTITY_CONFLICT',actor:'SYSTEM',created_at:new Date().toISOString(),payload:{provider:'GOOGLE',phone,google_sub:profile.subject}});
+        return send(res,409,{error:'identity_conflict',message:'La cuenta Google y el teléfono están asociados a usuarios distintos. Requiere revisión de Stylo.'});
+      }
+
+      const existing=byGoogle || byPhone;
+      if (existing) {
+        if (byGoogle && byGoogle.phone!==phone) return send(res,409,{error:'phone_conflict',message:'La cuenta Google ya está vinculada a otro teléfono.'});
+        const updated=linkAuthMethod(existing,'GOOGLE',{
+          ...googlePatch(profile),
+          phone,
+          name:profile.name || existing.name
+        });
+        store.updateUser(existing.id,updated);
+        store.addEvent({user_id:existing.id,type:'USER_GOOGLE_IDENTITY_LINKED',actor:'SYSTEM',created_at:new Date().toISOString(),payload:{email:profile.email,email_verified:profile.email_verified}});
+        return send(res,200,{user:updated,already_registered:true,google_linked:true,access_granted:updated.access_status==='ACTIVE'});
+      }
+
+      const user=createAutomaticRegistration({
+        phone,
+        name:profile.name,
+        email:profile.email,
+        email_verified:profile.email_verified,
+        avatar_url:profile.picture,
+        google_sub:profile.subject,
+        company:input.company,
+        country:input.country,
+        role:input.role,
+        auth_methods:['GOOGLE','PHONE']
+      });
+      store.addUser(user);
+      store.addEvent({user_id:user.id,type:'USER_REGISTERED_WITH_GOOGLE',actor:'SYSTEM',created_at:new Date().toISOString(),payload:{email:profile.email,email_verified:profile.email_verified,review_status:user.review_status}});
+      return send(res,201,{user,already_registered:false,google_linked:true,access_granted:true});
     }
 
     if (req.method==='GET' && url.pathname==='/admin/users'){
