@@ -13,10 +13,16 @@ alter table intake_messages add column if not exists processing_error text;
 alter table intake_messages add column if not exists updated_at timestamptz not null default now();
 
 -- Meta/WhatsApp puede reintentar un webhook. Una fuente + ID externo sólo debe
--- transformarse una vez en carga.
+-- transformarse una vez en ingreso.
 create unique index if not exists uq_intake_source_external_message
   on intake_messages(source, external_message_id)
   where external_message_id is not null;
+
+-- Un ingreso ya digitalizado sólo puede originar una carga, aun si un worker
+-- se reinicia entre la creación de la carga y el cierre del trabajo.
+create unique index if not exists uq_loads_intake_message
+  on loads(intake_message_id)
+  where intake_message_id is not null;
 
 create index if not exists idx_intake_processing_status
   on intake_messages(processing_status, received_at);
