@@ -11,6 +11,7 @@ Aplicar en este orden para el primer staging:
 7. `006_user_identities.sql`
 8. `007_persistent_user_sessions.sql`
 9. `008_resilient_digital_intake.sql`
+10. `009_location_resolution.sql`
 
 ## Nota
 
@@ -19,6 +20,8 @@ Existen dos archivos históricos con prefijo `002`. El despliegue inicial debe u
 Antes de convertir estas migraciones en una cadena de producción, se renumerarán en una única secuencia o se migrarán al formato estándar del mecanismo de migraciones elegido para Supabase/Postgres.
 
 `008_resilient_digital_intake.sql` convierte `intake_messages` en la bandeja universal e idempotente de entrada. Evita duplicados cuando una fuente reintenta un mensaje y permite dejar audios/documentos pendientes para procesamiento posterior sin perderlos si reinicia el backend.
+
+`009_location_resolution.sql` agrega una cache geográfica reutilizable y trazabilidad de confianza para origen/destino. El matching autónomo no debe tratar una localidad ambigua o una ubicación vieja del vehículo como una distancia confiable.
 
 ## Seguridad
 
