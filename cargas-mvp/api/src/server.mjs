@@ -4,12 +4,18 @@ import { MemoryStore, seed } from './store.mjs';
 import { normalizeIntake, scoreVehicle, haversineKm } from './engine.mjs';
 import { createAutomaticRegistration, applyAdminReview, normalizePhone, linkAuthMethod } from './registration-engine.mjs';
 import { verifyGoogleCredential, googlePatch } from './google-identity.mjs';
+import { createPersistentSession, hashSessionToken, isSessionUsable, touchPersistentSession, revokeSession } from './session-engine.mjs';
 
 const store = new MemoryStore(seed);
 const PORT = Number(process.env.PORT || 8787);
 
 function send(res, status, body){
-  res.writeHead(status, {'content-type':'application/json; charset=utf-8','access-control-allow-origin':'*','access-control-allow-headers':'content-type,x-admin-key','access-control-allow-methods':'GET,POST,OPTIONS'});
+  res.writeHead(status, {
+    'content-type':'application/json; charset=utf-8',
+    'access-control-allow-origin':'*',
+    'access-control-allow-headers':'content-type,x-admin-key,authorization',
+    'access-control-allow-methods':'GET,POST,OPTIONS'
+  });
   res.end(JSON.stringify(body, null, 2));
 }
 
@@ -26,6 +32,41 @@ function requireAdmin(req){
   if (req.headers['x-admin-key']!==expected) throw Object.assign(new Error('No autorizado'),{status:401});
 }
 
+function issueSession(user,input={}){
+  const issued=createPersistentSession(user.id,{
+    remember:input.remember !== false,
+    device_label:input.device_label,
+    platform:input.platform
+  });
+  store.addSession(issued.session);
+  store.addEvent({user_id:user.id,type:'USER_SESSION_CREATED',actor:'SYSTEM',created_at:new Date().toISOString(),payload:{session_id:issued.session.id,device_label:issued.session.device_label,platform:issued.session.platform,remember:issued.session.remember}});
+  return {token:issued.token,session:{...issued.session,token_hash:undefined}};
+}
+
+function bearerToken(req){
+  const auth=String(req.headers.authorization || '');
+  const match=auth.match(/^Bearer\s+(.+)$/i);
+  return match ? match[1] : null;
+}
+
+function requireSession(req){
+  const token=bearerToken(req);
+  if (!token) throw Object.assign(new Error('Sesión requerida'),{status:401});
+  const session=store.getSessionByTokenHash(hashSessionToken(token));
+  if (!isSessionUsable(session)) throw Object.assign(new Error('Sesión vencida o revocada'),{status:401});
+  const user=store.getUser(session.user_id);
+  if (!user || user.access_status!=='ACTIVE') throw Object.assign(new Error('Acceso de usuario no disponible'),{status:403});
+  const touched=touchPersistentSession(session);
+  store.updateSession(session.id,touched);
+  return {user,session:touched,token};
+}
+
+function revokeAllUserSessions(userId,reason){
+  for (const session of store.listUserSessions(userId)) {
+    if (!session.revoked_at) store.updateSession(session.id,revokeSession(session,reason));
+  }
+}
+
 function originCoordinates(origin=''){
   const x=origin.toLowerCase();
   if (x.includes('rafaela')) return {lat:-31.2503,lon:-61.4867};
@@ -38,18 +79,23 @@ const server = http.createServer(async (req,res)=>{
   if (req.method==='OPTIONS') return send(res,204,{});
   const url=new URL(req.url,`http://${req.headers.host || 'localhost'}`);
   try {
-    if (req.method==='GET' && url.pathname==='/health') return send(res,200,{ok:true,service:'stylo-cargas-mvp-api',version:'0.3.0'});
+    if (req.method==='GET' && url.pathname==='/health') return send(res,200,{ok:true,service:'stylo-cargas-mvp-api',version:'0.4.0'});
 
     if (req.method==='POST' && url.pathname==='/users/register'){
       const input=await body(req);
       if (!input.phone) return send(res,400,{error:'phone es obligatorio'});
       const phone=normalizePhone(input.phone);
       const existing=store.getUserByPhone(phone);
-      if (existing) return send(res,200,{user:existing,already_registered:true});
+      if (existing) {
+        if (existing.access_status!=='ACTIVE') return send(res,403,{error:'account_not_active'});
+        const session=issueSession(existing,input);
+        return send(res,200,{user:existing,already_registered:true,access_granted:true,session});
+      }
       const user=createAutomaticRegistration({...input,phone,auth_methods:['PHONE']});
       store.addUser(user);
       store.addEvent({user_id:user.id,type:'USER_REGISTERED_AUTOMATICALLY',actor:'SYSTEM',created_at:new Date().toISOString(),payload:{review_status:user.review_status,access_status:user.access_status,method:'PHONE'}});
-      return send(res,201,{user,already_registered:false,access_granted:true});
+      const session=issueSession(user,input);
+      return send(res,201,{user,already_registered:false,access_granted:true,session});
     }
 
     if (req.method==='POST' && url.pathname==='/users/register/google'){
@@ -68,6 +114,7 @@ const server = http.createServer(async (req,res)=>{
       const existing=byGoogle || byPhone;
       if (existing) {
         if (byGoogle && byGoogle.phone!==phone) return send(res,409,{error:'phone_conflict',message:'La cuenta Google ya está vinculada a otro teléfono.'});
+        if (existing.access_status!=='ACTIVE') return send(res,403,{error:'account_not_active'});
         const updated=linkAuthMethod(existing,'GOOGLE',{
           ...googlePatch(profile),
           phone,
@@ -75,7 +122,8 @@ const server = http.createServer(async (req,res)=>{
         });
         store.updateUser(existing.id,updated);
         store.addEvent({user_id:existing.id,type:'USER_GOOGLE_IDENTITY_LINKED',actor:'SYSTEM',created_at:new Date().toISOString(),payload:{email:profile.email,email_verified:profile.email_verified}});
-        return send(res,200,{user:updated,already_registered:true,google_linked:true,access_granted:updated.access_status==='ACTIVE'});
+        const session=issueSession(updated,input);
+        return send(res,200,{user:updated,already_registered:true,google_linked:true,access_granted:true,session});
       }
 
       const user=createAutomaticRegistration({
@@ -92,7 +140,26 @@ const server = http.createServer(async (req,res)=>{
       });
       store.addUser(user);
       store.addEvent({user_id:user.id,type:'USER_REGISTERED_WITH_GOOGLE',actor:'SYSTEM',created_at:new Date().toISOString(),payload:{email:profile.email,email_verified:profile.email_verified,review_status:user.review_status}});
-      return send(res,201,{user,already_registered:false,google_linked:true,access_granted:true});
+      const session=issueSession(user,input);
+      return send(res,201,{user,already_registered:false,google_linked:true,access_granted:true,session});
+    }
+
+    if (req.method==='GET' && url.pathname==='/me'){
+      const auth=requireSession(req);
+      return send(res,200,{user:auth.user,session:{...auth.session,token_hash:undefined}});
+    }
+
+    if (req.method==='POST' && url.pathname==='/session/refresh'){
+      const auth=requireSession(req);
+      return send(res,200,{ok:true,user:auth.user,session:{...auth.session,token_hash:undefined}});
+    }
+
+    if (req.method==='POST' && url.pathname==='/session/logout'){
+      const auth=requireSession(req);
+      const revoked=revokeSession(auth.session,'USER_LOGOUT');
+      store.updateSession(auth.session.id,revoked);
+      store.addEvent({user_id:auth.user.id,type:'USER_SESSION_REVOKED',actor:'USER',created_at:new Date().toISOString(),payload:{session_id:auth.session.id,reason:'USER_LOGOUT'}});
+      return send(res,200,{ok:true});
     }
 
     if (req.method==='GET' && url.pathname==='/admin/users'){
@@ -108,6 +175,7 @@ const server = http.createServer(async (req,res)=>{
       const input=await body(req);
       const updated=applyAdminReview(user,input);
       store.updateUser(user.id,updated);
+      if (updated.access_status!=='ACTIVE') revokeAllUserSessions(user.id,`ADMIN_${updated.access_status}`);
       store.addEvent({user_id:user.id,type:'USER_ADMIN_REVIEW',actor:input.reviewed_by || 'STYLO_ADMIN',created_at:new Date().toISOString(),payload:{from:user.review_status,to:updated.review_status,note:updated.review_note}});
       return send(res,200,{user:updated});
     }
