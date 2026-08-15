@@ -3,12 +3,24 @@ import { evaluateCandidate } from './decision-engine.mjs';
 import { buildSearchPlan } from './private-network-engine.mjs';
 import { notificationDecision } from './notification-engine.mjs';
 
+export const MATCHING_DECISION_VERSION = 'stylo-network-priority-v1';
+
 const DEFAULT_RULES = Object.freeze({
   require_green_load: true,
   require_green_vehicle: true,
   require_available_vehicle: true,
   minimum_auto_match_score: 85
 });
+
+function policySnapshot({ allowPrivateNetwork, allowStyloNetwork, rules }) {
+  return {
+    decision_version: MATCHING_DECISION_VERSION,
+    priority_order: ['OWN_FLEET','PRIVATE_NETWORK','STYLO_NETWORK'],
+    allow_private_network: allowPrivateNetwork,
+    allow_stylo_network: allowStyloNetwork,
+    rules: { ...rules }
+  };
+}
 
 export async function runPriorityMatching({
   load,
@@ -20,13 +32,16 @@ export async function runPriorityMatching({
   distanceResolver = async () => 9999,
   rules = DEFAULT_RULES
 } = {}) {
-  if (!load) return { status:'LOAD_NOT_FOUND', selected:null, trace:[] };
+  const policy = policySnapshot({ allowPrivateNetwork, allowStyloNetwork, rules });
+
+  if (!load) return { status:'LOAD_NOT_FOUND', selected:null, trace:[], policy };
   if (load.traffic_light !== 'GREEN') {
     return {
       status:'NEEDS_VALIDATION',
       selected:null,
       trace:[],
-      missing_fields:load.missing_fields || []
+      missing_fields:load.missing_fields || [],
+      policy
     };
   }
 
@@ -68,6 +83,19 @@ export async function runPriorityMatching({
       candidate_count:scored.length,
       eligible_count:eligible.length,
       best_score:scored[0]?.match?.total_score ?? null,
+      evaluated_candidates:scored.slice(0,10).map(x => ({
+        vehicle_id:x.vehicle.id,
+        carrier_id:x.carrier?.id || x.vehicle.carrier_id || null,
+        total_score:x.match.total_score,
+        distance_km:x.match.distance_km,
+        equipment_score:x.match.equipment_score,
+        documents_score:x.match.documents_score,
+        availability_score:x.match.availability_score,
+        distance_score:x.match.distance_score,
+        reputation_score:x.match.reputation_score,
+        eligible:x.evaluation.eligible,
+        reasons:x.evaluation.reasons
+      })),
       rejection_reasons:scored
         .filter(x => !x.evaluation.eligible)
         .slice(0,5)
@@ -91,7 +119,8 @@ export async function runPriorityMatching({
       selected:best,
       next_action:actionForLevel(step.level),
       notification,
-      trace
+      trace,
+      policy
     };
   }
 
@@ -106,7 +135,8 @@ export async function runPriorityMatching({
       title:'Stylo Cargas · Sin unidad elegible',
       body:'No se encontró una unidad compatible en los niveles habilitados.'
     }),
-    trace
+    trace,
+    policy
   };
 }
 
