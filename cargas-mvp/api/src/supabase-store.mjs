@@ -311,6 +311,57 @@ export class SupabaseStore {
     return data || [];
   }
 
+  async getNotificationByDedupeKey(dedupeKey) {
+    if (!dedupeKey) return null;
+    const { data, error } = await this.db.from('notification_outbox')
+      .select('*')
+      .eq('dedupe_key', dedupeKey)
+      .in('status', ['PENDING','SENT','DELIVERED'])
+      .maybeSingle();
+    if (error) throw error;
+    return data || null;
+  }
+
+  async addNotificationOutbox(item) {
+    if (!item?.target_user_id) return null;
+    let loadDbId = null;
+    if (item.load_id) {
+      const load = await this.getLoad(item.load_id);
+      loadDbId = load?.db_id || null;
+    }
+    const row = {
+      target_user_id: item.target_user_id,
+      organization_id: item.organization_id || null,
+      operation_id: item.operation_id || null,
+      load_id: loadDbId,
+      vehicle_id: item.vehicle_id || null,
+      event_type: item.event_type,
+      channel: item.channel,
+      priority: item.priority,
+      title: item.title || null,
+      body: item.body || null,
+      actions: item.actions || [],
+      dedupe_key: item.dedupe_key || null,
+      status: item.status || 'PENDING',
+      attempts: item.attempts || 0,
+      available_at: item.available_at || new Date().toISOString()
+    };
+    const { data, error } = await this.db.from('notification_outbox').insert(row).select().single();
+    if (error?.code === '23505' && row.dedupe_key) return this.getNotificationByDedupeKey(row.dedupe_key);
+    if (error) throw error;
+    return data;
+  }
+
+  async listNotificationOutbox(filters = {}) {
+    let q = this.db.from('notification_outbox').select('*').order('created_at', { ascending:false });
+    if (filters.status) q = q.eq('status', filters.status);
+    if (filters.target_user_id) q = q.eq('target_user_id', filters.target_user_id);
+    if (filters.limit) q = q.limit(filters.limit);
+    const { data, error } = await q;
+    if (error) throw error;
+    return data || [];
+  }
+
   async addEvent(event) {
     if (event.load_id) {
       const load = await this.getLoad(event.load_id);
