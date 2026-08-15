@@ -16,6 +16,7 @@ export function createSupabaseAdminClient(env = process.env) {
 export function mapLoadToRow(load) {
   return {
     public_id: load.id,
+    intake_message_id: load.intake_message_id || null,
     source: load.source,
     sender_id: load.sender_id,
     raw_text: load.raw_text,
@@ -40,6 +41,7 @@ export function mapLoadRow(row) {
   return {
     id: row.public_id,
     db_id: row.id,
+    intake_message_id: row.intake_message_id || null,
     source: row.source,
     sender_id: row.sender_id,
     raw_text: row.raw_text,
@@ -56,6 +58,28 @@ export function mapLoadRow(row) {
     assigned_vehicle_id: row.assigned_vehicle_id,
     assigned_carrier_id: row.assigned_carrier_id,
     created_at: row.created_at
+  };
+}
+
+export function mapIntakeRow(row) {
+  if (!row) return null;
+  return {
+    id: row.id,
+    source: row.source,
+    external_message_id: row.external_message_id || null,
+    sender_id: row.sender_id || null,
+    raw_text: row.raw_text ?? null,
+    content_type: row.content_type || 'TEXT',
+    media_reference: row.media_reference || null,
+    operation_channel_id: row.operation_channel_id || null,
+    received_at: row.received_at,
+    metadata: row.metadata || {},
+    classification: row.classification || null,
+    processing_status: row.processing_status || 'RECEIVED',
+    processing_error: row.processing_error || null,
+    processed_at: row.processed_at || null,
+    created_at: row.created_at,
+    updated_at: row.updated_at
   };
 }
 
@@ -173,6 +197,63 @@ export class SupabaseStore {
     const { data, error } = await this.db.from('user_sessions').select('*').eq('user_id', userId).order('created_at', { ascending: false });
     if (error) throw error;
     return data || [];
+  }
+
+  async addIntakeMessage(message) {
+    const row = {
+      source: message.source,
+      external_message_id: message.external_message_id || null,
+      sender_id: message.sender_id || null,
+      raw_text: message.raw_text ?? null,
+      content_type: message.content_type || 'TEXT',
+      media_reference: message.media_reference || null,
+      operation_channel_id: message.operation_channel_id || null,
+      received_at: message.received_at || new Date().toISOString(),
+      metadata: message.metadata || {},
+      classification: message.classification || null,
+      processing_status: message.processing_status || 'RECEIVED',
+      processing_error: message.processing_error || null,
+      processed_at: message.processed_at || null,
+      updated_at: new Date().toISOString()
+    };
+    const { data, error } = await this.db.from('intake_messages').insert(row).select().single();
+    if (error?.code === '23505' && row.external_message_id) {
+      return this.getIntakeByExternalMessage(row.source, row.external_message_id);
+    }
+    if (error) throw error;
+    return mapIntakeRow(data);
+  }
+
+  async getIntakeMessage(id) {
+    const { data, error } = await this.db.from('intake_messages').select('*').eq('id', id).maybeSingle();
+    if (error) throw error;
+    return mapIntakeRow(data);
+  }
+
+  async getIntakeByExternalMessage(source, externalMessageId) {
+    if (!externalMessageId) return null;
+    const { data, error } = await this.db.from('intake_messages').select('*').eq('source', source).eq('external_message_id', externalMessageId).maybeSingle();
+    if (error) throw error;
+    return mapIntakeRow(data);
+  }
+
+  async updateIntakeMessage(id, patch) {
+    const allowed = ['raw_text','classification','processing_status','processing_error','processed_at','media_reference','metadata'];
+    const dbPatch = { updated_at: new Date().toISOString() };
+    for (const key of allowed) if (key in patch) dbPatch[key] = patch[key];
+    const { data, error } = await this.db.from('intake_messages').update(dbPatch).eq('id', id).select().single();
+    if (error) throw error;
+    return mapIntakeRow(data);
+  }
+
+  async listIntakeMessages(filters = {}) {
+    let q = this.db.from('intake_messages').select('*').order('received_at', { ascending: true });
+    if (filters.processing_status) q = q.eq('processing_status', filters.processing_status);
+    if (filters.source) q = q.eq('source', filters.source);
+    if (filters.limit) q = q.limit(filters.limit);
+    const { data, error } = await q;
+    if (error) throw error;
+    return (data || []).map(mapIntakeRow);
   }
 
   async addLoad(load) {
