@@ -18,6 +18,7 @@ export class MemoryStore {
   addUser(user){ this.users.set(user.id,user); return user; }
   getUser(id){ return this.users.get(id); }
   getUserByPhone(phone){ return [...this.users.values()].find(x=>x.phone===phone) || null; }
+  getUserByGoogleSub(subject){ return [...this.users.values()].find(x=>x.google_sub===subject) || null; }
   updateUser(id, patch){ const current=this.users.get(id); if (!current) return null; const x={...current,...patch}; this.users.set(id,x); return x; }
   listUsers(filters={}){ return [...this.users.values()].filter(x => (!filters.review_status || x.review_status===filters.review_status) && (!filters.access_status || x.access_status===filters.access_status)); }
   saveMatches(loadId, matches){ this.matches=this.matches.filter(m=>m.load_id!==loadId).concat(matches); return matches; }
