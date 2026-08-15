@@ -2,12 +2,13 @@ import http from 'node:http';
 import { URL } from 'node:url';
 import { MemoryStore, seed } from './store.mjs';
 import { normalizeIntake, scoreVehicle, haversineKm } from './engine.mjs';
+import { createAutomaticRegistration, applyAdminReview, normalizePhone } from './registration-engine.mjs';
 
 const store = new MemoryStore(seed);
 const PORT = Number(process.env.PORT || 8787);
 
 function send(res, status, body){
-  res.writeHead(status, {'content-type':'application/json; charset=utf-8','access-control-allow-origin':'*','access-control-allow-headers':'content-type','access-control-allow-methods':'GET,POST,OPTIONS'});
+  res.writeHead(status, {'content-type':'application/json; charset=utf-8','access-control-allow-origin':'*','access-control-allow-headers':'content-type,x-admin-key','access-control-allow-methods':'GET,POST,OPTIONS'});
   res.end(JSON.stringify(body, null, 2));
 }
 
@@ -16,6 +17,12 @@ async function body(req){
   for await (const chunk of req) raw += chunk;
   if (!raw) return {};
   try { return JSON.parse(raw); } catch { throw Object.assign(new Error('JSON inválido'), {status:400}); }
+}
+
+function requireAdmin(req){
+  const expected=process.env.ADMIN_API_KEY;
+  if (!expected) throw Object.assign(new Error('Administración no configurada'),{status:503});
+  if (req.headers['x-admin-key']!==expected) throw Object.assign(new Error('No autorizado'),{status:401});
 }
 
 function originCoordinates(origin=''){
@@ -30,7 +37,36 @@ const server = http.createServer(async (req,res)=>{
   if (req.method==='OPTIONS') return send(res,204,{});
   const url=new URL(req.url,`http://${req.headers.host || 'localhost'}`);
   try {
-    if (req.method==='GET' && url.pathname==='/health') return send(res,200,{ok:true,service:'stylo-cargas-mvp-api',version:'0.1.0'});
+    if (req.method==='GET' && url.pathname==='/health') return send(res,200,{ok:true,service:'stylo-cargas-mvp-api',version:'0.2.0'});
+
+    if (req.method==='POST' && url.pathname==='/users/register'){
+      const input=await body(req);
+      if (!input.phone) return send(res,400,{error:'phone es obligatorio'});
+      const phone=normalizePhone(input.phone);
+      const existing=store.getUserByPhone(phone);
+      if (existing) return send(res,200,{user:existing,already_registered:true});
+      const user=createAutomaticRegistration({...input,phone});
+      store.addUser(user);
+      store.addEvent({user_id:user.id,type:'USER_REGISTERED_AUTOMATICALLY',actor:'SYSTEM',created_at:new Date().toISOString(),payload:{review_status:user.review_status,access_status:user.access_status}});
+      return send(res,201,{user,already_registered:false,access_granted:true});
+    }
+
+    if (req.method==='GET' && url.pathname==='/admin/users'){
+      requireAdmin(req);
+      return send(res,200,{items:store.listUsers({review_status:url.searchParams.get('review_status'),access_status:url.searchParams.get('access_status')})});
+    }
+
+    const adminUserPath=url.pathname.match(/^\/admin\/users\/([^/]+)\/review$/);
+    if (req.method==='POST' && adminUserPath){
+      requireAdmin(req);
+      const user=store.getUser(adminUserPath[1]);
+      if (!user) return send(res,404,{error:'Usuario no encontrado'});
+      const input=await body(req);
+      const updated=applyAdminReview(user,input);
+      store.updateUser(user.id,updated);
+      store.addEvent({user_id:user.id,type:'USER_ADMIN_REVIEW',actor:input.reviewed_by || 'STYLO_ADMIN',created_at:new Date().toISOString(),payload:{from:user.review_status,to:updated.review_status,note:updated.review_note}});
+      return send(res,200,{user:updated});
+    }
 
     if (req.method==='POST' && url.pathname==='/intake/messages'){
       const input=await body(req);
