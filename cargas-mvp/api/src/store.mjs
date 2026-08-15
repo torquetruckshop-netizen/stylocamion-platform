@@ -1,3 +1,5 @@
+import crypto from 'node:crypto';
+
 export class MemoryStore {
   constructor(seed={}) {
     this.loads = new Map((seed.loads || []).map(x => [x.id, x]));
@@ -5,8 +7,42 @@ export class MemoryStore {
     this.vehicles = new Map((seed.vehicles || []).map(x => [x.id, x]));
     this.users = new Map((seed.users || []).map(x => [x.id, x]));
     this.sessions = new Map((seed.sessions || []).map(x => [x.id, x]));
+    this.intakeMessages = new Map((seed.intake_messages || []).map(x => [x.id, x]));
     this.events = [];
     this.matches = [];
+  }
+  addIntakeMessage(message){
+    const x={
+      id:message.id || crypto.randomUUID(),
+      classification:null,
+      processed_at:null,
+      processing_status:'RECEIVED',
+      processing_error:null,
+      created_at:new Date().toISOString(),
+      updated_at:new Date().toISOString(),
+      ...message
+    };
+    if (x.external_message_id) {
+      const existing=this.getIntakeByExternalMessage(x.source,x.external_message_id);
+      if (existing) return existing;
+    }
+    this.intakeMessages.set(x.id,x);
+    return x;
+  }
+  getIntakeMessage(id){ return this.intakeMessages.get(id) || null; }
+  getIntakeByExternalMessage(source,externalMessageId){
+    if (!externalMessageId) return null;
+    return [...this.intakeMessages.values()].find(x=>x.source===source && x.external_message_id===externalMessageId) || null;
+  }
+  updateIntakeMessage(id,patch){
+    const current=this.intakeMessages.get(id);
+    if (!current) return null;
+    const x={...current,...patch,updated_at:new Date().toISOString()};
+    this.intakeMessages.set(id,x);
+    return x;
+  }
+  listIntakeMessages(filters={}){
+    return [...this.intakeMessages.values()].filter(x=>(!filters.processing_status || x.processing_status===filters.processing_status) && (!filters.source || x.source===filters.source));
   }
   addLoad(load){ this.loads.set(load.id, load); return load; }
   listLoads(filters={}){ return [...this.loads.values()].filter(x => (!filters.status || x.status===filters.status) && (!filters.traffic_light || x.traffic_light===filters.traffic_light)); }
@@ -36,6 +72,7 @@ export class MemoryStore {
 export const seed = {
   users:[],
   sessions:[],
+  intake_messages:[],
   carriers:[
     {id:'CAR-1',name:'Transporte López',status:'ACTIVE',reputation_score:4.8,completed_operations:27},
     {id:'CAR-2',name:'Logística del Litoral',status:'ACTIVE',reputation_score:4.5,completed_operations:19},
