@@ -12,8 +12,23 @@ export function createAudioIntakeProcessor({ store, downloadMedia, transcribeAud
     let intake = await store.getIntakeMessage(intakeId);
     if (!intake) throw new Error('intake no encontrado');
 
+    if (store.getLoadByIntakeMessageId) {
+      const existingLoad = await store.getLoadByIntakeMessageId(intake.id);
+      if (existingLoad) {
+        if (store.updateIntakeMessage && intake.processing_status !== 'COMPLETE') {
+          intake = await store.updateIntakeMessage(intake.id, {
+            classification:'LOAD',
+            processing_status:'COMPLETE',
+            processing_error:null,
+            processed_at:new Date().toISOString()
+          });
+        }
+        return { status:'ALREADY_COMPLETE', intake, load:existingLoad, transcription:null };
+      }
+    }
+
     if (intake.processing_status === 'COMPLETE') {
-      return { status: 'ALREADY_COMPLETE', intake, load: null };
+      return { status: 'ALREADY_COMPLETE', intake, load: null, transcription:null };
     }
 
     if (!intake.media_reference) {
@@ -24,7 +39,7 @@ export function createAudioIntakeProcessor({ store, downloadMedia, transcribeAud
     try {
       if (store.claimIntakeMessage) {
         const claimed = await store.claimIntakeMessage(intake.id, ['AWAITING_TRANSCRIPTION','FAILED','RECEIVED']);
-        if (!claimed) return { status: 'ALREADY_CLAIMED', intake: await store.getIntakeMessage(intake.id), load: null };
+        if (!claimed) return { status: 'ALREADY_CLAIMED', intake: await store.getIntakeMessage(intake.id), load: null, transcription:null };
         intake = claimed;
       } else if (store.updateIntakeMessage) {
         intake = await store.updateIntakeMessage(intake.id, { processing_status: 'PROCESSING', processing_error: null });
