@@ -3,12 +3,13 @@ import { evaluateCandidate } from './decision-engine.mjs';
 import { buildSearchPlan } from './private-network-engine.mjs';
 import { notificationDecision } from './notification-engine.mjs';
 
-export const MATCHING_DECISION_VERSION = 'stylo-network-priority-v1';
+export const MATCHING_DECISION_VERSION = 'stylo-network-priority-v2';
 
 const DEFAULT_RULES = Object.freeze({
   require_green_load: true,
   require_green_vehicle: true,
   require_available_vehicle: true,
+  require_reliable_distance: true,
   minimum_auto_match_score: 85
 });
 
@@ -22,6 +23,21 @@ function policySnapshot({ allowPrivateNetwork, allowStyloNetwork, rules }) {
   };
 }
 
+function normalizeDistanceResult(result) {
+  if (typeof result === 'number') {
+    return { km:result, quality:'MEDIUM', source:'LEGACY_DISTANCE_RESOLVER' };
+  }
+  const km = Number(result?.km);
+  return {
+    km:Number.isFinite(km) ? km : 9999,
+    quality:result?.quality || 'UNUSABLE',
+    source:result?.source || 'UNKNOWN',
+    vehicle_location_state:result?.vehicle_location_state || null,
+    vehicle_location_age_minutes:result?.vehicle_location_age_minutes ?? null,
+    straight_line_km:result?.straight_line_km ?? null
+  };
+}
+
 export async function runPriorityMatching({
   load,
   ownFleet = [],
@@ -29,7 +45,7 @@ export async function runPriorityMatching({
   styloNetwork = [],
   allowPrivateNetwork = true,
   allowStyloNetwork = true,
-  distanceResolver = async () => 9999,
+  distanceResolver = async () => ({ km:9999, quality:'UNUSABLE', source:'NOT_CONFIGURED' }),
   rules = DEFAULT_RULES
 } = {}) {
   const policy = policySnapshot({ allowPrivateNetwork, allowStyloNetwork, rules });
@@ -64,11 +80,16 @@ export async function runPriorityMatching({
       if (!vehicle?.id) continue;
       if (carrier.status && carrier.status !== 'ACTIVE') continue;
 
-      const distanceKm = Number(await distanceResolver({ load, vehicle, carrier, level:step.level }));
-      const safeDistance = Number.isFinite(distanceKm) ? Math.max(0, distanceKm) : 9999;
+      const distance = normalizeDistanceResult(await distanceResolver({ load, vehicle, carrier, level:step.level }));
+      const safeDistance = Number.isFinite(distance.km) ? Math.max(0, distance.km) : 9999;
       const match = {
         ...scoreVehicle(load, vehicle, carrier, safeDistance),
-        network_level:step.level
+        network_level:step.level,
+        distance_quality:distance.quality,
+        distance_source:distance.source,
+        vehicle_location_state:distance.vehicle_location_state,
+        vehicle_location_age_minutes:distance.vehicle_location_age_minutes,
+        straight_line_km:distance.straight_line_km
       };
       const evaluation = evaluateCandidate(load, vehicle, match, rules);
       scored.push({ match, vehicle, carrier, evaluation });
@@ -88,6 +109,10 @@ export async function runPriorityMatching({
         carrier_id:x.carrier?.id || x.vehicle.carrier_id || null,
         total_score:x.match.total_score,
         distance_km:x.match.distance_km,
+        distance_quality:x.match.distance_quality,
+        distance_source:x.match.distance_source,
+        vehicle_location_state:x.match.vehicle_location_state,
+        vehicle_location_age_minutes:x.match.vehicle_location_age_minutes,
         equipment_score:x.match.equipment_score,
         documents_score:x.match.documents_score,
         availability_score:x.match.availability_score,
