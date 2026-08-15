@@ -4,6 +4,7 @@ export class MemoryStore {
     this.carriers = new Map((seed.carriers || []).map(x => [x.id, x]));
     this.vehicles = new Map((seed.vehicles || []).map(x => [x.id, x]));
     this.users = new Map((seed.users || []).map(x => [x.id, x]));
+    this.sessions = new Map((seed.sessions || []).map(x => [x.id, x]));
     this.events = [];
     this.matches = [];
   }
@@ -21,6 +22,11 @@ export class MemoryStore {
   getUserByGoogleSub(subject){ return [...this.users.values()].find(x=>x.google_sub===subject) || null; }
   updateUser(id, patch){ const current=this.users.get(id); if (!current) return null; const x={...current,...patch}; this.users.set(id,x); return x; }
   listUsers(filters={}){ return [...this.users.values()].filter(x => (!filters.review_status || x.review_status===filters.review_status) && (!filters.access_status || x.access_status===filters.access_status)); }
+  addSession(session){ this.sessions.set(session.id,session); return session; }
+  getSession(id){ return this.sessions.get(id) || null; }
+  getSessionByTokenHash(tokenHash){ return [...this.sessions.values()].find(x=>x.token_hash===tokenHash) || null; }
+  updateSession(id, patch){ const current=this.sessions.get(id); if (!current) return null; const x={...current,...patch}; this.sessions.set(id,x); return x; }
+  listUserSessions(userId){ return [...this.sessions.values()].filter(x=>x.user_id===userId); }
   saveMatches(loadId, matches){ this.matches=this.matches.filter(m=>m.load_id!==loadId).concat(matches); return matches; }
   getMatches(loadId){ return this.matches.filter(m=>m.load_id===loadId).sort((a,b)=>b.total_score-a.total_score); }
   addEvent(event){ this.events.push(event); return event; }
@@ -29,6 +35,7 @@ export class MemoryStore {
 
 export const seed = {
   users:[],
+  sessions:[],
   carriers:[
     {id:'CAR-1',name:'Transporte López',status:'ACTIVE',reputation_score:4.8,completed_operations:27},
     {id:'CAR-2',name:'Logística del Litoral',status:'ACTIVE',reputation_score:4.5,completed_operations:19},
