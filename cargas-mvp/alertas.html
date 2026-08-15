@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090c10">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <title>Stylo Cargas · Alertas</title>
+  <style>
+    body{margin:0;background:#090c10;color:#f5f7fb;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.wrap{max-width:760px;margin:auto;padding:24px}.card{background:#11161c;border:1px solid #28303a;border-radius:18px;padding:18px;margin:12px 0}.muted{color:#97a2ae}.ok{color:#25c67a}.warn{color:#f4b83e}button{width:100%;padding:14px;border:0;border-radius:12px;background:#e3342f;color:#fff;font-weight:800;font-size:16px}.row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #202731}.row:last-child{border-bottom:0}code{font-size:12px}
+  </style>
+</head>
+<body><main class="wrap">
+  <h1>Alertas Stylo Cargas</h1>
+  <p class="muted">Trabajar en silencio y avisar sólo cuando una oportunidad o excepción requiere atención.</p>
+  <section class="card">
+    <div class="row"><span>PWA instalada</span><strong id="standalone">—</strong></div>
+    <div class="row"><span>Service Worker</span><strong id="sw">—</strong></div>
+    <div class="row"><span>Push</span><strong id="push">—</strong></div>
+    <div class="row"><span>Permiso</span><strong id="permission">—</strong></div>
+  </section>
+  <section class="card">
+    <h2>Activar avisos</h2>
+    <p class="muted">El permiso sólo se solicita al tocar el botón. En iPhone, para Web Push la app web debe estar agregada a la pantalla de inicio.</p>
+    <button id="enable">ACTIVAR ALERTAS</button>
+    <p id="result" class="muted"></p>
+  </section>
+  <section class="card"><strong>Política</strong><p class="muted">Cargas comunes: silencio. Match fuerte: push. Bloqueo, incidente o acción obligatoria: push + WhatsApp.</p></section>
+<script type="module">
+import { notificationSupport, enableStyloNotifications } from './notification-client.js';
+const $=id=>document.getElementById(id);
+async function refresh(){const s=await notificationSupport();$('standalone').textContent=s.standalone?'Sí':'No';$('sw').textContent=s.serviceWorker?'Sí':'No';$('push').textContent=s.pushManager?'Sí':'No';$('permission').textContent=('Notification'in window)?Notification.permission:'No disponible';}
+$('enable').addEventListener('click',async()=>{try{const r=await enableStyloNotifications();$('result').textContent=r.pendingServerKey?'Permiso otorgado. Falta vincular la clave del servidor de staging para completar la suscripción.':r.ok?'Alertas habilitadas.':'No se pudieron habilitar: '+r.reason;}catch(e){$('result').textContent='Error: '+e.message}await refresh();});
+refresh();
+</script>
+</main></body></html>
