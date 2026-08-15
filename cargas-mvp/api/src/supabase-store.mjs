@@ -30,6 +30,9 @@ export function mapLoadToRow(load) {
     traffic_light: load.traffic_light,
     missing_fields: load.missing_fields || [],
     operation_channel_id: load.operation_channel_id || null,
+    owner_organization_id: load.owner_organization_id || null,
+    visibility_scope: load.visibility_scope || 'PRIVATE',
+    escalation_level: load.escalation_level || 'OWN_FLEET',
     assigned_vehicle_id: load.assigned_vehicle_id || null,
     assigned_carrier_id: load.assigned_carrier_id || null,
     created_at: load.created_at,
@@ -55,6 +58,9 @@ export function mapLoadRow(row) {
     traffic_light: row.traffic_light,
     missing_fields: row.missing_fields || [],
     operation_channel_id: row.operation_channel_id || null,
+    owner_organization_id: row.owner_organization_id || null,
+    visibility_scope: row.visibility_scope || 'PRIVATE',
+    escalation_level: row.escalation_level || 'OWN_FLEET',
     assigned_vehicle_id: row.assigned_vehicle_id,
     assigned_carrier_id: row.assigned_carrier_id,
     created_at: row.created_at
@@ -87,6 +93,7 @@ export function mapVehicleRow(row) {
   return {
     id: row.id,
     carrier_id: row.carrier_id,
+    organization_id: row.organization_id || null,
     plate: row.plate,
     equipment_type: row.equipment_type,
     capacity_tn: row.capacity_tn == null ? null : Number(row.capacity_tn),
@@ -95,6 +102,14 @@ export function mapVehicleRow(row) {
     location_source: row.location_source,
     location_updated_at: row.location_updated_at,
     document_state: row.document_state
+  };
+}
+
+function candidateFromVehicleRow(row, extra = {}) {
+  return {
+    vehicle: mapVehicleRow(row),
+    carrier: row.carriers || {},
+    ...extra
   };
 }
 
@@ -173,6 +188,39 @@ export class SupabaseStore {
     const { data, error } = await q;
     if (error) throw error;
     return data || [];
+  }
+
+  async getPrimaryOrganizationForUser(userId) {
+    if (!userId) return null;
+    const { data, error } = await this.db.from('organization_members')
+      .select('organization_id,role,status,organizations(*)')
+      .eq('user_id', String(userId))
+      .eq('status','ACTIVE')
+      .order('created_at', { ascending:true })
+      .limit(1);
+    if (error) throw error;
+    const membership = data?.[0] || null;
+    if (!membership) return null;
+    return {
+      organization_id: membership.organization_id,
+      role: membership.role,
+      organization: membership.organizations || null
+    };
+  }
+
+  async resolveSenderOperationalContext(phone) {
+    if (!phone) return { user:null, target_user_id:null, organization_id:null, membership:null };
+    const user = await this.getUserByPhone(phone);
+    if (!user || user.access_status !== 'ACTIVE') {
+      return { user:user || null, target_user_id:null, organization_id:null, membership:null };
+    }
+    const membership = await this.getPrimaryOrganizationForUser(user.id);
+    return {
+      user,
+      target_user_id:user.id,
+      organization_id:membership?.organization_id || null,
+      membership
+    };
   }
 
   async addSession(session) {
@@ -290,6 +338,9 @@ export class SupabaseStore {
     const dbPatch = { updated_at: new Date().toISOString() };
     if ('status' in patch) dbPatch.status = patch.status;
     if ('traffic_light' in patch) dbPatch.traffic_light = patch.traffic_light;
+    if ('owner_organization_id' in patch) dbPatch.owner_organization_id = patch.owner_organization_id;
+    if ('visibility_scope' in patch) dbPatch.visibility_scope = patch.visibility_scope;
+    if ('escalation_level' in patch) dbPatch.escalation_level = patch.escalation_level;
     if ('assigned_vehicle_id' in patch) dbPatch.assigned_vehicle_id = patch.assigned_vehicle_id;
     if ('assigned_carrier_id' in patch) dbPatch.assigned_carrier_id = patch.assigned_carrier_id;
     const { data, error } = await this.db.from('loads').update(dbPatch).eq('public_id', publicId).select().single();
@@ -300,7 +351,57 @@ export class SupabaseStore {
   async listAvailableVehicles() {
     const { data, error } = await this.db.from('vehicles').select('*, carriers(*)').eq('availability','AVAILABLE');
     if (error) throw error;
-    return (data || []).map(row => ({ vehicle: mapVehicleRow(row), carrier: row.carriers }));
+    return (data || []).map(row => candidateFromVehicleRow(row));
+  }
+
+  async listMatchingNetworkCandidates(ownerOrganizationId, { includeStyloNetwork = false } = {}) {
+    const result = { ownFleet:[], privateNetwork:[], styloNetwork:[] };
+
+    if (ownerOrganizationId) {
+      const { data: ownRows, error: ownError } = await this.db.from('vehicles')
+        .select('*, carriers(*)')
+        .eq('organization_id', ownerOrganizationId)
+        .eq('availability','AVAILABLE');
+      if (ownError) throw ownError;
+      result.ownFleet = (ownRows || []).map(row => candidateFromVehicleRow(row));
+
+      const { data: members, error: memberError } = await this.db.from('private_network_members')
+        .select('carrier_id,priority,allow_auto_offer')
+        .eq('owner_organization_id', ownerOrganizationId)
+        .eq('status','ACTIVE')
+        .eq('allow_auto_offer', true)
+        .order('priority', { ascending:true });
+      if (memberError) throw memberError;
+
+      const priorityByCarrier = new Map((members || []).map(x => [x.carrier_id, x.priority]));
+      const carrierIds = [...priorityByCarrier.keys()];
+      if (carrierIds.length) {
+        const { data: privateRows, error: privateError } = await this.db.from('vehicles')
+          .select('*, carriers(*)')
+          .in('carrier_id', carrierIds)
+          .eq('availability','AVAILABLE');
+        if (privateError) throw privateError;
+        result.privateNetwork = (privateRows || [])
+          .map(row => candidateFromVehicleRow(row, { network_priority:priorityByCarrier.get(row.carrier_id) ?? 100 }))
+          .sort((a,b) => a.network_priority - b.network_priority);
+      }
+    }
+
+    if (includeStyloNetwork) {
+      const excludedCarrierIds = new Set([
+        ...result.ownFleet.map(x => x.vehicle.carrier_id),
+        ...result.privateNetwork.map(x => x.vehicle.carrier_id)
+      ]);
+      const { data: styloRows, error: styloError } = await this.db.from('vehicles')
+        .select('*, carriers(*)')
+        .eq('availability','AVAILABLE');
+      if (styloError) throw styloError;
+      result.styloNetwork = (styloRows || [])
+        .filter(row => !excludedCarrierIds.has(row.carrier_id) && (!row.carriers?.status || row.carriers.status === 'ACTIVE'))
+        .map(row => candidateFromVehicleRow(row));
+    }
+
+    return result;
   }
 
   async saveMatches(load, matches) {
