@@ -6,6 +6,7 @@ export function evaluateCandidate(load, vehicle, match, rules) {
   if (rules.require_available_vehicle && vehicle.availability !== 'AVAILABLE') reasons.push('NOT_AVAILABLE');
   if (match.total_score < rules.minimum_auto_match_score) reasons.push('LOW_SCORE');
   if (match.equipment_score !== 100) reasons.push('WRONG_EQUIPMENT');
+  if (load.weight_tn != null && vehicle.capacity_tn != null && Number(load.weight_tn) > Number(vehicle.capacity_tn)) reasons.push('OVER_CAPACITY');
   return { eligible: reasons.length === 0, reasons };
 }
 
