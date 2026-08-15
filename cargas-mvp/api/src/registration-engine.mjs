@@ -20,7 +20,7 @@ export function createAutomaticRegistration(input={}, now=new Date()) {
     : ['PHONE'];
 
   return {
-    id:`USR-${crypto.randomUUID()}`,
+    id:crypto.randomUUID(),
     phone,
     name:name || null,
     company:company || null,
