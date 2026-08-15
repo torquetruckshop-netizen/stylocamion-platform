@@ -30,7 +30,15 @@ function buildIntakeRecord(event = {}) {
 }
 
 function alreadyHandled(intake) {
-  return ['COMPLETE','AWAITING_TRANSCRIPTION','PROCESSING'].includes(intake?.processing_status);
+  return ['COMPLETE','PROCESSING'].includes(intake?.processing_status);
+}
+
+function duplicateDescriptor(intake, record) {
+  return {
+    intake_id: intake?.id || null,
+    external_message_id: record.external_message_id,
+    processing_status: intake?.processing_status || null
+  };
 }
 
 export function createWhatsAppIntakeHandler(store, { onLoadSaved = null } = {}) {
@@ -48,11 +56,7 @@ export function createWhatsAppIntakeHandler(store, { onLoadSaved = null } = {}) 
       if (record.external_message_id && store.getIntakeByExternalMessage) {
         persisted = await store.getIntakeByExternalMessage(record.source, record.external_message_id);
         if (alreadyHandled(persisted)) {
-          duplicates.push({
-            intake_id: persisted.id,
-            external_message_id: record.external_message_id,
-            processing_status: persisted.processing_status
-          });
+          duplicates.push(duplicateDescriptor(persisted, record));
           continue;
         }
       }
@@ -62,7 +66,7 @@ export function createWhatsAppIntakeHandler(store, { onLoadSaved = null } = {}) 
       }
 
       if (event.needs_transcription) {
-        if (persisted && persisted.processing_status !== 'AWAITING_TRANSCRIPTION' && store.updateIntakeMessage) {
+        if (persisted && !['AWAITING_TRANSCRIPTION','PROCESSING','COMPLETE'].includes(persisted.processing_status) && store.updateIntakeMessage) {
           persisted = await store.updateIntakeMessage(persisted.id, {
             processing_status: 'AWAITING_TRANSCRIPTION',
             processing_error: null
@@ -93,8 +97,31 @@ export function createWhatsAppIntakeHandler(store, { onLoadSaved = null } = {}) 
       }
 
       try {
-        if (persisted?.id && store.updateIntakeMessage) {
-          await store.updateIntakeMessage(persisted.id, { processing_status: 'PROCESSING', processing_error: null });
+        if (persisted?.id && store.claimIntakeMessage) {
+          const claimed = await store.claimIntakeMessage(persisted.id, ['RECEIVED','FAILED']);
+          if (!claimed) {
+            duplicates.push(duplicateDescriptor(await store.getIntakeMessage(persisted.id), record));
+            continue;
+          }
+          persisted = claimed;
+        } else if (persisted?.id && store.updateIntakeMessage) {
+          persisted = await store.updateIntakeMessage(persisted.id, { processing_status: 'PROCESSING', processing_error: null });
+        }
+
+        if (persisted?.id && store.getLoadByIntakeMessageId) {
+          const existingLoad = await store.getLoadByIntakeMessageId(persisted.id);
+          if (existingLoad) {
+            if (store.updateIntakeMessage) {
+              await store.updateIntakeMessage(persisted.id, {
+                classification: 'LOAD',
+                processing_status: 'COMPLETE',
+                processing_error: null,
+                processed_at: new Date().toISOString()
+              });
+            }
+            duplicates.push(duplicateDescriptor(persisted, record));
+            continue;
+          }
         }
 
         const load = normalizeIntake(intake);
