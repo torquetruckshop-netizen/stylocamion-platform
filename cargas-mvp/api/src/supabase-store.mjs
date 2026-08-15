@@ -28,6 +28,7 @@ export function mapLoadToRow(load) {
     status: load.status,
     traffic_light: load.traffic_light,
     missing_fields: load.missing_fields || [],
+    operation_channel_id: load.operation_channel_id || null,
     assigned_vehicle_id: load.assigned_vehicle_id || null,
     assigned_carrier_id: load.assigned_carrier_id || null,
     created_at: load.created_at,
@@ -51,6 +52,7 @@ export function mapLoadRow(row) {
     status: row.status,
     traffic_light: row.traffic_light,
     missing_fields: row.missing_fields || [],
+    operation_channel_id: row.operation_channel_id || null,
     assigned_vehicle_id: row.assigned_vehicle_id,
     assigned_carrier_id: row.assigned_carrier_id,
     created_at: row.created_at
