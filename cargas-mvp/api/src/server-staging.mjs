@@ -6,7 +6,10 @@ import { createAutomaticRegistration, applyAdminReview, normalizePhone } from '.
 import { verifyGoogleCredential } from './google-identity.mjs';
 import { createPersistentSession, hashSessionToken, isSessionUsable, touchPersistentSession, revokeSession } from './session-engine.mjs';
 import { notificationDecision } from './notification-engine.mjs';
+import { assertStagingReady } from './staging-config.mjs';
+import { corsHeaders, isOriginAllowed } from './http-security.mjs';
 
+const readiness = assertStagingReady(process.env);
 const store = new SupabaseStore();
 const PORT = Number(process.env.STAGING_PORT || 8788);
 const SESSION_COOKIE = 'sc_session';
@@ -14,9 +17,9 @@ const SESSION_COOKIE = 'sc_session';
 function send(res, status, body, extraHeaders={}) {
   res.writeHead(status, {
     'content-type':'application/json; charset=utf-8',
-    'access-control-allow-origin':'*',
     'access-control-allow-headers':'content-type,authorization,x-admin-key',
     'access-control-allow-methods':'GET,POST,OPTIONS',
+    ...(res._corsHeaders || {}),
     ...extraHeaders
   });
   res.end(JSON.stringify(body, null, 2));
@@ -92,11 +95,15 @@ function originCoordinates(origin='') {
 }
 
 const server=http.createServer(async (req,res)=>{
-  if (req.method==='OPTIONS') return send(res,204,{});
+  res._corsHeaders=corsHeaders(req);
+  if (req.method==='OPTIONS') {
+    if (!isOriginAllowed(req)) return send(res,403,{error:'Origen no autorizado'});
+    return send(res,204,{});
+  }
   const url=new URL(req.url,`http://${req.headers.host || 'localhost'}`);
   try {
     if (req.method==='GET' && url.pathname==='/health') {
-      return send(res,200,{ok:true,service:'stylo-cargas-staging-api',persistence:'SUPABASE',version:'0.2.0'});
+      return send(res,200,{ok:true,service:'stylo-cargas-staging-api',persistence:'SUPABASE',version:'0.3.0',integrations:readiness.integrations});
     }
 
     if (req.method==='POST' && url.pathname==='/users/register') {
