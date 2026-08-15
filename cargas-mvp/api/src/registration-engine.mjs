@@ -15,6 +15,10 @@ export function createAutomaticRegistration(input={}, now=new Date()) {
   const country=String(input.country || 'AR').trim().toUpperCase();
   const role=String(input.role || 'TRANSPORTISTA').trim().toUpperCase();
   const ts=now.toISOString();
+  const authMethods=Array.isArray(input.auth_methods) && input.auth_methods.length
+    ? [...new Set(input.auth_methods.map(x=>String(x).toUpperCase()))]
+    : ['PHONE'];
+
   return {
     id:`USR-${crypto.randomUUID()}`,
     phone,
@@ -22,6 +26,11 @@ export function createAutomaticRegistration(input={}, now=new Date()) {
     company:company || null,
     country,
     role,
+    email:input.email || null,
+    email_verified:Boolean(input.email_verified),
+    avatar_url:input.avatar_url || null,
+    google_sub:input.google_sub || null,
+    auth_methods:authMethods,
     access_status:'ACTIVE',
     review_status:'PENDING_REVIEW',
     registered_at:ts,
@@ -29,6 +38,16 @@ export function createAutomaticRegistration(input={}, now=new Date()) {
     reviewed_at:null,
     reviewed_by:null,
     review_note:null
+  };
+}
+
+export function linkAuthMethod(user, method, patch={}, now=new Date()) {
+  const methods=[...new Set([...(user.auth_methods || []), String(method).toUpperCase()])];
+  return {
+    ...user,
+    ...patch,
+    auth_methods:methods,
+    updated_at:now.toISOString()
   };
 }
 
@@ -48,5 +67,5 @@ export function applyAdminReview(user, input={}, now=new Date()) {
 }
 
 export function canAccessCargas(user) {
-  return Boolean(user) && user.access_status==='ACTIVE';
+  return Boolean(user) && user.access_status==='ACTIVE' && Boolean(user.phone);
 }
