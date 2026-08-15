@@ -1,6 +1,8 @@
 import http from 'node:http';
 import { URL } from 'node:url';
 import { extractWhatsAppInbound, extractWhatsAppStatuses } from './whatsapp-webhook-adapter.mjs';
+import { createWhatsAppIntakeHandler } from './whatsapp-intake-service.mjs';
+import { SupabaseStore } from './supabase-store.mjs';
 
 const PORT = Number(process.env.WHATSAPP_GATEWAY_PORT || 8790);
 
@@ -33,7 +35,14 @@ export function processWebhookPayload(payload) {
   };
 }
 
-export function createWhatsAppGateway({ verifyToken = process.env.WHATSAPP_VERIFY_TOKEN } = {}) {
+export function createWhatsAppGateway({
+  verifyToken = process.env.WHATSAPP_VERIFY_TOKEN,
+  handleParsed = async parsed => ({
+    saved_loads: [],
+    queued_audio: parsed.inbound.filter(x => x.needs_transcription),
+    status_events: parsed.statuses || []
+  })
+} = {}) {
   return http.createServer(async (req, res) => {
     const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
 
@@ -48,11 +57,13 @@ export function createWhatsAppGateway({ verifyToken = process.env.WHATSAPP_VERIF
       try {
         const payload = await readJson(req);
         const parsed = processWebhookPayload(payload);
-        // El siguiente adaptador persistirá/encolará parsed.inbound y parsed.statuses.
+        const handled = await handleParsed(parsed);
         return json(res, 200, {
           received: true,
           inbound_count: parsed.inbound.length,
           status_count: parsed.statuses.length,
+          saved_load_count: handled.saved_loads?.length || 0,
+          queued_audio_count: handled.queued_audio?.length || 0,
           events: parsed.inbound.map(x => ({
             source: x.shared.source,
             content_type: x.shared.content_type,
@@ -74,7 +85,9 @@ export function createWhatsAppGateway({ verifyToken = process.env.WHATSAPP_VERIF
 }
 
 if (process.argv[1] && import.meta.url.endsWith(process.argv[1].replaceAll('\\', '/'))) {
-  createWhatsAppGateway().listen(PORT, () => {
+  const store = new SupabaseStore();
+  const handleParsed = createWhatsAppIntakeHandler(store);
+  createWhatsAppGateway({ handleParsed }).listen(PORT, () => {
     console.log(`Stylo WhatsApp Gateway en http://localhost:${PORT}`);
   });
 }
