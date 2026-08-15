@@ -9,13 +9,15 @@ import { notificationDecision } from './notification-engine.mjs';
 
 const store = new SupabaseStore();
 const PORT = Number(process.env.STAGING_PORT || 8788);
+const SESSION_COOKIE = 'sc_session';
 
-function send(res, status, body) {
+function send(res, status, body, extraHeaders={}) {
   res.writeHead(status, {
     'content-type':'application/json; charset=utf-8',
     'access-control-allow-origin':'*',
     'access-control-allow-headers':'content-type,authorization,x-admin-key',
-    'access-control-allow-methods':'GET,POST,OPTIONS'
+    'access-control-allow-methods':'GET,POST,OPTIONS',
+    ...extraHeaders
   });
   res.end(JSON.stringify(body, null, 2));
 }
@@ -34,6 +36,24 @@ function requireAdmin(req) {
   if (req.headers['x-admin-key']!==expected) throw Object.assign(new Error('No autorizado'),{status:401});
 }
 
+function cookieValue(req, name) {
+  const cookie=String(req.headers.cookie || '');
+  for (const pair of cookie.split(';')) {
+    const [key,...rest]=pair.trim().split('=');
+    if (key===name) return decodeURIComponent(rest.join('='));
+  }
+  return '';
+}
+
+function persistentCookie(token, remember=true) {
+  const maxAge=remember ? Number(process.env.SESSION_IDLE_DAYS || 365) * 86400 : 7 * 86400;
+  return `${SESSION_COOKIE}=${encodeURIComponent(token)}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${maxAge}`;
+}
+
+function clearSessionCookie() {
+  return `${SESSION_COOKIE}=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0`;
+}
+
 async function issueSession(user, input={}) {
   const { token, session } = createPersistentSession(user.id, {
     remember: input.remember !== false,
@@ -46,7 +66,8 @@ async function issueSession(user, input={}) {
 
 async function authenticate(req) {
   const auth=String(req.headers.authorization || '');
-  const token=auth.startsWith('Bearer ') ? auth.slice(7).trim() : '';
+  const bearer=auth.startsWith('Bearer ') ? auth.slice(7).trim() : '';
+  const token=bearer || cookieValue(req,SESSION_COOKIE);
   if (!token) throw Object.assign(new Error('Sesión requerida'),{status:401});
   const session=await store.getSessionByTokenHash(hashSessionToken(token));
   if (!isSessionUsable(session)) throw Object.assign(new Error('Sesión vencida o revocada'),{status:401});
@@ -57,7 +78,7 @@ async function authenticate(req) {
   }
   const touched=touchPersistentSession(session);
   await store.updateSession(session.id,{last_seen_at:touched.last_seen_at,expires_at:touched.expires_at});
-  return { user, session:touched };
+  return { user, session:touched, token };
 }
 
 function originCoordinates(origin='') {
@@ -75,7 +96,7 @@ const server=http.createServer(async (req,res)=>{
   const url=new URL(req.url,`http://${req.headers.host || 'localhost'}`);
   try {
     if (req.method==='GET' && url.pathname==='/health') {
-      return send(res,200,{ok:true,service:'stylo-cargas-staging-api',persistence:'SUPABASE',version:'0.1.0'});
+      return send(res,200,{ok:true,service:'stylo-cargas-staging-api',persistence:'SUPABASE',version:'0.2.0'});
     }
 
     if (req.method==='POST' && url.pathname==='/users/register') {
@@ -89,8 +110,8 @@ const server=http.createServer(async (req,res)=>{
         await store.addUser(user);
         await store.addEvent({user_id:user.id,type:'USER_REGISTERED_AUTOMATICALLY',actor:'SYSTEM',created_at:new Date().toISOString(),payload:{method:'PHONE'}});
       }
-      const auth=await issueSession(user,input);
-      return send(res,alreadyRegistered?200:201,{user,already_registered:alreadyRegistered,access_granted:true,session_token:auth.token,session:auth.session});
+      const session=await issueSession(user,input);
+      return send(res,alreadyRegistered?200:201,{user,already_registered:alreadyRegistered,access_granted:true,session:session.session,session_token:input.return_token===true?session.token:undefined},{'set-cookie':persistentCookie(session.token,session.session.remember)});
     }
 
     if (req.method==='POST' && url.pathname==='/users/register/google') {
@@ -110,19 +131,19 @@ const server=http.createServer(async (req,res)=>{
       }
       user=await store.linkGoogleIdentity(user.id,profile);
       await store.addEvent({user_id:user.id,type:alreadyRegistered?'USER_GOOGLE_IDENTITY_LINKED':'USER_REGISTERED_WITH_GOOGLE',actor:'SYSTEM',created_at:new Date().toISOString(),payload:{email:profile.email,email_verified:profile.email_verified}});
-      const auth=await issueSession(user,input);
-      return send(res,alreadyRegistered?200:201,{user,already_registered:alreadyRegistered,google_linked:true,access_granted:true,session_token:auth.token,session:auth.session});
+      const session=await issueSession(user,input);
+      return send(res,alreadyRegistered?200:201,{user,already_registered:alreadyRegistered,google_linked:true,access_granted:true,session:session.session,session_token:input.return_token===true?session.token:undefined},{'set-cookie':persistentCookie(session.token,session.session.remember)});
     }
 
     if (req.method==='GET' && url.pathname==='/me') {
       const auth=await authenticate(req);
-      return send(res,200,{user:auth.user,session:{id:auth.session.id,last_seen_at:auth.session.last_seen_at,expires_at:auth.session.expires_at,device_label:auth.session.device_label}});
+      return send(res,200,{user:auth.user,session:{id:auth.session.id,last_seen_at:auth.session.last_seen_at,expires_at:auth.session.expires_at,device_label:auth.session.device_label}},{'set-cookie':persistentCookie(auth.token,auth.session.remember)});
     }
 
     if (req.method==='POST' && url.pathname==='/session/logout') {
       const auth=await authenticate(req);
       await store.updateSession(auth.session.id,revokeSession(auth.session,'USER_LOGOUT'));
-      return send(res,200,{logged_out:true});
+      return send(res,200,{logged_out:true},{'set-cookie':clearSessionCookie()});
     }
 
     if (req.method==='POST' && url.pathname==='/intake/messages') {
