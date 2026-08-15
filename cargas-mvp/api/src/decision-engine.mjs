@@ -7,6 +7,7 @@ export function evaluateCandidate(load, vehicle, match, rules) {
   if (match.total_score < rules.minimum_auto_match_score) reasons.push('LOW_SCORE');
   if (match.equipment_score !== 100) reasons.push('WRONG_EQUIPMENT');
   if (load.weight_tn != null && vehicle.capacity_tn != null && Number(load.weight_tn) > Number(vehicle.capacity_tn)) reasons.push('OVER_CAPACITY');
+  if (rules.require_reliable_distance && ['LOW','UNUSABLE'].includes(match.distance_quality)) reasons.push('LOW_DISTANCE_CONFIDENCE');
   return { eligible: reasons.length === 0, reasons };
 }
 
