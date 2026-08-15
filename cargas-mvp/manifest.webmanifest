@@ -1,0 +1,10 @@
+{
+  "name": "Stylo Cargas",
+  "short_name": "Stylo Cargas",
+  "start_url": "./mi-flota.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090c10",
+  "theme_color": "#090c10",
+  "description": "Asistente de tráfico y continuidad de cargas de Stylo Camión"
+}
