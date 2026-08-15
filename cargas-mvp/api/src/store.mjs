@@ -8,6 +8,7 @@ export class MemoryStore {
     this.users = new Map((seed.users || []).map(x => [x.id, x]));
     this.sessions = new Map((seed.sessions || []).map(x => [x.id, x]));
     this.intakeMessages = new Map((seed.intake_messages || []).map(x => [x.id, x]));
+    this.notificationOutbox = new Map((seed.notification_outbox || []).map(x => [x.id, x]));
     this.events = [];
     this.matches = [];
   }
@@ -71,6 +72,19 @@ export class MemoryStore {
   listUserSessions(userId){ return [...this.sessions.values()].filter(x=>x.user_id===userId); }
   saveMatches(loadId, matches){ this.matches=this.matches.filter(m=>m.load_id!==loadId).concat(matches); return matches; }
   getMatches(loadId){ return this.matches.filter(m=>m.load_id===loadId).sort((a,b)=>b.total_score-a.total_score); }
+  addNotificationOutbox(item){
+    if (!item) return null;
+    if (item.dedupe_key) {
+      const existing=[...this.notificationOutbox.values()].find(x=>x.dedupe_key===item.dedupe_key && ['PENDING','SENT','DELIVERED'].includes(x.status));
+      if (existing) return existing;
+    }
+    const x={ id:item.id || crypto.randomUUID(), created_at:new Date().toISOString(), ...item };
+    this.notificationOutbox.set(x.id,x);
+    return x;
+  }
+  listNotificationOutbox(filters={}){
+    return [...this.notificationOutbox.values()].filter(x=>(!filters.status || x.status===filters.status) && (!filters.load_id || x.load_id===filters.load_id));
+  }
   addEvent(event){ this.events.push(event); return event; }
   listExceptions(){ return this.listLoads({traffic_light:'RED'}); }
 }
@@ -79,6 +93,7 @@ export const seed = {
   users:[],
   sessions:[],
   intake_messages:[],
+  notification_outbox:[],
   carriers:[
     {id:'CAR-1',name:'Transporte López',status:'ACTIVE',reputation_score:4.8,completed_operations:27},
     {id:'CAR-2',name:'Logística del Litoral',status:'ACTIVE',reputation_score:4.5,completed_operations:19},
