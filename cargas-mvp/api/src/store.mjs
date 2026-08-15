@@ -41,12 +41,18 @@ export class MemoryStore {
     this.intakeMessages.set(id,x);
     return x;
   }
+  claimIntakeMessage(id,expectedStatuses=['RECEIVED','AWAITING_TRANSCRIPTION','FAILED']){
+    const current=this.intakeMessages.get(id);
+    if (!current || !expectedStatuses.includes(current.processing_status)) return null;
+    return this.updateIntakeMessage(id,{processing_status:'PROCESSING',processing_error:null});
+  }
   listIntakeMessages(filters={}){
     return [...this.intakeMessages.values()].filter(x=>(!filters.processing_status || x.processing_status===filters.processing_status) && (!filters.source || x.source===filters.source));
   }
   addLoad(load){ this.loads.set(load.id, load); return load; }
   listLoads(filters={}){ return [...this.loads.values()].filter(x => (!filters.status || x.status===filters.status) && (!filters.traffic_light || x.traffic_light===filters.traffic_light)); }
   getLoad(id){ return this.loads.get(id); }
+  getLoadByIntakeMessageId(intakeMessageId){ return [...this.loads.values()].find(x=>x.intake_message_id===intakeMessageId) || null; }
   updateLoad(id, patch){ const x={...this.loads.get(id),...patch}; this.loads.set(id,x); return x; }
   listVehicles(){ return [...this.vehicles.values()]; }
   getVehicle(id){ return this.vehicles.get(id); }
