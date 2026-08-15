@@ -46,7 +46,7 @@ test('match fuerte genera traza auditable y alerta en outbox', async () => {
 
   const decisionEvent = store.events.find(x => x.type === 'AI_MATCH_DECISION');
   assert.ok(decisionEvent);
-  assert.equal(decisionEvent.payload.decision_version,'stylo-network-priority-v1');
+  assert.equal(decisionEvent.payload.decision_version,'stylo-network-priority-v2');
   assert.equal(decisionEvent.payload.selected.vehicle_id,'OWN-1');
   assert.equal(decisionEvent.payload.trace[0].evaluated_candidates[0].eligible,true);
 });
