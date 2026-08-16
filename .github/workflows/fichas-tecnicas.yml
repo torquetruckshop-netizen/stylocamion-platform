@@ -1,0 +1,33 @@
+name: Recolectar fichas técnicas
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 6 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  recolectar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Ejecutar recolector
+        run: python tools/fichas/collector.py
+
+      - name: Guardar resultado para revisión
+        uses: actions/upload-artifact@v4
+        with:
+          name: fichas-tecnicas-${{ github.run_number }}
+          path: tools/fichas/output/
+          retention-days: 30
+          if-no-files-found: error
