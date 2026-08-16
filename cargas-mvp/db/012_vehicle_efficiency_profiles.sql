@@ -20,6 +20,11 @@ create table if not exists vehicle_efficiency_profiles (
   updated_at timestamptz not null default now()
 );
 
+alter table trip_economic_estimates add column if not exists consumption_confidence text;
+alter table trip_economic_estimates add column if not exists fuel_profile_version text;
+alter table trip_economic_estimates add column if not exists fuel_profile_sample_count integer;
+alter table trip_economic_estimates add column if not exists fuel_profile_distance_km numeric(14,2);
+
 create index if not exists idx_vehicle_efficiency_profiles_ready
   on vehicle_efficiency_profiles(ready_for_estimation, confidence);
 
