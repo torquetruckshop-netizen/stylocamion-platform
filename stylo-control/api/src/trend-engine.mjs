@@ -16,7 +16,7 @@ export function previousRange(range={}) {
   const end=new Date(range.end).getTime();
   if (!Number.isFinite(start)||!Number.isFinite(end)||end<=start) throw new Error('range inválido');
   const span=end-start;
-  return {start:new Date(start-span).toISOString(),end:new Date(start).toISOString()};
+  return {start:new Date(start-span).toISOString(),end:new Date(start-1).toISOString()};
 }
 
 export function buildMetricComparison({facts=[],period='DAY',now=new Date(),visibility=null}={}) {
@@ -36,8 +36,7 @@ export function buildMetricComparison({facts=[],period='DAY',now=new Date(),visi
 export function buildDailySeries({facts=[],days=30,now=new Date(),visibility=null}={}) {
   const safeDays=Math.max(1,Math.min(366,Number(days)||30));
   const rows=[];
-  const end=new Date(now);
-  end.setUTCHours(23,59,59,999);
+  const end=new Date(now); end.setUTCHours(23,59,59,999);
   for (let offset=safeDays-1;offset>=0;offset--) {
     const dayEnd=new Date(end); dayEnd.setUTCDate(dayEnd.getUTCDate()-offset);
     const dayStart=new Date(dayEnd); dayStart.setUTCHours(0,0,0,0);
@@ -47,8 +46,5 @@ export function buildDailySeries({facts=[],days=30,now=new Date(),visibility=nul
   return rows;
 }
 
-function percentChange(current,previous){
-  if (previous===0) return current===0 ? 0 : null;
-  return round(((current-previous)/Math.abs(previous))*100);
-}
+function percentChange(current,previous){ if(previous===0)return current===0?0:null; return round(((current-previous)/Math.abs(previous))*100); }
 function round(value){ return Math.round((Number(value)+Number.EPSILON)*100)/100; }
