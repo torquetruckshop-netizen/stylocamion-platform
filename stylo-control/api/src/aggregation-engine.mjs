@@ -26,6 +26,11 @@ function factsForMetric(metric,facts,{start=null,end=null}={}){
 }
 
 export function calculateMetric(metric,facts,range={}){
+  if (metric.aggregation==='RATIO') {
+    const numerator=facts.filter(f=>inMetricRange(f,range) && f.event_type===metric.numeratorEvent).length;
+    const denominator=facts.filter(f=>inMetricRange(f,range) && f.event_type===metric.denominatorEvent).length;
+    return denominator ? round((numerator/denominator)*100) : 0;
+  }
   const selected=factsForMetric(metric,facts,range);
   switch(metric.aggregation){
     case 'COUNT': return selected.length;
@@ -40,16 +45,15 @@ export function calculateMetric(metric,facts,range={}){
 }
 
 export function buildMetricSnapshot({facts=[],range={},visibility=null,generatedAt=new Date()}={}){
-  const catalog=visibility
-    ? METRICS.filter(x=>x.visibility===visibility)
-    : METRICS;
+  const catalog=visibility ? METRICS.filter(x=>x.visibility===visibility) : METRICS;
   const metrics=Object.fromEntries(catalog.map(metric=>[
     metric.key,
     {
       value:calculateMetric(metric,facts,range),
       label:metric.label,
       section:metric.section,
-      visibility:metric.visibility
+      visibility:metric.visibility,
+      unit:metric.aggregation==='RATIO'?'PERCENT':undefined
     }
   ]));
   return {
@@ -62,19 +66,14 @@ export function buildMetricSnapshot({facts=[],range={},visibility=null,generated
 
 export function buildInvestorSnapshot({facts=[],range={},generatedAt=new Date()}={}){
   const snapshot=buildMetricSnapshot({facts,range,visibility:MetricVisibility.INVESTOR,generatedAt});
-  return {
-    view:'INVESTOR',
-    ...snapshot,
-    privacy:'AGGREGATED_ONLY'
-  };
+  return {view:'INVESTOR',...snapshot,privacy:'AGGREGATED_ONLY'};
 }
 
 export function groupMetricsBySection(snapshot={}){
   const sections={};
-  for (const [key,metric] of Object.entries(snapshot.metrics || {})) {
-    (sections[metric.section] ||= {})[key]=metric;
-  }
+  for (const [key,metric] of Object.entries(snapshot.metrics || {})) (sections[metric.section] ||= {})[key]=metric;
   return sections;
 }
 
+function inMetricRange(fact,range={}){ return inRange(fact.occurred_at,range.start || null,range.end || null); }
 function round(value){ return Math.round((Number(value)+Number.EPSILON)*100)/100; }
