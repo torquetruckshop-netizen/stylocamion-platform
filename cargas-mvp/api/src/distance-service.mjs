@@ -14,8 +14,8 @@ export function vehicleLocationState(vehicle, now = new Date(), staleAfterMinute
 
 export function createEmptyDistanceResolver({
   roadDistanceProvider = null,
-  estimatedRoadMultiplier = 1.18,
-  staleAfterMinutes = 240,
+  estimatedRoadMultiplier = envPositiveNumber('STYLO_ESTIMATED_ROAD_MULTIPLIER', 1.18),
+  staleAfterMinutes = envPositiveNumber('VEHICLE_LOCATION_STALE_MINUTES', 240),
   now = () => new Date()
 } = {}) {
   return async function resolveEmptyDistance({ load, vehicle }) {
@@ -82,4 +82,9 @@ export function createEmptyDistanceResolver({
       vehicle_location_age_minutes:locationState.age_minutes
     };
   };
+}
+
+function envPositiveNumber(name, fallback) {
+  const value = Number(process.env[name]);
+  return Number.isFinite(value) && value > 0 ? value : fallback;
 }
