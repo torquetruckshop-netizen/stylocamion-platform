@@ -12,6 +12,9 @@ jobs:
   recolectar:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
     steps:
       - name: Descargar código
         uses: actions/checkout@v4
@@ -21,10 +24,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Ejecutar recolector
+      - name: Descargar y catalogar fichas
         run: python tools/fichas/collector.py
 
-      - name: Guardar resultado para revisión
+      - name: Subir fichas a almacenamiento permanente
+        if: env.SUPABASE_URL != '' && env.SUPABASE_SERVICE_ROLE_KEY != ''
+        run: python tools/fichas/upload_supabase.py
+
+      - name: Guardar respaldo para revisión
         uses: actions/upload-artifact@v4
         with:
           name: fichas-tecnicas-${{ github.run_number }}
