@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "volkswagen_ar",
+      "brand": "Volkswagen",
+      "country": "AR",
+      "seeds": ["https://vwcamionesybuses.com.ar/"],
+      "allowed_hosts": ["vwcamionesybuses.com.ar", "www.vwcamionesybuses.com.ar"],
+      "page_pattern": "/modelo/",
+      "max_pages": 80
+    },
+    {
+      "id": "isuzu_ar",
+      "brand": "Isuzu",
+      "country": "AR",
+      "seeds": [
+        "https://isuzu.com.ar/",
+        "https://isuzu.com.ar/isuzu-nqr90/",
+        "https://isuzu.com.ar/wp-content/uploads/2019/07/Brochure-BAJAv4.pdf"
+      ],
+      "allowed_hosts": ["isuzu.com.ar", "www.isuzu.com.ar"],
+      "page_pattern": "/isuzu-",
+      "max_pages": 40
+    }
+  ]
+}
