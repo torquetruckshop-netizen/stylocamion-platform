@@ -1,7 +1,13 @@
 import { runPriorityMatching } from './network-matching-engine.mjs';
 import { buildNotificationOutboxItem } from './notification-outbox.mjs';
 
-export function createLoadDecisionOrchestrator({ store, distanceResolver, rules, tripEconomicsEstimator = null } = {}) {
+export function createLoadDecisionOrchestrator({
+  store,
+  distanceResolver,
+  rules,
+  tripEconomicsEstimator = null,
+  fuelProfileResolver = null
+} = {}) {
   if (!store) throw new Error('store es obligatorio');
 
   return async function decideLoad({
@@ -49,12 +55,18 @@ export function createLoadDecisionOrchestrator({ store, distanceResolver, rules,
       reputation_score: result.selected.match?.reputation_score ?? null
     } : null;
 
+    const profileResolution = await resolveFuelProfile({
+      explicitProfile:fuelProfile,
+      resolver:fuelProfileResolver,
+      result
+    });
+
     const economicEvaluation = await calculateEconomicsIfPossible({
       estimator:tripEconomicsEstimator,
       result,
       load,
       organization:{ id:organizationId || organization.id || null, ...organization },
-      fuelProfile,
+      fuelProfile:profileResolution.profile,
       loadedKm,
       fuelPricePerLiter,
       tolls,
@@ -76,6 +88,8 @@ export function createLoadDecisionOrchestrator({ store, distanceResolver, rules,
           network_level: result.network_level || null,
           next_action: result.next_action || null,
           selected,
+          fuel_profile_resolution:profileResolution.status,
+          fuel_profile_error:profileResolution.error || null,
           economics_status:economicEvaluation.status,
           economics:economicEvaluation.estimate || null,
           trace: result.trace || [],
@@ -120,6 +134,9 @@ export function createLoadDecisionOrchestrator({ store, distanceResolver, rules,
     return {
       ...result,
       selected_summary: selected,
+      fuel_profile:profileResolution.profile,
+      fuel_profile_resolution:profileResolution.status,
+      fuel_profile_error:profileResolution.error || null,
       economics:economicEvaluation.estimate,
       economics_status:economicEvaluation.status,
       economics_error:economicEvaluation.error || null,
@@ -128,6 +145,18 @@ export function createLoadDecisionOrchestrator({ store, distanceResolver, rules,
       decided_at: decidedAt
     };
   };
+}
+
+async function resolveFuelProfile({ explicitProfile, resolver, result }) {
+  if (explicitProfile) return { status:'EXPLICIT', profile:explicitProfile, error:null };
+  const vehicleId = result.selected?.vehicle?.id || null;
+  if (!resolver || !vehicleId) return { status:'NOT_AVAILABLE', profile:null, error:null };
+  try {
+    const profile = await resolver({ vehicleId, vehicle:result.selected.vehicle });
+    return { status:profile ? 'RESOLVED' : 'NOT_FOUND', profile:profile || null, error:null };
+  } catch (error) {
+    return { status:'RESOLUTION_FAILED', profile:null, error:error.message || 'fuel_profile_resolution_failed' };
+  }
 }
 
 async function calculateEconomicsIfPossible({ estimator, result, load, organization, fuelProfile, loadedKm, fuelPricePerLiter, tolls, estimatedTollCount, averageTollAmount, freightAmount, currency }) {
