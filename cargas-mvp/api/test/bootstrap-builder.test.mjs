@@ -16,16 +16,18 @@ test('bootstrap incluye todas las migraciones operativas actuales en orden', () 
     '009_location_resolution.sql',
     '010_trip_economics.sql',
     '011_telematics_integrations.sql',
-    '012_vehicle_efficiency_profiles.sql'
+    '012_vehicle_efficiency_profiles.sql',
+    '013_marketplace_intelligence.sql'
   ]);
 });
 
-test('bootstrap instala economía antes que telemetría y usa la FK correcta', () => {
+test('bootstrap instala economía antes que telemetría y marketplace intelligence al final', () => {
   const sql=buildBootstrapSql();
   const economics=sql.indexOf('-- ===== 010_trip_economics.sql =====');
   const telematics=sql.indexOf('-- ===== 011_telematics_integrations.sql =====');
   const profiles=sql.indexOf('-- ===== 012_vehicle_efficiency_profiles.sql =====');
-  assert.ok(economics>=0 && telematics>economics && profiles>telematics);
+  const marketplace=sql.indexOf('-- ===== 013_marketplace_intelligence.sql =====');
+  assert.ok(economics>=0 && telematics>economics && profiles>telematics && marketplace>profiles);
   assert.match(sql,/estimated_snapshot_id uuid references trip_economic_estimates\(id\)/);
   assert.doesNotMatch(sql,/references travel_cost_estimates\(id\)/);
 });
