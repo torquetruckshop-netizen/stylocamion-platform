@@ -67,3 +67,15 @@ test('rango temporal limita métricas',()=>{
   assert.equal(result.metrics.loads_detected.value,2);
   assert.equal(result.metrics.users_total.value,0);
 });
+
+test('un source_event_id repetido no duplica ingresos ni hechos',()=>{
+  const store=new MemoryControlStore();
+  const service=createControlService({store});
+  const fact={
+    module:'REVENUE',source_event_id:'mp-payment-123',event_type:'REVENUE_RECORDED',entity_type:'PAYMENT',entity_id:'P123',value:35000,currency:'ARS',occurred_at:'2026-08-05T12:00:00Z'
+  };
+  service.recordFact({role:'ADMIN',fact});
+  service.recordFact({role:'ADMIN',fact});
+  assert.equal(store.listFacts().length,1);
+  assert.equal(service.adminOverview({role:'ADMIN'}).sections.REVENUE.gross_revenue.value,35000);
+});
