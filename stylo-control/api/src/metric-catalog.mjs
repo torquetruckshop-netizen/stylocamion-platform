@@ -1,4 +1,4 @@
-export const CONTROL_METRIC_CATALOG_VERSION='stylo-control-metrics-v1';
+export const CONTROL_METRIC_CATALOG_VERSION='stylo-control-metrics-v2';
 
 export const MetricVisibility=Object.freeze({
   INTERNAL:'INTERNAL',
@@ -18,8 +18,13 @@ export const METRICS=Object.freeze([
   {key:'loads_from_whatsapp',section:'CARGAS',label:'Cargas originadas en WhatsApp',visibility:'INTERNAL',aggregation:'COUNT',event:'LOAD_DETECTED',where:{channel:'WHATSAPP'}},
 
   {key:'sales_listings_active',section:'VENTAS',label:'Publicaciones activas',visibility:'INVESTOR',aggregation:'GAUGE',event:'SALES_LISTINGS_ACTIVE',valueField:'value'},
+  {key:'sales_listings_created',section:'VENTAS',label:'Publicaciones creadas',visibility:'INVESTOR',aggregation:'COUNT',event:'SALES_LISTING_CREATED'},
   {key:'sales_inquiries',section:'VENTAS',label:'Consultas de ventas',visibility:'INVESTOR',aggregation:'COUNT',event:'SALES_INQUIRY'},
   {key:'sales_services_purchased',section:'VENTAS',label:'Servicios de ventas contratados',visibility:'INVESTOR',aggregation:'COUNT',event:'SALES_SERVICE_PURCHASED'},
+  {key:'sales_contacts_whatsapp',section:'VENTAS',label:'Consultas iniciadas por WhatsApp',visibility:'INTERNAL',aggregation:'COUNT',event:'SALES_INQUIRY',where:{channel:'WHATSAPP'}},
+  {key:'sales_deals_closed',section:'VENTAS',label:'Operaciones de venta cerradas',visibility:'INVESTOR',aggregation:'COUNT',event:'SALES_DEAL_CLOSED'},
+  {key:'sales_gmv',section:'VENTAS',label:'Valor de operaciones cerradas',visibility:'INVESTOR',aggregation:'SUM',event:'SALES_DEAL_CLOSED',valueField:'value'},
+  {key:'sales_conversion_rate',section:'VENTAS',label:'Conversión consulta a cierre',visibility:'INVESTOR',aggregation:'RATIO',numeratorEvent:'SALES_DEAL_CLOSED',denominatorEvent:'SALES_INQUIRY'},
 
   {key:'gross_revenue',section:'REVENUE',label:'Ingresos registrados',visibility:'INTERNAL',aggregation:'SUM',event:'REVENUE_RECORDED',valueField:'value'},
   {key:'payments_confirmed',section:'REVENUE',label:'Pagos confirmados',visibility:'INTERNAL',aggregation:'COUNT',event:'PAYMENT_CONFIRMED'},
