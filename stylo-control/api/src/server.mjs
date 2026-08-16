@@ -14,12 +14,14 @@ function trendArgs(url){return{period:url.searchParams.get('period')||'DAY',days
 const server=http.createServer(async(req,res)=>{
  const url=new URL(req.url,`http://${req.headers.host||'localhost'}`);
  try{
-  if(req.method==='GET'&&url.pathname==='/health')return send(res,200,{ok:true,service:'stylo-control',version:'0.5.0'});
+  if(req.method==='GET'&&url.pathname==='/health')return send(res,200,{ok:true,service:'stylo-control',version:'0.6.0'});
   if(req.method==='GET'&&url.pathname==='/admin/overview'){const identity=requireControlIdentity(req.headers);return send(res,200,service.adminOverview({role:identity.role,range:rangeFromUrl(url)}));}
   if(req.method==='GET'&&url.pathname==='/admin/trends'){const identity=requireControlIdentity(req.headers);return send(res,200,service.trends({role:identity.role,...trendArgs(url)}));}
   if(req.method==='GET'&&url.pathname==='/admin/funnel'){const identity=requireControlIdentity(req.headers);return send(res,200,service.funnel({role:identity.role,range:rangeFromUrl(url),groupBy:url.searchParams.get('group_by')||'source'}));}
   if(req.method==='GET'&&url.pathname==='/admin/attribution'){const identity=requireControlIdentity(req.headers);return send(res,200,service.attribution({role:identity.role,range:rangeFromUrl(url),groupBy:url.searchParams.get('group_by')||'source'}));}
   if(req.method==='GET'&&url.pathname==='/admin/alerts'){const identity=requireControlIdentity(req.headers);return send(res,200,service.healthAlerts({role:identity.role}));}
+  if(req.method==='GET'&&url.pathname==='/admin/anomalies'){const identity=requireControlIdentity(req.headers);return send(res,200,service.anomalies({role:identity.role,period:url.searchParams.get('period')||'DAY'}));}
+  if(req.method==='POST'&&url.pathname==='/admin/ask'){const identity=requireControlIdentity(req.headers);const input=await readJson(req);if(!input.question)return send(res,400,{error:'question es obligatorio'});return send(res,200,service.ask({role:identity.role,question:input.question}));}
   if(req.method==='GET'&&url.pathname==='/investor/snapshot'){const identity=requireControlIdentity(req.headers);return send(res,200,service.investorSnapshot({role:identity.role,range:rangeFromUrl(url)}));}
   if(req.method==='GET'&&url.pathname==='/investor/trends'){const identity=requireControlIdentity(req.headers);return send(res,200,service.trends({role:identity.role,...trendArgs(url),investor:true}));}
   if(req.method==='GET'&&url.pathname==='/investor/export'){const identity=requireControlIdentity(req.headers);return send(res,200,service.investorExport({role:identity.role,range:rangeFromUrl(url),expiresAt:url.searchParams.get('expires_at')||null}));}
