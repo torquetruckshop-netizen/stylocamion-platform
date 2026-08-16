@@ -16,6 +16,7 @@ Aplicar en este orden para el primer staging:
 12. `011_telematics_integrations.sql`
 13. `012_vehicle_efficiency_profiles.sql`
 14. `013_marketplace_intelligence.sql`
+15. `014_operational_intelligence.sql`
 
 ## Nota
 
@@ -33,7 +34,9 @@ Antes de convertir estas migraciones en una cadena de producción, se renumerar�
 
 `012_vehicle_efficiency_profiles.sql` mantiene un perfil aprendido de consumo por camión.
 
-`013_marketplace_intelligence.sql` agrega inteligencia de instalaciones, tiempos de espera, preferencias aprendidas de transportistas y planes de movimientos continuos para reducir kilómetros vacíos y mejorar rentabilidad.
+`013_marketplace_intelligence.sql` agrega inteligencia de instalaciones, tiempos de espera, preferencias aprendidas de transportistas y planes de movimientos continuos.
+
+`014_operational_intelligence.sql` agrega propuestas de Instant Book, bids condicionados, Exception Inbox y snapshots de market heatmap.
 
 ## Seguridad
 
