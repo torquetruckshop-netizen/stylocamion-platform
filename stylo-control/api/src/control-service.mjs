@@ -4,6 +4,8 @@ import { buildUnifiedFunnel, buildGlobalFunnel } from './funnel-engine.mjs';
 import { buildAttributionReport } from './attribution-engine.mjs';
 import { buildHealthAlerts } from './health-alert-engine.mjs';
 import { buildInvestorExport } from './investor-export.mjs';
+import { answerControlQuestion } from './conversational-analytics-engine.mjs';
+import { detectMetricAnomalies } from './anomaly-detection-engine.mjs';
 import { requirePermission } from './access-control.mjs';
 import { MetricVisibility } from './metric-catalog.mjs';
 
@@ -43,6 +45,14 @@ export function createControlService({store}={}){
     healthAlerts({role='ADMIN'}={}){
       requirePermission(role,'CONTROL_READ');
       return {view:'ADMIN',alerts:buildHealthAlerts({health:store.listModuleHealth()})};
+    },
+    ask({role='ADMIN',question,now=new Date()}={}){
+      requirePermission(role,'CONTROL_READ');
+      return {view:'ADMIN',question,answer:answerControlQuestion({question,facts:store.listFacts(),now})};
+    },
+    anomalies({role='ADMIN',period='DAY',now=new Date()}={}){
+      requirePermission(role,'CONTROL_READ');
+      return {view:'ADMIN',...detectMetricAnomalies({facts:store.listFacts(),period,now})};
     },
     recordFact({role='ADMIN',fact}={}){requirePermission(role,'CONTROL_WRITE');return store.addFact(fact);},
     updateModuleHealth({role='ADMIN',health}={}){requirePermission(role,'CONTROL_WRITE');return store.upsertModuleHealth(health);}
