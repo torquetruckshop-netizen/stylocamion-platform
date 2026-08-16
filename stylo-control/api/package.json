@@ -1,0 +1,13 @@
+{
+  "name": "stylo-control-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/server.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
