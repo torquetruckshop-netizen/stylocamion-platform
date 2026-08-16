@@ -1,12 +1,14 @@
-import { calculateTripEconomics, resolveFuelConsumption } from './trip-economics-engine.mjs';
+import { calculateTripEconomics } from './trip-economics-engine.mjs';
+import { resolveAdaptiveFuelConsumption } from './vehicle-efficiency-profile.mjs';
 
-export const TRIP_ECONOMICS_VERSION = 'trip-economics-v1';
+export const TRIP_ECONOMICS_VERSION = 'trip-economics-v2';
 
 export function createTripEconomicsService({ saveEstimate = null } = {}) {
   return async function estimateTrip({
     load,
     vehicle = {},
     organization = {},
+    fuelProfile = null,
     loadedKm = 0,
     emptyKm = 0,
     fuelPricePerLiter = null,
@@ -18,7 +20,7 @@ export function createTripEconomicsService({ saveEstimate = null } = {}) {
   } = {}) {
     if (!load) throw new Error('load es obligatorio');
 
-    const consumption = resolveFuelConsumption({ vehicle, organization });
+    const consumption = resolveAdaptiveFuelConsumption({ profile:fuelProfile, vehicle, organization });
     const resolvedFuelPrice = fuelPricePerLiter ?? organization.default_fuel_price_per_liter ?? null;
     const resolvedAverageToll = averageTollAmount ?? organization.default_toll_average_amount ?? 0;
     const resolvedCurrency = currency || organization.default_cost_currency || load.price_currency || 'ARS';
@@ -43,6 +45,10 @@ export function createTripEconomicsService({ saveEstimate = null } = {}) {
       vehicle_id:vehicle.id || null,
       organization_id:organization.id || load.owner_organization_id || null,
       consumption_source:consumption.source,
+      consumption_confidence:consumption.confidence || null,
+      fuel_profile_version:consumption.profile_version || null,
+      fuel_profile_sample_count:consumption.sample_count ?? null,
+      fuel_profile_distance_km:consumption.total_distance_km ?? null,
       ...economics,
       created_at:new Date().toISOString()
     };
@@ -56,6 +62,10 @@ export function tripEconomicsSummary(estimate = {}) {
   const parts = [];
   parts.push(`${estimate.total_km ?? 0} km`);
   parts.push(`${estimate.estimated_liters ?? 0} L estimados`);
+  if (estimate.consumption_l_per_100km != null) {
+    const source = estimate.consumption_source === 'TELEMATICS_PROFILE' ? 'histórico real' : 'estimado';
+    parts.push(`${estimate.consumption_l_per_100km} L/100 km · ${source}`);
+  }
   if (estimate.fuel_cost != null) parts.push(`combustible ${estimate.currency || 'ARS'} ${estimate.fuel_cost}`);
   if ((estimate.toll_count || 0) > 0) parts.push(`${estimate.toll_count} peaje${estimate.toll_count === 1 ? '' : 's'} · ${estimate.toll_confidence || 'ESTIMATED'}`);
   if (estimate.variable_cost != null) parts.push(`costo variable ${estimate.currency || 'ARS'} ${estimate.variable_cost}`);
