@@ -46,7 +46,8 @@ export function createStagingMatchService({
     }
 
     const includeStyloNetwork = config.allow_stylo_network !== false;
-    const network = await store.listMatchingNetworkCandidates(organizationId, { includeStyloNetwork });
+    const rawNetwork = await store.listMatchingNetworkCandidates(organizationId, { includeStyloNetwork });
+    const network = await hydrateVehicleEconomics(rawNetwork,contextStore);
 
     const decision = await decide({
       load,
@@ -84,4 +85,22 @@ export function createStagingMatchService({
       decision
     };
   };
+}
+
+async function hydrateVehicleEconomics(network,contextStore) {
+  const levels=['ownFleet','privateNetwork','styloNetwork'];
+  const ids=levels.flatMap(level=>(network[level] || []).map(x=>(x.vehicle || x)?.id).filter(Boolean));
+  if (!ids.length || !contextStore.getVehicleEconomicsMap) return network;
+  const economicsMap=await contextStore.getVehicleEconomicsMap(ids);
+  const hydrated={...network};
+  for (const level of levels) {
+    hydrated[level]=(network[level] || []).map(candidate=>{
+      const vehicle=candidate.vehicle || candidate;
+      const economics=economicsMap.get(vehicle.id) || {};
+      return candidate.vehicle
+        ? {...candidate,vehicle:{...candidate.vehicle,...economics}}
+        : {...candidate,...economics};
+    });
+  }
+  return hydrated;
 }
