@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T13:47:44.111351+00:00",
+  "updated_at": "2026-08-16T17:00:59.250779+00:00",
   "items": [
     {
       "id": "e8f11da375c64a",
@@ -42,11 +42,11 @@
       "time": "Wed, 12 Aug 2026 11:12:00 GMT"
     },
     {
-      "id": "9b3f355c1f4e13",
+      "id": "e6258432533f64",
       "title": "Formación, seguridad vial y minería: cómo cambia el transporte de cargas en Argentina",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
-      "source": "identidadcorrentina.com.ar",
+      "source": "Identidad Correntina",
       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNaHJfSkJlLXFpTU4yQ3NmdDhkWEFzMzktVk90RTF5QTNsbkhhX3lYSXdZWVJxMUdReHRPeEdreHc3V2ptRmxPZ29XVkhwbGtPd1RmZUdWYndBX0FHd0JuSWktNUZlNHJVaXRSOWhNR09UQzIxOXNXc1ZGTXFoalAtMFkyQ3VlZGRsNWlYN25jdUdYb2NWTHVIX3FZNG15dmRrX1NTc0FLMjdDQUhjOUxKYlVQOGlpWnVmYzR6SWtLR2xEYXgyLWRaRFNTbnllc3RQUm5n?oc=5",
       "published_at": "2026-08-04T09:04:59+00:00",
       "time": "Tue, 04 Aug 2026 09:04:59 GMT"
@@ -312,6 +312,16 @@
       "time": "Mon, 10 Aug 2026 20:10:00 GMT"
     },
     {
+      "id": "6d254fef6e7595",
+      "title": "El Gobierno cambió por decreto las reglas para el transporte de cargas: más peso, bitrenes y guiño al GNC de Vaca Muerta",
+      "summary": "Información reciente de rutas y normativa seleccionada por el radar regional de Stylo Camión.",
+      "category": "Rutas y normativa",
+      "source": "Diario Río Negro",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNcVJMWnE3SnhldEdtaW1TX3JiOGVjMWJISGlEYkwtdWFJaU44Wk9RVkdMazVqME90bWEwLVRMd05ndHdHZ041V0NraXAwYUdpbWRtbXRITjNXZV9SSHZkQjd6ZVg3Ynp0Z3l5VU96Q1E2dzNOSXlicmtJdUFhY2prSVRNUzR4SDBkWTJpaVhGeXN1NHBaOUhIVkpfblIwSUIzdVd2UjZvSHVTMWZteE11RC0yWEs5MW1vbTAwZEsxaVl2dUhtQUNuY3NhTGRVclhBMzkxWXJIT3NkdHYxSERvS3RUNXhyVVY5LUZqZlhNZmFSUHZwYVVJ0gH_AUFVX3lxTE1FWkRjTlhZN0VLaWdqNXNBcjJINnJMR2U5TE02TWFsaVNuVWNiNmM3aVAxSDZsWThSOGhacFhIdklNZDdJZ19XX1hWenQxNDNtcFlvZmlwVVFrd2pYYklBUGx6enU3anZzTFJfdEpzWWs2Y05FZzNfa0tGdklaZ0pYc0NaOURPbEo3VTZTbWR5bHBYZ1NDM0lmTV96THN6UUxlSHkybks2NzRTWWlfZE9kUGNvMENGY28tMkZpMTg0d2pTRDFGOTZ5ZFVlcUtEYXFEd3dCYTY0YVNlcUo1NFVYNHJlMGd2X1VDdGdUUmhpN1FhbWZCUUhPejhBbVhzaw?oc=5",
+      "published_at": "2026-08-10T19:37:17+00:00",
+      "time": "Mon, 10 Aug 2026 19:37:17 GMT"
+    },
+    {
       "id": "d7de51af05b483",
       "title": "El Gobierno amplía pesos y medidas para camiones y bitrenes",
       "summary": "Información reciente de rutas y normativa seleccionada por el radar regional de Stylo Camión.",
@@ -352,16 +362,6 @@
       "time": "Thu, 06 Aug 2026 07:00:00 GMT"
     },
     {
-      "id": "1607e2d1b9f8c8",
-      "title": "La nieve mantiene rutas cerradas en Neuquén: más de 1.200 camiones esperan para cruzar a Chile",
-      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
-      "category": "Camiones",
-      "source": "La Voz del Interior",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPV1lZbUNXT1FKeGIxd3lwUDRYME5ZX01DLUpxZlVaNVJjdWEwMXJFWlljQThHYjB2M0dMRDJ0OHdXNjNOTFltMVRoeUdtakdFb0xsNnBoYndTVVo1SEhMajRKRno1VzRONEc2OFQ2NXhvWW5WVGgwYW40UmIyNEMxdHJyeTRRY1FzVGNrVnYxWGFKcTQzVGVFMlVqdUF1M0NFZkpOWV9IVW5KclJFZ3BfUnZtUC12MWF6bUxsNmVNVjFZS3pj?oc=5",
-      "published_at": "2026-08-06T07:00:00+00:00",
-      "time": "Thu, 06 Aug 2026 07:00:00 GMT"
-    },
-    {
       "id": "dd89dbce01afea",
       "title": "El paso Cristo Redentor cumple un récord de días cerrado por la nieve y hay quejas de los camioneros por las pérdidas millonarias",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -382,11 +382,11 @@
       "time": "Tue, 04 Aug 2026 07:00:00 GMT"
     },
     {
-      "id": "7a538ac57aa955",
+      "id": "7ccde85dbc30b7",
       "title": "Argentina: Provincia de Santa Fe afianza modelo que ordena ingreso de camiones a puertos",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
-      "source": "transporteyenergia.com.ar",
+      "source": "Transporte y Energia",
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNT05WWTE0T3B0STlvdmlkU2d5VFdwNVRvZ1ZMMWdZcVVLX0VsM3lFLVdQZVlSd2w2OW12T3ZCR3hfM3VhVi1WMnZ6VTVNem03TXNPVDRvUGJQTFJybG4xTHhoME5HTFhrS3RGXzRXNUtLZFZoQTEtcEx1bzlOb1h0Z3hpZ0lWeXZPeFJ1OTc2QXplR3FtRHN0MlY5VXRfeGVHNFJ5M2N2VVUyS2FvWkZkTWZMQ1VicWl1ek5yS2Z3Y0xERFU0ZVZuRGZMMFZyWi0zNlI0MQ?oc=5",
       "published_at": "2026-07-27T05:05:09+00:00",
       "time": "Mon, 27 Jul 2026 05:05:09 GMT"
@@ -452,11 +452,21 @@
       "time": "Wed, 29 Jul 2026 07:00:00 GMT"
     },
     {
-      "id": "2a7039046d6f10",
+      "id": "d2434c91d7ccd9",
+      "title": "Autos chinos, sí; camiones, no: Toto Caputo y Sturzenegger rechazaron bajar impuestos para renovar la flota",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "Letra P",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOak5zdlV4Y3oyVFpTVjY2RVhCZUZJWHhGSGdpanAxOHZOZlVIYUZLZVNqMjU3MHQtWC1oSVlfMlBnd2pDNThHeXhqUENtbjJma1M0ZVZ0MjdDUkhfZURUWVA0WG90U3NJTjctdGUyYW1sTG5oeTdSTUVtS1Q5TlE3RFdPUkpuYVY5eUh3QU9hMTNfaGZWaUc4ME52aVM5bkNuMUo1cVB0dmRfNnlfNUxDQ3F2T3FpSDJGZlpPOVNweHRVMnZkOExuZDBwd2Nkd3BBRU9oX0h5VkxZd9IB3wFBVV95cUxQNE9ELTZ5SmQ2SzhXaTdrYnUyUFI1NzgxeEtCdkVFWno3U1BrLW5ETjFpT05MVDR3Q3E5WWJjV183T0J1UjF3bW95Q3A5TGwtWHZuV2Z0ekxFMjJoUVRFb1VfS1pfUk5Dem5LUng5R0ZQcmhrbXJTT0lnQm9zWEtoZUh4WWpLWFlfRzlpU2JUYzVjdWpLTUxSX2tWUHFna01lZWt4NkNlM3VkMjVuYkpLeEZDUzRuYm5kYUhfTXRvOHhBNk5yYXpCS09acG1yRi0tMUtYQi1OQkd1VUs0dGRJ?oc=5",
+      "published_at": "2026-08-02T07:00:00+00:00",
+      "time": "Sun, 02 Aug 2026 07:00:00 GMT"
+    },
+    {
+      "id": "203849722553e2",
       "title": "El Gobierno actualizó la normativa sobre camiones, bitrenes y GNC",
       "summary": "Información reciente de rutas y normativa seleccionada por el radar regional de Stylo Camión.",
       "category": "Rutas y normativa",
-      "source": "identidadcorrentina.com.ar",
+      "source": "Identidad Correntina",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxObC03SWNINHhsR2pyNW5zT2w1cGxHbl91U2lNNFpwQ050a2dwTDM4X2FEb2JnVmtrM3Q5aW4yaHRlMThCc0ViSkhqUFNydDRRMm1sSmNuTU9BXzdsMFVRaksyQWdwUEkycEo4eFk2VHFkQnY5TWJveTI3UG5faWViaWFrbkZScDQ2NTVuZjdJRWstT2tCWjhxdWlMUjlkLUw5Z1lNbldaS3lsRmFDVEtBX3gwRXFkTkJjQjNqRA?oc=5",
       "published_at": "2026-08-02T07:00:00+00:00",
       "time": "Sun, 02 Aug 2026 07:00:00 GMT"
@@ -590,16 +600,6 @@
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQR0phdVdOZm9rTTJIcXRPRlYxOHVNbEY2aVFja1E4ODZiTENfV2NSZWpGODRqd2IxOWtKVVk5MXhycnV5MlRoUU4zblFrRHl2a1NZRmd5cndGckNTRGFsR09sOHlIX1pjbUp3Z19xTnJldVNKR3RrMXV1QWY0TkJCRkE3RWQ2LVFIZnhOVUdKQ0JDYTVVMmp4WlVFNHpTcWF5YzdNMFIwMmhPU3l3blZtbXl6TG1aa2RtV3c?oc=5",
       "published_at": "2026-07-05T07:00:00+00:00",
       "time": "Sun, 05 Jul 2026 07:00:00 GMT"
-    },
-    {
-      "id": "170b0765def84f",
-      "title": "Marinucci pone en marcha un nuevo sistema de licencias profesionales",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "Provincia de Buenos Aires |",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPa0RITjkyUnV1LXhqMXlvQmtLcU81SXBISGZEX0YxZDM1UkxEWVJBYXlKOTlhYmhsdzZHNzJxMkxmbFJ0NjBibm44X19BZDRBeDN1QzhwWi1MRzBaeTk5MHdQNHBBVXFvMEJwNVdCbmo3VTZMeFFGM2FIM3lMV3FXODVvSWZOLUtrRlBGMk9tOXBxZjFRSGRsWFBCWWpvTWU5M3hIQjVPMEswMlI2aEx2SQ?oc=5",
-      "published_at": "2026-07-03T07:00:00+00:00",
-      "time": "Fri, 03 Jul 2026 07:00:00 GMT"
     }
   ]
 }
