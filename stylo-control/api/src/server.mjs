@@ -14,7 +14,7 @@ function trendArgs(url){return{period:url.searchParams.get('period')||'DAY',days
 const server=http.createServer(async(req,res)=>{
  const url=new URL(req.url,`http://${req.headers.host||'localhost'}`);
  try{
-  if(req.method==='GET'&&url.pathname==='/health')return send(res,200,{ok:true,service:'stylo-control',version:'0.7.0'});
+  if(req.method==='GET'&&url.pathname==='/health')return send(res,200,{ok:true,service:'stylo-control',version:'0.8.0'});
   const identityNeeded=()=>requireControlIdentity(req.headers);
   if(req.method==='GET'&&url.pathname==='/admin/overview'){const i=identityNeeded();return send(res,200,service.adminOverview({role:i.role,range:rangeFromUrl(url)}));}
   if(req.method==='GET'&&url.pathname==='/admin/trends'){const i=identityNeeded();return send(res,200,service.trends({role:i.role,...trendArgs(url)}));}
@@ -27,6 +27,7 @@ const server=http.createServer(async(req,res)=>{
   if(req.method==='GET'&&url.pathname==='/admin/network-liquidity'){const i=identityNeeded();return send(res,200,service.networkLiquidity({role:i.role,range:rangeFromUrl(url)}));}
   if(req.method==='GET'&&url.pathname==='/admin/module-quality'){const i=identityNeeded();return send(res,200,service.moduleQuality({role:i.role}));}
   if(req.method==='GET'&&url.pathname==='/admin/executive-brief'){const i=identityNeeded();return send(res,200,service.executiveBrief({role:i.role,period:url.searchParams.get('period')||'DAY'}));}
+  if(req.method==='GET'&&url.pathname==='/admin/world-class-kpis'){const i=identityNeeded();return send(res,200,service.worldClassKpis({role:i.role,range:rangeFromUrl(url)}));}
   if(req.method==='POST'&&url.pathname==='/admin/ask'){const i=identityNeeded();const input=await readJson(req);if(!input.question)return send(res,400,{error:'question es obligatorio'});return send(res,200,service.ask({role:i.role,question:input.question}));}
   if(req.method==='GET'&&url.pathname==='/investor/snapshot'){const i=identityNeeded();return send(res,200,service.investorSnapshot({role:i.role,range:rangeFromUrl(url)}));}
   if(req.method==='GET'&&url.pathname==='/investor/trends'){const i=identityNeeded();return send(res,200,service.trends({role:i.role,...trendArgs(url),investor:true}));}
