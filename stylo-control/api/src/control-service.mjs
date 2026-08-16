@@ -6,6 +6,11 @@ import { buildHealthAlerts } from './health-alert-engine.mjs';
 import { buildInvestorExport } from './investor-export.mjs';
 import { answerControlQuestion } from './conversational-analytics-engine.mjs';
 import { detectMetricAnomalies } from './anomaly-detection-engine.mjs';
+import { buildRetentionCohorts } from './cohort-engine.mjs';
+import { buildUnitEconomics } from './unit-economics-engine.mjs';
+import { buildNetworkLiquidity } from './network-liquidity-engine.mjs';
+import { buildExecutiveBrief } from './executive-brief-engine.mjs';
+import { buildModuleQualityScores } from './module-quality-engine.mjs';
 import { requirePermission } from './access-control.mjs';
 import { MetricVisibility } from './metric-catalog.mjs';
 
@@ -53,6 +58,26 @@ export function createControlService({store}={}){
     anomalies({role='ADMIN',period='DAY',now=new Date()}={}){
       requirePermission(role,'CONTROL_READ');
       return {view:'ADMIN',...detectMetricAnomalies({facts:store.listFacts(),period,now})};
+    },
+    cohorts({role='ADMIN',cohort='MONTH',periods=6}={}){
+      requirePermission(role,'CONTROL_READ');
+      return {view:'ADMIN',cohort,rows:buildRetentionCohorts({facts:store.listFacts(),cohort,periods})};
+    },
+    unitEconomics({role='ADMIN',range={},groupBy='module'}={}){
+      requirePermission(role,'CONTROL_READ');
+      return {view:'ADMIN',range,group_by:groupBy,rows:buildUnitEconomics({facts:store.listFacts(),range,groupBy})};
+    },
+    networkLiquidity({role='ADMIN',range={}}={}){
+      requirePermission(role,'CONTROL_READ');
+      return {view:'ADMIN',range,...buildNetworkLiquidity({facts:store.listFacts(),range})};
+    },
+    moduleQuality({role='ADMIN',now=new Date()}={}){
+      requirePermission(role,'CONTROL_READ');
+      return {view:'ADMIN',generated_at:new Date(now).toISOString(),rows:buildModuleQualityScores({health:store.listModuleHealth(),facts:store.listFacts(),now})};
+    },
+    executiveBrief({role='ADMIN',period='DAY',now=new Date()}={}){
+      requirePermission(role,'CONTROL_READ');
+      return {view:'ADMIN',...buildExecutiveBrief({facts:store.listFacts(),health:store.listModuleHealth(),period,now})};
     },
     recordFact({role='ADMIN',fact}={}){requirePermission(role,'CONTROL_WRITE');return store.addFact(fact);},
     updateModuleHealth({role='ADMIN',health}={}){requirePermission(role,'CONTROL_WRITE');return store.upsertModuleHealth(health);}
