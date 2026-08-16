@@ -12,6 +12,7 @@ export function normalizeControlFact(input={}){
   return {
     id:input.id || crypto.randomUUID(),
     module,
+    source_event_id:input.source_event_id ? String(input.source_event_id) : null,
     event_type:eventType,
     entity_type:input.entity_type ? String(input.entity_type).toUpperCase() : null,
     entity_id:input.entity_id ? String(input.entity_id) : null,
@@ -28,10 +29,23 @@ export function normalizeControlFact(input={}){
 
 export class MemoryControlStore {
   constructor(seed={}){
-    this.facts=(seed.facts || []).map(normalizeControlFact);
+    this.facts=[];
+    this.factBySourceEvent=new Map();
+    for (const item of seed.facts || []) this.addFact(item);
     this.health=new Map((seed.health || []).map(x=>[String(x.module).toUpperCase(),normalizeModuleHealth(x)]));
   }
-  addFact(fact){ const normalized=normalizeControlFact(fact); this.facts.push(normalized); return normalized; }
+  addFact(fact){
+    const normalized=normalizeControlFact(fact);
+    const key=sourceEventKey(normalized);
+    if (key && this.factBySourceEvent.has(key)) return this.factBySourceEvent.get(key);
+    this.facts.push(normalized);
+    if (key) this.factBySourceEvent.set(key,normalized);
+    return normalized;
+  }
+  getFactBySourceEvent(module,sourceEventId){
+    if (!sourceEventId) return null;
+    return this.factBySourceEvent.get(`${String(module || '').toUpperCase()}:${sourceEventId}`) || null;
+  }
   listFacts(){ return [...this.facts]; }
   upsertModuleHealth(item){ const normalized=normalizeModuleHealth(item); this.health.set(normalized.module,normalized); return normalized; }
   listModuleHealth(){ return [...this.health.values()].sort((a,b)=>a.module.localeCompare(b.module)); }
@@ -51,6 +65,8 @@ export function normalizeModuleHealth(input={}){
     checked_at:input.checked_at || new Date().toISOString()
   };
 }
+
+function sourceEventKey(fact){ return fact.source_event_id ? `${fact.module}:${fact.source_event_id}` : null; }
 
 function safeDimensions(value){
   const blocked=new Set(['phone','email','name','message','raw_text','plate','dni','document','token','secret']);
