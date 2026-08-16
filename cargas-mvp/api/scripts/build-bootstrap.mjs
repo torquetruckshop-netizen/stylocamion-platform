@@ -17,7 +17,8 @@ export const BOOTSTRAP_MIGRATIONS=[
   '009_location_resolution.sql',
   '010_trip_economics.sql',
   '011_telematics_integrations.sql',
-  '012_vehicle_efficiency_profiles.sql'
+  '012_vehicle_efficiency_profiles.sql',
+  '013_marketplace_intelligence.sql'
 ];
 const output=path.join(dbDir,'bootstrap-staging.generated.sql');
 
