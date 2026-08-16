@@ -17,30 +17,25 @@ Aplicar en este orden para el primer staging:
 13. `012_vehicle_efficiency_profiles.sql`
 14. `013_marketplace_intelligence.sql`
 15. `014_operational_intelligence.sql`
+16. `015_delivery_documents.sql`
+17. `016_telematics_intelligence.sql`
 
 ## Nota
+Existen dos archivos históricos con prefijo `002`. El despliegue inicial debe usar este orden explícito.
 
-Existen dos archivos históricos con prefijo `002`. El despliegue inicial debe usar este orden explícito y no ordenar únicamente por nombre de archivo.
+`008_resilient_digital_intake.sql`: bandeja universal/idempotente.
+`009_location_resolution.sql`: cache geográfica y confianza.
+`010_trip_economics.sql`: combustible, peajes y costo variable.
+`011_telematics_integrations.sql`: conexiones multi-proveedor ECU/GPS.
+`012_vehicle_efficiency_profiles.sql`: consumo aprendido por camión.
+`013_marketplace_intelligence.sql`: instalaciones, espera, preferencias y movimientos continuos.
+`014_operational_intelligence.sql`: Instant Book, bids, Exception Inbox y heatmap.
+`015_delivery_documents.sql`: compliance documental, POD operacional y disputas.
+`016_telematics_intelligence.sql`: ralentí, anomalías de combustible, mantenimiento y eficiencia operacional.
 
-Antes de convertir estas migraciones en una cadena de producción, se renumerarán en una única secuencia o se migrarán al formato estándar del mecanismo de migraciones elegido para Supabase/Postgres.
-
-`008_resilient_digital_intake.sql` convierte `intake_messages` en la bandeja universal e idempotente de entrada.
-
-`009_location_resolution.sql` agrega cache geográfica y trazabilidad de confianza para origen/destino.
-
-`010_trip_economics.sql` incorpora combustible, gasoil, peajes y snapshots de costo variable.
-
-`011_telematics_integrations.sql` agrega conexiones multi-proveedor de telemetría, ECU/GPS y métricas reales por viaje.
-
-`012_vehicle_efficiency_profiles.sql` mantiene un perfil aprendido de consumo por camión.
-
-`013_marketplace_intelligence.sql` agrega inteligencia de instalaciones, tiempos de espera, preferencias aprendidas de transportistas y planes de movimientos continuos.
-
-`014_operational_intelligence.sql` agrega propuestas de Instant Book, bids condicionados, Exception Inbox y snapshots de market heatmap.
-
-## Seguridad
-
+## Seguridad y gate legal
 - Las claves secretas/service-role se usan sólo en backend.
-- Los tokens de telemetría/API no se guardan en texto plano en tablas.
+- Los tokens de telemetría/API no se guardan en texto plano.
 - El navegador nunca recibe una clave administrativa.
-- Antes de exponer acceso directo a tablas desde cliente, se deben definir políticas RLS específicas.
+- Definir RLS antes de exponer tablas a clientes.
+- POD y reglas documentales se consideran evidencia operacional hasta completar revisión jurídica por país.
