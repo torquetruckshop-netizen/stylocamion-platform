@@ -19,9 +19,9 @@ function candidate() {
   };
 }
 
-test('match adjunta combustible peajes y resultado preliminar', async () => {
-  const load={
-    id:'SC-ECO-MATCH-1',
+function load(id='SC-ECO-MATCH-1') {
+  return {
+    id,
     traffic_light:'GREEN',
     missing_fields:[],
     equipment_required:'chasis + acoplado',
@@ -29,7 +29,11 @@ test('match adjunta combustible peajes y resultado preliminar', async () => {
     price_amount:1000000,
     price_currency:'ARS'
   };
-  const store=new MemoryStore({loads:[load]});
+}
+
+test('match adjunta combustible peajes y resultado preliminar', async () => {
+  const currentLoad=load();
+  const store=new MemoryStore({loads:[currentLoad]});
   const tripEconomicsEstimator=createTripEconomicsService();
   const decide=createLoadDecisionOrchestrator({
     store,
@@ -38,7 +42,7 @@ test('match adjunta combustible peajes y resultado preliminar', async () => {
   });
 
   const result=await decide({
-    load,
+    load:currentLoad,
     ownFleet:[candidate()],
     targetUserId:'11111111-1111-1111-1111-111111111111',
     loadedKm:500,
@@ -60,22 +64,75 @@ test('match adjunta combustible peajes y resultado preliminar', async () => {
 });
 
 test('si falta distancia cargada el matching continúa y la economía queda pendiente', async () => {
-  const load={
-    id:'SC-ECO-MATCH-2',
-    traffic_light:'GREEN',
-    missing_fields:[],
-    equipment_required:'chasis + acoplado',
-    weight_tn:28
-  };
-  const store=new MemoryStore({loads:[load]});
+  const currentLoad=load('SC-ECO-MATCH-2');
+  const store=new MemoryStore({loads:[currentLoad]});
   const decide=createLoadDecisionOrchestrator({
     store,
     distanceResolver:async () => 20,
     tripEconomicsEstimator:createTripEconomicsService()
   });
 
-  const result=await decide({load,ownFleet:[candidate()]});
+  const result=await decide({load:currentLoad,ownFleet:[candidate()]});
   assert.equal(result.status,'MATCH_FOUND');
   assert.equal(result.economics_status,'WAITING_ROUTE_DISTANCE');
   assert.equal(result.economics,null);
+});
+
+test('resuelve automáticamente el perfil telemétrico del camión elegido', async () => {
+  const currentLoad=load('SC-ECO-PROFILE-1');
+  const store=new MemoryStore({loads:[currentLoad]});
+  const queried=[];
+  const decide=createLoadDecisionOrchestrator({
+    store,
+    distanceResolver:async () => 0,
+    tripEconomicsEstimator:createTripEconomicsService(),
+    fuelProfileResolver:async ({vehicleId}) => {
+      queried.push(vehicleId);
+      return {
+        profile_version:'vehicle-fuel-profile-v1',
+        ready_for_estimation:true,
+        consumption_l_per_100km:28,
+        sample_count:6,
+        total_distance_km:2500,
+        confidence:'HIGH'
+      };
+    }
+  });
+
+  const result=await decide({
+    load:currentLoad,
+    ownFleet:[candidate()],
+    loadedKm:500,
+    fuelPricePerLiter:1500
+  });
+
+  assert.deepEqual(queried,['VEH-ECO-1']);
+  assert.equal(result.fuel_profile_resolution,'RESOLVED');
+  assert.equal(result.economics.consumption_source,'TELEMATICS_PROFILE');
+  assert.equal(result.economics.consumption_l_per_100km,28);
+  assert.equal(result.economics.estimated_liters,140);
+});
+
+test('si falla el perfil telemétrico no bloquea el match ni la economía', async () => {
+  const currentLoad=load('SC-ECO-PROFILE-2');
+  const store=new MemoryStore({loads:[currentLoad]});
+  const decide=createLoadDecisionOrchestrator({
+    store,
+    distanceResolver:async () => 0,
+    tripEconomicsEstimator:createTripEconomicsService(),
+    fuelProfileResolver:async () => { throw new Error('telemetry temporarily unavailable'); }
+  });
+
+  const result=await decide({
+    load:currentLoad,
+    ownFleet:[candidate()],
+    loadedKm:500,
+    fuelPricePerLiter:1500
+  });
+
+  assert.equal(result.status,'MATCH_FOUND');
+  assert.equal(result.fuel_profile_resolution,'RESOLUTION_FAILED');
+  assert.equal(result.economics_status,'CALCULATED');
+  assert.equal(result.economics.consumption_source,'VEHICLE');
+  assert.equal(result.economics.consumption_l_per_100km,30);
 });
