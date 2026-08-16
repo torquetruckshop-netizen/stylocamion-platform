@@ -1,16 +1,31 @@
 import http from 'node:http';
 import { URL } from 'node:url';
 import { SupabaseStore } from './supabase-store.mjs';
-import { normalizeIntake, scoreVehicle, haversineKm } from './engine.mjs';
+import { normalizeIntake } from './engine.mjs';
 import { createAutomaticRegistration, applyAdminReview, normalizePhone } from './registration-engine.mjs';
 import { verifyGoogleCredential } from './google-identity.mjs';
 import { createPersistentSession, hashSessionToken, isSessionUsable, touchPersistentSession, revokeSession } from './session-engine.mjs';
-import { notificationDecision } from './notification-engine.mjs';
 import { assertStagingReady } from './staging-config.mjs';
 import { corsHeaders, isOriginAllowed } from './http-security.mjs';
+import { createEmptyDistanceResolver } from './distance-service.mjs';
+import { createSupabaseMatchingContextStore } from './supabase-matching-context.mjs';
+import { createSupabaseEfficiencyProfileStore } from './supabase-efficiency-profile-store.mjs';
+import { createSupabaseTripReconciliationStore } from './supabase-trip-reconciliation-store.mjs';
+import { createStagingMatchService } from './staging-match-service.mjs';
 
 const readiness = assertStagingReady(process.env);
 const store = new SupabaseStore();
+const matchingContextStore = createSupabaseMatchingContextStore(store.db);
+const efficiencyProfileStore = createSupabaseEfficiencyProfileStore(store.db);
+const reconciliationStore = createSupabaseTripReconciliationStore(store.db);
+const distanceResolver = createEmptyDistanceResolver();
+const matchLoad = createStagingMatchService({
+  store,
+  contextStore:matchingContextStore,
+  efficiencyProfileStore,
+  distanceResolver,
+  saveEstimate:snapshot => reconciliationStore.saveEstimate(snapshot)
+});
 const PORT = Number(process.env.STAGING_PORT || 8788);
 const SESSION_COOKIE = 'sc_session';
 
@@ -84,16 +99,6 @@ async function authenticate(req) {
   return { user, session:touched, token };
 }
 
-function originCoordinates(origin='') {
-  const x=origin.toLowerCase();
-  if (x.includes('rafaela')) return {lat:-31.2503,lon:-61.4867};
-  if (x.includes('paraná') || x.includes('parana')) return {lat:-31.73197,lon:-60.5238};
-  if (x.includes('rosario')) return {lat:-32.9442,lon:-60.6505};
-  if (x.includes('córdoba') || x.includes('cordoba')) return {lat:-31.4201,lon:-64.1888};
-  if (x.includes('malabrigo')) return {lat:-29.3464,lon:-59.9696};
-  return null;
-}
-
 const server=http.createServer(async (req,res)=>{
   res._corsHeaders=corsHeaders(req);
   if (req.method==='OPTIONS') {
@@ -103,7 +108,7 @@ const server=http.createServer(async (req,res)=>{
   const url=new URL(req.url,`http://${req.headers.host || 'localhost'}`);
   try {
     if (req.method==='GET' && url.pathname==='/health') {
-      return send(res,200,{ok:true,service:'stylo-cargas-staging-api',persistence:'SUPABASE',version:'0.3.0',integrations:readiness.integrations});
+      return send(res,200,{ok:true,service:'stylo-cargas-staging-api',persistence:'SUPABASE',version:'0.4.0',matching:'NETWORK_PRIORITY_V2',integrations:readiness.integrations});
     }
 
     if (req.method==='POST' && url.pathname==='/users/register') {
@@ -158,30 +163,20 @@ const server=http.createServer(async (req,res)=>{
       const input=await body(req);
       if (!input.source || !input.raw_text || !input.received_at) return send(res,400,{error:'source, raw_text y received_at son obligatorios'});
       const load=normalizeIntake({...input,sender_id:input.sender_id || auth.user.id});
+      const membership=await store.getPrimaryOrganizationForUser(auth.user.id);
+      if (membership?.organization_id) load.owner_organization_id=membership.organization_id;
       const saved=await store.addLoad(load);
-      await store.addEvent({load_id:saved.id,type:'INTAKE_CLASSIFIED',actor:'AI',created_at:new Date().toISOString(),payload:{missing_fields:saved.missing_fields,user_id:auth.user.id}});
+      await store.addEvent({load_id:saved.id,type:'INTAKE_CLASSIFIED',actor:'AI',created_at:new Date().toISOString(),payload:{missing_fields:saved.missing_fields,user_id:auth.user.id,organization_id:load.owner_organization_id || null}});
       return send(res,202,{load:saved});
     }
 
     const matchPath=url.pathname.match(/^\/loads\/([^/]+)\/match$/);
     if (req.method==='POST' && matchPath) {
-      await authenticate(req);
-      const load=await store.getLoad(matchPath[1]);
-      if (!load) return send(res,404,{error:'Carga no encontrada'});
-      if (load.traffic_light==='RED') return send(res,422,{error:'Carga bloqueada por compliance'});
-      const cfg=await body(req);
-      const maxRadius=Number(cfg.max_radius_km || process.env.STYLO_MAX_RADIUS_KM || 300);
-      const origin=originCoordinates(load.origin);
-      const candidates=await store.listAvailableVehicles();
-      const ranking=candidates.map(({vehicle,carrier})=>scoreVehicle(load,vehicle,carrier,haversineKm(origin,vehicle.location)))
-        .filter(m=>m.distance_km<=maxRadius && m.equipment_score===100 && m.documents_score>0 && m.availability_score===100)
-        .sort((a,b)=>b.total_score-a.total_score);
-      await store.saveMatches(load,ranking);
-      await store.updateLoad(load.id,{status:'BUSCANDO'});
-      const best=ranking[0] || null;
-      const notification=best ? notificationDecision({type:'MATCH_STRONG',score:best.total_score,load_id:load.id,vehicle_id:best.vehicle_id,detail:`${load.origin} → ${load.destination} · match ${best.total_score}%`}) : notificationDecision({type:'NO_MATCH'});
-      await store.addEvent({load_id:load.id,type:'MATCHING_COMPLETED',actor:'SYSTEM',created_at:new Date().toISOString(),payload:{candidates:ranking.length,best_score:best?.total_score || null,notification_channel:notification.channel}});
-      return send(res,200,{load_id:load.id,ranking,notification});
+      const auth=await authenticate(req);
+      const config=await body(req);
+      const result=await matchLoad({loadId:matchPath[1],user:auth.user,config});
+      const status=result.status==='NEEDS_ORGANIZATION_CONTEXT' ? 409 : 200;
+      return send(res,status,result);
     }
 
     if (req.method==='GET' && url.pathname==='/admin/users') {
