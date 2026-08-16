@@ -4,6 +4,7 @@
 create table if not exists control_facts (
   id uuid primary key default gen_random_uuid(),
   module text not null,
+  source_event_id text,
   event_type text not null,
   entity_type text,
   entity_id text,
@@ -17,6 +18,9 @@ create table if not exists control_facts (
   recorded_at timestamptz not null default now()
 );
 
+create unique index if not exists idx_control_facts_source_event
+  on control_facts(module, source_event_id)
+  where source_event_id is not null;
 create index if not exists idx_control_facts_event_time
   on control_facts(event_type, occurred_at desc);
 create index if not exists idx_control_facts_module_time
@@ -61,5 +65,6 @@ create table if not exists control_access_audit (
 -- Seguridad de diseño:
 -- 1. Investor View jamás consulta tablas de detalle de usuarios/clientes.
 -- 2. control_facts admite entity_id interno para COUNT DISTINCT, pero Investor View sólo recibe agregados.
--- 3. dimensions no debe contener PII: teléfono, email, DNI, patente, mensaje/raw_text ni secretos.
--- 4. Las claves de administración/integraciones viven sólo en backend/secret manager.
+-- 3. source_event_id hace la ingesta idempotente y evita duplicar métricas ante reintentos.
+-- 4. dimensions no debe contener PII: teléfono, email, DNI, patente, mensaje/raw_text ni secretos.
+-- 5. Las claves de administración/integraciones viven sólo en backend/secret manager.
