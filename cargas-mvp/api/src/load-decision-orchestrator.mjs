@@ -14,6 +14,7 @@ export function createLoadDecisionOrchestrator({ store, distanceResolver, rules,
     targetUserId = null,
     organizationId = null,
     organization = {},
+    fuelProfile = null,
     loadedKm = null,
     fuelPricePerLiter = null,
     tolls = [],
@@ -53,6 +54,7 @@ export function createLoadDecisionOrchestrator({ store, distanceResolver, rules,
       result,
       load,
       organization:{ id:organizationId || organization.id || null, ...organization },
+      fuelProfile,
       loadedKm,
       fuelPricePerLiter,
       tolls,
@@ -128,7 +130,7 @@ export function createLoadDecisionOrchestrator({ store, distanceResolver, rules,
   };
 }
 
-async function calculateEconomicsIfPossible({ estimator, result, load, organization, loadedKm, fuelPricePerLiter, tolls, estimatedTollCount, averageTollAmount, freightAmount, currency }) {
+async function calculateEconomicsIfPossible({ estimator, result, load, organization, fuelProfile, loadedKm, fuelPricePerLiter, tolls, estimatedTollCount, averageTollAmount, freightAmount, currency }) {
   if (!estimator || result.status !== 'MATCH_FOUND' || !result.selected?.vehicle) {
     return { status:'NOT_REQUESTED', estimate:null, error:null };
   }
@@ -141,6 +143,7 @@ async function calculateEconomicsIfPossible({ estimator, result, load, organizat
       load,
       vehicle:result.selected.vehicle,
       organization,
+      fuelProfile,
       loadedKm:resolvedLoadedKm,
       emptyKm:result.selected.match?.distance_km ?? 0,
       fuelPricePerLiter,
