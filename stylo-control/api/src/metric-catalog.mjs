@@ -1,4 +1,4 @@
-export const CONTROL_METRIC_CATALOG_VERSION='stylo-control-metrics-v3';
+export const CONTROL_METRIC_CATALOG_VERSION='stylo-control-metrics-v4';
 export const MetricVisibility=Object.freeze({INTERNAL:'INTERNAL',INVESTOR:'INVESTOR'});
 export const METRICS=Object.freeze([
  {key:'users_total',section:'USERS',label:'Usuarios registrados',visibility:'INVESTOR',aggregation:'COUNT_DISTINCT',entity:'USER'},
@@ -26,6 +26,13 @@ export const METRICS=Object.freeze([
  {key:'gmv',section:'REVENUE',label:'Volumen procesado',visibility:'INVESTOR',aggregation:'SUM',event:'GMV_RECORDED',valueField:'value'},
  {key:'site_unique_visitors',section:'AUDIENCE',label:'Visitantes únicos',visibility:'INVESTOR',aggregation:'GAUGE',event:'UNIQUE_VISITORS',valueField:'value'},
  {key:'page_views',section:'AUDIENCE',label:'Vistas de página',visibility:'INTERNAL',aggregation:'SUM',event:'PAGE_VIEWS',valueField:'value'},
+ {key:'web_sessions',section:'AUDIENCE',label:'Sesiones web',visibility:'INVESTOR',aggregation:'COUNT_DISTINCT',event:'WEB_SESSION',entity:'SESSION'},
+ {key:'web_visitors_observed',section:'AUDIENCE',label:'Visitantes observados',visibility:'INTERNAL',aggregation:'COUNT_DISTINCT',event:'WEB_SESSION',entity:'SESSION',distinctField:'dimensions.visitor_id'},
+ {key:'module_visits_cargas',section:'AUDIENCE',label:'Visitas a Cargas',visibility:'INTERNAL',aggregation:'COUNT',event:'MODULE_VIEW',where:{module_name:'CARGAS'}},
+ {key:'module_visits_ventas',section:'AUDIENCE',label:'Visitas a Ventas',visibility:'INTERNAL',aggregation:'COUNT',event:'MODULE_VIEW',where:{module_name:'VENTAS'}},
+ {key:'module_visits_noticias',section:'AUDIENCE',label:'Visitas a Noticias',visibility:'INTERNAL',aggregation:'COUNT',event:'MODULE_VIEW',where:{module_name:'NOTICIAS'}},
+ {key:'commercial_clicks',section:'AUDIENCE',label:'Acciones comerciales iniciadas',visibility:'INTERNAL',aggregation:'COUNT',event:'COMMERCIAL_ACTION'},
+ {key:'visitor_to_inquiry_rate',section:'AUDIENCE',label:'Conversión visita a consulta',visibility:'INTERNAL',aggregation:'RATIO',numeratorEvent:'SALES_INQUIRY',denominatorEvent:'WEB_SESSION'},
  {key:'ai_messages_processed',section:'AI',label:'Mensajes procesados por IA',visibility:'INVESTOR',aggregation:'COUNT',event:'AI_MESSAGE_PROCESSED'},
  {key:'ai_audio_transcribed',section:'AI',label:'Audios transcritos',visibility:'INTERNAL',aggregation:'COUNT',event:'AI_AUDIO_TRANSCRIBED'},
  {key:'ai_decisions',section:'AI',label:'Decisiones automáticas',visibility:'INVESTOR',aggregation:'COUNT',event:'AI_DECISION'},
