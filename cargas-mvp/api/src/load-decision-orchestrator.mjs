@@ -1,7 +1,7 @@
 import { runPriorityMatching } from './network-matching-engine.mjs';
 import { buildNotificationOutboxItem } from './notification-outbox.mjs';
 
-export function createLoadDecisionOrchestrator({ store, distanceResolver, rules } = {}) {
+export function createLoadDecisionOrchestrator({ store, distanceResolver, rules, tripEconomicsEstimator = null } = {}) {
   if (!store) throw new Error('store es obligatorio');
 
   return async function decideLoad({
@@ -12,7 +12,15 @@ export function createLoadDecisionOrchestrator({ store, distanceResolver, rules 
     allowPrivateNetwork = true,
     allowStyloNetwork = true,
     targetUserId = null,
-    organizationId = null
+    organizationId = null,
+    organization = {},
+    loadedKm = null,
+    fuelPricePerLiter = null,
+    tolls = [],
+    estimatedTollCount = 0,
+    averageTollAmount = null,
+    freightAmount = null,
+    currency = null
   } = {}) {
     if (!load) throw new Error('load es obligatorio');
 
@@ -40,6 +48,20 @@ export function createLoadDecisionOrchestrator({ store, distanceResolver, rules 
       reputation_score: result.selected.match?.reputation_score ?? null
     } : null;
 
+    const economicEvaluation = await calculateEconomicsIfPossible({
+      estimator:tripEconomicsEstimator,
+      result,
+      load,
+      organization:{ id:organizationId || organization.id || null, ...organization },
+      loadedKm,
+      fuelPricePerLiter,
+      tolls,
+      estimatedTollCount,
+      averageTollAmount,
+      freightAmount,
+      currency
+    });
+
     if (store.addEvent) {
       await store.addEvent({
         load_id: load.id,
@@ -52,6 +74,8 @@ export function createLoadDecisionOrchestrator({ store, distanceResolver, rules 
           network_level: result.network_level || null,
           next_action: result.next_action || null,
           selected,
+          economics_status:economicEvaluation.status,
+          economics:economicEvaluation.estimate || null,
           trace: result.trace || [],
           policy: result.policy || null,
           missing_fields: result.missing_fields || []
@@ -62,7 +86,7 @@ export function createLoadDecisionOrchestrator({ store, distanceResolver, rules 
     let alert = null;
     let alert_status = 'NOT_REQUIRED';
 
-    const alertEvent = buildAlertEvent({ result, load, targetUserId, organizationId });
+    const alertEvent = buildAlertEvent({ result, load, targetUserId, organizationId, economics:economicEvaluation.estimate });
     if (alertEvent) {
       const outboxItem = buildNotificationOutboxItem(alertEvent);
       if (!outboxItem) {
@@ -94,6 +118,9 @@ export function createLoadDecisionOrchestrator({ store, distanceResolver, rules 
     return {
       ...result,
       selected_summary: selected,
+      economics:economicEvaluation.estimate,
+      economics_status:economicEvaluation.status,
+      economics_error:economicEvaluation.error || null,
       alert,
       alert_status,
       decided_at: decidedAt
@@ -101,9 +128,40 @@ export function createLoadDecisionOrchestrator({ store, distanceResolver, rules 
   };
 }
 
-function buildAlertEvent({ result, load, targetUserId, organizationId }) {
+async function calculateEconomicsIfPossible({ estimator, result, load, organization, loadedKm, fuelPricePerLiter, tolls, estimatedTollCount, averageTollAmount, freightAmount, currency }) {
+  if (!estimator || result.status !== 'MATCH_FOUND' || !result.selected?.vehicle) {
+    return { status:'NOT_REQUESTED', estimate:null, error:null };
+  }
+  const resolvedLoadedKm = loadedKm ?? load.loaded_route_km ?? null;
+  if (resolvedLoadedKm == null) {
+    return { status:'WAITING_ROUTE_DISTANCE', estimate:null, error:null };
+  }
+  try {
+    const estimate = await estimator({
+      load,
+      vehicle:result.selected.vehicle,
+      organization,
+      loadedKm:resolvedLoadedKm,
+      emptyKm:result.selected.match?.distance_km ?? 0,
+      fuelPricePerLiter,
+      tolls,
+      estimatedTollCount,
+      averageTollAmount,
+      freightAmount,
+      currency
+    });
+    return { status:'CALCULATED', estimate, error:null };
+  } catch (error) {
+    return { status:'CALCULATION_FAILED', estimate:null, error:error.message || 'trip_economics_failed' };
+  }
+}
+
+function buildAlertEvent({ result, load, targetUserId, organizationId, economics = null }) {
   if (result.status === 'MATCH_FOUND' && result.selected?.match) {
     const match = result.selected.match;
+    const economicsText = economics?.variable_cost != null
+      ? ` · Costo variable ${economics.currency || 'ARS'} ${economics.variable_cost}`
+      : '';
     return {
       type: 'MATCH_STRONG',
       score: match.total_score,
@@ -112,7 +170,7 @@ function buildAlertEvent({ result, load, targetUserId, organizationId }) {
       load_id: load.id,
       vehicle_id: result.selected.vehicle?.id || null,
       title: 'Stylo Cargas · Oportunidad encontrada',
-      body: `${result.network_level} · Match ${match.total_score}% · ${match.distance_km} km vacío`,
+      body: `${result.network_level} · Match ${match.total_score}% · ${match.distance_km} km vacío${economicsText}`,
       dedupe_key: `MATCH_STRONG:${load.id}:${result.selected.vehicle?.id || 'NO_VEHICLE'}`
     };
   }
