@@ -67,7 +67,7 @@ create table if not exists telematics_trip_actuals (
   fuel_cost_source text,
   confidence text not null default 'LOW' check (confidence in ('HIGH','MEDIUM','LOW')),
   status text not null default 'PARTIAL' check (status in ('PARTIAL','MEASURED','RECONCILED')),
-  estimated_snapshot_id uuid references travel_cost_estimates(id) on delete set null,
+  estimated_snapshot_id uuid references trip_economic_estimates(id) on delete set null,
   variance jsonb not null default '{}'::jsonb,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
