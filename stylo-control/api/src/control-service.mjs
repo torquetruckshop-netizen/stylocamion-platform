@@ -11,6 +11,7 @@ import { buildUnitEconomics } from './unit-economics-engine.mjs';
 import { buildNetworkLiquidity } from './network-liquidity-engine.mjs';
 import { buildExecutiveBrief } from './executive-brief-engine.mjs';
 import { buildModuleQualityScores } from './module-quality-engine.mjs';
+import { buildWorldClassKpis } from './world-class-kpi-engine.mjs';
 import { requirePermission } from './access-control.mjs';
 import { MetricVisibility } from './metric-catalog.mjs';
 
@@ -78,6 +79,10 @@ export function createControlService({store}={}){
     executiveBrief({role='ADMIN',period='DAY',now=new Date()}={}){
       requirePermission(role,'CONTROL_READ');
       return {view:'ADMIN',...buildExecutiveBrief({facts:store.listFacts(),health:store.listModuleHealth(),period,now})};
+    },
+    worldClassKpis({role='ADMIN',range={}}={}){
+      requirePermission(role,'CONTROL_READ');
+      return {view:'ADMIN',range,sections:buildWorldClassKpis({facts:store.listFacts(),range})};
     },
     recordFact({role='ADMIN',fact}={}){requirePermission(role,'CONTROL_WRITE');return store.addFact(fact);},
     updateModuleHealth({role='ADMIN',health}={}){requirePermission(role,'CONTROL_WRITE');return store.upsertModuleHealth(health);}
