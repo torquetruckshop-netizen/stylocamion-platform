@@ -92,5 +92,5 @@ test('servicio guarda snapshot con fuente de consumo', async () => {
   assert.equal(result.estimated_liters,136);
   assert.equal(result.toll_cost,16000);
   assert.equal(saved.length,1);
-  assert.equal(saved[0].calculation_version,'trip-economics-v1');
+  assert.equal(saved[0].calculation_version,'trip-economics-v2');
 });
