@@ -39,6 +39,21 @@ export function createSupabaseMatchingContextStore(client = createSupabaseAdminC
         default_fuel_price_per_liter:data.default_fuel_price_per_liter == null ? null : Number(data.default_fuel_price_per_liter),
         default_toll_average_amount:data.default_toll_average_amount == null ? null : Number(data.default_toll_average_amount)
       };
+    },
+
+    async getVehicleEconomicsMap(vehicleIds = []) {
+      const ids=[...new Set((vehicleIds || []).filter(Boolean))];
+      if (!ids.length) return new Map();
+      const { data, error } = await client.from('vehicles')
+        .select('id,fuel_consumption_l_per_100km')
+        .in('id',ids);
+      if (error) throw error;
+      return new Map((data || []).map(row=>[
+        row.id,
+        {
+          fuel_consumption_l_per_100km:row.fuel_consumption_l_per_100km == null ? null : Number(row.fuel_consumption_l_per_100km)
+        }
+      ]));
     }
   };
 }
