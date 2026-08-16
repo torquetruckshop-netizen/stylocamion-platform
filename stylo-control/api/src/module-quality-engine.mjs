@@ -14,5 +14,5 @@ export function buildModuleQualityScores({health=[],facts=[],now=new Date(),fres
     return {module,quality_score:score,status:h.status||'UNKNOWN',latency_ms:Number.isFinite(latency)?latency:null,data_age_hours:ageHours==null?null:round(ageHours,1),grade:score>=90?'A':score>=75?'B':score>=60?'C':'D'};
   }).sort((a,b)=>b.quality_score-a.quality_score);
 }
-function statusBase(s){if(s==='HEALTHY')return85;if(s==='DEGRADED')return60;if(s==='DOWN')return20;return50;}
+function statusBase(s){if(s==='HEALTHY') return 85;if(s==='DEGRADED') return 60;if(s==='DOWN') return 20;return 50;}
 function round(n,d=1){const f=10**d;return Math.round((n+Number.EPSILON)*f)/f;}
