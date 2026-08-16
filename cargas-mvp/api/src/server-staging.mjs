@@ -12,12 +12,15 @@ import { createSupabaseMatchingContextStore } from './supabase-matching-context.
 import { createSupabaseEfficiencyProfileStore } from './supabase-efficiency-profile-store.mjs';
 import { createSupabaseTripReconciliationStore } from './supabase-trip-reconciliation-store.mjs';
 import { createStagingMatchService } from './staging-match-service.mjs';
+import { createSupabaseOperationStore } from './supabase-operation-store.mjs';
+import { createOperationMessageService } from './operation-message-service.mjs';
 
 const readiness = assertStagingReady(process.env);
 const store = new SupabaseStore();
 const matchingContextStore = createSupabaseMatchingContextStore(store.db);
 const efficiencyProfileStore = createSupabaseEfficiencyProfileStore(store.db);
 const reconciliationStore = createSupabaseTripReconciliationStore(store.db);
+const operationStore = createSupabaseOperationStore(store,store.db);
 const distanceResolver = createEmptyDistanceResolver();
 const matchLoad = createStagingMatchService({
   store,
@@ -25,6 +28,18 @@ const matchLoad = createStagingMatchService({
   efficiencyProfileStore,
   distanceResolver,
   saveEstimate:snapshot => reconciliationStore.saveEstimate(snapshot)
+});
+const processOperationMessage=createOperationMessageService({
+  store:operationStore,
+  onVehicleAvailable:async event=>{
+    await store.addEvent({
+      load_id:event.load.id,
+      type:'NEXT_LOAD_SEARCH_REQUESTED',
+      actor:'AI',
+      created_at:event.observed_at || new Date().toISOString(),
+      payload:{vehicle_id:event.vehicle_id,source:event.source}
+    });
+  }
 });
 const PORT = Number(process.env.STAGING_PORT || 8788);
 const SESSION_COOKIE = 'sc_session';
@@ -99,6 +114,11 @@ async function authenticate(req) {
   return { user, session:touched, token };
 }
 
+function operationActorForUser(user={}) {
+  if (user.role==='DADOR_CARGA') return 'SHIPPER';
+  return 'CARRIER';
+}
+
 const server=http.createServer(async (req,res)=>{
   res._corsHeaders=corsHeaders(req);
   if (req.method==='OPTIONS') {
@@ -108,7 +128,7 @@ const server=http.createServer(async (req,res)=>{
   const url=new URL(req.url,`http://${req.headers.host || 'localhost'}`);
   try {
     if (req.method==='GET' && url.pathname==='/health') {
-      return send(res,200,{ok:true,service:'stylo-cargas-staging-api',persistence:'SUPABASE',version:'0.4.0',matching:'NETWORK_PRIORITY_V2',integrations:readiness.integrations});
+      return send(res,200,{ok:true,service:'stylo-cargas-staging-api',persistence:'SUPABASE',version:'0.5.0',matching:'NETWORK_PRIORITY_V2',operations:'NATURAL_LANGUAGE_SAFE_TRANSITIONS',integrations:readiness.integrations});
     }
 
     if (req.method==='POST' && url.pathname==='/users/register') {
@@ -176,6 +196,22 @@ const server=http.createServer(async (req,res)=>{
       const config=await body(req);
       const result=await matchLoad({loadId:matchPath[1],user:auth.user,config});
       const status=result.status==='NEEDS_ORGANIZATION_CONTEXT' ? 409 : 200;
+      return send(res,status,result);
+    }
+
+    const operationPath=url.pathname.match(/^\/loads\/([^/]+)\/operation-message$/);
+    if (req.method==='POST' && operationPath) {
+      const auth=await authenticate(req);
+      const input=await body(req);
+      if (!String(input.text || '').trim()) return send(res,400,{error:'text es obligatorio'});
+      const result=await processOperationMessage({
+        loadId:operationPath[1],
+        text:input.text,
+        actor:operationActorForUser(auth.user),
+        senderId:auth.user.id,
+        observedAt:input.observed_at || new Date().toISOString()
+      });
+      const status=result.status==='APPLIED' || result.status==='NO_CHANGE' ? 200 : 202;
       return send(res,status,result);
     }
 
