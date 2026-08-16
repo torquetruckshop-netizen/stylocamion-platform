@@ -1,4 +1,4 @@
-export const CONTROL_METRIC_CATALOG_VERSION='stylo-control-metrics-v4';
+export const CONTROL_METRIC_CATALOG_VERSION='stylo-control-metrics-v5';
 export const MetricVisibility=Object.freeze({INTERNAL:'INTERNAL',INVESTOR:'INVESTOR'});
 export const METRICS=Object.freeze([
  {key:'users_total',section:'USERS',label:'Usuarios registrados',visibility:'INVESTOR',aggregation:'COUNT_DISTINCT',entity:'USER'},
@@ -33,6 +33,13 @@ export const METRICS=Object.freeze([
  {key:'module_visits_noticias',section:'AUDIENCE',label:'Visitas a Noticias',visibility:'INTERNAL',aggregation:'COUNT',event:'MODULE_VIEW',where:{module_name:'NOTICIAS'}},
  {key:'commercial_clicks',section:'AUDIENCE',label:'Acciones comerciales iniciadas',visibility:'INTERNAL',aggregation:'COUNT',event:'COMMERCIAL_ACTION'},
  {key:'visitor_to_inquiry_rate',section:'AUDIENCE',label:'Conversión visita a consulta',visibility:'INTERNAL',aggregation:'RATIO',numeratorEvent:'SALES_INQUIRY',denominatorEvent:'WEB_SESSION'},
+ {key:'news_articles_published',section:'NOTICIAS',label:'Noticias publicadas',visibility:'INVESTOR',aggregation:'COUNT',event:'NEWS_ARTICLE_PUBLISHED'},
+ {key:'news_article_views',section:'NOTICIAS',label:'Lecturas de noticias',visibility:'INVESTOR',aggregation:'COUNT',event:'NEWS_ARTICLE_VIEW'},
+ {key:'news_engaged_reads',section:'NOTICIAS',label:'Lecturas con interacción',visibility:'INTERNAL',aggregation:'COUNT',event:'NEWS_ARTICLE_ENGAGED'},
+ {key:'news_commercial_clicks',section:'NOTICIAS',label:'Clics comerciales desde Noticias',visibility:'INTERNAL',aggregation:'COUNT',event:'NEWS_COMMERCIAL_CLICK'},
+ {key:'news_to_commercial_rate',section:'NOTICIAS',label:'Conversión lectura a acción comercial',visibility:'INTERNAL',aggregation:'RATIO',numeratorEvent:'NEWS_COMMERCIAL_CLICK',denominatorEvent:'NEWS_ARTICLE_VIEW'},
+ {key:'news_to_ventas_clicks',section:'NOTICIAS',label:'Derivaciones a Ventas',visibility:'INTERNAL',aggregation:'COUNT',event:'NEWS_COMMERCIAL_CLICK',where:{target:'VENTAS'}},
+ {key:'news_to_cargas_clicks',section:'NOTICIAS',label:'Derivaciones a Cargas',visibility:'INTERNAL',aggregation:'COUNT',event:'NEWS_COMMERCIAL_CLICK',where:{target:'CARGAS'}},
  {key:'ai_messages_processed',section:'AI',label:'Mensajes procesados por IA',visibility:'INVESTOR',aggregation:'COUNT',event:'AI_MESSAGE_PROCESSED'},
  {key:'ai_audio_transcribed',section:'AI',label:'Audios transcritos',visibility:'INTERNAL',aggregation:'COUNT',event:'AI_AUDIO_TRANSCRIBED'},
  {key:'ai_decisions',section:'AI',label:'Decisiones automáticas',visibility:'INVESTOR',aggregation:'COUNT',event:'AI_DECISION'},
