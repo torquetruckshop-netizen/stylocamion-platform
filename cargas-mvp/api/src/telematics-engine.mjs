@@ -119,7 +119,7 @@ export function calculateActualTripMetrics({
 
 export function compareEstimatedVsActual({ estimated, actual } = {}) {
   if (!estimated || !actual) return null;
-  const estimatedLiters = finiteOrNull(estimated.fuel_liters ?? estimated.estimated_fuel_liters);
+  const estimatedLiters = finiteOrNull(estimated.estimated_liters ?? estimated.fuel_liters ?? estimated.estimated_fuel_liters);
   const actualLiters = finiteOrNull(actual.fuel_used_l);
   const estimatedCost = finiteOrNull(estimated.fuel_cost ?? estimated.estimated_fuel_cost);
   const actualCost = finiteOrNull(actual.fuel_cost_amount);
