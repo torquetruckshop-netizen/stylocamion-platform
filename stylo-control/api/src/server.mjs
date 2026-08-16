@@ -14,19 +14,25 @@ function trendArgs(url){return{period:url.searchParams.get('period')||'DAY',days
 const server=http.createServer(async(req,res)=>{
  const url=new URL(req.url,`http://${req.headers.host||'localhost'}`);
  try{
-  if(req.method==='GET'&&url.pathname==='/health')return send(res,200,{ok:true,service:'stylo-control',version:'0.6.0'});
-  if(req.method==='GET'&&url.pathname==='/admin/overview'){const identity=requireControlIdentity(req.headers);return send(res,200,service.adminOverview({role:identity.role,range:rangeFromUrl(url)}));}
-  if(req.method==='GET'&&url.pathname==='/admin/trends'){const identity=requireControlIdentity(req.headers);return send(res,200,service.trends({role:identity.role,...trendArgs(url)}));}
-  if(req.method==='GET'&&url.pathname==='/admin/funnel'){const identity=requireControlIdentity(req.headers);return send(res,200,service.funnel({role:identity.role,range:rangeFromUrl(url),groupBy:url.searchParams.get('group_by')||'source'}));}
-  if(req.method==='GET'&&url.pathname==='/admin/attribution'){const identity=requireControlIdentity(req.headers);return send(res,200,service.attribution({role:identity.role,range:rangeFromUrl(url),groupBy:url.searchParams.get('group_by')||'source'}));}
-  if(req.method==='GET'&&url.pathname==='/admin/alerts'){const identity=requireControlIdentity(req.headers);return send(res,200,service.healthAlerts({role:identity.role}));}
-  if(req.method==='GET'&&url.pathname==='/admin/anomalies'){const identity=requireControlIdentity(req.headers);return send(res,200,service.anomalies({role:identity.role,period:url.searchParams.get('period')||'DAY'}));}
-  if(req.method==='POST'&&url.pathname==='/admin/ask'){const identity=requireControlIdentity(req.headers);const input=await readJson(req);if(!input.question)return send(res,400,{error:'question es obligatorio'});return send(res,200,service.ask({role:identity.role,question:input.question}));}
-  if(req.method==='GET'&&url.pathname==='/investor/snapshot'){const identity=requireControlIdentity(req.headers);return send(res,200,service.investorSnapshot({role:identity.role,range:rangeFromUrl(url)}));}
-  if(req.method==='GET'&&url.pathname==='/investor/trends'){const identity=requireControlIdentity(req.headers);return send(res,200,service.trends({role:identity.role,...trendArgs(url),investor:true}));}
-  if(req.method==='GET'&&url.pathname==='/investor/export'){const identity=requireControlIdentity(req.headers);return send(res,200,service.investorExport({role:identity.role,range:rangeFromUrl(url),expiresAt:url.searchParams.get('expires_at')||null}));}
-  if(req.method==='POST'&&url.pathname==='/internal/facts'){const identity=requireControlIdentity(req.headers);const fact=await readJson(req);return send(res,201,{fact:service.recordFact({role:identity.role,fact})});}
-  if(req.method==='POST'&&url.pathname==='/internal/modules/health'){const identity=requireControlIdentity(req.headers);const health=await readJson(req);return send(res,200,{health:service.updateModuleHealth({role:identity.role,health})});}
+  if(req.method==='GET'&&url.pathname==='/health')return send(res,200,{ok:true,service:'stylo-control',version:'0.7.0'});
+  const identityNeeded=()=>requireControlIdentity(req.headers);
+  if(req.method==='GET'&&url.pathname==='/admin/overview'){const i=identityNeeded();return send(res,200,service.adminOverview({role:i.role,range:rangeFromUrl(url)}));}
+  if(req.method==='GET'&&url.pathname==='/admin/trends'){const i=identityNeeded();return send(res,200,service.trends({role:i.role,...trendArgs(url)}));}
+  if(req.method==='GET'&&url.pathname==='/admin/funnel'){const i=identityNeeded();return send(res,200,service.funnel({role:i.role,range:rangeFromUrl(url),groupBy:url.searchParams.get('group_by')||'source'}));}
+  if(req.method==='GET'&&url.pathname==='/admin/attribution'){const i=identityNeeded();return send(res,200,service.attribution({role:i.role,range:rangeFromUrl(url),groupBy:url.searchParams.get('group_by')||'source'}));}
+  if(req.method==='GET'&&url.pathname==='/admin/alerts'){const i=identityNeeded();return send(res,200,service.healthAlerts({role:i.role}));}
+  if(req.method==='GET'&&url.pathname==='/admin/anomalies'){const i=identityNeeded();return send(res,200,service.anomalies({role:i.role,period:url.searchParams.get('period')||'DAY'}));}
+  if(req.method==='GET'&&url.pathname==='/admin/cohorts'){const i=identityNeeded();return send(res,200,service.cohorts({role:i.role,cohort:url.searchParams.get('cohort')||'MONTH',periods:Number(url.searchParams.get('periods')||6)}));}
+  if(req.method==='GET'&&url.pathname==='/admin/unit-economics'){const i=identityNeeded();return send(res,200,service.unitEconomics({role:i.role,range:rangeFromUrl(url),groupBy:url.searchParams.get('group_by')||'module'}));}
+  if(req.method==='GET'&&url.pathname==='/admin/network-liquidity'){const i=identityNeeded();return send(res,200,service.networkLiquidity({role:i.role,range:rangeFromUrl(url)}));}
+  if(req.method==='GET'&&url.pathname==='/admin/module-quality'){const i=identityNeeded();return send(res,200,service.moduleQuality({role:i.role}));}
+  if(req.method==='GET'&&url.pathname==='/admin/executive-brief'){const i=identityNeeded();return send(res,200,service.executiveBrief({role:i.role,period:url.searchParams.get('period')||'DAY'}));}
+  if(req.method==='POST'&&url.pathname==='/admin/ask'){const i=identityNeeded();const input=await readJson(req);if(!input.question)return send(res,400,{error:'question es obligatorio'});return send(res,200,service.ask({role:i.role,question:input.question}));}
+  if(req.method==='GET'&&url.pathname==='/investor/snapshot'){const i=identityNeeded();return send(res,200,service.investorSnapshot({role:i.role,range:rangeFromUrl(url)}));}
+  if(req.method==='GET'&&url.pathname==='/investor/trends'){const i=identityNeeded();return send(res,200,service.trends({role:i.role,...trendArgs(url),investor:true}));}
+  if(req.method==='GET'&&url.pathname==='/investor/export'){const i=identityNeeded();return send(res,200,service.investorExport({role:i.role,range:rangeFromUrl(url),expiresAt:url.searchParams.get('expires_at')||null}));}
+  if(req.method==='POST'&&url.pathname==='/internal/facts'){const i=identityNeeded();const fact=await readJson(req);return send(res,201,{fact:service.recordFact({role:i.role,fact})});}
+  if(req.method==='POST'&&url.pathname==='/internal/modules/health'){const i=identityNeeded();const health=await readJson(req);return send(res,200,{health:service.updateModuleHealth({role:i.role,health})});}
   return send(res,404,{error:'Ruta no encontrada'});
  }catch(error){return send(res,error.status||500,{error:error.message||'Error interno',code:error.code||null});}
 });
