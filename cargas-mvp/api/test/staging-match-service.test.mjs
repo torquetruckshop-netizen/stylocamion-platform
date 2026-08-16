@@ -78,6 +78,29 @@ test('staging v2 usa perfil telemétrico si existe', async () => {
   assert.equal(result.decision.economics.estimated_liters,108);
 });
 
+test('si no hay perfil telemétrico conserva el consumo configurado del camión', async () => {
+  const store=makeStore();
+  const contextStore={
+    async getLoadContext(){ return {origin_lat:-31.25,origin_lon:-61.48,location_resolution_status:'RESOLVED',price_currency:'ARS'}; },
+    async getOrganization(){ return {id:'ORG-1',default_fuel_consumption_l_per_100km:30,default_fuel_price_per_liter:1500}; },
+    async getVehicleEconomicsMap(ids){
+      assert.ok(ids.includes('OWN-1'));
+      return new Map([['OWN-1',{fuel_consumption_l_per_100km:33}]]);
+    }
+  };
+  const service=createStagingMatchService({
+    store,
+    contextStore,
+    efficiencyProfileStore:{async getProfile(){return null;}},
+    distanceResolver:async ()=>({km:0,quality:'HIGH',source:'TEST'})
+  });
+
+  const result=await service({loadId:'SC-1',user:{id:'USER-1'},config:{loaded_km:100}});
+  assert.equal(result.decision.economics.consumption_source,'VEHICLE');
+  assert.equal(result.decision.economics.consumption_l_per_100km,33);
+  assert.equal(result.decision.economics.estimated_liters,33);
+});
+
 test('sin organización no abre la búsqueda a toda la red', async () => {
   const store=makeStore({membership:false});
   const contextStore={
