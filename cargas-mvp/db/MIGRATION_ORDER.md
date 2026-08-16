@@ -13,6 +13,7 @@ Aplicar en este orden para el primer staging:
 9. `008_resilient_digital_intake.sql`
 10. `009_location_resolution.sql`
 11. `010_trip_economics.sql`
+12. `011_telematics_integrations.sql`
 
 ## Nota
 
@@ -26,8 +27,11 @@ Antes de convertir estas migraciones en una cadena de producción, se renumerar�
 
 `010_trip_economics.sql` incorpora consumo estimado de combustible, precio de gasoil, peajes confirmados/estimados y snapshots de costo variable por carga/unidad. El valor base de consumo es 30 L/100 km, con override por empresa o vehículo.
 
+`011_telematics_integrations.sql` agrega conexiones multi-proveedor de telemetría, vínculo entre unidad Stylo y unidad externa, lecturas normalizadas de ECU/GPS y métricas reales por viaje. Permite comparar el consumo estimado con el consumo reportado por la telemetría sin atar el núcleo de Stylo a un proveedor específico.
+
 ## Seguridad
 
 - Las claves secretas/service-role se usan sólo en backend.
+- Los tokens de telemetría/API no se guardan en texto plano en tablas: se referencia un secreto seguro del backend.
 - El navegador nunca recibe una clave administrativa.
 - Antes de exponer acceso directo a tablas desde cliente, se deben definir políticas RLS específicas.
