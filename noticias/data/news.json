@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T06:00:41.483101+00:00",
+  "updated_at": "2026-08-17T10:07:10.470809+00:00",
   "items": [
     {
       "id": "e8f11da375c64a",
@@ -82,16 +82,6 @@
       "time": "Wed, 12 Aug 2026 11:12:00 GMT"
     },
     {
-      "id": "e6258432533f64",
-      "title": "Formación, seguridad vial y minería: cómo cambia el transporte de cargas en Argentina",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "Identidad Correntina",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNaHJfSkJlLXFpTU4yQ3NmdDhkWEFzMzktVk90RTF5QTNsbkhhX3lYSXdZWVJxMUdReHRPeEdreHc3V2ptRmxPZ29XVkhwbGtPd1RmZUdWYndBX0FHd0JuSWktNUZlNHJVaXRSOWhNR09UQzIxOXNXc1ZGTXFoalAtMFkyQ3VlZGRsNWlYN25jdUdYb2NWTHVIX3FZNG15dmRrX1NTc0FLMjdDQUhjOUxKYlVQOGlpWnVmYzR6SWtLR2xEYXgyLWRaRFNTbnllc3RQUm5n?oc=5",
-      "published_at": "2026-08-04T09:04:59+00:00",
-      "time": "Tue, 04 Aug 2026 09:04:59 GMT"
-    },
-    {
       "id": "087234716633b2",
       "title": "El gremio de conductores navales advirtió sobre la \"pérdida de soberanía\"",
       "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
@@ -120,6 +110,16 @@
       "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNaHVqSk11SnNXaHZhQ0ZTcTJ6QjhsX1VVMnRsakxkN1hzdEtFQUQwVWRFbVJZMHAzTDZZdmE2dUJwTlhKRG9IVkNKcW5CZzN4cHkydjkxWldLREdwb0xsbzgwcFJUMHBIXy1LcHRfNHBzczJNYVRHQXhWN0drQ1pzX0FvejdOeVY2NXdaWTd4Zk5xTGJUSXhoaUZPaW1uQ1g5MTJjWWVjZVBtRTV3TVJLY0t3bDNRV0kzTWVHQ2k0Y1p3QUliM3FLQklPMGQ2VjZXVGtJV0V4YU1najBQX1c0Y2VxcGtyOUVVaWkw0gHzAUFVX3lxTE1OTkVVc05tVmdPQ2NJbV9fNkhXcTREQkVPMnhMOWpPNUVSMXBsREVRZm92YjFHWmZfdlhraW1nVnItNGtwbDY2NnV4ODRKLUpPZjVnYjdTSHhHR0xpMlNpcS1SaDhoV1plbEtIejhOYWhTa1dpa1J5NWE5ZUdhU0pDYmdQMUx4OXFqNUljMjFqNklwYnd5Q1FwZHlzenhMRk9yTTdBc1ppazM2aVpwLVBQXzZmLWhIXzUzNmhTbU95TjRYSXQ5dDBjZFhyY0RtREtNWExRcHhNNEV2SjVjVU9yRG9rbnFOaV9udTNfNElJYmhSaw?oc=5",
       "published_at": "2026-08-11T18:16:31+00:00",
       "time": "Tue, 11 Aug 2026 18:16:31 GMT"
+    },
+    {
+      "id": "1a99960233ed5b",
+      "title": "El sector de la logística y el transporte reclamaron más infraestructura y financiamiento",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Webpicking",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQXk0cS1tQWlEMDNxaHA4QlQ0M1V1U3hKZUFKUVBOTzcxZnlnVm56UXVGS01Rb0lYRExjYlRycnVVV0xIanVjTXo1WVBRd2M3cFgwcS1LV29hODlaTHJQelpOd04tUVRwSWJkT0txbWtzNjBGblBtVFlfV2tvWDZyQUwxTzhoRUFRVDlvQWRjWE1oR0kwRVNQbjNTV3JHSWRFSkdaOHFla0JnWWZ5QVlFUzNXSQ?oc=5",
+      "published_at": "2026-08-15T21:09:58+00:00",
+      "time": "Sat, 15 Aug 2026 21:09:58 GMT"
     },
     {
       "id": "0aa4274ccdabd2",
@@ -162,11 +162,11 @@
       "time": "Mon, 10 Aug 2026 17:42:57 GMT"
     },
     {
-      "id": "a06bae3d53c9c0",
+      "id": "732a3320b677d0",
       "title": "Caos en la frontera con Chile: más de 3.000 camiones varados y casi US$ 2 millones de pérdidas por día",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
-      "source": "eleconomista.com.ar",
+      "source": "El Economista - Últimas noticias económicas y financieras",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNTXk2WU4yel8yaFdTYnloMTZYYmh5TzUxeXRYOTJnTTJhdEhUNXc3Mnl5NS1HT2RieW9rMFR5OWNyZkZtdGlSeHRuRGJGc01kWGoxa3JSQW1pNTNVVG1MMTc1Njgza0RfTXh0eEZHTFhtZmo3eVZ6UW1zZ2pEUi1IRGQtcm5CeXd3RTFhNjdOVWd0Ul9PWFRzby1sUmxhYzNnemtVZXlCYXk1SDhKc24zaF9ITk90R3JNajdWUVFwX01VeWF10gHKAUFVX3lxTE9oejV6UW1aSVM0NzRxeEE5YVc0WENrTU12Skg5UjlpQXdRVC05Nm9CNjdkQmdxUm0yazNDTWs2NDZGNkZmak9HcVh2Mjl6ekdvdUFmSnB1MWM1eXRRMlI1ODB0Z0dRWG9XdVNweXdTdmlYNFBCU21hM2FvdTRyRmdHeHFJRTJFX1dTdXV4eVgxTjVUVFdIX2ZjMlhWR2ZRRkRFWkpSZGlZdTdGZXFGVjFfVUxfbEJNMXJMYW8zLWRMMWcxNkwzQnNOY2c?oc=5",
       "published_at": "2026-08-10T16:27:00+00:00",
       "time": "Mon, 10 Aug 2026 16:27:00 GMT"
@@ -202,24 +202,14 @@
       "time": "Thu, 13 Aug 2026 20:08:12 GMT"
     },
     {
-      "id": "4c1866c1720179",
+      "id": "1306d45de16536",
       "title": "Expo Logisti-k y Expo Transporte 2026: el sector apuesta a la modernización y al financiamiento productivo",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
-      "source": "Comercio y Justicia",
+      "source": "comercioyjusticia.info",
       "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNb2REc1FuYmJwaDcwRGFtRDFhdzktcm5yLVpMTklSZ0ZKNUJSUkcyV1hoSElxOTJFbmFsV05fV3kzLTNSdjAyQ2FQY3BNWlBsREd4N0IzQnNVVHJUZmxvZHFWb3ViS3M2SFRzUGg4VUcyUTBkZTYwYkJmMXp1aWVLaFl2UG80dHFDZHNhWEs5eTJ0MWdvVUpYbFAzSDBMaEdVUHZHaVctTXpQc0pmNGc1UEVaU0FkT2ZXZllUcU1yU0xiU2NRVHhpZ21GTDB0U09mUWtaUERiT3JwZzYxUjUw?oc=5",
       "published_at": "2026-08-13T08:07:00+00:00",
       "time": "Thu, 13 Aug 2026 08:07:00 GMT"
-    },
-    {
-      "id": "bd79d356be0e54",
-      "title": "Esto es lo que cambiaría en materia económica para el bolsillo de los colombianos con la nueva administración, según análisis",
-      "summary": "Información reciente de economía seleccionada por el radar regional de Stylo Camión.",
-      "category": "Economía",
-      "source": "Infobae",
-      "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQRDF5Mzh1T0NPamhwTjk1QWVJOG9fSTh6OEdIUEZJbXNxdWJ2anI2Z1Z3ekJXMW1xWFUzQWIyNnotYnJXalQ2bW4wZzFUOFhLclhFZjAzdWhWSkxwTVNoNXBsTlZiRE9kd3E5VlpsSjdqYm0zS3FjQkRXRWZQWHVIbEE0U0RvR1lHRUFJX3ZLWWNoVC13a25XUEowalNBdDFONGNUTUgyVHFlZ0xqd1dSRU5VTzFWLV9nRS1yX1JQWGJVNkNLRWlPeEtaLVVyV2hKS0dUYU1YaUZuakllM1BHdGFYQmhwRDV0ckFBT2FrMDhNcG0wUkxsSUhtTkVaUdIBmAJBVV95cUxNVzFEaHYwZWNsNlphTmdjSFFHMGFnc2ZHSHRFSll4MndBOEJtLTBfQUFBMVA5Y1dvQjYzZ2dzeEVWdGptbk5VRC03RUt3ekdqVk5RR3Z6YVFCdzluOGE5U0phdmdCQk5IazMzUWZZUnBGdmQteGZPclFTaDVsSDVlSW1tNjJxMXNfZUg1OXF2RDU4OS1hREplcktkYWNCb2prYTFsdjlXdjJVVGRlY2QxbGVKb0JOZjFWOXItck5DZFV6YlhORXFCRXBZZk9VcGdpWjVBOXBZdHNUMVQ1eldEUTFMWjVSd25pdjFGMEx2TnVZa3A1N2NoLUZ1bWpyeDVIZTVGZWJwN3Z0Nk5JN0VlVjBTYTFFTWFn?oc=5",
-      "published_at": "2026-08-08T17:19:00+00:00",
-      "time": "Sat, 08 Aug 2026 17:19:00 GMT"
     },
     {
       "id": "0832e6c5e6e4c5",
@@ -232,21 +222,21 @@
       "time": "Sat, 08 Aug 2026 17:02:42 GMT"
     },
     {
-      "id": "561ed259bb7f85",
+      "id": "5b60b3742e59e6",
       "title": "Rutas destruidas, desvío de fondos y camiones más pesados",
       "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
       "category": "Camiones",
-      "source": "Catamarca Actual",
+      "source": "catamarcactual.com.ar",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOdW45cTk5YW5LSjJJNHhqei1SSkVvNFBwTDdIakFaM05Xa0dXRGFraHhVamk0eE1ESGduTjJwaU9jdUkzZGdXYXloc1BKMkx5LWEwY2QzMVFEQjNlbDdoX3FUbjJ2MHR1UDFqNjZmbDFVdGNqcEdMM1JMUVppLWpERThEMFRhX3RnUEphNnNnLUxLM2Fob01GeGdadFNHR09MWmpmcjhhM1JfS0JlbjNXSU5udXc2aVhMeGFEdzFR0gGnAUFVX3lxTE11UUp3Tll5TlJ1ZHZva3JUSGJuMnBVdF9DN3RvR19PeHk0THRKYVFRNzY5VUxwc28tZ2h6WS12bVU2eHdqSW9BMEtMVzFMdUVLbUpmQ0hXclJjdWV5aDZSck5yZlVsa2VhWG8xdmRfQy1Za1ZLWGh5M3NMRTZIMEZLTDNwbUp6cW1TQmRSYnlKMEcwajBtaVlvd25HUE9CaGdsOGZSWFA0?oc=5",
       "published_at": "2026-08-12T15:29:00+00:00",
       "time": "Wed, 12 Aug 2026 15:29:00 GMT"
     },
     {
-      "id": "aa0412ee9abe91",
+      "id": "02db037e815b89",
       "title": "Scania ve una fuerte demanda de camiones por el avance de la minería y Vaca Muerta",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
-      "source": "Comex Online",
+      "source": "comexonline.com.ar",
       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPM0I1ZnRIeGdMbUlGNDBINWdVanN4eUFIdFFDZ1lYYzNEQktZb0NDSkd6SGFzOGJ6Z01BQ3BEUzlsc1ZNRWcwRkpQaFFTWUxROV8zSHVxLXUyQ21RbkFFdFFIUXhUVGwwaDU2WThWVTRlejZmSmtpWXZCdXQ5NkI5X1JDSWo0YXdUQ1haajlDYzVsMTlCRW1kSzR4N3F0NVVBbkdRRWdFOVBRMzFkX0Y3TWhJMmVpOEVRXy1hZ3YzUVhYLUl4amt0ZVFnTVRJUQ?oc=5",
       "published_at": "2026-08-12T15:25:34+00:00",
       "time": "Wed, 12 Aug 2026 15:25:34 GMT"
@@ -272,10 +262,20 @@
       "time": "Wed, 12 Aug 2026 13:31:18 GMT"
     },
     {
+      "id": "bd79d356be0e54",
+      "title": "Esto es lo que cambiaría en materia económica para el bolsillo de los colombianos con la nueva administración, según análisis",
+      "summary": "Información reciente de economía seleccionada por el radar regional de Stylo Camión.",
+      "category": "Economía",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQRDF5Mzh1T0NPamhwTjk1QWVJOG9fSTh6OEdIUEZJbXNxdWJ2anI2Z1Z3ekJXMW1xWFUzQWIyNnotYnJXalQ2bW4wZzFUOFhLclhFZjAzdWhWSkxwTVNoNXBsTlZiRE9kd3E5VlpsSjdqYm0zS3FjQkRXRWZQWHVIbEE0U0RvR1lHRUFJX3ZLWWNoVC13a25XUEowalNBdDFONGNUTUgyVHFlZ0xqd1dSRU5VTzFWLV9nRS1yX1JQWGJVNkNLRWlPeEtaLVVyV2hKS0dUYU1YaUZuakllM1BHdGFYQmhwRDV0ckFBT2FrMDhNcG0wUkxsSUhtTkVaUdIBmAJBVV95cUxNVzFEaHYwZWNsNlphTmdjSFFHMGFnc2ZHSHRFSll4MndBOEJtLTBfQUFBMVA5Y1dvQjYzZ2dzeEVWdGptbk5VRC03RUt3ekdqVk5RR3Z6YVFCdzluOGE5U0phdmdCQk5IazMzUWZZUnBGdmQteGZPclFTaDVsSDVlSW1tNjJxMXNfZUg1OXF2RDU4OS1hREplcktkYWNCb2prYTFsdjlXdjJVVGRlY2QxbGVKb0JOZjFWOXItck5DZFV6YlhORXFCRXBZZk9VcGdpWjVBOXBZdHNUMVQ1eldEUTFMWjVSd25pdjFGMEx2TnVZa3A1N2NoLUZ1bWpyeDVIZTVGZWJwN3Z0Nk5JN0VlVjBTYTFFTWFn?oc=5",
+      "published_at": "2026-08-08T07:00:00+00:00",
+      "time": "Sat, 08 Aug 2026 07:00:00 GMT"
+    },
+    {
       "id": "71e7f397eab50a",
       "title": "Polémica tras la decisión del Gobierno que habilita la circulación de camiones más pesados en las rutas nac...",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
       "source": "Rosario3",
       "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQcV9TbXVlcXlleFNuN296SDJVT0dhQlhuc3lFZjF3THk1RmdkS0l0TGF6M2RCU2psa3RzTUxoVGVpa21WQVZMcHY2ZkQwV1NnZjg1X3ZUbFBkdnRsdWxCVmNVVld6YWFWY05CS1czb1F6N0dudVNMZnlza3EwQUJWdkszX2otX1lNc1M5T1F2aXQ4TGlBN2xMYTFPNFVWQUVaR1RFa09CTHppa2ZmQmZ0MUUtMDBhZk53ZUFSYlVZMDUyaWpucXRNN2REbTBSSjk2a3Zvb2ZNc2t2SW95NlR1cmlYaTh5WERmZzl5Q3lkbXplRzdKM0RPb1FXYUpLYUxRd2tPcWlaLWjSAYgCQVVfeXFMUHFfU211ZXF5ZXhTbjdvekgyVU9HYUJYbnN5RWYxd0x5NUZnZEtJdExhejNkQlNqbGt0c01MaFRlaWttVkFWTHB2NmZEMFdTZ2Y4NV92VGxQZHZ0bHVsQlZjVVZXemFhVmNOQktXM29RejdHbnVTTGZ5c2txMEFCVnZLM19qLV9ZTXNTOU9Rdml0OExpQTdsTGExTzRVVkFFWkdURWtPQkx6aWtmZkJmdDFFLTAwYWZOd2VBUmJVWTA1MmlqbnF0TTdkRG0wUko5Nmt2b29mTXNrdklveTZUdXJpWGk4eVhEZmc5eUN5ZG16ZUc3SjNET29RV2FKS2FMUXdrT3FpWi1o?oc=5",
       "published_at": "2026-08-12T00:40:00+00:00",
@@ -312,11 +312,11 @@
       "time": "Fri, 07 Aug 2026 07:00:00 GMT"
     },
     {
-      "id": "f3d2f18a49e870",
+      "id": "a522a8ff15de37",
       "title": "Adiós cuerdas: MTT anuncia cambios en normativa de remolque de autos averiados en Chile",
       "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
       "category": "Remolques",
-      "source": "Rutamotor",
+      "source": "rutamotor.com",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOGxuOEYtUlVwWmxaUHA4a20xVC1XaG9kLW5nTloxWVVjbHhDdkV1UnN2dk0wY1ZKUll1dEhHQUZ1M0ZBZzhHZ1J0WHdnNGh3S0N4Q182YWVVa2VHZFlrNFJSRmU0T29tMUFOeHkxcnQzWU9yQlJkdmh6WnNYRWZmYmQ5NmhWeHRnN3R1cjNUdXhva25mdkZGbTBzd1ZpQUk1cjJkRFMzSHlBdHBWd0dEWA?oc=5",
       "published_at": "2026-08-07T07:00:00+00:00",
       "time": "Fri, 07 Aug 2026 07:00:00 GMT"
@@ -352,6 +352,16 @@
       "time": "Mon, 10 Aug 2026 17:18:22 GMT"
     },
     {
+      "id": "75e9a1f2546a70",
+      "title": "Preocupación por los camiones varados: el paso Cristo Redentor rompió un récord histórico",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "MinutoUno",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZExFY1g5V1hMbHNDSW5TZDBZMEVFdTZ3ckt0bGR1MlRWNldjZXp4SGppY3BOTnE4d3ZxMTZZZi0zRl83YzVsbkE3VU0ySFZoSjRJOW16OWhnNnFIeWpMU3VaNm9BRUlKTmdudkJDelgyM1o5Q0xIb0Q4RzFMbm1ZRUtzTnhrZ291M2NWeWJkaFdiRUd3TUdSSkxZVlV0RlJQWUhVTHZZeUplNzVZajhMVjVVTXA4Rlo2ZkRzUFhobnBJNHNKc2g40gHHAUFVX3lxTE1kTEVjWDlXWExsc0NJblNkMFkwRUV1NndyS3RsZHUyVFY2V2NlenhIamljcE5OcTh3dnExNllmLTNGXzdjNWxuQTdVTTJIVmhKNEk5bXo5aGc2cUh5akxTdVo2b0FFSUpOZ252QkN6WDIzWjlDTEhvRDhHMUxubVlFS3NOeGtnb3UzY1Z5YmRoV2JFR3dNR1JKTFlWVXRGUlBZSFVMdll5SmU3NVlqOExWNVVNcDhGWjZmRHNQWGhucEk0c0pzaDg?oc=5",
+      "published_at": "2026-08-10T11:20:00+00:00",
+      "time": "Mon, 10 Aug 2026 11:20:00 GMT"
+    },
+    {
       "id": "141a5e9a101b4e",
       "title": "El Paso Cristo Redentor permanece cerrado por la nieve y crece la preocupación de los camioneros por las pérdidas",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -372,6 +382,16 @@
       "time": "Thu, 06 Aug 2026 07:00:00 GMT"
     },
     {
+      "id": "1607e2d1b9f8c8",
+      "title": "La nieve mantiene rutas cerradas en Neuquén: más de 1.200 camiones esperan para cruzar a Chile",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "La Voz del Interior",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPV1lZbUNXT1FKeGIxd3lwUDRYME5ZX01DLUpxZlVaNVJjdWEwMXJFWlljQThHYjB2M0dMRDJ0OHdXNjNOTFltMVRoeUdtakdFb0xsNnBoYndTVVo1SEhMajRKRno1VzRONEc2OFQ2NXhvWW5WVGgwYW40UmIyNEMxdHJyeTRRY1FzVGNrVnYxWGFKcTQzVGVFMlVqdUF1M0NFZkpOWV9IVW5KclJFZ3BfUnZtUC12MWF6bUxsNmVNVjFZS3pj?oc=5",
+      "published_at": "2026-08-06T07:00:00+00:00",
+      "time": "Thu, 06 Aug 2026 07:00:00 GMT"
+    },
+    {
       "id": "dd89dbce01afea",
       "title": "El paso Cristo Redentor cumple un récord de días cerrado por la nieve y hay quejas de los camioneros por las pérdidas millonarias",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -380,6 +400,16 @@
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQYVIxUXlTY2NrWmN6ek85dkhCZk03RzJJQWtnQW43MThGTGN2Vmc5bWdWTEEtMFFJN1RHc1NTSTEtZlc2UnVkdVVqbmpnWEY2WVNqYmdvdGc0c3E4UTB2NW1vQTZNMVk2aG94LWQta05ILVljQ3VaU2FWNVhFMU9SOE1DbUZvZ1VPZzU0VWhCbllFS09IUlBUUjFVUTJQV3Z4ZVFoVkdrZU1HNkZmTUZSQnRTQThYcUx4NmpSLUluaFRYdHJQdFk4b21rOW5Zd19rR0hCdko1SE1hdw?oc=5",
       "published_at": "2026-08-10T09:01:45+00:00",
       "time": "Mon, 10 Aug 2026 09:01:45 GMT"
+    },
+    {
+      "id": "67a7161b9501ad",
+      "title": "Nieve y frío complican el tránsito en la cordillera: miles de camiones quedaron varados y hay pasos cerrados",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "El Litoral",
+      "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxNd1NsUEJ1Z1BacjdGX3V3SmtTVkhDbENvSnV1MDZiQ2xpR1BLS1N5bml1U1ptSVZEWGZzTk9wcXo5cHJYbXVLVXdORlVsME1ZaEo5SkFXdnozZ2xmRU9zVFhoeHJGQ1RsVG0wd2pSRlU5YTBJdHJqTVd0WWZEdjk2UGplZkhYc2VlWlJwQjYwRV8tc0dqMGlkVC1qcEM5OEdNU2tYcFFjN0FfRWtGX1h4VExBZnVpLWVjSjlIWVp0NGxlXy1xd1c3bTlDM2RCR2VjSXg4QVBGczBDRGxkVkJTM3c4V0g2TzNuT18xYVlNdjZUTzhwMzdCNUZrcGdsalBHUURSWkhGcU4xVXlTVnJaRHBLdkYxdlnSAZwCQVVfeXFMT3Nlb3g1S2RlSmpHd3IxdjBJcWlEMFQ2ZEFCM3U4UTh5QW1XbmFJOWNubDhzMDQtQ05JTHVxUUlpWGpJWmNvSldQRXZjS3EtczA1ZUFxX05UcEFDX3FDVVpJd3BpdTA3em9nQU9WM0RBR1dIOUdPN3JhTzBmT0w1R3FJTUhHVFM0R3JrTnRJcUgzR3lMOWhpSzliUk10SXFwcmdOVkdZS19KeGF0NzMwYWp2YVhGZzVrcE8tMTh6WmNobC1obWw1T0ZfLWNCWnFUTUNtV19hdjFBV2lPWHNERm1DWGR4M2VSRjY4UmRCRGM0eFNCM1VaUzNYdXVaMEFXZzViUV9wNUhLUmVlaGplVjNkX2lqVVJYZUdhWmQ?oc=5",
+      "published_at": "2026-08-09T12:00:16+00:00",
+      "time": "Sun, 09 Aug 2026 12:00:16 GMT"
     },
     {
       "id": "19e682611395ac",
@@ -512,11 +542,11 @@
       "time": "Fri, 31 Jul 2026 07:00:00 GMT"
     },
     {
-      "id": "f3d3c6c8a420a6",
+      "id": "66a89ef9941059",
       "title": "Gobierno argentino modificó normas sobre pesos, dimensiones y otros aspectos",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
-      "source": "webpicking.com",
+      "source": "Webpicking",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONDlnTm9YYVFPX1J5VUh1Zk9kTE9XdXRSQXhtNGNVZE15T05UQkdIV1ZaQzBHVnVkamQtb3lwbW9neFl4UzRzN1k2ODcxdDhka2MyWVhLZmxpdlBLcEcyNll0NWtyUXpmRnMwRDF3dXlVUWZLUEFCQkJWd0xvN1dDdUhhYmVTZTRCazc2aGxxdTVidG1LYzQ0eTBlbG1LNm5v?oc=5",
       "published_at": "2026-07-31T07:00:00+00:00",
       "time": "Fri, 31 Jul 2026 07:00:00 GMT"
@@ -530,6 +560,16 @@
       "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPMDRrb0F6Q2ZhR3o0dW51UkhLWWtFWmFNY1ZPdTZXUGl4WHFzbmNvc3Q3bjVlSFMxM25DbnlMUG9zMk1OZ0dLbko0Z2pNVmRpeWhsWGlhelUzUkdSY0Qya0pnU1lNb2tUZmt4N1hJcDZBMU5XaWZmU0V6b1hsOU05TFExc3RCWnR2X2ZObEJpT21pYmFld0dRakJQaW5RUURXeUhfcWxXSHRFWnBwaEZVNjJta0xPZk9fNjRscTkzMTJmTmNLMXA0WVZlWGdhMzg1RkFvemlQY0lkU2xxQWZsWXpB?oc=5",
       "published_at": "2026-07-30T07:00:00+00:00",
       "time": "Thu, 30 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "id": "b134797a8ef2cf",
+      "title": "El transporte pesado argentino: entre la infraestructura pendiente y el recambio de flota",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUWlhMWw4MmFnOXdDV0JNcnM1WENZcVZqQTlkVHFqZzRkZ1h3ZFktMXVTMExDUG5BWlJJTUJCWGVTcVVFdFA2QVpVVk1rT2VKVExTZ2JtMzVSZHFyeUNIU19mQTlUblhscHZzb19XWUtBc1RGOGtSTFdwZUtmc3hFcGpJMEFhTVY4WW1WRXlaUTlUR3JUUnVwSkw2MHFHUDVLRDdRakxDLTI5YXU2bnYzNEZ3NGJqYnMtTUd4U2NKZzZXNFNzdVFkWEdid9IB5gFBVV95cUxOTlV0LW9Kb25vbE1zQU94OGVNZTMyWjE0eDRnNmFNQ0xGZWNKSUZxVFJxREhWX19LejZjZGx3NHRaZndNUm84NUE4U0lIVmFPLTVRQTA3YTNDd1lkR2pUNWh3Q1lMZDBFWHVRUTVLTWVsd25LRGNocTN5LWxqaDhQT3FTMGREVVpzM2hSRklSa0JlbjFtQmw1RUdOSFhuZ2NmUG1XUE1jOFpyUzBSUjhfMWpjUF9WcVNBa1U0WUpxaDg0NWNEVWtKbmcycndTSnNKZTY2YmZZQ3RBUVNNanNpQ3N4N2RwUQ?oc=5",
+      "published_at": "2026-07-28T07:00:00+00:00",
+      "time": "Tue, 28 Jul 2026 07:00:00 GMT"
     },
     {
       "id": "c711812cdec36a",
@@ -560,46 +600,6 @@
       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNd2NnSGdGcFRXbWNIVHhlY1V6dlp6UmloLUVFQ25ELTRTNXVrYVlfNEc5eWRPUTVPM2ZqMzhqSkQ2X090Q0RqOTFVVnZFTU5CZWpUVlFKQkVEX3A4bEhlY2Nqa2cxVE9xVlRNRG1nZnFhT3A2b2wyakJieHhWR1VwTFBCRzJiV2FGQk02ZW1sekE4VlZ0eGNyQ2ZhNmNHRUZSMENXdnBMWmdnM3AzcV83dmpsbGtoaFIxSlRTd3hCekpDVDVqNGFRNlpXUXJVQdIB0wFBVV95cUxOQ2NabFVTQVJldWFJazJTTWVEUE1Cc2VINmE2cXpFVzlOTm43OXFONE1KOG9CeTRhUDR3M1VMVHhvTjVlTWZneldXWXRKM3p0MFplaTBMeFZ6S1FmSzcyTVZNanRqcDB5N0RrYzFkSUM1NkRISUVkcUFlbVZwZ0VHTnVFWVR0Z2FqT040MUJseG1TRi1memp6czFfN2lEbkhyUVRyNVVCYnBsM0NfTVFIQ05aaGI1bWo2di1YYTZDZGxBWkloZ255bUdLY2hsQjVGOUdz?oc=5",
       "published_at": "2026-06-22T07:00:00+00:00",
       "time": "Mon, 22 Jun 2026 07:00:00 GMT"
-    },
-    {
-      "id": "c4a4ea7457e3ee",
-      "title": "El desempeño industrial durante mayo",
-      "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
-      "category": "Remolques",
-      "source": "ladiaria.com.uy",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxONHkxUzJMNTBwWEdzX1dkWF9xU2lSOVVLaXNKb1U3dFg1a1JoUXhjcGxJaGJFak9JUGdrOVJlWkd3d3FDa0k3VUpVYmtTRERaOUFYaXJYWlZPMDUzdFFKM0daMmR3WUpSQ05meGpzSDhHY0pzczFtU29rYkU3MzV5YmRtamRVYUVuQTdRQkVETdIBnwFBVV95cUxNLV9abUdFblVwUnV6UjhUbEdkc0swT0RzcXlXSmx0THNidTZvQ3hWcDVJYTI2bmpnWE9uVkRKM3FlSHc4cFBNNFJDOGQwMUFIb1N0TXJ0R0p4YVNaVmxXZko2aFByQ0w3RHloSDBQTHN3NUxnTXItWUlMWFhlMDhLRFFBeDJ4cUtsUVNVUkFlQWRxRTVTSGlmZjJTbXNrc1U?oc=5",
-      "published_at": "2026-07-16T07:00:00+00:00",
-      "time": "Thu, 16 Jul 2026 07:00:00 GMT"
-    },
-    {
-      "id": "7f537327fc121d",
-      "title": "Santa Fe Pesa: con más de 10.000 camiones fiscalizados, la Provincia detectó más de 1.600 toneladas de exceso en rutas santafesinas",
-      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
-      "category": "Camiones",
-      "source": "Gobierno de Santa Fe",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE91MVlyaGZSdjQ2QXZnMFNfYVZmMUxQdU5wZmVVRUtsTEtjREZpdk5lb3ZCUE5iQnltRXZfNmFfQzdSV1p4LXdKRnJ4aEM2V2p3bnNocDF5dF9GdndfeUJtWQ?oc=5",
-      "published_at": "2026-07-09T07:00:00+00:00",
-      "time": "Thu, 09 Jul 2026 07:00:00 GMT"
-    },
-    {
-      "id": "053717b0eaab0f",
-      "title": "Ministerio de Transporte aplaza por un año las nuevas normas para carros y motos: estos son los cambios y las fechas",
-      "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
-      "category": "Remolques",
-      "source": "Infobae",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQXzhOSXVZMlNWTnZCYjFlRXdYRVRMb05kRS1SY3lOdDk3OGstOTA5M2Q2dGRINkNDWXoxT0Zrbjg0bTZRMVhySi11eFRVM2JTS3FNZ2J1cjFLdVllUGVLYXg5eWZMZGN5WkV4MXlBam9RY3dLWk1XTGw5eUtUYko4MVlURlJ6ZjE5QjZ6Y1JTenpxLXZaQ2ctSDN1d0F1ZVo4NVkzSVBjTDdJWE5TZDV1eUROalhwMjlfMF8zc3oycW05Y0xPVjdTbG5TSEd0OEFjWUZQdHBqMTlmalpMV1lsbnlRNE5YbTZrWW54Y0JjOXl6QdIBjAJBVV95cUxNYmZjWUVQUmxpZURnVk1uRlNXell1UE9DdWM4MjNabWZDVzR5cnc0ZVBIRWRfem9wV1hXY3YwQkdNMjRlcmFXQzQ1NGhRcmpsQnNBTlJPellTVWEtNkdGaGh3X2pxcHFrdHV3eDlzTHYwVGlYaDdoUnVXYUpOSklwaHF6OEcwWGJYS1JVUlJfeXpkTk1IU2lnc2RFZDM0cUdpY1dDMVRDenhlZm8xeVI0Tkk4MWoxNktKelZIazFpU0hvU2ZYZVhXYlNfMUdMRElYb2l5MkQtWXRqYU5UNXZWcV9kM2U4eG44NS15bVVIN21NTkNMdW5fa1dIQk51QVlKaE1vR243Y1J1TThR?oc=5",
-      "published_at": "2026-07-07T07:00:00+00:00",
-      "time": "Tue, 07 Jul 2026 07:00:00 GMT"
-    },
-    {
-      "id": "53f8af324fc2bd",
-      "title": "Investigarán cómo la altura afecta a los conductores del Corredor Bioceánico",
-      "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
-      "category": "Logística",
-      "source": "Diario Huarpe",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQR0phdVdOZm9rTTJIcXRPRlYxOHVNbEY2aVFja1E4ODZiTENfV2NSZWpGODRqd2IxOWtKVVk5MXhycnV5MlRoUU4zblFrRHl2a1NZRmd5cndGckNTRGFsR09sOHlIX1pjbUp3Z19xTnJldVNKR3RrMXV1QWY0TkJCRkE3RWQ2LVFIZnhOVUdKQ0JDYTVVMmp4WlVFNHpTcWF5YzdNMFIwMmhPU3l3blZtbXl6TG1aa2RtV3c?oc=5",
-      "published_at": "2026-07-05T07:00:00+00:00",
-      "time": "Sun, 05 Jul 2026 07:00:00 GMT"
     }
   ]
 }
