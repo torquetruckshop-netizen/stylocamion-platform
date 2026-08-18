@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T03:13:15.221982+00:00",
+  "updated_at": "2026-08-18T05:50:16.790214+00:00",
   "items": [
     {
       "id": "377a2790a390b8",
@@ -42,11 +42,11 @@
       "time": "Sat, 15 Aug 2026 22:21:26 GMT"
     },
     {
-      "id": "a7e71ba1035a46",
+      "id": "dfbf722131fd5c",
       "title": "Aerolínea brasileña Azul Linhas Aéreas inicia vuelos de carga a Perú",
       "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
       "category": "Logística",
-      "source": "Turiweb",
+      "source": "turiweb.pe",
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQeVJKNjByZUdKaXdfSk00YXlIUHVpWEpHYkVKNHlxVkpMMU1ETWFvVWRJczJXZGhCamR6eERaSDF2TTZvbDh1VHVqU1JPYUQteUFWZmNuWjNVd2UtaWFoTTNDOVBhTVlPeFMwaUlMaDBCY1cwaGdNMEJzeTkxcGxtRXdVTXF1RWVwVmhMN3ZDOW42QVFJZXNj?oc=5",
       "published_at": "2026-08-14T19:47:25+00:00",
       "time": "Fri, 14 Aug 2026 19:47:25 GMT"
@@ -62,11 +62,11 @@
       "time": "Fri, 14 Aug 2026 09:23:12 GMT"
     },
     {
-      "id": "f1904d0940a538",
+      "id": "d47fd816e6d5fe",
       "title": "Aduanas bajo disputa: empresas cuestionan los cobros de los gobiernos en Latinoamérica",
       "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
       "category": "Logística",
-      "source": "publimetro.com.mx",
+      "source": "Publimetro México",
       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNaUJZb3BwcmpmSVltN3FqOHRBYklDY1lGQUp5bHdhT1p5U1pLejBES2FfemVMckFWa2VvMUFDMmJOVHN3b285Z2NhWXdSWkpsa1RlZnk1aVFRNEREREhjZ19JMzhmZmx4SHY3VEx0NGkxYTlWRzd5VExaWldfMmxjLUdHVHNyNktra2l3V1hLS2tnWnZiY2Y3X2JHLXBQY2xuaFhzbVVTRDVMQklIT2Z5QlZuMGx1bE9XakFSOXNUanhlandlODVQV3hUbUhRamZxcHc?oc=5",
       "published_at": "2026-08-13T21:32:20+00:00",
       "time": "Thu, 13 Aug 2026 21:32:20 GMT"
@@ -82,31 +82,21 @@
       "time": "Tue, 18 Aug 2026 01:24:28 GMT"
     },
     {
-      "id": "7d1fc691e9a769",
-      "title": "Después de 34 días, reabren el Paso Cristo Redentor: quiénes podrán cruzar",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "noticiasnqn.com.ar",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOcHZmZ18xSG1mcDlya3d5eTBfeE1UdWNXMm9ZdlNBLXRoeFpQeWpHMHFIcGR3NFVoSnI3WVpyMzlsTEpVUHk5OHFhSkdCTHV6NS1pZ0g4R3I3SC1UU2RneE16OUdsSmZJOFRGaVRob2pGS3gyQ3hnQ2VadHl5ekVpRUZrQlNnRnJKQ1g0NUszWjE0aWlta1VNb05XNEFkU0NTbnJLNUQ4WW5vTFY1NzdDajZwSHc4WlRySFB5VHA5VjVpXzY0d1ZHNEx3SkdocGPSAc8BQVVfeXFMTnB2ZmdfMUhtZnA5cmt3eXkwX3hNVHVjVzJvWXZTQS10aHhaUHlqRzBxSHBkdzRVaEpyN1lacjM5bExKVVB5OThxYUpHQkx1ejUtaWdIOEdyN0gtVFNkZ3hNejlHbEpmSThURmlUaG9qRkt4MkN4Z0NlWnR5eXpFaUVGa0JTZ0ZySkNYNDVLM1oxNGlpbWtVTW9OVzRBZFNDU25ySzVEOFlub0xWNTc3Q2o2cEh3OFpUckhQeVRwOVY1aV82NHdWRzRMd0pHaHBj?oc=5",
-      "published_at": "2026-08-17T23:05:18+00:00",
-      "time": "Mon, 17 Aug 2026 23:05:18 GMT"
-    },
-    {
       "id": "03e6dcbee0a4da",
       "title": "Reabre el Paso Cristo Redentor tras 34 días: operativo especial para liberar 3.500 camiones",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
       "source": "Maraco Digital",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOSnhKN243TW43dmllbGd1SjJ5Wld6aUQyZWptS3RVYWxHLWc4dkRuVUZNSkZDN1IwOGdFZHM4TkcyLTllRUxpamhVTmpURW1sT3BMUzdfOEZBdzFpbGxoU0l2bEhpMDBPZHBRN1EyNEMzQTlZQTFFM2hmTF9ERW1YSWNYTVdZbnprMi10QThZTV9LX3Fqam1XcV9vbTJFQnFFUU12bERORTBWaXZBUC1KZ015M29IeXBQa0NublNDSGpYdw?oc=5",
-      "published_at": "2026-08-17T22:52:26+00:00",
-      "time": "Mon, 17 Aug 2026 22:52:26 GMT"
+      "published_at": "2026-08-17T22:52:32+00:00",
+      "time": "Mon, 17 Aug 2026 22:52:32 GMT"
     },
     {
-      "id": "8f7b7eb18a23b9",
+      "id": "ba88e2245aaa79",
       "title": "Reabren el Paso Cristo Redentor solo para transporte de carga",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
-      "source": "Diario El Norte - San Nicolás",
+      "source": "diarioelnorte.com.ar",
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOa0Qzd3Z0d3VoMmdOS3c4VmQyVFBoLVV6Q1NnRWw4X3E2emYteFZQMVFxTEhkLUdDd1hEek9rMGNud3paYklwb19vSjAyaG5kckdsOV9OUkJmNDJ0ZDFIZGc1VXU0VktlLVpYTlVielNUODVNVkJoOEpvNkxNNko5R3FLSlo1SjdETnJ0bnZiMnRNa3RmWUE?oc=5",
       "published_at": "2026-08-17T21:04:46+00:00",
       "time": "Mon, 17 Aug 2026 21:04:46 GMT"
@@ -222,11 +212,11 @@
       "time": "Fri, 14 Aug 2026 08:43:29 GMT"
     },
     {
-      "id": "96d743750dc8cf",
+      "id": "ce0b994e3a1e35",
       "title": "SICONARA RECORRIÓ LA VÍA DE NAVEGACIÓN TRONCAL Y ADVIRTIÓ SOBRE LA PÉRDIDA DE SOBERANÍA EN EL TRANSPORTE DE CARGAS",
       "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
       "category": "Logística",
-      "source": "Así es nuestra vida",
+      "source": "asiesnuestravida.com.ar",
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPb1pIQjlUd19tS1lFQTR2dkRlemlUVmJQQTk0QlZCYmdDOWJsSzhuU21IT3FTOUk3U251WUozcE91bUpPcDlUQzZ0TW5DME9nNXFNN19Ec2pJOThZT2tCWEZqaU1SRFlKU2ZSVTZWa2RZQlRDYWgxY2d5X0lPdXVtXzJmaUEyenFlNGlLUms5Sno0cDV4Z3RKUzd2ZUFYYjJJWHUxQnlqQV9NNW1VYzVRSnJTdjhlMWYydHIxYUJsRm1TWTMtRHA5ai1xTmNrZTRYUnZBeWRPOEQyOHM1VTliUw?oc=5",
       "published_at": "2026-08-14T04:52:21+00:00",
       "time": "Fri, 14 Aug 2026 04:52:21 GMT"
@@ -402,11 +392,11 @@
       "time": "Mon, 10 Aug 2026 19:37:17 GMT"
     },
     {
-      "id": "75e9a1f2546a70",
+      "id": "28df61a282d7fe",
       "title": "Preocupación por los camiones varados: el paso Cristo Redentor rompió un récord histórico",
       "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
       "category": "Camiones",
-      "source": "MinutoUno",
+      "source": "minutouno.com",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNZExFY1g5V1hMbHNDSW5TZDBZMEVFdTZ3ckt0bGR1MlRWNldjZXp4SGppY3BOTnE4d3ZxMTZZZi0zRl83YzVsbkE3VU0ySFZoSjRJOW16OWhnNnFIeWpMU3VaNm9BRUlKTmdudkJDelgyM1o5Q0xIb0Q4RzFMbm1ZRUtzTnhrZ291M2NWeWJkaFdiRUd3TUdSSkxZVlV0RlJQWUhVTHZZeUplNzVZajhMVjVVTXA4Rlo2ZkRzUFhobnBJNHNKc2g40gHHAUFVX3lxTE1kTEVjWDlXWExsc0NJblNkMFkwRUV1NndyS3RsZHUyVFY2V2NlenhIamljcE5OcTh3dnExNllmLTNGXzdjNWxuQTdVTTJIVmhKNEk5bXo5aGc2cUh5akxTdVo2b0FFSUpOZ252QkN6WDIzWjlDTEhvRDhHMUxubVlFS3NOeGtnb3UzY1Z5YmRoV2JFR3dNR1JKTFlWVXRGUlBZSFVMdll5SmU3NVlqOExWNVVNcDhGWjZmRHNQWGhucEk0c0pzaDg?oc=5",
       "published_at": "2026-08-10T11:20:00+00:00",
       "time": "Mon, 10 Aug 2026 11:20:00 GMT"
@@ -436,7 +426,7 @@
       "title": "El paso Cristo Redentor cumple un récord de días cerrado por la nieve y hay quejas de los camioneros por las pérdidas millonarias",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
-      "source": "Clarin.com",
+      "source": "clarin.com",
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQYVIxUXlTY2NrWmN6ek85dkhCZk03RzJJQWtnQW43MThGTGN2Vmc5bWdWTEEtMFFJN1RHc1NTSTEtZlc2UnVkdVVqbmpnWEY2WVNqYmdvdGc0c3E4UTB2NW1vQTZNMVk2aG94LWQta05ILVljQ3VaU2FWNVhFMU9SOE1DbUZvZ1VPZzU0VWhCbllFS09IUlBUUjFVUTJQV3Z4ZVFoVkdrZU1HNkZmTUZSQnRTQThYcUx4NmpSLUluaFRYdHJQdFk4b21rOW5Zd19rR0hCdko1SE1hdw?oc=5",
       "published_at": "2026-08-10T09:01:45+00:00",
       "time": "Mon, 10 Aug 2026 09:01:45 GMT"
@@ -482,11 +472,11 @@
       "time": "Thu, 06 Aug 2026 07:00:00 GMT"
     },
     {
-      "id": "813283e5107fba",
+      "id": "c5033ef4e2f120",
       "title": "Bertotto Boglione se hace fuerte en el segmento de semirremolques",
       "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
       "category": "Remolques",
-      "source": "Maquinac",
+      "source": "maquinac.com",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQTzVpWFF4VmI5S1hQVnZBdWRnUkNLRnFpX0daeGNaMEFoZTU5d29NLWV3b0RWWEpHR1VZTmxvai0tY1YyWU81R3pHZ3hVelk5TGRWaHdfTzROcE1lUlpEVENUWmpnSUtpOUp1SFprNFVUZEthUVJaZi1VV0pNTExGNUFZdFhmRWZUZ0dJb200M3pkUjdTWHBwNFlCTQ?oc=5",
       "published_at": "2026-08-05T20:13:45+00:00",
       "time": "Wed, 05 Aug 2026 20:13:45 GMT"
@@ -522,11 +512,11 @@
       "time": "Wed, 29 Jul 2026 07:00:00 GMT"
     },
     {
-      "id": "d2434c91d7ccd9",
+      "id": "145ff06aa5c0b0",
       "title": "Autos chinos, sí; camiones, no: Toto Caputo y Sturzenegger rechazaron bajar impuestos para renovar la flota",
       "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
       "category": "Camiones",
-      "source": "Letra P",
+      "source": "letrap.com.ar",
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOak5zdlV4Y3oyVFpTVjY2RVhCZUZJWHhGSGdpanAxOHZOZlVIYUZLZVNqMjU3MHQtWC1oSVlfMlBnd2pDNThHeXhqUENtbjJma1M0ZVZ0MjdDUkhfZURUWVA0WG90U3NJTjctdGUyYW1sTG5oeTdSTUVtS1Q5TlE3RFdPUkpuYVY5eUh3QU9hMTNfaGZWaUc4ME52aVM5bkNuMUo1cVB0dmRfNnlfNUxDQ3F2T3FpSDJGZlpPOVNweHRVMnZkOExuZDBwd2Nkd3BBRU9oX0h5VkxZd9IB3wFBVV95cUxQNE9ELTZ5SmQ2SzhXaTdrYnUyUFI1NzgxeEtCdkVFWno3U1BrLW5ETjFpT05MVDR3Q3E5WWJjV183T0J1UjF3bW95Q3A5TGwtWHZuV2Z0ekxFMjJoUVRFb1VfS1pfUk5Dem5LUng5R0ZQcmhrbXJTT0lnQm9zWEtoZUh4WWpLWFlfRzlpU2JUYzVjdWpLTUxSX2tWUHFna01lZWt4NkNlM3VkMjVuYkpLeEZDUzRuYm5kYUhfTXRvOHhBNk5yYXpCS09acG1yRi0tMUtYQi1OQkd1VUs0dGRJ?oc=5",
       "published_at": "2026-08-02T07:00:00+00:00",
       "time": "Sun, 02 Aug 2026 07:00:00 GMT"
@@ -552,11 +542,11 @@
       "time": "Tue, 28 Jul 2026 07:00:00 GMT"
     },
     {
-      "id": "10321a4b7670b3",
+      "id": "b61bcbe6d58deb",
       "title": "Estado de situación: Sudamérica y el robo de carga terrestre",
       "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
       "category": "Logística",
-      "source": "mascontainer.com",
+      "source": "MasContainer",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPcTVnbDVpeWhnTTlQZmtnTkZNcW12TlhFd3dwTWo5anh2NFNMS2U4VWNtczlrTkRFVHRzUGJtNE9MWmxMTlZyUTI3enZFVWk3a0hhUEVhWjN6VGg1dWZuVHdxQk15eDFVQkEteEpkWDNjal9URGZEN09qRjg2QlZmcktYQy1JOV9WaGxzcV93?oc=5",
       "published_at": "2026-07-28T07:00:00+00:00",
       "time": "Tue, 28 Jul 2026 07:00:00 GMT"
@@ -592,14 +582,24 @@
       "time": "Fri, 31 Jul 2026 07:00:00 GMT"
     },
     {
-      "id": "66a89ef9941059",
+      "id": "f3d3c6c8a420a6",
       "title": "Gobierno argentino modificó normas sobre pesos, dimensiones y otros aspectos",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
-      "source": "Webpicking",
+      "source": "webpicking.com",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONDlnTm9YYVFPX1J5VUh1Zk9kTE9XdXRSQXhtNGNVZE15T05UQkdIV1ZaQzBHVnVkamQtb3lwbW9neFl4UzRzN1k2ODcxdDhka2MyWVhLZmxpdlBLcEcyNll0NWtyUXpmRnMwRDF3dXlVUWZLUEFCQkJWd0xvN1dDdUhhYmVTZTRCazc2aGxxdTVidG1LYzQ0eTBlbG1LNm5v?oc=5",
       "published_at": "2026-07-31T07:00:00+00:00",
       "time": "Fri, 31 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "id": "6688531b49d1eb",
+      "title": "Un gobernador quiere poner peajes a los camiones que van a Vaca Muerta: argumenta que el tránsito pesado creció el 900% en sus rutas",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "clarin.com",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPMDRrb0F6Q2ZhR3o0dW51UkhLWWtFWmFNY1ZPdTZXUGl4WHFzbmNvc3Q3bjVlSFMxM25DbnlMUG9zMk1OZ0dLbko0Z2pNVmRpeWhsWGlhelUzUkdSY0Qya0pnU1lNb2tUZmt4N1hJcDZBMU5XaWZmU0V6b1hsOU05TFExc3RCWnR2X2ZObEJpT21pYmFld0dRakJQaW5RUURXeUhfcWxXSHRFWnBwaEZVNjJta0xPZk9fNjRscTkzMTJmTmNLMXA0WVZlWGdhMzg1RkFvemlQY0lkU2xxQWZsWXpB?oc=5",
+      "published_at": "2026-07-30T07:00:00+00:00",
+      "time": "Thu, 30 Jul 2026 07:00:00 GMT"
     }
   ]
 }
