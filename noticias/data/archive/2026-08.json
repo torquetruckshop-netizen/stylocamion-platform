@@ -1,7 +1,17 @@
 {
   "month": "2026-08",
-  "updated_at": "2026-08-19T09:58:15.523170+00:00",
+  "updated_at": "2026-08-19T14:09:46.466173+00:00",
   "items": [
+    {
+      "id": "bbd89cbd526b34",
+      "title": "Colombia reglamenta por primera vez la revisión técnico-mecánica de remolques",
+      "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
+      "category": "Remolques",
+      "source": "Webpicking",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTENpT2ZWMjhkM0pQSlp3T1ZpRGlGTjkya000X0N3VFlRcjNwNVdwRlNZLWdqdlFXTXJfZV9ydC10cWdvTkdHYm94OEdKY0d1T05uSVgzYnVLS2xiU3dOaWQ5SkpXT0pZWEhLY2hPcXQ5Qjc1WTctbEZjd1pHNktPazhRZ2ZycUNERlhoTUJpd0M1eDBoRUlkX0lWdVV5dTJCOHBN?oc=5",
+      "published_at": "2026-08-19T12:47:48+00:00",
+      "time": "Wed, 19 Aug 2026 12:47:48 GMT"
+    },
     {
       "id": "e0bcd735931692",
       "title": "Paso Los Libertadores reabre parcialmente para tránsito de camiones tras 34 días de cierre",
@@ -183,6 +193,16 @@
       "time": "Mon, 17 Aug 2026 21:04:46 GMT"
     },
     {
+      "id": "ba88e2245aaa79",
+      "title": "Reabren el Paso Cristo Redentor solo para transporte de carga",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "diarioelnorte.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOa0Qzd3Z0d3VoMmdOS3c4VmQyVFBoLVV6Q1NnRWw4X3E2emYteFZQMVFxTEhkLUdDd1hEek9rMGNud3paYklwb19vSjAyaG5kckdsOV9OUkJmNDJ0ZDFIZGc1VXU0VktlLVpYTlVielNUODVNVkJoOEpvNkxNNko5R3FLSlo1SjdETnJ0bnZiMnRNa3RmWUE?oc=5",
+      "published_at": "2026-08-17T21:04:46+00:00",
+      "time": "Mon, 17 Aug 2026 21:04:46 GMT"
+    },
+    {
       "id": "32c1aa666165fa",
       "title": "La producción metalúrgica en el país cayó 4,4 % en julio: qué pasa en Santa Fe",
       "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
@@ -338,6 +358,16 @@
       "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
       "category": "Logística",
       "source": "Publimetro México",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNaUJZb3BwcmpmSVltN3FqOHRBYklDY1lGQUp5bHdhT1p5U1pLejBES2FfemVMckFWa2VvMUFDMmJOVHN3b285Z2NhWXdSWkpsa1RlZnk1aVFRNEREREhjZ19JMzhmZmx4SHY3VEx0NGkxYTlWRzd5VExaWldfMmxjLUdHVHNyNktra2l3V1hLS2tnWnZiY2Y3X2JHLXBQY2xuaFhzbVVTRDVMQklIT2Z5QlZuMGx1bE9XakFSOXNUanhlandlODVQV3hUbUhRamZxcHc?oc=5",
+      "published_at": "2026-08-13T21:32:20+00:00",
+      "time": "Thu, 13 Aug 2026 21:32:20 GMT"
+    },
+    {
+      "id": "f1904d0940a538",
+      "title": "Aduanas bajo disputa: empresas cuestionan los cobros de los gobiernos en Latinoamérica",
+      "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
+      "category": "Logística",
+      "source": "publimetro.com.mx",
       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNaUJZb3BwcmpmSVltN3FqOHRBYklDY1lGQUp5bHdhT1p5U1pLejBES2FfemVMckFWa2VvMUFDMmJOVHN3b285Z2NhWXdSWkpsa1RlZnk1aVFRNEREREhjZ19JMzhmZmx4SHY3VEx0NGkxYTlWRzd5VExaWldfMmxjLUdHVHNyNktra2l3V1hLS2tnWnZiY2Y3X2JHLXBQY2xuaFhzbVVTRDVMQklIT2Z5QlZuMGx1bE9XakFSOXNUanhlandlODVQV3hUbUhRamZxcHc?oc=5",
       "published_at": "2026-08-13T21:32:20+00:00",
       "time": "Thu, 13 Aug 2026 21:32:20 GMT"
@@ -523,6 +553,16 @@
       "time": "Mon, 10 Aug 2026 17:18:22 GMT"
     },
     {
+      "id": "bf113fbd62674e",
+      "title": "El Gobierno amplía pesos y medidas para camiones y bitrenes",
+      "summary": "Información reciente de rutas y normativa seleccionada por el radar regional de Stylo Camión.",
+      "category": "Rutas y normativa",
+      "source": "diarioelnorte.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQQUtpUWw2ZWc3ZlBVc3JtZ2pTODJPcXEyb05Dc2pQbjhic0tJdmdZWWZqaHdGZWV1RW1FZEtGbnNicGFBOGJNSWRxcEF6a0JCYTltR0ktTWdfRE03eWQzRTdNblUybWx5dHlkaWVXYXYtRHgzNEg3YVdmREJ2Q0toY3JDNkMwZlNFNE96WE9pSE5SRjA?oc=5",
+      "published_at": "2026-08-10T17:18:22+00:00",
+      "time": "Mon, 10 Aug 2026 17:18:22 GMT"
+    },
+    {
       "id": "1865d8179bd84c",
       "title": "Nuevas reglas para los camiones argentinos: el cambio que los acerca a Brasil",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -648,6 +688,16 @@
       "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
       "category": "Remolques",
       "source": "EL MERCANTIL",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPdkY1bkJYWjZuTDNyRkt5ZmJ5VFBhZmNfWndtQUJLMmd3clcwOGMwZDNWNzVRODQ4SG5rSFdSNHViem00c2NsYk1kcl9xcG1FbHRsVlo4Vng0ODEyUjBvR0ZrTTc0dVZybTM5VXlHZC1uZkVWY1cydDZqcjJkbDd0ZnZYdFY5VDN5UnBFREZ0dlY?oc=5",
+      "published_at": "2026-08-06T07:00:00+00:00",
+      "time": "Thu, 06 Aug 2026 07:00:00 GMT"
+    },
+    {
+      "id": "8dcbff2afbd651",
+      "title": "Top 10 por marcas de remolques y semirremolques 2026",
+      "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
+      "category": "Remolques",
+      "source": "elmercantil.com",
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPdkY1bkJYWjZuTDNyRkt5ZmJ5VFBhZmNfWndtQUJLMmd3clcwOGMwZDNWNzVRODQ4SG5rSFdSNHViem00c2NsYk1kcl9xcG1FbHRsVlo4Vng0ODEyUjBvR0ZrTTc0dVZybTM5VXlHZC1uZkVWY1cydDZqcjJkbDd0ZnZYdFY5VDN5UnBFREZ0dlY?oc=5",
       "published_at": "2026-08-06T07:00:00+00:00",
       "time": "Thu, 06 Aug 2026 07:00:00 GMT"
