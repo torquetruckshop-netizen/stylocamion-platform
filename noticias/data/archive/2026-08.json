@@ -1,6 +1,6 @@
 {
   "month": "2026-08",
-  "updated_at": "2026-08-19T05:52:00.420765+00:00",
+  "updated_at": "2026-08-19T09:58:15.523170+00:00",
   "items": [
     {
       "id": "e0bcd735931692",
@@ -13,11 +13,31 @@
       "time": "Wed, 19 Aug 2026 03:02:05 GMT"
     },
     {
+      "id": "1fd905f7fd4d4b",
+      "title": "Paso Los Libertadores reabre parcialmente para tránsito de camiones tras 34 días de cierre",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Data Portuaria",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPVFJZMHI3SzMyc2o0QktSY1RxWS0xcHdWQnMtbUZMUU1wQUlSMVNHclh3WkJsRWVvR2tReFBKNjBVUFROZTN1QVNmOFIyYnY1VllRV2lyNno1SzBkYUd6a2J3RVV0SVA4cF9hOTd1Zy1OM2kxbEZHb2tkZEpjN2ZkZmo0aExabDZJQ0o0b2pTLTNkTnNWVEducWhEUFo0eV9ZSlpIUjhBNWxzQnd4b2RjZDJpZ1NtUEIt?oc=5",
+      "published_at": "2026-08-19T03:02:05+00:00",
+      "time": "Wed, 19 Aug 2026 03:02:05 GMT"
+    },
+    {
       "id": "699ca9049b6d1d",
       "title": "Más de 1400 camiones cruzaron a Chile tras la reapertura parcial del paso Cristo Redentor",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
       "source": "mendozatoday.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPdExhS04wRVlTQ04yNHV6b3d6Z3ptRU50ckMyRzhSY0NYcmlGM09fbk5DREhEU1Exa1QwMjdFbHQ0OU1SM2tpX0JudXdyMldNSzhOTTZLdjJQNVg1Z3JoSTlWWmZ5OTVQYzFyZ1dJbG55QjlfUFVncmc2X3FrVlV6a3laSUlDUlBObFRIN3JPOU9HTWI2R2hGYkFXdUtxaHdiUnFrSUlUbW13TEY1d1JpWjZ3Sm9xQ1JMbWE4dFZWRQ?oc=5",
+      "published_at": "2026-08-19T00:45:08+00:00",
+      "time": "Wed, 19 Aug 2026 00:45:08 GMT"
+    },
+    {
+      "id": "814500bfd17dde",
+      "title": "Más de 1400 camiones cruzaron a Chile tras la reapertura parcial del paso Cristo Redentor",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Diario Mendoza Today",
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPdExhS04wRVlTQ04yNHV6b3d6Z3ptRU50ckMyRzhSY0NYcmlGM09fbk5DREhEU1Exa1QwMjdFbHQ0OU1SM2tpX0JudXdyMldNSzhOTTZLdjJQNVg1Z3JoSTlWWmZ5OTVQYzFyZ1dJbG55QjlfUFVncmc2X3FrVlV6a3laSUlDUlBObFRIN3JPOU9HTWI2R2hGYkFXdUtxaHdiUnFrSUlUbW13TEY1d1JpWjZ3Sm9xQ1JMbWE4dFZWRQ?oc=5",
       "published_at": "2026-08-19T00:45:08+00:00",
       "time": "Wed, 19 Aug 2026 00:45:08 GMT"
@@ -88,6 +108,16 @@
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
       "source": "La Brújula 24",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNd2gzaThjV1UtSzBuZVJWMzhQTU9CVnZhYVJhT0dJdzlpVGp4bWllbTc1R09IaXhKWHRaU1dVTkN5QmFSSjh6WEVsQ1g4OWpqcm5YbHlYQmphNEZiUHA1dkU0U2lUQ0dub2lIOEdJaTJYRjFVaXpkUVhSZHNWNUVDdDhweE9iVkZWcXZXbDRYRzZxM3BKVFZ6bWxwTDUtVUV4N1BNZkpHYUJDUlZUNjk3UVplZDJTXzQ0UzBvSDlRNjQyLXN4VUR0VXVScEt0RTE3UjVj?oc=5",
+      "published_at": "2026-08-18T10:06:51+00:00",
+      "time": "Tue, 18 Aug 2026 10:06:51 GMT"
+    },
+    {
+      "id": "e0d68a82219ae8",
+      "title": "Tras 34 días cerrado, reabre el Paso Cristo Redentor con prioridad para los camiones",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "labrujula24.com",
       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNd2gzaThjV1UtSzBuZVJWMzhQTU9CVnZhYVJhT0dJdzlpVGp4bWllbTc1R09IaXhKWHRaU1dVTkN5QmFSSjh6WEVsQ1g4OWpqcm5YbHlYQmphNEZiUHA1dkU0U2lUQ0dub2lIOEdJaTJYRjFVaXpkUVhSZHNWNUVDdDhweE9iVkZWcXZXbDRYRzZxM3BKVFZ6bWxwTDUtVUV4N1BNZkpHYUJDUlZUNjk3UVplZDJTXzQ0UzBvSDlRNjQyLXN4VUR0VXVScEt0RTE3UjVj?oc=5",
       "published_at": "2026-08-18T10:06:51+00:00",
       "time": "Tue, 18 Aug 2026 10:06:51 GMT"
@@ -459,8 +489,8 @@
       "category": "Argentina",
       "source": "La Nación",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNT1NMcGJ4TmFGZVlxOW5PVzgxbU9FaGZPdWFWZDZ1QnloRmVuQnp1VUYtMVVzR1B1aWtCcVRPT3FGTG5DNks5UlVIdlVGYmpHbTJwS3hqV0pqM1lpSlIxYi1ZRXk3XzdzYUpaRUdsVWZrSGJfRXdWcG5KcHpmYmJxd1pqYlVvOVF0cHpaLVQ5cVZQczF4Z1M4NVl4U0NQVHZCTTZFdFVaLWtHS1ZyclNGaXpB?oc=5",
-      "published_at": "2026-08-11T13:05:00+00:00",
-      "time": "Tue, 11 Aug 2026 13:05:00 GMT"
+      "published_at": "2026-08-11T07:00:00+00:00",
+      "time": "Tue, 11 Aug 2026 07:00:00 GMT"
     },
     {
       "id": "133e26de8cb70b",
@@ -653,6 +683,16 @@
       "time": "Tue, 04 Aug 2026 07:00:00 GMT"
     },
     {
+      "id": "9124e5bedd0536",
+      "title": "Argentina y Chile: el cierre de pasos fronterizos reabre el debate sobre la resiliencia de los corredores bioceánicos",
+      "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
+      "category": "Logística",
+      "source": "aduananews.com",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxORkd5QTg5TC1kcFRqYVhkX0hLY3lvX0l0Z19iQWV2MVBUU3BVYjhfcmY1aDlIN3gxalFuRnUwUUtvVGc1Umk2bHZtWVplQ1hkSFVLT0Y3dTkzS0ZMZllfZGxDUGtlSWtURmtDTTBTU0hYMXdlT1FfNlhyeE1oSmctcU96Zi11RHlWZWZCT184eEpmZGFvM0VCVFg1ZlNTVXRfLTloZFc2VW1scmdvWklmdmd3YnlJX00ybERTT1ZONmlKMnVyS1FJUUJTUzJwd2tHd1dlOFJQcw?oc=5",
+      "published_at": "2026-08-04T07:00:00+00:00",
+      "time": "Tue, 04 Aug 2026 07:00:00 GMT"
+    },
+    {
       "id": "7b9503487c1a19",
       "title": "Pesos y dimensiones del transporte de cargas: todas las nuevas medidas para camiones, bitrenes y equipos especiales",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -678,7 +718,7 @@
       "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
       "category": "Camiones",
       "source": "Letra P",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOak5zdlV4Y3oyVFpTVjY2RVhCZUZJWHhGSGdpanAxOHZOZlVIYUZLZVNqMjU3MHQtWC1oSVlfMlBnd2pDNThHeXhqUENtbjJma1M0ZVZ0MjdDUkhfZURUWVA0WG90U3NJTjctdGUyYW1sTG5oeTdSTUVtS1Q5TlE3RFdPUkpuYVY5eUh3QU9hMTNfaGZWaUc4ME52aVM5bkNuMUo1cVB0dmRfNnlfNUxDQ3F2T3FpSDJGZlpPOVNweHRVMnZkOExuZDBwd2Nkd3BBRU9oX0h5VkxZd9IB3wFBVV95cUxQNE9ELTZ5SmQ2SzhXaTdrYnUyUFI1NzgxeEtCdkVFWno3U1BrLW5ETjFpT05MVDR3Q3E5WWJjV183T0J1UjF3bW95Q3A5TGwtWHZuV2Z0ekxFMjJoUVRFb1VfS1pfUk5Dem5LUng5R0ZQcmhrbXJTT0lnQm9zWEtoZUh4WWpLWFlfRzlpU2JUYzVjdWpLTUxSX2tWUHFna01lZWt4NkNlM3VkMjVuYkpLeEZDUzRuYm5kYUhfTXRvOHhBNk5yYXpCS09acG1yRi0tMUtYQi1OQkd1VUs0dGRJ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNT2RVRFNNSDdueEVMaVo3emFYUlpsVDhmejJsTmpkemhtVk1NVEd4bW1mel9NdGpHejlSTjBuN2Rza0NyOXk1TnFjNXlPTll2TVlRbDhua1ZDdnBxRzk5eW9oTDVxUlRpTHVxUldVZWptajdjcVpvSTRqaHRJTEp3WHZiMFJjb1BtVkswMFdlUDljaW9ySjVld1JnVTY4ZXNGOUpkMEtrckkzZzdsNktPQ3BVeFlOTzgxTE5Fd0xtanJzZFlGaGlaTnlRazAzaWlTZDVBWU5MTXpGSThTWVg3OUNaU0NTUDBjUi1yckNDYWhHenh3?oc=5",
       "published_at": "2026-08-02T07:00:00+00:00",
       "time": "Sun, 02 Aug 2026 07:00:00 GMT"
     },
