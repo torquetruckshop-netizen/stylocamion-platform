@@ -33,6 +33,7 @@ TRUSTED_SOURCE_TERMS = [
 
 MAX_AGE_DAYS = 75
 OUT = Path(__file__).resolve().parents[1] / 'noticias' / 'data' / 'news.json'
+ARCHIVE_DIR = OUT.parent / 'archive'
 
 
 def clean(text):
@@ -128,6 +129,60 @@ def google_news_rss(query):
     return f'https://news.google.com/rss/search?q={encoded}&hl=es-419&gl=AR&ceid=AR:es-419'
 
 
+def parse_iso(value):
+    try:
+        return datetime.fromisoformat((value or '').replace('Z', '+00:00'))
+    except (TypeError, ValueError):
+        return None
+
+
+def write_json(path, payload):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + '.tmp')
+    temporary.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
+    temporary.replace(path)
+
+
+def merge_monthly_archive(items, updated_at):
+    grouped = {}
+    for item in items:
+        published = parse_iso(item.get('published_at')) or datetime.now(timezone.utc)
+        grouped.setdefault(published.strftime('%Y-%m'), []).append(item)
+
+    for month, incoming in grouped.items():
+        path = ARCHIVE_DIR / f'{month}.json'
+        existing = []
+        if path.exists():
+            try:
+                existing = json.loads(path.read_text(encoding='utf-8')).get('items', [])
+            except (OSError, json.JSONDecodeError, AttributeError):
+                existing = []
+
+        merged = {
+            item['id']: item
+            for item in existing + incoming
+            if isinstance(item, dict) and item.get('id')
+        }
+        ordered = sorted(
+            merged.values(),
+            key=lambda item: item.get('published_at') or '',
+            reverse=True,
+        )
+        write_json(path, {'month': month, 'updated_at': updated_at, 'items': ordered})
+
+    months = []
+    for path in sorted(ARCHIVE_DIR.glob('????-??.json'), reverse=True):
+        payload = json.loads(path.read_text(encoding='utf-8'))
+        archived = payload.get('items', [])
+        months.append({
+            'month': path.stem,
+            'file': path.name,
+            'count': len(archived),
+            'newest_at': archived[0].get('published_at') if archived else None,
+        })
+    write_json(ARCHIVE_DIR / 'index.json', {'updated_at': updated_at, 'months': months})
+
+
 def main():
     items = []
     seen_titles = set()
@@ -166,13 +221,15 @@ def main():
     for item in items:
         item.pop('_score', None)
 
+    updated_at = datetime.now(timezone.utc).isoformat()
+    selected_items = items[:60]
     payload = {
-        'updated_at': datetime.now(timezone.utc).isoformat(),
-        'items': items[:60],
+        'updated_at': updated_at,
+        'items': selected_items,
     }
 
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
+    write_json(OUT, payload)
+    merge_monthly_archive(selected_items, updated_at)
     print(f'Noticias guardadas: {len(payload["items"])}')
 
 
