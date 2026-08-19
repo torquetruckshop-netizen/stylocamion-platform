@@ -1,20 +1,24 @@
 {
-  "product": "Stylo Camion Noticias",
-  "release": "2026-08-14-noticias-v2",
-  "status": "ready-for-deploy",
+  "schema": 1,
+  "app": "noticias",
+  "product": "Stylo Camión Noticias",
+  "release": "2026-08-19-noticias-v35",
+  "release_id": "noticias-2026.08.19-01",
+  "status": "production",
+  "published_at": "2026-08-19T02:34:50Z",
+  "official_repository": "torquetruckshop-netizen/stylocamion-platform",
+  "official_content_ref": "main",
+  "event": {
+    "title": "LA FERIA DEL USADO",
+    "subtitle": "Pasión y negocio."
+  },
   "features": [
-    "navegacion-ecosistema",
-    "logo-limpio",
-    "hitos-stylo-camion",
-    "infobae-movant",
-    "vorterix-litoral",
-    "expoagro-2026",
-    "feria-usado-nuevo-2027",
-    "modo-ruta",
-    "boletin-ruta",
-    "informacion-operativa-oficial",
-    "efemerides",
-    "idiomas-es-pt-en",
-    "radar-automatico"
+    "la-feria-del-usado-2027",
+    "flyer-oficial-provisorio",
+    "radar-diario-acumulativo",
+    "imagenes-reales-sudamericanas",
+    "contacto-noticias-stylocamion",
+    "acceso-directo-movil",
+    "version-publica-sin-redireccion"
   ]
 }
