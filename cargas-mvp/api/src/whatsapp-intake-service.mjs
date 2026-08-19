@@ -1,4 +1,5 @@
 import { normalizeIntake } from './engine.mjs';
+import { evaluateDigitalIntake } from './digital-intake-policy-engine.mjs';
 
 function sourceForEvent(event = {}) {
   if (event.intake?.source) return event.intake.source;
@@ -41,16 +42,36 @@ function duplicateDescriptor(intake, record) {
   };
 }
 
-export function createWhatsAppIntakeHandler(store, { onLoadSaved = null } = {}) {
+export function createWhatsAppIntakeHandler(store, { onLoadSaved = null, authorizedGroupIds = [] } = {}) {
   if (!store) throw new Error('store es obligatorio');
 
   return async function handleWhatsAppParsed(parsed = {}) {
     const savedLoads = [];
     const queuedAudio = [];
     const duplicates = [];
+    const availabilitySignals = [];
+    const reviewSignals = [];
+    const policyRejections = [];
 
     for (const event of parsed.inbound || []) {
       const record = buildIntakeRecord(event);
+      const policy = evaluateDigitalIntake({
+        source: event.shared?.source || record.source,
+        text: event.intake?.raw_text || record.raw_text,
+        contentType: record.content_type,
+        metadata: record.metadata,
+        authorizedGroupIds
+      });
+      if (!policy.authorization.allowed) {
+        policyRejections.push({
+          external_message_id: record.external_message_id,
+          source: policy.authorization.source,
+          reason: policy.authorization.reason,
+          policy_version: policy.policy_version
+        });
+        continue;
+      }
+      record.metadata = { ...record.metadata, digital_intake_policy: policy };
       let persisted = null;
 
       if (record.external_message_id && store.getIntakeByExternalMessage) {
@@ -81,6 +102,58 @@ export function createWhatsAppIntakeHandler(store, { onLoadSaved = null } = {}) 
           source: record.source,
           metadata: record.metadata
         });
+        continue;
+      }
+
+      if (policy.classification.intent === 'TRUCK_AVAILABLE') {
+        availabilitySignals.push({
+          intake_id: persisted?.id || null,
+          sender_reference: record.sender_id,
+          operation_channel_id: record.operation_channel_id,
+          raw_text: event.intake?.raw_text || record.raw_text,
+          confidence: policy.classification.confidence,
+          next_action: policy.next_action,
+          policy_version: policy.policy_version
+        });
+        if (persisted?.id && store.updateIntakeMessage) {
+          await store.updateIntakeMessage(persisted.id, {
+            classification: 'TRUCK_AVAILABLE',
+            processing_status: 'COMPLETE',
+            processing_error: null,
+            processed_at: new Date().toISOString()
+          });
+        }
+        continue;
+      }
+
+      if (policy.classification.intent === 'IRRELEVANT') {
+        if (persisted?.id && store.updateIntakeMessage) {
+          await store.updateIntakeMessage(persisted.id, {
+            classification: 'IRRELEVANT',
+            processing_status: 'IGNORED',
+            processing_error: null,
+            processed_at: new Date().toISOString()
+          });
+        }
+        continue;
+      }
+
+      if (policy.classification.intent === 'UNKNOWN') {
+        reviewSignals.push({
+          intake_id: persisted?.id || null,
+          sender_reference: record.sender_id,
+          raw_text: event.intake?.raw_text || record.raw_text,
+          confidence: policy.classification.confidence,
+          next_action: policy.next_action,
+          policy_version: policy.policy_version
+        });
+        if (persisted?.id && store.updateIntakeMessage) {
+          await store.updateIntakeMessage(persisted.id, {
+            classification: 'UNKNOWN',
+            processing_status: 'RECEIVED',
+            processing_error: 'AI_CLASSIFICATION_REQUIRED'
+          });
+        }
         continue;
       }
 
@@ -171,6 +244,9 @@ export function createWhatsAppIntakeHandler(store, { onLoadSaved = null } = {}) 
       saved_loads: savedLoads,
       queued_audio: queuedAudio,
       duplicate_messages: duplicates,
+      availability_signals: availabilitySignals,
+      review_signals: reviewSignals,
+      policy_rejections: policyRejections,
       status_events: parsed.statuses || []
     };
   };
