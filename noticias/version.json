@@ -2,10 +2,10 @@
   "schema": 1,
   "app": "noticias",
   "product": "Stylo Camión Noticias",
-  "release": "2026-08-19-noticias-v35",
-  "release_id": "noticias-2026.08.19-01",
+  "release": "2026-08-19-noticias-v36",
+  "release_id": "noticias-2026.08.19-02",
   "status": "production",
-  "published_at": "2026-08-19T02:34:50Z",
+  "published_at": "2026-08-19T03:12:06Z",
   "official_repository": "torquetruckshop-netizen/stylocamion-platform",
   "official_content_ref": "main",
   "event": {
