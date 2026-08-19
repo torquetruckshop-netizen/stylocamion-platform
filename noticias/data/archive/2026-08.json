@@ -1,6 +1,6 @@
 {
   "month": "2026-08",
-  "updated_at": "2026-08-19T14:09:46.466173+00:00",
+  "updated_at": "2026-08-19T17:43:29.621095+00:00",
   "items": [
     {
       "id": "bbd89cbd526b34",
@@ -11,6 +11,16 @@
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTENpT2ZWMjhkM0pQSlp3T1ZpRGlGTjkya000X0N3VFlRcjNwNVdwRlNZLWdqdlFXTXJfZV9ydC10cWdvTkdHYm94OEdKY0d1T05uSVgzYnVLS2xiU3dOaWQ5SkpXT0pZWEhLY2hPcXQ5Qjc1WTctbEZjd1pHNktPazhRZ2ZycUNERlhoTUJpd0M1eDBoRUlkX0lWdVV5dTJCOHBN?oc=5",
       "published_at": "2026-08-19T12:47:48+00:00",
       "time": "Wed, 19 Aug 2026 12:47:48 GMT"
+    },
+    {
+      "id": "eb2c4dffdced65",
+      "title": "Paso Cristo Redentor: cruzaron más de 1.400 camiones a Chile en el primer día de reapertura",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "mendovoz.com",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQMTB3cXJPWm93VmZZYkFPZzI2eEc1ZXhhZE1qampWTC04WmZQdXlhTVNJVGh6cjNhQmk4RllzWWpYUEtHcU02ZmprU0FzNWJTTDdLeDhRN0V6WTJLLURabGFIRlZGcW92NWJUYzROM1F4NEg1YlVNU3I0OXNPME1jWW5LOW1TeUxQOXd5NUc1N3NyRVJmT1QwNnlNSHVKdlh2bndIclpKZ29UVnZPMHJqOFczVWNDQ2daS2VyWkFXeElMUERFX2F2ZDZkcHZLUVJhQjIydjljSGhUWXZFNVYw0gHfAUFVX3lxTFAxMHdxck9ab3dWZlliQU9nMjZ4RzVleGFkTWpqalZMLThaZlB1eWFNU0lUaHpyM2FCaThGWXNZalhQS0dxTTZmamtTQXM1YlNMN0t4OFE3RXpZMkstRFpsYUhGVkZxb3Y1YlRjNE4zUXg0SDViVU1TcjQ5c08wTWNZbks5bVN5TFA5d3k1RzU3c3JFUmZPVDA2eU1IdUp2WHZud0hyWkpnb1RWdk8wcmo4VzNVY0NDZ1pLZXJaQVd4SUxQREVfYXZkNmRwdktRUmFCMjJ2OWNIaFRZdkU1VjA?oc=5",
+      "published_at": "2026-08-19T12:21:10+00:00",
+      "time": "Wed, 19 Aug 2026 12:21:10 GMT"
     },
     {
       "id": "e0bcd735931692",
@@ -48,9 +58,9 @@
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
       "source": "Diario Mendoza Today",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPdExhS04wRVlTQ04yNHV6b3d6Z3ptRU50ckMyRzhSY0NYcmlGM09fbk5DREhEU1Exa1QwMjdFbHQ0OU1SM2tpX0JudXdyMldNSzhOTTZLdjJQNVg1Z3JoSTlWWmZ5OTVQYzFyZ1dJbG55QjlfUFVncmc2X3FrVlV6a3laSUlDUlBObFRIN3JPOU9HTWI2R2hGYkFXdUtxaHdiUnFrSUlUbW13TEY1d1JpWjZ3Sm9xQ1JMbWE4dFZWRQ?oc=5",
-      "published_at": "2026-08-19T00:45:08+00:00",
-      "time": "Wed, 19 Aug 2026 00:45:08 GMT"
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPeWFQUTd4ZFBhZl9VemZ1NG84U3p1cG5Ja0ZBbkhzM25SRE9TQmUtYmN2bUd0QjMwZjNKem80SjgweUZ6bkZNdkZjRVBraEJxQ1ZhQ01JQnZLMUhaYTFzQjFUTVJJbHBhcFFpemp1dFZsQTdmUHVVTjNsWXlLSlh6QmNNZDM4UE9SeXlKWjJaOV9xLWt0eVcxZThtYkFVczFaWGkyZW1rVEFGUTBmQ3lyUlk5YmcxWFp3WnBNWFF1RWQ1V2p4OXc?oc=5",
+      "published_at": "2026-08-18T23:54:15+00:00",
+      "time": "Tue, 18 Aug 2026 23:54:15 GMT"
     },
     {
       "id": "c643f867962de6",
@@ -168,6 +178,16 @@
       "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
       "category": "Camiones",
       "source": "Maraco Digital",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOSnhKN243TW43dmllbGd1SjJ5Wld6aUQyZWptS3RVYWxHLWc4dkRuVUZNSkZDN1IwOGdFZHM4TkcyLTllRUxpamhVTmpURW1sT3BMUzdfOEZBdzFpbGxoU0l2bEhpMDBPZHBRN1EyNEMzQTlZQTFFM2hmTF9ERW1YSWNYTVdZbnprMi10QThZTV9LX3Fqam1XcV9vbTJFQnFFUU12bERORTBWaXZBUC1KZ015M29IeXBQa0NublNDSGpYdw?oc=5",
+      "published_at": "2026-08-17T22:52:32+00:00",
+      "time": "Mon, 17 Aug 2026 22:52:32 GMT"
+    },
+    {
+      "id": "cafa1f80ad57cc",
+      "title": "Reabre el Paso Cristo Redentor tras 34 días: operativo especial para liberar 3.500 camiones",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "maracodigital.net",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOSnhKN243TW43dmllbGd1SjJ5Wld6aUQyZWptS3RVYWxHLWc4dkRuVUZNSkZDN1IwOGdFZHM4TkcyLTllRUxpamhVTmpURW1sT3BMUzdfOEZBdzFpbGxoU0l2bEhpMDBPZHBRN1EyNEMzQTlZQTFFM2hmTF9ERW1YSWNYTVdZbnprMi10QThZTV9LX3Fqam1XcV9vbTJFQnFFUU12bERORTBWaXZBUC1KZ015M29IeXBQa0NublNDSGpYdw?oc=5",
       "published_at": "2026-08-17T22:52:32+00:00",
       "time": "Mon, 17 Aug 2026 22:52:32 GMT"
@@ -381,6 +401,16 @@
       "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNc2NaX1QxSTJDaGQ4b3lheW5TYmhuT0c2UGVHZVR5T3EweGZYYWhyNnZzdzY0bDlIeUJPa2RYQVp5WEN4cGc2NlBJZ1dVSjF4b3VjMmZzQklyTDB3ZkhBMzZSclZFX0tVdGZ4dThLSzQtQkR6VmptSUM3ZTNtWloxdTBZSUhUeXloc1otMmdWZlM4alFQaXpMZ2laRlZ6UjZ1dVBwQi1UT3BqanRvQk5UMjdkZjF5SmcyWVNkbk5uWk5GU1pELU41bTY2RUxIbGdjRUdWR2lPT05nREVVMDE1SWRiZzZkLW_SAe8BQVVfeXFMTmlSWmh6eDI5cmlFYkVBVWRRcXg1TnRnWVBHZlNvSUp6anRWYnlQbm1YRHowQ3pBb0ZucWRTS3hJeGJoQzIyMHBEQjNMcWdwOHp0SkVLWlUwTTFCeUtiS2tpQnZRQ0JhZ1Y3M0ZpeC14ZDVNWTlJSzVLZVhGMG9Xa2tpMHNsckdIWnFCV1Y4VjhucU03UHhpQjNDZ2FwVWFkakM0NW1SalZQT3VMY0dVNUhOMmlvb1A3NWJaMWZwTWNoU3dqX0x0ekV3eVIzWWhwVkw0aFFFTmZIY1ZvUkdpYnlPODNncUVBaV9nOG9SQ00?oc=5",
       "published_at": "2026-08-13T20:08:12+00:00",
       "time": "Thu, 13 Aug 2026 20:08:12 GMT"
+    },
+    {
+      "id": "fcecac11956da8",
+      "title": "Rutas destrozadas y camiones más pesados: Una combinación peligrosa",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPSUhOVjRiLTd2VFFKZnY5M2FnLUZtbDVGa0thXzlYUS1KSDJHU3dYMnVCSXhBM2RwRngyOUU5azh5cWlJS09QWG1tUXpXaU1feVFiV1k1YlczYWR2aWZ6emR0Qk13YW0tV09PZ2N2ZUdIU2F5amhCU1R5ZGpwWUR1VDdEbHN3NDFnSG5RbE5hcF9NakJMRlVmdy1NNmZWc0s4RWVFNXhTZmM5YlN1eURqeTZ0dWsyLVpiNUpIOUJIWmtlc2lvWC1YLUJHVDVxS1k?oc=5",
+      "published_at": "2026-08-13T13:12:46+00:00",
+      "time": "Thu, 13 Aug 2026 13:12:46 GMT"
     },
     {
       "id": "5a557bb0728b18",
@@ -653,6 +683,16 @@
       "time": "Fri, 07 Aug 2026 07:00:00 GMT"
     },
     {
+      "id": "a522a8ff15de37",
+      "title": "Adiós cuerdas: MTT anuncia cambios en normativa de remolque de autos averiados en Chile",
+      "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
+      "category": "Remolques",
+      "source": "rutamotor.com",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOGxuOEYtUlVwWmxaUHA4a20xVC1XaG9kLW5nTloxWVVjbHhDdkV1UnN2dk0wY1ZKUll1dEhHQUZ1M0ZBZzhHZ1J0WHdnNGh3S0N4Q182YWVVa2VHZFlrNFJSRmU0T29tMUFOeHkxcnQzWU9yQlJkdmh6WnNYRWZmYmQ5NmhWeHRnN3R1cjNUdXhva25mdkZGbTBzd1ZpQUk1cjJkRFMzSHlBdHBWd0dEWA?oc=5",
+      "published_at": "2026-08-07T07:00:00+00:00",
+      "time": "Fri, 07 Aug 2026 07:00:00 GMT"
+    },
+    {
       "id": "1607e2d1b9f8c8",
       "title": "La nieve mantiene rutas cerradas en Neuquén: más de 1.200 camiones esperan para cruzar a Chile",
       "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
@@ -768,7 +808,7 @@
       "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
       "category": "Camiones",
       "source": "Letra P",
-      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNT2RVRFNNSDdueEVMaVo3emFYUlpsVDhmejJsTmpkemhtVk1NVEd4bW1mel9NdGpHejlSTjBuN2Rza0NyOXk1TnFjNXlPTll2TVlRbDhua1ZDdnBxRzk5eW9oTDVxUlRpTHVxUldVZWptajdjcVpvSTRqaHRJTEp3WHZiMFJjb1BtVkswMFdlUDljaW9ySjVld1JnVTY4ZXNGOUpkMEtrckkzZzdsNktPQ3BVeFlOTzgxTE5Fd0xtanJzZFlGaGlaTnlRazAzaWlTZDVBWU5MTXpGSThTWVg3OUNaU0NTUDBjUi1yckNDYWhHenh3?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOak5zdlV4Y3oyVFpTVjY2RVhCZUZJWHhGSGdpanAxOHZOZlVIYUZLZVNqMjU3MHQtWC1oSVlfMlBnd2pDNThHeXhqUENtbjJma1M0ZVZ0MjdDUkhfZURUWVA0WG90U3NJTjctdGUyYW1sTG5oeTdSTUVtS1Q5TlE3RFdPUkpuYVY5eUh3QU9hMTNfaGZWaUc4ME52aVM5bkNuMUo1cVB0dmRfNnlfNUxDQ3F2T3FpSDJGZlpPOVNweHRVMnZkOExuZDBwd2Nkd3BBRU9oX0h5VkxZd9IB3wFBVV95cUxQNE9ELTZ5SmQ2SzhXaTdrYnUyUFI1NzgxeEtCdkVFWno3U1BrLW5ETjFpT05MVDR3Q3E5WWJjV183T0J1UjF3bW95Q3A5TGwtWHZuV2Z0ekxFMjJoUVRFb1VfS1pfUk5Dem5LUng5R0ZQcmhrbXJTT0lnQm9zWEtoZUh4WWpLWFlfRzlpU2JUYzVjdWpLTUxSX2tWUHFna01lZWt4NkNlM3VkMjVuYkpLeEZDUzRuYm5kYUhfTXRvOHhBNk5yYXpCS09acG1yRi0tMUtYQi1OQkd1VUs0dGRJ?oc=5",
       "published_at": "2026-08-02T07:00:00+00:00",
       "time": "Sun, 02 Aug 2026 07:00:00 GMT"
     },
