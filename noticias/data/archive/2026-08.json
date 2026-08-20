@@ -1,7 +1,17 @@
 {
   "month": "2026-08",
-  "updated_at": "2026-08-20T10:01:06.626969+00:00",
+  "updated_at": "2026-08-20T14:20:52.822228+00:00",
   "items": [
+    {
+      "id": "6264d6436b96ae",
+      "title": "Paso Cristo Redentor: pasaron 2870 camiones y hoy el flujo va hacia Argentina",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "La Arena",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOUTA3X01TWlN1RG5LendFdU9rVTMwNG1XWWVpMGlURHRwNG5Pb20tdkt5M3NkRkN2VXEwYXAtNDZmUjBmaGdnZ0NPanJIdGZGMEZwTS1pbUZEOFk2QmhJUEpYZFU0a3Bqc2hkam5lWEhEZVZFRDFEZmMwckNLWUNVNmU0OFlYd2hwUGxSS2I0aFVSUmJkMGtzMGh1S1FkZWhtUVJwcV9KSzlZckxFbkdWbFZwbnBQMkpsdlIyNHA0bmNHdm8?oc=5",
+      "published_at": "2026-08-20T11:50:11+00:00",
+      "time": "Thu, 20 Aug 2026 11:50:11 GMT"
+    },
     {
       "id": "c561eb0aa93737",
       "title": "Bloqueo de rutas en Argentina afecta el abastecimiento de Magallanes",
@@ -11,6 +21,16 @@
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQMnEzdW9aWmVYekpTMHM4Q1k0bGJCbDl2YXYzNTZLWlZLM2pvYUNBUTdRdk54N0V6a1ZkU3JCaGhCUVJtQzJmRU5TaFNtQXpHeERMZnpwazlJOUFCRm9YNWtyZ3V2ZkZlVnZNVEtWd1dGQTJadDRhcHNrSU1SNXcteU9WS2ZpRFdUbXMyRzZxNU93d3RrSG82WVM2dHhnRGNSYkJkd2llMFZQZjFpUTV5c0pSVnnSAbQBQVVfeXFMUDJxM3VvWlplWHpKUzBzOENZNGxiQmw5dmF2MzU2S1pWSzNqb2FDQVE3UXZOeDdFemtWZFNyQmhoQlFSbUMyZkVOU2hTbUF6R3hETGZ6cGs5STlBQkZvWDVrcmd1dmZGZVZ2TVRLVndXRkEyWnQ0YXBza0lNUjV3LXlPVktmaURXVG1zMkc2cTVPd3d0a0hvNllTNnR4Z0RjUmJCZHdpZTBWUGYxaVE1eXNKUlZ5?oc=5",
       "published_at": "2026-08-19T23:57:00+00:00",
       "time": "Wed, 19 Aug 2026 23:57:00 GMT"
+    },
+    {
+      "id": "772393888a2d1f",
+      "title": "Camiones más pesados, rutas cada vez más deterioradas: el debate que también alcanza a San Andrés de Giles",
+      "summary": "Información reciente de rutas y normativa seleccionada por el radar regional de Stylo Camión.",
+      "category": "Rutas y normativa",
+      "source": "infociudad",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQRWRmWmkwem5oVDVsU3l0WUg5bDQ1eFJKZ204U3RINk4yYjJ4Zk1QM0lTc2lvOTlMZTBxYWJ1U3FERG9PUWtYdFFHYzVOQ2pfLWJnd0g5TnRwUHYtaE5YYzNDSzZxMUU1Mkx4eXZxWnFnc0c2OFl4N0szWHdnX196cGwtM04tS21DbmNFNXA4dkJQV2tZSV9xSTdpNDI4aXVjN05uVU52M2p0RS1heU5tMHdQLUtHNFg1NEFzcXU0ZldEeEZXdzAtdG5SdTNTSFE3X1pyZUxfczRrUQ?oc=5",
+      "published_at": "2026-08-19T23:35:50+00:00",
+      "time": "Wed, 19 Aug 2026 23:35:50 GMT"
     },
     {
       "id": "a809490759c517",
@@ -168,9 +188,9 @@
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
       "source": "Diario Mendoza Today",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPeWFQUTd4ZFBhZl9VemZ1NG84U3p1cG5Ja0ZBbkhzM25SRE9TQmUtYmN2bUd0QjMwZjNKem80SjgweUZ6bkZNdkZjRVBraEJxQ1ZhQ01JQnZLMUhaYTFzQjFUTVJJbHBhcFFpemp1dFZsQTdmUHVVTjNsWXlLSlh6QmNNZDM4UE9SeXlKWjJaOV9xLWt0eVcxZThtYkFVczFaWGkyZW1rVEFGUTBmQ3lyUlk5YmcxWFp3WnBNWFF1RWQ1V2p4OXc?oc=5",
-      "published_at": "2026-08-18T23:54:15+00:00",
-      "time": "Tue, 18 Aug 2026 23:54:15 GMT"
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPdExhS04wRVlTQ04yNHV6b3d6Z3ptRU50ckMyRzhSY0NYcmlGM09fbk5DREhEU1Exa1QwMjdFbHQ0OU1SM2tpX0JudXdyMldNSzhOTTZLdjJQNVg1Z3JoSTlWWmZ5OTVQYzFyZ1dJbG55QjlfUFVncmc2X3FrVlV6a3laSUlDUlBObFRIN3JPOU9HTWI2R2hGYkFXdUtxaHdiUnFrSUlUbW13TEY1d1JpWjZ3Sm9xQ1JMbWE4dFZWRQ?oc=5",
+      "published_at": "2026-08-19T00:45:08+00:00",
+      "time": "Wed, 19 Aug 2026 00:45:08 GMT"
     },
     {
       "id": "c643f867962de6",
@@ -208,7 +228,7 @@
       "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
       "category": "Logística",
       "source": "Bloomberg Línea",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPdENXSHROeTZPVG4zVFR3UHNyQXZJbVNFSXM0SDlrTWtkSEJ0Z0Z2cXBWU201TGtzTDlJYk50RXBsd2dTOWNCUDJFNGlHSUplRmpxVDJRMDJnRzJGbkl3enU3Zy1mSHE3ellCemM3Vy1NeG9FanV5S3NOeHZnUVlJcGlGeVRqczVfVzYyRmxQaHktMllJRlVOdDVacFZ0a2w0Njg5LWw2RG00bGJqRFhGQkZ6c2I2Mm1hMVY1ZzhEQ1N4NnRPTTNteFU5TDktMXM2OGdGd04wWUtYTHZyYkxURHN1SG03cFBRaFlDN0c4N3rSAYQCQVVfeXFMUHIwOThHc0h0ZnU2VzE5WUhpeGJ0U3gwLWtjT2FUdkIwaU1VQzJCVk82WmhURlIzWmc1cW5zUkdFWWc5czY0S2F3YlBrQXVTVC1hNzBLVFNHMlZ1aDZsSzk0Q21vMDJwREF4ekoyOFJHcWJjbnJvMEhwQXF1WFowdzNqa0oyWGpDX19VNzNYSmdZY09Gcm90OGlnV3JaMXA4QXhRY3haZC1CaXNKYXVrSWtDSXNNRGxWWXNqR1VJMTIyZHl1V1dCZTdBSkppVGRuLThFS2oxcWE0dWhUXzI0d1d2NXR3aDVpYU96UDJBTlBIR1lzODByXzRjNkFuNWtNeXhiLS0?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPdENXSHROeTZPVG4zVFR3UHNyQXZJbVNFSXM0SDlrTWtkSEJ0Z0Z2cXBWU201TGtzTDlJYk50RXBsd2dTOWNCUDJFNGlHSUplRmpxVDJRMDJnRzJGbkl3enU3Zy1mSHE3ellCemM3Vy1NeG9FanV5S3NOeHZnUVlJcGlGeVRqczVfVzYyRmxQaHktMllJRlVOdDVacFZ0a2w0Njg5LWw2RG00bGJqRFhGQkZ6c2I2Mm1hMVY1ZzhEQ1N4NnRPTTNteFU5TDktMXM2OGdGd04wWUtYTHZyYkxURHN1SG03cFBRaFlDN0c4N3o?oc=5",
       "published_at": "2026-08-18T17:15:54+00:00",
       "time": "Tue, 18 Aug 2026 17:15:54 GMT"
     },
