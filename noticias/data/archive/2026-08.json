@@ -1,7 +1,47 @@
 {
   "month": "2026-08",
-  "updated_at": "2026-08-19T21:43:08.718324+00:00",
+  "updated_at": "2026-08-20T03:25:52.219580+00:00",
   "items": [
+    {
+      "id": "c561eb0aa93737",
+      "title": "Bloqueo de rutas en Argentina afecta el abastecimiento de Magallanes",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "Tiempo Sur",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQMnEzdW9aWmVYekpTMHM4Q1k0bGJCbDl2YXYzNTZLWlZLM2pvYUNBUTdRdk54N0V6a1ZkU3JCaGhCUVJtQzJmRU5TaFNtQXpHeERMZnpwazlJOUFCRm9YNWtyZ3V2ZkZlVnZNVEtWd1dGQTJadDRhcHNrSU1SNXcteU9WS2ZpRFdUbXMyRzZxNU93d3RrSG82WVM2dHhnRGNSYkJkd2llMFZQZjFpUTV5c0pSVnnSAbQBQVVfeXFMUDJxM3VvWlplWHpKUzBzOENZNGxiQmw5dmF2MzU2S1pWSzNqb2FDQVE3UXZOeDdFemtWZFNyQmhoQlFSbUMyZkVOU2hTbUF6R3hETGZ6cGs5STlBQkZvWDVrcmd1dmZGZVZ2TVRLVndXRkEyWnQ0YXBza0lNUjV3LXlPVktmaURXVG1zMkc2cTVPd3d0a0hvNllTNnR4Z0RjUmJCZHdpZTBWUGYxaVE1eXNKUlZ5?oc=5",
+      "published_at": "2026-08-19T23:57:00+00:00",
+      "time": "Wed, 19 Aug 2026 23:57:00 GMT"
+    },
+    {
+      "id": "a809490759c517",
+      "title": "Paso Cristo Redentor: cruce exclusivo de camiones desde Chile hacia Argentina arranca un día antes de lo previsto",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "Diario Mendoza Today",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNVFVETXJERW9kT21EVEcxZUU4SnM0UnNNUUEyQ1Q2Mk1hVlBkTUpTTTByZ1k0cnk3RkhuZjh5NEFPUWFzcmJzbGtoVmZFU2hiakdzakxNWkJWME1MMlZsNzBiN0VmaWs0SG9Oa0h5bkx4UjREVlloV25HX0dULXFQOG5uLWNybXhBUDVNUUVOM2NMZFF6bzgyVlpyM29idV9KdGN2cTNsNUlPbXRkSTBWeldUcmt0LU4wbEQzeTUycE13bDhKTzhkRzQyRWp1NTlkbG56T1FDdnRtS2MxRGc?oc=5",
+      "published_at": "2026-08-19T23:55:01+00:00",
+      "time": "Wed, 19 Aug 2026 23:55:01 GMT"
+    },
+    {
+      "id": "b2eb65c011bdf1",
+      "title": "Adelantaron para este jueves el cruce de camiones desde Chile a Mendoza",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Diario Mendoza",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxORnNmNGtESDdrLVFmcEZUTU9ZVDh5Q3oxT1lnSVZhNDk5Szl4bUsyWUF2TndWSF9CUGVLQVd1cXQzbW4wNlpSaXJaRGl5QVZTNkM4V3lTZkpZcWU0aGpTRHlpYUlScXhyUVJJS0gtbWNnSkNtV3lHWVpLdldiZ1R0cGh1MUFEVG5LalZfcDFWeDcyN0pKNW92MDhhYUFGdw?oc=5",
+      "published_at": "2026-08-19T22:00:00+00:00",
+      "time": "Wed, 19 Aug 2026 22:00:00 GMT"
+    },
+    {
+      "id": "d0dd38f25237e5",
+      "title": "Paso Cristo Redentor: este jueves se habilita el tránsito de cargas desde Chile hacia Argentina",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Mendovoz",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNWmdFYnpWOXpxM2RtSERrWmxFMGQtNlAtelZfLUc1Ml92OWwxMXhTMlpjaWFwa0FxZ1hzQVZGYy1kVGhIQ3V6cFVLQ2FJLUFvSklqS19aUndCUGFwMFU4OXZlcXl6RHNJU284RU1aWHJsRlN2STJvdWY4cURMeWJ0WG81ams1SjhDVFR2STBDMDJwaW0zZUptSFBYbVc0ZWhSbU1aZHpHUUdUeHJXTG5RQTFtTzNRSjdvTFBiMDVQb1gyQnlSRElKOU9ZVWEyeGd6dU52Y2NZQUdPeFVqSW9PeWN6STh0aFli0gHoAUFVX3lxTE1aZ0VielY5enEzZG1IRGtabEUwZC02UC16Vl8tRzUyX3Y5bDExeFMyWmNpYXBrQXFnWHNBVkZjLWRUaEhDdXpwVUtDYUktQW9KSWpLX1pSd0JQYXAwVTg5dmVxeXpEc0lTbzhFTVpYcmxGU3ZJMm91ZjhxREx5YnRYbzVqazVKOENUVHZJMEMwMnBpbTNlSm1IUFhtVzRlaFJtTVpkekdRR1R4cldMblFBMW1PM1FKN29MUGIwNVBvWDJCeVJESUo5T1lVYTJ4Z3p1TnZjY1lBR094VWpJb095Y3pJOHRoWWI?oc=5",
+      "published_at": "2026-08-19T21:23:10+00:00",
+      "time": "Wed, 19 Aug 2026 21:23:10 GMT"
+    },
     {
       "id": "84b91fa44c6d47",
       "title": "Paso Cristo Redentor: ya cruzaron 2.300 camiones a Chile y este jueves comienza el tránsito hacia Argentina",
@@ -11,6 +51,26 @@
       "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPWHlmWDZLeGxmTTN0ZDNTVUFpbWRSZ09FeV92WTJpc3RYcndsMVVOWkphM29GeW91R01kUnZLYmRIU0J3X3kxYlMwTUdmRVA1OGZoT0FkeDQ5WnRRbjFrRGRXZWRWWlRiQVdyX0l5ZGVfcXktOWtNUUczdU1tRzVmRnppQTlId1owVm02T0lac25Ob3JuMHFQdmRuMzhJSmg2WXpyRjFlTWY0NTl5MDlMYmFMNlBCeU9sV2g2WjZFM21uWFNoQ1hiNWRmMndWcGl5VkJKdGxGWHJhdTQ?oc=5",
       "published_at": "2026-08-19T21:18:00+00:00",
       "time": "Wed, 19 Aug 2026 21:18:00 GMT"
+    },
+    {
+      "id": "3fa919584162f2",
+      "title": "Paso Cristo Redentor: ya cruzaron 2.870 camiones a Chile y este jueves comienza el tránsito hacia Argentina",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "losandes.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPaEpIYVpIdU5KY1c5SElQTmJINUU4VFQwUDhoX2JRdlJpRHRranhDRkRGYWdzQ2FNUVZOaWtQd012VTNjTGszMEhvMjFQcVBROUxhRTNNc2hTVHFmZFRTSmJhR2dWc3lDY21EQU96T1ZRVGFOWlhGMzBTNHFfeUtnajRBUzBZMWEzT1NVQ3dvcXN0Vkg4amdrekVHajhSMmNoWkdsNnFldVE3SjVUMDN0M3N1VFgwalVPR05sR3NfeS1GM0tpSWpLbFltTEFBckVWY19DbEczbG85UWM?oc=5",
+      "published_at": "2026-08-19T21:18:00+00:00",
+      "time": "Wed, 19 Aug 2026 21:18:00 GMT"
+    },
+    {
+      "id": "3fcdb0eb041835",
+      "title": "Habilitarán el Paso Internacional Los Libertadores para el transporte de cargas desde Chile hacia Argentina",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Sitio Andino",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPSE9jWHNRR1BLNFg3czBjLWVmY181X21Rb0plX0xSdlQ4bVFaR2tCZ2hTNlJrZnp2WjFvUXdLc0JJb0pJS2FvOU9nQmVWNEJrWGhFdUJVM0kzUDVubXIzQVMzWEU0ZUJESDZlb1RxRVltU2lsS0s3ZTNGNlZ5ZGNoWEhITjh3TTBnYkp5d3RRaW9aR1VYQkNNWEQyWS1xNlU0d1JjZHdlZW83dUcwa3VoX2FLd0gtUzluTHp5b1ZXbzNocFVpZzk0NWRCMFZoZ2N2bkHSAdcBQVVfeXFMTWs2MXphOGw4dkdUTkZaVVRHRW9IejRTdjE0RWE2X2t4MWVXVURNRmI0b2ppQkdMYklrQnp3NjZIWHBYV0JBQnRlV29tTmpWNnBLWTcyN3h3dmlzamF3aWw1dUpzYzNWbnpkWHJWTERRbFVfalJRc3ZaSVZ1R1Jhdzg3eGJaSXpianBxM01FaFdBSlpaSXdzLU9iZ1hGQUVmU253U2l4M0pjemhpRVZSNkRfOWhudFhsR1Y0TnBtTHZncHFLb0VTWkd0YjVUWHpjZmxienRGRUk?oc=5",
+      "published_at": "2026-08-19T20:59:00+00:00",
+      "time": "Wed, 19 Aug 2026 20:59:00 GMT"
     },
     {
       "id": "121bf20f6cbb34",
@@ -328,6 +388,16 @@
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
       "source": "La Voz del Interior",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQeVdjRE1VR2hfS2huXzl4OUxhVTRfckdvWHdyam9lUmk3YTdyeVVjNUo3b3djMktwcVJrSGo3RGxiWlFIbEQxWUxMek5EZG5Valh2a2R5R0Z6MlEyb2pSeW91TzRJNnpXbjJIQ1I5c1ZUV2M3QVhEZHNlRWJLWUs2WUMwU2RFU2I5Qnp2S3FFNHlua2M3QXVGN2czOFNqTC1jYUZGak11d3FWUm0zQXNIRFVXSko2N1V2Mkg3cEt6SXBoYlhob0E?oc=5",
+      "published_at": "2026-08-17T16:46:46+00:00",
+      "time": "Mon, 17 Aug 2026 16:46:46 GMT"
+    },
+    {
+      "id": "7cafb9dace1121",
+      "title": "Paso Cristo Redentor: reabre este martes exclusivamente para camiones tras 34 días de cierre",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "lavoz.com.ar",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQeVdjRE1VR2hfS2huXzl4OUxhVTRfckdvWHdyam9lUmk3YTdyeVVjNUo3b3djMktwcVJrSGo3RGxiWlFIbEQxWUxMek5EZG5Valh2a2R5R0Z6MlEyb2pSeW91TzRJNnpXbjJIQ1I5c1ZUV2M3QVhEZHNlRWJLWUs2WUMwU2RFU2I5Qnp2S3FFNHlua2M3QXVGN2czOFNqTC1jYUZGak11d3FWUm0zQXNIRFVXSko2N1V2Mkg3cEt6SXBoYlhob0E?oc=5",
       "published_at": "2026-08-17T16:46:46+00:00",
       "time": "Mon, 17 Aug 2026 16:46:46 GMT"
@@ -828,6 +898,16 @@
       "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
       "category": "Remolques",
       "source": "Maquinac",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQTzVpWFF4VmI5S1hQVnZBdWRnUkNLRnFpX0daeGNaMEFoZTU5d29NLWV3b0RWWEpHR1VZTmxvai0tY1YyWU81R3pHZ3hVelk5TGRWaHdfTzROcE1lUlpEVENUWmpnSUtpOUp1SFprNFVUZEthUVJaZi1VV0pNTExGNUFZdFhmRWZUZ0dJb200M3pkUjdTWHBwNFlCTQ?oc=5",
+      "published_at": "2026-08-05T20:13:45+00:00",
+      "time": "Wed, 05 Aug 2026 20:13:45 GMT"
+    },
+    {
+      "id": "c5033ef4e2f120",
+      "title": "Bertotto Boglione se hace fuerte en el segmento de semirremolques",
+      "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
+      "category": "Remolques",
+      "source": "maquinac.com",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQTzVpWFF4VmI5S1hQVnZBdWRnUkNLRnFpX0daeGNaMEFoZTU5d29NLWV3b0RWWEpHR1VZTmxvai0tY1YyWU81R3pHZ3hVelk5TGRWaHdfTzROcE1lUlpEVENUWmpnSUtpOUp1SFprNFVUZEthUVJaZi1VV0pNTExGNUFZdFhmRWZUZ0dJb200M3pkUjdTWHBwNFlCTQ?oc=5",
       "published_at": "2026-08-05T20:13:45+00:00",
       "time": "Wed, 05 Aug 2026 20:13:45 GMT"
