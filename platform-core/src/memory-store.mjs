@@ -7,6 +7,7 @@ export class MemoryStore {
     this.entitlements = new Map();
     this.qrByHash = new Map();
     this.audit = [];
+    this.sessions = new Map();
   }
 
   async upsertProfile(profile) {
@@ -51,11 +52,19 @@ export class MemoryStore {
   }
 
   async recordPaymentEvent(providerEventId) {
+    if (this.paymentEvents.has(providerEventId)) return false;
     this.paymentEvents.add(providerEventId);
+    return true;
+  }
+
+  async releasePaymentEvent(providerEventId) {
+    this.paymentEvents.delete(providerEventId);
   }
 
   async grantEntitlement(entitlement) {
     const key = `${entitlement.userId}:${entitlement.code}:${entitlement.orderId}`;
+    const existing = this.entitlements.get(key);
+    if (existing) return structuredClone(existing);
     this.entitlements.set(key, structuredClone(entitlement));
     return structuredClone(entitlement);
   }
@@ -78,6 +87,10 @@ export class MemoryStore {
   }
 
   async saveQr(credential) {
+    const existing = [...this.qrByHash.values()].find(
+      (item) => item.orderId === credential.orderId && item.kind === credential.kind,
+    );
+    if (existing) return structuredClone(existing);
     this.qrByHash.set(credential.tokenHash, structuredClone(credential));
     return structuredClone(credential);
   }
@@ -110,5 +123,21 @@ export class MemoryStore {
       qr: [...this.qrByHash.values()].map(({ tokenHash, tokenCiphertext, ...item }) => structuredClone(item)),
       audit: this.audit.map((item) => structuredClone(item)),
     };
+  }
+
+  async saveSession(session) {
+    this.sessions.set(session.tokenHash, structuredClone(session));
+  }
+
+  async getSession(tokenHash) {
+    const session = this.sessions.get(tokenHash);
+    return session ? structuredClone(session) : null;
+  }
+
+  async revokeSession(tokenHash, now = new Date()) {
+    const session = this.sessions.get(tokenHash);
+    if (!session) return;
+    session.revokedAt = now.toISOString();
+    this.sessions.set(tokenHash, session);
   }
 }

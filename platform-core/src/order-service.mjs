@@ -69,9 +69,6 @@ export class OrderService {
   }
 
   async reconcilePayment({ providerEventId, payment }) {
-    if (await this.store.hasPaymentEvent(providerEventId)) {
-      return { duplicate: true };
-    }
     const order = await this.requireOrder(payment.external_reference);
     const product = requireProduct(order.sku);
     if (Number(payment.transaction_amount) !== product.amount) throw new Error('PAYMENT_AMOUNT_MISMATCH');
@@ -79,21 +76,28 @@ export class OrderService {
 
     const status = PAYMENT_STATUS[payment.status];
     if (!status) throw new Error('PAYMENT_STATUS_UNSUPPORTED');
-    if (order.status === 'approved' && status === 'approved') {
-      await this.store.recordPaymentEvent(providerEventId);
-      return { duplicate: true, order };
-    }
-    order.status = status;
-    order.providerPaymentId = String(payment.id);
-    order.updatedAt = this.clock().toISOString();
-    await this.store.recordPaymentEvent(providerEventId);
-    await this.store.saveOrder(order);
+    const recorded = await this.store.recordPaymentEvent(providerEventId, { orderId: order.id, payment });
+    if (!recorded) return { duplicate: true };
+    try {
+      if (order.status === 'approved' && status === 'approved') {
+        return this.activate(order, product);
+      }
+      order.status = status;
+      order.providerPaymentId = String(payment.id);
+      order.updatedAt = this.clock().toISOString();
+      await this.store.saveOrder(order);
 
-    if (status === 'approved') return this.activate(order, product);
-    if (status === 'refunded' || status === 'charged_back') {
-      await this.store.revokeOrderBenefits(order.id, this.clock());
+      if (status === 'approved') return this.activate(order, product);
+      if (status === 'refunded' || status === 'charged_back') {
+        await this.store.revokeOrderBenefits(order.id, this.clock());
+      }
+      return { order };
+    } catch (error) {
+      if (typeof this.store.releasePaymentEvent === 'function') {
+        await this.store.releasePaymentEvent(providerEventId);
+      }
+      throw error;
     }
-    return { order };
   }
 
   async activate(order, product) {
@@ -112,14 +116,14 @@ export class OrderService {
     });
     let qr = null;
     if (product.qrKind) {
-      qr = createQrCredential({
+      const createdQr = createQrCredential({
         orderId: order.id,
         kind: product.qrKind,
         publicBaseUrl: this.publicBaseUrl,
         encryptionSecret: this.qrEncryptionSecret,
         now,
       });
-      await this.store.saveQr(qr);
+      qr = await this.store.saveQr(createdQr);
     }
     return { order, entitlement, qr };
   }

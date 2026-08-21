@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  },
   "scripts": {
     "start": "node src/server.mjs",
+    "start:production": "node --env-file=.env.production src/server.mjs",
     "test": "node --test",
     "audit:navigation": "node tools/audit-navigation.mjs"
   },
