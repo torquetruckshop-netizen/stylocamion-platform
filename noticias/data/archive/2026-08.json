@@ -1,7 +1,27 @@
 {
   "month": "2026-08",
-  "updated_at": "2026-08-21T10:01:28.572044+00:00",
+  "updated_at": "2026-08-21T14:19:04.658285+00:00",
   "items": [
+    {
+      "id": "d83ec031349677",
+      "title": "FOTON e-Galaxus 5 y 9: los nuevos camiones eléctricos pesados llegaron a Sudamérica",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "SuperTruck.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPT0FuYXFPUVdoenRPeGJNUnRZRFNPV0k3dHZDaDdEX0JfTVZnLWptdWpYVFhxWWpQVk9ER1lTVHNTanQ3cWRkaHBfLVZCMkZnaUNRLUJDUmtObzE4Slo5SGtjM1dCVnRLUndoanZyY21DaHE0NmMwSlY0WTVNd2FCTTZPZFY1b0lKZmFOMm1Rd3U1bWZ3MTBtSkxEREQya1g3dEViTVhaa3ZpUQ?oc=5",
+      "published_at": "2026-08-21T13:00:30+00:00",
+      "time": "Fri, 21 Aug 2026 13:00:30 GMT"
+    },
+    {
+      "id": "d1c621bb65183c",
+      "title": "Los camiones más vendidos de Volvo: ¿qué premio ganaron y por qué?",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "autotest.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQVUdnZHVrdFdZZFg5UXlFZ3VMMlRuZVlEM2NvY1VURzRJTHRRb0hIRTMxRmRuQlE5VFkyejJCREVaTVNMUVJ4MkluRkM3V2puV3phU0h6VlROQXZMa0dBTGVGYV9tMTJ4bl9sS2dDV3dZQnRwUU1tYmxIeUpuLVppa0prZlVaaTlPdHgweDJSNElSOGl4SXdVQjJXN08wanpNVlE?oc=5",
+      "published_at": "2026-08-21T10:40:13+00:00",
+      "time": "Fri, 21 Aug 2026 10:40:13 GMT"
+    },
     {
       "id": "e143d320172f8b",
       "title": "Aguascalientes atrae más de 140 mdd y mil empleos con nuevas inversiones",
@@ -53,16 +73,6 @@
       "time": "Thu, 20 Aug 2026 11:50:27 GMT"
     },
     {
-      "id": "a5cc916fb6ed96",
-      "title": "Adelantaron para este jueves el cruce de camiones desde Chile hacia Mendoza",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "Diario Mendoza",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxORnNmNGtESDdrLVFmcEZUTU9ZVDh5Q3oxT1lnSVZhNDk5Szl4bUsyWUF2TndWSF9CUGVLQVd1cXQzbW4wNlpSaXJaRGl5QVZTNkM4V3lTZkpZcWU0aGpTRHlpYUlScXhyUVJJS0gtbWNnSkNtV3lHWVpLdldiZ1R0cGh1MUFEVG5LalZfcDFWeDcyN0pKNW92MDhhYUFGd9IBowFBVV95cUxPaWYyU3dJNGJ0ZVNLVDdPQWJEbVBEZXgzc0ptaktCME95bFhzWTdJU3ZjTEliLXJZQUZVRndaYTRhSjRfcTdGaURsMHlESll6bEZyVWxoZUVLQnZlNm94X0hMbHVUR1o2Uk1XRVlodUFyallPek5jTHNnYldLb0xMa1pONzVFZUhILVBrT3BQRVk2Z0lNNENmTW1VRzQzV3E0SUVv?oc=5",
-      "published_at": "2026-08-20T02:52:11+00:00",
-      "time": "Thu, 20 Aug 2026 02:52:11 GMT"
-    },
-    {
       "id": "c561eb0aa93737",
       "title": "Bloqueo de rutas en Argentina afecta el abastecimiento de Magallanes",
       "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
@@ -91,6 +101,16 @@
       "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQQjRHQnFjdWluREtjaTdkb29OMDRabWtJOGlEMlpxLTNDRGg4V1FkVWs5Y2RLeWIydFd0R2xGRUJuMG1RNDUwLVNpdURjVk9SLVRfSGRTWnJRS05RZkJoX3NVWXE5Z2toRnBGUVY5QUptbWlNZVI3bWFxb2x3Y05RRWxUX0dsRW9uUThlVzFLdzlkUzd1bnBSTzZFdUFYYlZOV0w1RTBOcXV5dVg2Q1ZyVWhDYkhqMVpaV0h3c1F6RmZaTzNhUVV0YXdsUGptRDJ2NDZCM2p2NnRvUHRmSTRCa0xOMmg?oc=5",
       "published_at": "2026-08-19T23:08:38+00:00",
       "time": "Wed, 19 Aug 2026 23:08:38 GMT"
+    },
+    {
+      "id": "a5cc916fb6ed96",
+      "title": "Adelantaron para este jueves el cruce de camiones desde Chile hacia Mendoza",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Diario Mendoza",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxORnNmNGtESDdrLVFmcEZUTU9ZVDh5Q3oxT1lnSVZhNDk5Szl4bUsyWUF2TndWSF9CUGVLQVd1cXQzbW4wNlpSaXJaRGl5QVZTNkM4V3lTZkpZcWU0aGpTRHlpYUlScXhyUVJJS0gtbWNnSkNtV3lHWVpLdldiZ1R0cGh1MUFEVG5LalZfcDFWeDcyN0pKNW92MDhhYUFGd9IBowFBVV95cUxPaWYyU3dJNGJ0ZVNLVDdPQWJEbVBEZXgzc0ptaktCME95bFhzWTdJU3ZjTEliLXJZQUZVRndaYTRhSjRfcTdGaURsMHlESll6bEZyVWxoZUVLQnZlNm94X0hMbHVUR1o2Uk1XRVlodUFyallPek5jTHNnYldLb0xMa1pONzVFZUhILVBrT3BQRVk2Z0lNNENmTW1VRzQzV3E0SUVv?oc=5",
+      "published_at": "2026-08-19T22:00:00+00:00",
+      "time": "Wed, 19 Aug 2026 22:00:00 GMT"
     },
     {
       "id": "b2eb65c011bdf1",
@@ -653,16 +673,6 @@
       "time": "Thu, 13 Aug 2026 20:08:12 GMT"
     },
     {
-      "id": "fcecac11956da8",
-      "title": "Rutas destrozadas y camiones más pesados: Una combinación peligrosa",
-      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
-      "category": "Camiones",
-      "source": "Infobae",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPSUhOVjRiLTd2VFFKZnY5M2FnLUZtbDVGa0thXzlYUS1KSDJHU3dYMnVCSXhBM2RwRngyOUU5azh5cWlJS09QWG1tUXpXaU1feVFiV1k1YlczYWR2aWZ6emR0Qk13YW0tV09PZ2N2ZUdIU2F5amhCU1R5ZGpwWUR1VDdEbHN3NDFnSG5RbE5hcF9NakJMRlVmdy1NNmZWc0s4RWVFNXhTZmM5YlN1eURqeTZ0dWsyLVpiNUpIOUJIWmtlc2lvWC1YLUJHVDVxS1k?oc=5",
-      "published_at": "2026-08-13T13:12:46+00:00",
-      "time": "Thu, 13 Aug 2026 13:12:46 GMT"
-    },
-    {
       "id": "5a557bb0728b18",
       "title": "Infraestructura, tecnología y capacitación marcan la agenda para la logística argentina",
       "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
@@ -671,6 +681,16 @@
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNcF9QeDVubmZWZEJTMmZzQTJ0MWVQUkFrT0lISm9zMFJDS01aNm1HMnBTVFdzM09XZ2Zhbk1OajVZQk9uX19YNk5RZEdBaXV6ZnBVbFVQYW5ESHQ4RjduV2o2UHN5cTgwNFVNTFU2N0RXdTVqY1R6UGVQeVFvZ3JVdzRlWGtnWVFCRGRBdlZxMXpNRG9pSlFKUV9GS1UxRGdMbEctRExJTUxJQU1vUjZHRG9senZ3U2F0M0ZFOVBZb0hxY19BZjcyZNIB4wFBVV95cUxNa2xoaEpzV2pORFBDWW9aamZZbldpVEd6TnVtRUVqcjd6T1ZRLVdQdTZfVVlWSUlqNGlhQkx3RmIzV2pmbUZWekZYZkxrLUFyRXVFbEFEOWx1STN5S2k2cG1BTlpqcDBTOFA5eFdqRlhqaVdkcDJxMnNpalltb0ZfT2ktNW1WalJ2SXV4bGJfUFhGRmFSWTl0Nk5BSzZ6Tkt5aGxSNXJIRlMtd3dKWnVLZjV2Q2lYTWhydkZsT3RHVW1HS0VPUlhmSWFtRXBQajVTel9OOE1xWHliQ045RkUxN3pSbw?oc=5",
       "published_at": "2026-08-13T07:07:00+00:00",
       "time": "Thu, 13 Aug 2026 07:07:00 GMT"
+    },
+    {
+      "id": "fcecac11956da8",
+      "title": "Rutas destrozadas y camiones más pesados: Una combinación peligrosa",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPSUhOVjRiLTd2VFFKZnY5M2FnLUZtbDVGa0thXzlYUS1KSDJHU3dYMnVCSXhBM2RwRngyOUU5azh5cWlJS09QWG1tUXpXaU1feVFiV1k1YlczYWR2aWZ6emR0Qk13YW0tV09PZ2N2ZUdIU2F5amhCU1R5ZGpwWUR1VDdEbHN3NDFnSG5RbE5hcF9NakJMRlVmdy1NNmZWc0s4RWVFNXhTZmM5YlN1eURqeTZ0dWsyLVpiNUpIOUJIWmtlc2lvWC1YLUJHVDVxS1k?oc=5",
+      "published_at": "2026-08-13T07:00:00+00:00",
+      "time": "Thu, 13 Aug 2026 07:00:00 GMT"
     },
     {
       "id": "b9191fb76da54c",
@@ -765,8 +785,8 @@
     {
       "id": "d7d8bb4b569d3f",
       "title": "Amplían pesos y medidas permitidos para camiones y colectivos: temen que se deteriore aún más el estado de rutas nacionales",
-      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
-      "category": "Camiones",
+      "summary": "Información reciente de rutas y normativa seleccionada por el radar regional de Stylo Camión.",
+      "category": "Rutas y normativa",
       "source": "Diario Digital Conclusión",
       "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNdENNblN1XzRlMF9sOTdBMXNpOWxRa3I0RWxKTmhOTkVkR2ZMZEZRQ09KbXBKSy1KTXl3UC1GaDFQSFhlX3ZxelNNOTJDeUpYcFBlZnRSRHBBaG0tTXVzMmVEdWozcVM2MWF1OU1sQnk5aUhMNU1uMk5VMXg0QjltT0p4c0hVUm4wbTF6UGZSeDZQamVHNm4ySEVXTFdrdzNVM0Mzd0FVM00tYkxPTWE2M1pHUkdnRzAwX0J4NXB2cXJfVlNZcVJHQXpjdk5LSU1kcDZYYlpJdm80WXZGZFlya1hxSjlBMFFDTnlnVlBUY3VYekl2eE0wQ1JEeWZCaW8?oc=5",
       "published_at": "2026-08-12T13:31:18+00:00",
