@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T14:19:04.658285+00:00",
+  "updated_at": "2026-08-21T17:50:59.494252+00:00",
   "items": [
     {
       "id": "175f8afacd13ee",
@@ -240,16 +240,6 @@
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOa0Qzd3Z0d3VoMmdOS3c4VmQyVFBoLVV6Q1NnRWw4X3E2emYteFZQMVFxTEhkLUdDd1hEek9rMGNud3paYklwb19vSjAyaG5kckdsOV9OUkJmNDJ0ZDFIZGc1VXU0VktlLVpYTlVielNUODVNVkJoOEpvNkxNNko5R3FLSlo1SjdETnJ0bnZiMnRNa3RmWUE?oc=5",
       "published_at": "2026-08-17T21:04:46+00:00",
       "time": "Mon, 17 Aug 2026 21:04:46 GMT"
-    },
-    {
-      "id": "908aabd428d9df",
-      "title": "Reabrirá el Paso Cristo Redentor en Mendoza tras 34 días y miles de camiones esperan por cruzar la frontera",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "Infobae",
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPcnloUWRJcV9fQThXbVFKLTBDMVp4eVFaTE9lMzFpdi1feU1adnZzX2trUVB2ZWNCYlJTMWZzQklfdTVuSjNkbllyWUZyVlBUSkxVcnpQSjZLY0NOZ0NwemZnR3U5S3RjSU4xYjRpUm9CRlQ3eFRYQXBRMjJ5ZE5WNng5ZFplbkNtYnliMF9ZZU1zYTQtb0tkNTJQaDMxOUJfRmZHSjNnU05Ja28xT2s2UGlyZ2tRcF9tbDY3LTlHcVdKVWREMUVUMEVySFBmVEVDRW9MZ2pRQm05VDNLSHItYzBxcUVaVTDSAYICQVVfeXFMTmlNUkZOQVFCNjVZRk52MUpiNjZUOHhXMzZDQzIxSFliNUNtOURDNl9lTmpDUlFlaEFSUW91UXVqdEFUMUtIT00yc3NncU1XN3RGN2hnLS1rUXpra1JMckNmVE5WcjdHQk1UbFYya2d6dXVpQ3o3YU5QZmJDdkdSYUE3RGtKckRpWUlSYVVMWS15QVlZbzM4ZGM4R0k2MUdjWUpRd3Z0dEY2YlM0a0xITldpODZlbUlTdnVBdFQ3cnRaWEJPLUp1SGFlYjVyWGZsaHc2TnAxaXFGN0Z0NG50UW01UHVuZmI2UTNMdy1lUHBVWWhza0VwQXdvUkQ2TWF2Ymd3?oc=5",
-      "published_at": "2026-08-17T18:50:00+00:00",
-      "time": "Mon, 17 Aug 2026 18:50:00 GMT"
     },
     {
       "id": "fe9264f392dc5c",
@@ -502,6 +492,16 @@
       "time": "Wed, 05 Aug 2026 20:13:45 GMT"
     },
     {
+      "id": "5e7d87d5d5f11a",
+      "title": "Petróleo a USD 100: el shock global que puede darle más dólares a la Argentina, pero también traer presión a los surtidores",
+      "summary": "Información reciente de economía seleccionada por el radar regional de Stylo Camión.",
+      "category": "Economía",
+      "source": "Canal26",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOcE05cmhKTDZIUHE3MGphQlpjNWJMcjdqWVUtdTNUWUpmNGhLdHB3cGdZX1BJY3N1QVVjemZ0OVJMakJGU0pSa3Z3OUNLMjlOOTVNOEJWajRXSnNhaEJvNThJN29qREJjMXQ4dXl2N1ljdWtHX0llLUpvVElrU1R2QUxUMG5faFBhUVp1dnRGaXFYQ1dwMHFKTkdKUHVPWmZ4aDR4TmJtYk9GNVBCdUVrRW5IOVpUUGxBc2c1eWJqcXdyZ0pudWhHS094b1dBUXdKMzhuUGZ0R2VjZVFMMmdNOEdOSWMxMk9uZlhWRHJ6UGNMZnVhbmxLeDF3?oc=5",
+      "published_at": "2026-07-24T07:00:00+00:00",
+      "time": "Fri, 24 Jul 2026 07:00:00 GMT"
+    },
+    {
       "id": "618b9b64bcde31",
       "title": "Hablan los camioneros varados en Neuquén: cómo se vive la espera en la ruta para llegar a Chile",
       "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
@@ -552,6 +552,16 @@
       "time": "Sun, 02 Aug 2026 07:00:00 GMT"
     },
     {
+      "id": "03405c715f7bf7",
+      "title": "Actualizan las reglas para camiones y bitrenes y amplían las configuraciones permitidas",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQzZjemZKbHVVQjNlV3B1eXBEUUFYNXJzVTFLVEliRmt6akFpQXRNemZweUhvTGhnaEhhVzN2Y1JHX2ZQS2JUaDFRdlBNTXhsOGZDUGRoZG84d2NsZGFkRzBVRUNuRjBqR0VJYUZzb3dNSGRxeUdqX2dDUU83bGo0REtFeWpOWGFJS3pfQWZSQ1pyT1N6dzRfWkV2ZkZsNjZVTkljVFJtQ2RCWGNXN1gzVHRYUWs3Y2xucXdUUkdPRHNCZDRNdF9mc1p30gHkAUFVX3lxTE9wbldvS2w4d3ZuSXk1V2xTU0VJZjJaRXZETFgxRkhwcVhFcUQ3dDVVREdVMXQ3SFpjcmVTTkc3WlBvV0V0ekRtM29RNjBzM0RvOVpBa09nNmhfTFBrWmN1b3libW15S0NrSkg0QmNlV3VwWDNLTVBVM3hhMGlsdm1XUzZiVXVfcENabGZoV2k3c05UVFYzRy03QWdDcmxGazBLMzNTS1oxUEZlei1rRDlHVmJCdi1uTlZaYks5czV1MnJmcV9Gb2t4MnQ3dTU0MHR6c3pscnUxd3VWbjhFSzA2a2gwOQ?oc=5",
+      "published_at": "2026-07-31T07:00:00+00:00",
+      "time": "Fri, 31 Jul 2026 07:00:00 GMT"
+    },
+    {
       "id": "690a1902a3a10a",
       "title": "El Gobierno apuesta por los bitrenes y el GNC para bajar el costo del transporte",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -588,16 +598,6 @@
       "category": "Camiones",
       "source": "Infobae",
       "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOcmVnZzlPNTdzUjZhTzR5Mzh1TUVxUVIwOWhlMk1veDdDSkc2VlQ3ZmhXSklsMzF1ajFWUU1nY1dRTjdXaFFCa0JKaFVLNUtWbEpFUWF3NDJQakhwOC1pV3pjR2twRUlDUjFBdHVMN3dFcDlUZUZkTmZLN0huSVVndW1qbzJLV05HR1NIVVpfZTlWazBqNWllN0tKRGNfazJ4RklJaER1ZWU4Q1gwOWN5Y2hlMFVTVm5TbHluOXhaYTdnM2xhOXhLTTJ6STVnXzFLUmJ2R2s1T2s5LXJmbmFF0gH6AUFVX3lxTE0zX0JIU1dRY1EtbFNUdGlrQXdMNzZGMGtWOWMwWEYzVnpCUVJIZHAxdlpOYlhPanRGa1lraDhOWTNsM190N1RJSDd3RkxKTTV1Ylk4cWdSWk83NG01N2RJbVNtODRDVjY3VTlPaDB2STFDSlluNnlXOUMwUWRIYTJwMXJMYS1md3k5b2NsanBzbUdjT2ZjeEFZN3p5dzFBY2RCSWpDcE0yYVhORXF0T25UOHdWbnJSNW15dHFMZGptaUVGTXVzTjhOV2hzdllZUm9IdTFkWFB2X1FEWFFqX0M0dTVUeEVsd3pBN0hrWTBObmNkWFhFVFRnd0E?oc=5",
-      "published_at": "2026-07-31T07:00:00+00:00",
-      "time": "Fri, 31 Jul 2026 07:00:00 GMT"
-    },
-    {
-      "id": "03405c715f7bf7",
-      "title": "Actualizan las reglas para camiones y bitrenes y amplían las configuraciones permitidas",
-      "summary": "Información reciente de rutas y normativa seleccionada por el radar regional de Stylo Camión.",
-      "category": "Rutas y normativa",
-      "source": "Infobae",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQzZjemZKbHVVQjNlV3B1eXBEUUFYNXJzVTFLVEliRmt6akFpQXRNemZweUhvTGhnaEhhVzN2Y1JHX2ZQS2JUaDFRdlBNTXhsOGZDUGRoZG84d2NsZGFkRzBVRUNuRjBqR0VJYUZzb3dNSGRxeUdqX2dDUU83bGo0REtFeWpOWGFJS3pfQWZSQ1pyT1N6dzRfWkV2ZkZsNjZVTkljVFJtQ2RCWGNXN1gzVHRYUWs3Y2xucXdUUkdPRHNCZDRNdF9mc1p30gHkAUFVX3lxTE9wbldvS2w4d3ZuSXk1V2xTU0VJZjJaRXZETFgxRkhwcVhFcUQ3dDVVREdVMXQ3SFpjcmVTTkc3WlBvV0V0ekRtM29RNjBzM0RvOVpBa09nNmhfTFBrWmN1b3libW15S0NrSkg0QmNlV3VwWDNLTVBVM3hhMGlsdm1XUzZiVXVfcENabGZoV2k3c05UVFYzRy03QWdDcmxGazBLMzNTS1oxUEZlei1rRDlHVmJCdi1uTlZaYks5czV1MnJmcV9Gb2t4MnQ3dTU0MHR6c3pscnUxd3VWbjhFSzA2a2gwOQ?oc=5",
       "published_at": "2026-07-31T07:00:00+00:00",
       "time": "Fri, 31 Jul 2026 07:00:00 GMT"
     }
