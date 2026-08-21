@@ -55,10 +55,14 @@ create table if not exists public.platform_orders (
   provider_payment_id text,
   terms_version text not null,
   terms_accepted_at timestamptz not null,
+  payer jsonb not null default '{}'::jsonb,
   metadata jsonb not null default '{}'::jsonb,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+alter table public.platform_orders
+  add column if not exists payer jsonb not null default '{}'::jsonb;
 
 create unique index if not exists platform_orders_provider_payment_uidx
   on public.platform_orders(provider, provider_payment_id)
@@ -113,6 +117,19 @@ create table if not exists public.platform_admin_audit (
   created_at timestamptz not null default now()
 );
 
+create table if not exists public.platform_sessions (
+  token_hash text primary key,
+  user_id uuid not null references auth.users(id) on delete cascade,
+  phone_e164 text,
+  created_at timestamptz not null default now(),
+  expires_at timestamptz not null,
+  revoked_at timestamptz,
+  check (expires_at > created_at)
+);
+
+create index if not exists platform_sessions_user_expires_idx
+  on public.platform_sessions(user_id, expires_at desc);
+
 create or replace function public.is_platform_admin(check_user uuid default auth.uid())
 returns boolean language sql stable security definer set search_path = public
 as $$
@@ -131,6 +148,22 @@ alter table public.platform_entitlements enable row level security;
 alter table public.platform_event_qr enable row level security;
 alter table public.platform_admins enable row level security;
 alter table public.platform_admin_audit enable row level security;
+alter table public.platform_sessions enable row level security;
+
+grant select, insert, update, delete on table
+  public.platform_profiles,
+  public.platform_roles,
+  public.platform_admins,
+  public.platform_products,
+  public.platform_orders,
+  public.platform_payment_events,
+  public.platform_entitlements,
+  public.platform_event_qr,
+  public.platform_admin_audit,
+  public.platform_sessions
+to service_role;
+
+grant select on table public.platform_products to anon, authenticated;
 
 drop policy if exists profiles_own_select on public.platform_profiles;
 create policy profiles_own_select on public.platform_profiles for select

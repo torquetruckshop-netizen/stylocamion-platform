@@ -8,17 +8,20 @@ export class AdminService {
     this.clock = clock;
   }
 
-  requireAdmin(actorId) {
-    if (!actorId || !this.adminIds.has(actorId)) throw new Error('ADMIN_REQUIRED');
+  async requireAdmin(actorId) {
+    if (!actorId) throw new Error('ADMIN_REQUIRED');
+    if (this.adminIds.has(actorId)) return;
+    if (typeof this.store.isAdmin === 'function' && await this.store.isAdmin(actorId)) return;
+    throw new Error('ADMIN_REQUIRED');
   }
 
   async snapshot(actorId) {
-    this.requireAdmin(actorId);
+    await this.requireAdmin(actorId);
     return this.store.adminSnapshot();
   }
 
   async redeemQr({ actorId, token }) {
-    this.requireAdmin(actorId);
+    await this.requireAdmin(actorId);
     const result = await this.store.redeemQr(hashQrToken(token), actorId, this.clock());
     await this.store.appendAudit({
       id: randomUUID(),

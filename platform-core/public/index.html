@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f36b21">
+  <title>Mi cuenta · Stylo Camión</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Stylo Camión">STYLO <span>CAMIÓN</span></a>
+    <button id="logout" class="quiet hidden" type="button">Salir</button>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">UNA CUENTA · TODA LA RED</p>
+      <h1>Tu acceso a Stylo Camión</h1>
+      <p>Ingresá con tu celular para usar Feria, Ventas, Choferes, Cargas y Club Stylo.</p>
+    </section>
+
+    <div id="notice" class="notice hidden" role="status"></div>
+
+    <section id="login-card" class="card">
+      <div id="phone-step">
+        <h2>Ingresar o registrarme</h2>
+        <p>Te enviaremos un código de 6 dígitos por SMS.</p>
+        <form id="phone-form">
+          <label for="phone">Celular con código de país</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+54 9 343 000 0000" required>
+          <button type="submit">Enviar código</button>
+        </form>
+      </div>
+      <div id="otp-step" class="hidden">
+        <h2>Ingresá el código</h2>
+        <p>Lo enviamos a <strong id="sent-phone"></strong>.</p>
+        <form id="otp-form">
+          <label for="otp">Código SMS</label>
+          <input id="otp" name="otp" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" placeholder="000000" required>
+          <button type="submit">Verificar e ingresar</button>
+          <button id="change-phone" class="secondary" type="button">Cambiar número</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="profile-card" class="card hidden">
+      <h2>Completá tu cuenta</h2>
+      <form id="profile-form">
+        <label for="display-name">Nombre o empresa</label>
+        <input id="display-name" name="displayName" autocomplete="name" required>
+        <fieldset>
+          <legend>¿Cómo vas a usar Stylo Camión?</legend>
+          <label class="check"><input type="checkbox" name="role" value="buyer"> Comprar o buscar</label>
+          <label class="check"><input type="checkbox" name="role" value="seller"> Vender vehículos</label>
+          <label class="check"><input type="checkbox" name="role" value="carrier"> Transportista</label>
+          <label class="check"><input type="checkbox" name="role" value="load_owner"> Publicar cargas</label>
+          <label class="check"><input type="checkbox" name="role" value="company"> Empresa / contratar choferes</label>
+          <label class="check"><input type="checkbox" name="role" value="driver"> Buscar trabajo como chofer</label>
+        </fieldset>
+        <label class="check legal"><input id="terms" type="checkbox" required> Acepto los términos y la política de privacidad vigentes.</label>
+        <button type="submit">Crear mi cuenta</button>
+      </form>
+    </section>
+
+    <section id="account" class="hidden">
+      <div class="account-heading">
+        <div><p class="eyebrow">MI CUENTA</p><h2 id="welcome">Hola</h2></div>
+        <span class="pill">Acceso activo</span>
+      </div>
+      <div class="card free-card">
+        <h3>Incluido sin cargo</h3>
+        <p>Noticias, explorar Feria y Ventas, buscar trabajo como chofer y acceso a Cargas.</p>
+      </div>
+      <h2>Servicios</h2>
+      <div id="products" class="product-grid"></div>
+      <h2>Mis compras y accesos</h2>
+      <div id="orders" class="stack"></div>
+    </section>
+
+    <section id="validator" class="card hidden">
+      <p class="eyebrow">CONTROL DE ACCESO</p>
+      <h2>Validar QR</h2>
+      <p>Esta función es exclusiva del personal autorizado.</p>
+      <button id="redeem" type="button">Validar este acceso</button>
+      <div id="validation-result"></div>
+    </section>
+  </main>
+
+  <footer>Stylo Camión · La comunidad del transporte de cargas</footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>

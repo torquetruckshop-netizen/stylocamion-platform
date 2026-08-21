@@ -1,17 +1,52 @@
 import { createServer } from 'node:http';
+import { readFile } from 'node:fs/promises';
+import QRCode from 'qrcode';
 import { AdminService } from './admin-service.mjs';
 import { AccountService } from './account-service.mjs';
-import { SupabaseAuth } from './auth.mjs';
+import { PlatformAuth, SupabaseAuth } from './auth.mjs';
 import { MemoryStore } from './memory-store.mjs';
+import { SupabaseStore } from './supabase-store.mjs';
 import { MercadoPagoClient } from './mercadopago.mjs';
 import { OrderService } from './order-service.mjs';
+import { PRODUCTS } from './catalog.mjs';
 
-export function createPlatformServer({ auth, accountService, orderService, adminService, paymentClient }) {
+export function createPlatformServer({
+  auth, accountService, orderService, adminService, paymentClient,
+  publicConfig = {}, sessionCookie = {}, staticDir = null,
+}) {
   return createServer(async (req, res) => {
     try {
       const url = new URL(req.url, 'http://localhost');
       if (req.method === 'GET' && url.pathname === '/health') {
         return json(res, 200, { ok: true, service: 'stylo-platform-core' });
+      }
+
+      if (req.method === 'GET' && url.pathname === '/api/public-config') {
+        return json(res, 200, publicConfig);
+      }
+
+      if (req.method === 'GET' && url.pathname === '/api/products') {
+        return json(res, 200, Object.values(PRODUCTS)
+          .filter((product) => product.enabled && product.amount !== null)
+          .map(({ durationMs, ...product }) => ({
+            ...product,
+            durationDays: durationMs ? Math.round(durationMs / 86400000) : null,
+          })));
+      }
+
+      if (req.method === 'POST' && url.pathname === '/api/session') {
+        if (typeof auth.createSession !== 'function') throw new Error('SESSION_NOT_AVAILABLE');
+        const session = await auth.createSession(toRequest(req));
+        return json(res, 201, { user: session.user, expiresAt: session.expiresAt.toISOString() }, {
+          'Set-Cookie': sessionCookieHeader({ ...sessionCookie, token: session.token, expiresAt: session.expiresAt }),
+        });
+      }
+
+      if (req.method === 'DELETE' && url.pathname === '/api/session') {
+        if (typeof auth.revokeSession === 'function') await auth.revokeSession(toRequest(req));
+        return json(res, 200, { signedOut: true }, {
+          'Set-Cookie': clearSessionCookieHeader(sessionCookie),
+        });
       }
 
       if (req.method === 'POST' && url.pathname === '/api/account/bootstrap') {
@@ -45,6 +80,17 @@ export function createPlatformServer({ auth, accountService, orderService, admin
         return json(res, 200, await orderService.recoverQr({ orderId: qrRecovery[1], userId: user.id }));
       }
 
+      const qrImage = url.pathname.match(/^\/api\/orders\/([^/]+)\/qr\.svg$/);
+      if (req.method === 'GET' && qrImage) {
+        const user = await auth.authenticate(toRequest(req));
+        const credential = await orderService.recoverQr({ orderId: qrImage[1], userId: user.id });
+        const svg = await QRCode.toString(credential.payload, {
+          type: 'svg', width: 360, margin: 2,
+          color: { dark: '#111111ff', light: '#ffffffff' },
+        });
+        return textResponse(res, 200, svg, 'image/svg+xml; charset=utf-8');
+      }
+
       if (req.method === 'POST' && url.pathname === '/api/webhooks/mercadopago') {
         const body = await readJson(req);
         const dataId = url.searchParams.get('data.id') ?? body?.data?.id;
@@ -70,11 +116,42 @@ export function createPlatformServer({ auth, accountService, orderService, admin
         return json(res, 200, await adminService.redeemQr({ actorId: actor.id, token }));
       }
 
+      if (req.method === 'GET' && staticDir) {
+        const asset = staticAsset(url.pathname);
+        if (asset) return serveFile(res, new URL(asset.file, staticDir), asset.type);
+      }
+
       return json(res, 404, { error: 'NOT_FOUND' });
     } catch (error) {
       return json(res, statusFor(error.message), { error: error.message });
     }
   });
+}
+
+async function serveFile(res, fileUrl, contentType) {
+  try {
+    const data = await readFile(fileUrl);
+    res.writeHead(200, {
+      'Content-Type': contentType,
+      'Content-Length': data.length,
+      'Cache-Control': contentType.startsWith('text/html') ? 'no-store' : 'public, max-age=300',
+      'X-Content-Type-Options': 'nosniff',
+      'Content-Security-Policy': "default-src 'self'; connect-src 'self' https://*.supabase.co; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'self'; frame-ancestors 'none'",
+    });
+    res.end(data);
+  } catch (error) {
+    if (error.code === 'ENOENT') return json(res, 404, { error: 'NOT_FOUND' });
+    throw error;
+  }
+}
+
+function staticAsset(pathname) {
+  if (pathname === '/' || pathname.startsWith('/validar/')) {
+    return { file: 'index.html', type: 'text/html; charset=utf-8' };
+  }
+  if (pathname === '/app.js') return { file: 'app.js', type: 'text/javascript; charset=utf-8' };
+  if (pathname === '/styles.css') return { file: 'styles.css', type: 'text/css; charset=utf-8' };
+  return null;
 }
 
 function statusFor(code) {
@@ -86,14 +163,40 @@ function statusFor(code) {
   return 400;
 }
 
-function json(res, status, body) {
+function json(res, status, body, extraHeaders = {}) {
   const data = JSON.stringify(body);
   res.writeHead(status, {
     'Content-Type': 'application/json; charset=utf-8',
     'Content-Length': Buffer.byteLength(data),
     'Cache-Control': 'no-store',
+    ...extraHeaders,
   });
   res.end(data);
+}
+
+function textResponse(res, status, body, contentType) {
+  res.writeHead(status, {
+    'Content-Type': contentType,
+    'Content-Length': Buffer.byteLength(body),
+    'Cache-Control': 'private, no-store',
+    'X-Content-Type-Options': 'nosniff',
+  });
+  res.end(body);
+}
+
+function sessionCookieHeader({ token, expiresAt, name = 'stylo-platform-auth', domain = '.stylocamion.com' }) {
+  return [
+    `${name}=${encodeURIComponent(token)}`,
+    'Path=/', `Domain=${domain}`, 'HttpOnly', 'Secure', 'SameSite=Lax',
+    `Expires=${expiresAt.toUTCString()}`,
+  ].join('; ');
+}
+
+function clearSessionCookieHeader({ name = 'stylo-platform-auth', domain = '.stylocamion.com' } = {}) {
+  return [
+    `${name}=`, 'Path=/', `Domain=${domain}`, 'HttpOnly', 'Secure', 'SameSite=Lax',
+    'Expires=Thu, 01 Jan 1970 00:00:00 GMT',
+  ].join('; ');
 }
 
 async function readJson(req) {
@@ -113,18 +216,25 @@ function toRequest(req) {
 }
 
 if (process.argv[1] === new URL(import.meta.url).pathname) {
-  if (process.env.NODE_ENV === 'production') {
-    throw new Error('Production requires the Supabase store; memory storage is disabled.');
-  }
-  const store = new MemoryStore();
+  const production = process.env.NODE_ENV === 'production';
+  const supabaseUrl = process.env.SUPABASE_URL;
+  const supabaseAuthKey = process.env.SUPABASE_PUBLISHABLE_KEY ?? process.env.SUPABASE_ANON_KEY;
+  const supabaseSecretKey = process.env.SUPABASE_SECRET_KEY ?? process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const store = production
+    ? new SupabaseStore({ supabaseUrl, secretKey: supabaseSecretKey })
+    : new MemoryStore();
   const paymentClient = new MercadoPagoClient({
     accessToken: process.env.MERCADOPAGO_ACCESS_TOKEN ?? 'local-test-token',
     webhookSecret: process.env.MERCADOPAGO_WEBHOOK_SECRET ?? 'local-test-secret',
   });
-  const auth = new SupabaseAuth({
-    supabaseUrl: process.env.SUPABASE_URL,
-    anonKey: process.env.SUPABASE_ANON_KEY,
+  const supabaseAuth = new SupabaseAuth({
+    supabaseUrl,
+    anonKey: supabaseAuthKey,
   });
+  const cookieName = process.env.AUTH_COOKIE_NAME ?? 'stylo-platform-auth';
+  const auth = production
+    ? new PlatformAuth({ supabaseAuth, store, cookieName, sessionDays: 30 })
+    : supabaseAuth;
   const admins = new Set(String(process.env.ADMIN_USER_ID_ALLOWLIST ?? '').split(',').filter(Boolean));
   const orderService = new OrderService({
     store,
@@ -138,6 +248,16 @@ if (process.argv[1] === new URL(import.meta.url).pathname) {
     orderService,
     paymentClient,
     adminService: new AdminService({ store, adminIds: admins }),
+    publicConfig: {
+      supabaseUrl,
+      supabasePublishableKey: supabaseAuthKey,
+      accountTermsVersion: process.env.ACCOUNT_TERMS_VERSION ?? 'general-2026-08-v1',
+    },
+    sessionCookie: {
+      name: cookieName,
+      domain: process.env.AUTH_COOKIE_DOMAIN ?? '.stylocamion.com',
+    },
+    staticDir: new URL('../public/', import.meta.url),
   });
-  server.listen(Number(process.env.PORT ?? 8787));
+  server.listen(Number(process.env.PORT ?? 8787), process.env.HOST ?? '127.0.0.1');
 }

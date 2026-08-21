@@ -170,3 +170,30 @@ test('rechaza montos modificados en el navegador', async () => {
     /PAYMENT_AMOUNT_MISMATCH/,
   );
 });
+
+test('un fallo transitorio libera el webhook para que Mercado Pago pueda reintentarlo', async () => {
+  const { store, service } = setup();
+  const { order } = await service.createOrder({
+    userId: 'user-retry', sku: 'feria_person_adult', termsVersion: 'feria-v1',
+  });
+  const originalSave = store.saveOrder.bind(store);
+  let failOnce = true;
+  store.saveOrder = async (value) => {
+    if (failOnce) {
+      failOnce = false;
+      throw new Error('TRANSIENT_DATABASE_FAILURE');
+    }
+    return originalSave(value);
+  };
+  const input = {
+    providerEventId: 'payment:retry',
+    payment: {
+      id: 500, external_reference: order.id, transaction_amount: 6500,
+      currency_id: 'ARS', status: 'approved',
+    },
+  };
+  await assert.rejects(service.reconcilePayment(input), /TRANSIENT_DATABASE_FAILURE/);
+  const retried = await service.reconcilePayment(input);
+  assert.equal(retried.order.status, 'approved');
+  assert.equal(retried.qr.kind, 'person');
+});
