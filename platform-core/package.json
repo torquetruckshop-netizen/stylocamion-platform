@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "node src/server.mjs",
-    "start:production": "node --env-file=.env.production src/server.mjs",
+    "start:production": "node --env-file-if-exists=.env.production src/server.mjs",
+    "preflight:production": "node --env-file-if-exists=.env.production deploy/preflight.mjs",
     "test": "node --test",
     "audit:navigation": "node tools/audit-navigation.mjs"
   },
