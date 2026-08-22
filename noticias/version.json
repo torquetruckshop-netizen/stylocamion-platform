@@ -2,10 +2,10 @@
   "schema": 1,
   "app": "noticias",
   "product": "Stylo Camión Noticias",
-  "release": "2026-08-19-noticias-v37",
-  "release_id": "noticias-2026.08.19-03",
+  "release": "2026-08-22-experiencia-humana-v1",
+  "release_id": "noticias-2026.08.22-04",
   "status": "production",
-  "published_at": "2026-08-19T03:17:39Z",
+  "published_at": "2026-08-22T21:30:00Z",
   "official_repository": "torquetruckshop-netizen/stylocamion-platform",
   "official_content_ref": "main",
   "event": {
@@ -20,6 +20,9 @@
     "imagenes-reales-sudamericanas",
     "contacto-noticias-stylocamion",
     "acceso-directo-movil",
-    "version-publica-sin-redireccion"
+    "version-publica-sin-redireccion",
+    "portada-luminosa-con-personas-reales",
+    "noticias-destacadas-en-primera-pantalla",
+    "experiencia-comun-del-ecosistema"
   ]
 }
