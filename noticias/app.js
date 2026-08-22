@@ -10,7 +10,7 @@ const fallbackNews = [
 const translations = {
   es: {
     navHome:'Portada', navRoute:'Modo Ruta', navBefore:'Antes de salir', navLatest:'Últimas', navSections:'Secciones', navPlatform:'Plataforma',
-    edition:'EDICIÓN REGIONAL · ACTUALIZACIÓN AUTOMÁTICA', heroTitle:'Noticias que sirven para <span>tomar decisiones.</span>', heroDeck:'Información del transporte con prioridad argentina, mirada sudamericana y foco en camiones, remolques, rutas, logística, economía y negocios.', lastUpdate:'ÚLTIMA ACTUALIZACIÓN',
+    edition:'STYLO CAMIÓN NOTICIAS · ARGENTINA + SUDAMÉRICA', heroTitle:'La gente que <span>mueve al país.</span>', heroDeck:'Noticias, datos e historias para quienes trabajan, deciden y viven alrededor del transporte.', heroPrimary:'Ver noticias de hoy', heroSecondary:'Escuchar Modo Ruta', lastUpdate:'ÚLTIMA ACTUALIZACIÓN',
     trust1:'Fuentes identificadas', trust2:'Actualización automática', trust3:'Prioridad Argentina + Sudamérica', trust4:'Lectura + audio · Modo Ruta',
     routeLabel:'MODO RUTA · BOLETÍN AUTOMÁTICO', routeTitle:'Escuchá las noticias importantes del día, una detrás de otra.', routeText:'Un resumen continuo de transporte, rutas, economía, camiones, remolques y logística. Preparado para iniciar antes de salir y escuchar con el teléfono conectado al vehículo.', routeButton:'▶ Escuchar Boletín de Ruta', routeSafety:'Activá la reproducción antes de iniciar la marcha o mediante controles manos libres.',
     beforeLabel:'ANTES DE SALIR', beforeTitle:'Información operativa oficial', beforeText:'Accesos directos para revisar pasos fronterizos, rutas nacionales y alertas meteorológicas antes de iniciar un viaje.', officialSources:'FUENTES OFICIALES',
@@ -21,7 +21,7 @@ const translations = {
   },
   pt: {
     navHome:'Capa', navRoute:'Modo Estrada', navBefore:'Antes de sair', navLatest:'Últimas', navSections:'Seções', navPlatform:'Plataforma',
-    edition:'EDIÇÃO REGIONAL · ATUALIZAÇÃO AUTOMÁTICA', heroTitle:'Notícias que ajudam a <span>tomar decisões.</span>', heroDeck:'Informação do transporte com prioridade para a Argentina, visão sul-americana e foco em caminhões, implementos, estradas, logística, economia e negócios.', lastUpdate:'ÚLTIMA ATUALIZAÇÃO',
+    edition:'STYLO CAMIÓN NOTÍCIAS · ARGENTINA + AMÉRICA DO SUL', heroTitle:'A gente que <span>move o país.</span>', heroDeck:'Notícias, dados e histórias para quem trabalha, decide e vive em torno do transporte.', heroPrimary:'Ver notícias de hoje', heroSecondary:'Ouvir Modo Estrada', lastUpdate:'ÚLTIMA ATUALIZAÇÃO',
     trust1:'Fontes identificadas', trust2:'Atualização automática', trust3:'Prioridade Argentina + América do Sul', trust4:'Leitura + áudio · Modo Estrada',
     routeLabel:'MODO ESTRADA · BOLETIM AUTOMÁTICO', routeTitle:'Ouça as notícias mais importantes do dia, uma após a outra.', routeText:'Resumo contínuo de transporte, estradas, economia, caminhões, implementos e logística, pensado para ouvir com o telefone conectado ao veículo.', routeButton:'▶ Ouvir Boletim de Estrada', routeSafety:'Inicie a reprodução antes de dirigir ou use controles mãos livres.',
     beforeLabel:'ANTES DE SAIR', beforeTitle:'Informação operacional oficial', beforeText:'Acessos diretos para consultar fronteiras, rodovias nacionais e alertas meteorológicos antes da viagem.', officialSources:'FONTES OFICIAIS',
@@ -32,7 +32,7 @@ const translations = {
   },
   en: {
     navHome:'Home', navRoute:'Road Mode', navBefore:'Before departure', navLatest:'Latest', navSections:'Sections', navPlatform:'Platform',
-    edition:'REGIONAL EDITION · AUTOMATIC UPDATES', heroTitle:'News that helps you <span>make decisions.</span>', heroDeck:'Transport information with an Argentine priority, a South American perspective and focus on trucks, trailers, roads, logistics, economics and business.', lastUpdate:'LAST UPDATE',
+    edition:'STYLO CAMIÓN NEWS · ARGENTINA + SOUTH AMERICA', heroTitle:'The people who <span>keep the country moving.</span>', heroDeck:'News, data and stories for the people who work, decide and live around transport.', heroPrimary:'See today’s news', heroSecondary:'Listen to Road Mode', lastUpdate:'LAST UPDATE',
     trust1:'Identified sources', trust2:'Automatic updates', trust3:'Argentina + South America priority', trust4:'Reading + audio · Road Mode',
     routeLabel:'ROAD MODE · AUTOMATIC BULLETIN', routeTitle:'Listen to the day’s most important news, one after another.', routeText:'A continuous briefing on transport, roads, economics, trucks, trailers and logistics, designed to play with the phone connected to the vehicle.', routeButton:'▶ Listen to Road Bulletin', routeSafety:'Start playback before driving or use hands-free controls.',
     beforeLabel:'BEFORE DEPARTURE', beforeTitle:'Official operational information', beforeText:'Direct links to check border crossings, national roads and weather alerts before a trip.', officialSources:'OFFICIAL SOURCES',
