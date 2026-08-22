@@ -1,4 +1,4 @@
-name: Actualizar Noticias Stylo Camion
+name: Actualizar y publicar Noticias Stylo Camion
 
 on:
   schedule:
@@ -7,9 +7,18 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-noticias
+  cancel-in-progress: true
 
 jobs:
-  update-news:
+  update-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,8 +41,25 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add noticias/data/news.json noticias/data/archive/
           if git diff --cached --quiet; then
-            echo "Sin cambios"
+            echo "Sin cambios nuevos; se publica igualmente el contenido vigente."
           else
             git commit -m "Actualizar radar automático de noticias"
             git push
           fi
+
+      - name: Configurar GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Preparar Noticias para publicar
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./noticias
+
+      - name: Publicar Noticias
+        if: github.ref == 'refs/heads/main'
+        id: deployment
+        uses: actions/deploy-pages@v4
