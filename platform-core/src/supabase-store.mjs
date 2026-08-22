@@ -18,6 +18,13 @@ export class SupabaseStore {
     this.fetch = fetchImpl;
   }
 
+  async healthCheck() {
+    await this.request(TABLES.profiles, {
+      query: { select: 'user_id', limit: 1 },
+    });
+    return { ok: true };
+  }
+
   async upsertProfile(profile) {
     const rows = await this.request(TABLES.profiles, {
       method: 'POST', query: { on_conflict: 'user_id' },
@@ -37,6 +44,13 @@ export class SupabaseStore {
       });
     }
     return [...roles];
+  }
+
+  async hasRole(userId, role) {
+    const rows = await this.request(TABLES.roles, {
+      query: { select: 'user_id', user_id: `eq.${userId}`, role: `eq.${role}`, limit: 1 },
+    });
+    return rows.length > 0;
   }
 
   async getUserSummary(userId) {
@@ -146,7 +160,7 @@ export class SupabaseStore {
   }
 
   async saveQr(credential) {
-    const current = await this.getQrByOrder(credential.orderId);
+    const current = await this.getQrByAllocation(credential.orderId, credential.kind, credential.slot ?? 1);
     if (current) return current;
     try {
       const rows = await this.request(TABLES.qr, {
@@ -155,15 +169,29 @@ export class SupabaseStore {
       return qrFromRow(rows[0]);
     } catch (error) {
       if (!/SUPABASE_STORE_(409|422)/.test(error.message)) throw error;
-      const existing = await this.getQrByOrder(credential.orderId);
+      const existing = await this.getQrByAllocation(credential.orderId, credential.kind, credential.slot ?? 1);
       if (!existing) throw error;
       return existing;
     }
   }
 
   async getQrByOrder(orderId) {
+    return (await this.getQrsByOrder(orderId))[0] ?? null;
+  }
+
+  async getQrsByOrder(orderId) {
     const rows = await this.request(TABLES.qr, {
-      query: { select: '*', order_id: `eq.${orderId}`, limit: 1 },
+      query: { select: '*', order_id: `eq.${orderId}`, order: 'kind.asc,slot.asc' },
+    });
+    return rows.map(qrFromRow);
+  }
+
+  async getQrByAllocation(orderId, kind, slot) {
+    const rows = await this.request(TABLES.qr, {
+      query: {
+        select: '*', order_id: `eq.${orderId}`, kind: `eq.${kind}`,
+        slot: `eq.${slot}`, limit: 1,
+      },
     });
     return rows[0] ? qrFromRow(rows[0]) : null;
   }
@@ -321,6 +349,7 @@ function entitlementFromRow(row) {
 function qrToRow(item) {
   return {
     id: item.id, order_id: item.orderId, user_id: item.userId, kind: item.kind,
+    slot: item.slot ?? 1, label: item.label ?? null,
     token_hash: item.tokenHash, token_ciphertext: item.tokenCiphertext, status: item.status,
     issued_at: item.issuedAt, used_at: item.usedAt, used_by: item.usedBy ?? null,
     revoked_at: item.revokedAt,
@@ -330,6 +359,7 @@ function qrToRow(item) {
 function qrFromRow(row) {
   return {
     id: row.id, orderId: row.order_id, userId: row.user_id, kind: row.kind,
+    slot: row.slot ?? 1, label: row.label ?? null,
     tokenHash: row.token_hash, tokenCiphertext: row.token_ciphertext, status: row.status,
     issuedAt: row.issued_at, usedAt: row.used_at, usedBy: row.used_by,
     revokedAt: row.revoked_at,
@@ -352,5 +382,5 @@ function auditFromRow(row) {
 }
 
 function publicQrColumns() {
-  return 'id,order_id,user_id,kind,status,issued_at,used_at,used_by,revoked_at';
+  return 'id,order_id,user_id,kind,slot,label,status,issued_at,used_at,used_by,revoked_at';
 }
