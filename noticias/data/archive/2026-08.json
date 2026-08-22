@@ -1,7 +1,17 @@
 {
   "month": "2026-08",
-  "updated_at": "2026-08-22T17:00:02.526931+00:00",
+  "updated_at": "2026-08-22T20:59:45.072786+00:00",
   "items": [
+    {
+      "id": "69bfcf0c84bf4c",
+      "title": "Nafta y gasoil: qué explica las diferencias de precios entre las provincias",
+      "summary": "Información reciente de economía seleccionada por el radar regional de Stylo Camión.",
+      "category": "Economía",
+      "source": "LV12",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNaktZc3pSSkpqdXo4cC0zcmNpSnZ0Z1M2Ul92OVVxa1BRSmdvaHdVSWtaX05obGNVa1VlWG9DeFFPcXFPc2FGNDlmYU03a1ZIajRoNUVQMGF2Y0QyVDBRRU9sNzNuUFRyczFscWVqV1lCS0NFQnFLeE9GSzZiMEhpclRteXhjcklkZWhBS0VXUEtBLU10WWhmNG5NU0NQN1Z4UjRrcjZn0gGmAUFVX3lxTE1qS1lzelJKSmp1ejhwLTNyY2lKdnRnUzZSX3Y5VXFrUFFKZ29od1VJa1pfTmhsY1VrVWVYb0N4UU9xcU9zYUY0OWZhTTdrVkhqNGg1RVAwYXZjRDJUMFFFT2w3M25QVHJzMWxxZWpXWUJLQ0VCcUt4T0ZLNmIwSGlyVG15eGNySWRlaEFLRVdQS0EtTXRZaGY0bk1TQ1A3VnhSNGtyNmc?oc=5",
+      "published_at": "2026-08-22T19:08:00+00:00",
+      "time": "Sat, 22 Aug 2026 19:08:00 GMT"
+    },
     {
       "id": "c3c33fa68ea4c3",
       "title": "Reabrieron el paso Cristo Redentor tras el cruce masivo de transporte de carga",
@@ -1163,16 +1173,6 @@
       "time": "Thu, 06 Aug 2026 07:00:00 GMT"
     },
     {
-      "id": "813283e5107fba",
-      "title": "Bertotto Boglione se hace fuerte en el segmento de semirremolques",
-      "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
-      "category": "Remolques",
-      "source": "Maquinac",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQTzVpWFF4VmI5S1hQVnZBdWRnUkNLRnFpX0daeGNaMEFoZTU5d29NLWV3b0RWWEpHR1VZTmxvai0tY1YyWU81R3pHZ3hVelk5TGRWaHdfTzROcE1lUlpEVENUWmpnSUtpOUp1SFprNFVUZEthUVJaZi1VV0pNTExGNUFZdFhmRWZUZ0dJb200M3pkUjdTWHBwNFlCTQ?oc=5",
-      "published_at": "2026-08-05T20:13:45+00:00",
-      "time": "Wed, 05 Aug 2026 20:13:45 GMT"
-    },
-    {
       "id": "c5033ef4e2f120",
       "title": "Bertotto Boglione se hace fuerte en el segmento de semirremolques",
       "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
@@ -1181,6 +1181,26 @@
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQTzVpWFF4VmI5S1hQVnZBdWRnUkNLRnFpX0daeGNaMEFoZTU5d29NLWV3b0RWWEpHR1VZTmxvai0tY1YyWU81R3pHZ3hVelk5TGRWaHdfTzROcE1lUlpEVENUWmpnSUtpOUp1SFprNFVUZEthUVJaZi1VV0pNTExGNUFZdFhmRWZUZ0dJb200M3pkUjdTWHBwNFlCTQ?oc=5",
       "published_at": "2026-08-05T20:13:45+00:00",
       "time": "Wed, 05 Aug 2026 20:13:45 GMT"
+    },
+    {
+      "id": "813283e5107fba",
+      "title": "Bertotto Boglione se hace fuerte en el segmento de semirremolques",
+      "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
+      "category": "Remolques",
+      "source": "Maquinac",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQTzVpWFF4VmI5S1hQVnZBdWRnUkNLRnFpX0daeGNaMEFoZTU5d29NLWV3b0RWWEpHR1VZTmxvai0tY1YyWU81R3pHZ3hVelk5TGRWaHdfTzROcE1lUlpEVENUWmpnSUtpOUp1SFprNFVUZEthUVJaZi1VV0pNTExGNUFZdFhmRWZUZ0dJb200M3pkUjdTWHBwNFlCTQ?oc=5",
+      "published_at": "2026-08-05T07:00:00+00:00",
+      "time": "Wed, 05 Aug 2026 07:00:00 GMT"
+    },
+    {
+      "id": "5290c358a67599",
+      "title": "Vuelos en Colombia podrían ser más baratos: IATA propone reducir el IVA al 5%",
+      "summary": "Información reciente de economía seleccionada por el radar regional de Stylo Camión.",
+      "category": "Economía",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOWHlISk91c0M1QlA4M1JSbTI2N1otemJTNHpiZnJVcjJtaEZ1ZFVtQWxMSWhUczZXcXR2RHRUSngtdFlIWG1GN3RHeXYwbV83VlNNU1JmZ0NEVG1XTTN1VThOVDhzUjFrYnh5ZE1UOWNNdDdOTWZFQUVvQ1ZySkl2Z3ZJcmlzOHBobEVPOW9yQjY0MUlrdV9vOGV0Yi01VFBKTHBsMlBXVjdsOTFTMmxsSkViaUstRVVqajVGRtIB1wFBVV95cUxQZHlLZmlmVGNWZ1lZUnJvOUphUDdvTzlXSE1MV2E2X3hMb3B4MzI0VjMyR2NWVFN6Mlh6WDVuSWt2cm96MEdEaTZWb0g0TW9BRmJtbHBrQzlTS1BSM2pVSHZYMmppNEl0VHBqWm1Eay1CRjlPdUJBSTlNNEpJb3VmclF1T0djZ282QkRFMWo4OWNSZlVEazdPZlhnXzgtZzlxTDFaOGhGWlNJVHdUa2FqdlVUVGJ1NnBtUWUzNnp2ZG1iMVI2cUVUNUtOckQwWlkzT1lGeFdHNA?oc=5",
+      "published_at": "2026-08-05T07:00:00+00:00",
+      "time": "Wed, 05 Aug 2026 07:00:00 GMT"
     },
     {
       "id": "b17a8beda966ce",
