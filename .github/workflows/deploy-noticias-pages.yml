@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'noticias/**'
+      - '.github/workflows/update-news.yml'
       - '.github/workflows/deploy-noticias-pages.yml'
   workflow_dispatch:
 
