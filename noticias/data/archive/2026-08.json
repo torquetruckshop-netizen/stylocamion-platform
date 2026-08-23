@@ -1,6 +1,6 @@
 {
   "month": "2026-08",
-  "updated_at": "2026-08-22T20:59:45.072786+00:00",
+  "updated_at": "2026-08-23T03:33:19.880878+00:00",
   "items": [
     {
       "id": "69bfcf0c84bf4c",
@@ -13,14 +13,24 @@
       "time": "Sat, 22 Aug 2026 19:08:00 GMT"
     },
     {
+      "id": "a82e1a3e980cdc",
+      "title": "La ruta de los combustibles: por qué algunas provincias son más caras que otras",
+      "summary": "Información reciente de economía seleccionada por el radar regional de Stylo Camión.",
+      "category": "Economía",
+      "source": "Impacto Castex",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBFTDdPYkFtMW1NSnNhR2puMjNhM3k2S255YzNJU0NrMndrYmlxd3VKNkVEY3RJajFwa01mOVFpbEwtdC1HSnZOUFZiZjVfZmQwLUhfUHRSbw?oc=5",
+      "published_at": "2026-08-22T18:33:04+00:00",
+      "time": "Sat, 22 Aug 2026 18:33:04 GMT"
+    },
+    {
       "id": "c3c33fa68ea4c3",
       "title": "Reabrieron el paso Cristo Redentor tras el cruce masivo de transporte de carga",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
       "source": "Mendovoz",
       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNN21tbEpDaElxbVQ5d1dkeDJYNTVkSEJHRk5saEFXVlRLZWdRMXkzLTNkbG9yWG9xMGVCU0hlTnRrb0RvT1pTRERSWXdJeDV2OURvNDJCQzVZQ0Y1aGhfMjF4YXZ4UkZsVEt3NWZPX19JMVhXT0pvbUpHWnZscjBTVzVic29IUktMNzBGMnVWZE5PZ0M1NktSd2FXMFFpWGFONVQ4MF9Xc3ctZnNrZF9fQUZqajBPTEplTGthd0M0MTRULUVLMlItU05adnRPWmFiOVZz0gHTAUFVX3lxTE03bW1sSkNoSXFtVDl3V2R4Mlg1NWRIQkdGTmxoQVdWVEtlZ1ExeTMtM2Rsb3JYb3EwZUJTSGVOdGtvRG9PWlNERFJZd0l4NXY5RG80MkJDNVlDRjVoaF8yMXhhdnhSRmxUS3c1Zk9fX0kxWFdPSm9tSkdadmxyMFNXNWJzb0hSS0w3MEYydVZkTk9nQzU2S1J3YVcwUWlYYU41VDgwX1dzdy1mc2tkX19BRmpqME9MSmVMa2F3QzQxNFQtRUsyUi1TTlp2dE9aYWI5VnM?oc=5",
-      "published_at": "2026-08-22T13:24:54+00:00",
-      "time": "Sat, 22 Aug 2026 13:24:54 GMT"
+      "published_at": "2026-08-22T13:24:55+00:00",
+      "time": "Sat, 22 Aug 2026 13:24:55 GMT"
     },
     {
       "id": "5315a3d19f183d",
@@ -71,6 +81,16 @@
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOTnVGLWNKeVZvb01SMGtLay1tZ2p3SGNBak1iTG1CemZ1YlU4eUM2dGQyOGtnUEVOR2ZTd3BIaEtMMjBFbHpwdzB0WkVjUjdOQ0JYQXBYaDJTUUNEUUliNDQ3UEgzckxUbWw4TWpxNWd2bjE3MnhYVGlYSGJEZzFDS3FSRjlsRVpldVpaTEwyQmJzMTgyNkliYUlDZ0xDcVlDVDNGYWRVNWViOXcyczhpVHYyVmRVcGg3aW9xZG9wQUpKM01BclpuZC0xSzBuNUnSAc8BQVVfeXFMTk51Ri1jSnlWb29NUjBrS2stbWdqd0hjQWpNYkxtQnpmdWJVOHlDNnRkMjhrZ1BFTkdmU3dwSGhLTDIwRWx6cHcwdFpFY1I3TkNCWEFwWGgyU1FDRFFJYjQ0N1BIM3JMVG1sOE1qcTVndm4xNzJ4WFRpWEhiRGcxQ0txUkY5bEVaZXVaWkxMMkJiczE4MjZJYmFJQ2dMQ3FZQ1QzRmFkVTVlYjl3MnM4aVR2MlZkVXBoN2lvcWRvcEFKSjNNQXJabmQtMUswbjVJ?oc=5",
       "published_at": "2026-08-20T23:32:00+00:00",
       "time": "Thu, 20 Aug 2026 23:32:00 GMT"
+    },
+    {
+      "id": "21b6d36c97bb8d",
+      "title": "Sudamérica busca ganar terreno en el mercado mundial de cruceros: más puertos, menos costos y reglas comunes",
+      "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
+      "category": "Logística",
+      "source": "ArgenPorts",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbWF3dHdQT0l4alFOdUszZFBvd2R0YVpkaHF6bFBpNGttRnQ0LUNjcUpvOE1MM2hINl9KekJtbEMwUUZsUkdBcGM2ZnZhMHhHRlBoM0c4TUo4Q0MwLWpvRHNfWFRLWGZxb0R4QS1SX0hZd1A1ejY2Z3o1TkhYd3o3bC1LNXNDd1hIX05vWHIwQXJjaDZyaU52cFNxNkItUGJ2d0lVc2lEcVladGpQZmlHM0NRVnE5OEtsRXptMGsyTllKbnpqZ2JIRjhfRXFmMXZI?oc=5",
+      "published_at": "2026-08-20T21:58:56+00:00",
+      "time": "Thu, 20 Aug 2026 21:58:56 GMT"
     },
     {
       "id": "acaf23ebb6d057",
