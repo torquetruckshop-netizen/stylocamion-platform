@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T03:33:19.880878+00:00",
+  "updated_at": "2026-08-23T05:50:40.287255+00:00",
   "items": [
     {
       "id": "6264d6436b96ae",
@@ -70,16 +70,6 @@
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPT0FuYXFPUVdoenRPeGJNUnRZRFNPV0k3dHZDaDdEX0JfTVZnLWptdWpYVFhxWWpQVk9ER1lTVHNTanQ3cWRkaHBfLVZCMkZnaUNRLUJDUmtObzE4Slo5SGtjM1dCVnRLUndoanZyY21DaHE0NmMwSlY0WTVNd2FCTTZPZFY1b0lKZmFOMm1Rd3U1bWZ3MTBtSkxEREQya1g3dEViTVhaa3ZpUQ?oc=5",
       "published_at": "2026-08-21T13:00:30+00:00",
       "time": "Fri, 21 Aug 2026 13:00:30 GMT"
-    },
-    {
-      "id": "21b6d36c97bb8d",
-      "title": "Sudamérica busca ganar terreno en el mercado mundial de cruceros: más puertos, menos costos y reglas comunes",
-      "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
-      "category": "Logística",
-      "source": "ArgenPorts",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbWF3dHdQT0l4alFOdUszZFBvd2R0YVpkaHF6bFBpNGttRnQ0LUNjcUpvOE1MM2hINl9KekJtbEMwUUZsUkdBcGM2ZnZhMHhHRlBoM0c4TUo4Q0MwLWpvRHNfWFRLWGZxb0R4QS1SX0hZd1A1ejY2Z3o1TkhYd3o3bC1LNXNDd1hIX05vWHIwQXJjaDZyaU52cFNxNkItUGJ2d0lVc2lEcVladGpQZmlHM0NRVnE5OEtsRXptMGsyTllKbnpqZ2JIRjhfRXFmMXZI?oc=5",
-      "published_at": "2026-08-20T21:58:56+00:00",
-      "time": "Thu, 20 Aug 2026 21:58:56 GMT"
     },
     {
       "id": "73ebd1a9a4917c",
@@ -600,6 +590,16 @@
       "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPVVJ5dVBmb2hlNmtaajYzWG8yT2RlOFB2VkFOSHFxYVdmVm9ZVmw0Zk10ZG9NLVlDczcxbkNUd2tQdzdsTWJSOGM1LUw5TGdtR0kxTGpmY0JhcFpPdFJyZ1VEWjBCd0FXNV9taTN6ZFNGRTRNZGpxamFibWoybVEtc01Ccm90MC05dXoyNDY0NWlldVFEbzZBZ29kaDNlVmVmbGZ1U1Z6RnhuX3hsZzUyOTFydFlURDVQV3hRNXJTYVRGb1FIOVZRMWQzWjN6N2xhUmg4dHFsUHNDMTdjWjdDZlliNFFfSzkxMHhjNnU3UWhQbEZhdjI40gH8AUFVX3lxTE00UGVCem5zbGZOenZHNFFFYXh1clV6ZVQtRHNpb09nVk40N3FXaG5IZ3NKUERjUlJJZTFTWDNPbWdNdF9wR3RvekljUl84WEd0Zks0M09mTXJTYmpRa0lSRmctLXNST3pJcDd4NktTX1RPSjBzM0RnN1BOWFBPUXRUX2NZQlRzd0R3bUEtT2R6Tmd0ak9QNjVvWVBxWnRNdVBsVUc1dW8tcjlfQTFTUW5zeWV2UVkweHBreC1MTzZZOHNveDZ5UVJIQVhZdkNyMzlkNG5VUS1GV1dSYUZYWlhNTUJROFBHN3oyRGxRb3RYRmRTTThSM0NialZ4SQ?oc=5",
       "published_at": "2026-07-30T07:00:00+00:00",
       "time": "Thu, 30 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "id": "b134797a8ef2cf",
+      "title": "El transporte pesado argentino: entre la infraestructura pendiente y el recambio de flota",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUWlhMWw4MmFnOXdDV0JNcnM1WENZcVZqQTlkVHFqZzRkZ1h3ZFktMXVTMExDUG5BWlJJTUJCWGVTcVVFdFA2QVpVVk1rT2VKVExTZ2JtMzVSZHFyeUNIU19mQTlUblhscHZzb19XWUtBc1RGOGtSTFdwZUtmc3hFcGpJMEFhTVY4WW1WRXlaUTlUR3JUUnVwSkw2MHFHUDVLRDdRakxDLTI5YXU2bnYzNEZ3NGJqYnMtTUd4U2NKZzZXNFNzdVFkWEdid9IB5gFBVV95cUxOTlV0LW9Kb25vbE1zQU94OGVNZTMyWjE0eDRnNmFNQ0xGZWNKSUZxVFJxREhWX19LejZjZGx3NHRaZndNUm84NUE4U0lIVmFPLTVRQTA3YTNDd1lkR2pUNWh3Q1lMZDBFWHVRUTVLTWVsd25LRGNocTN5LWxqaDhQT3FTMGREVVpzM2hSRklSa0JlbjFtQmw1RUdOSFhuZ2NmUG1XUE1jOFpyUzBSUjhfMWpjUF9WcVNBa1U0WUpxaDg0NWNEVWtKbmcycndTSnNKZTY2YmZZQ3RBUVNNanNpQ3N4N2RwUQ?oc=5",
+      "published_at": "2026-07-28T07:00:00+00:00",
+      "time": "Tue, 28 Jul 2026 07:00:00 GMT"
     }
   ]
 }
