@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T05:50:40.287255+00:00",
+  "updated_at": "2026-08-23T09:47:18.955255+00:00",
   "items": [
     {
       "id": "6264d6436b96ae",
@@ -112,14 +112,14 @@
       "time": "Tue, 18 Aug 2026 23:54:15 GMT"
     },
     {
-      "id": "a82e1a3e980cdc",
-      "title": "La ruta de los combustibles: por qué algunas provincias son más caras que otras",
+      "id": "69bfcf0c84bf4c",
+      "title": "Nafta y gasoil: qué explica las diferencias de precios entre las provincias",
       "summary": "Información reciente de economía seleccionada por el radar regional de Stylo Camión.",
       "category": "Economía",
-      "source": "Impacto Castex",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBFTDdPYkFtMW1NSnNhR2puMjNhM3k2S255YzNJU0NrMndrYmlxd3VKNkVEY3RJajFwa01mOVFpbEwtdC1HSnZOUFZiZjVfZmQwLUhfUHRSbw?oc=5",
-      "published_at": "2026-08-22T18:33:04+00:00",
-      "time": "Sat, 22 Aug 2026 18:33:04 GMT"
+      "source": "LV12",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNaktZc3pSSkpqdXo4cC0zcmNpSnZ0Z1M2Ul92OVVxa1BRSmdvaHdVSWtaX05obGNVa1VlWG9DeFFPcXFPc2FGNDlmYU03a1ZIajRoNUVQMGF2Y0QyVDBRRU9sNzNuUFRyczFscWVqV1lCS0NFQnFLeE9GSzZiMEhpclRteXhjcklkZWhBS0VXUEtBLU10WWhmNG5NU0NQN1Z4UjRrcjZn0gGmAUFVX3lxTE1qS1lzelJKSmp1ejhwLTNyY2lKdnRnUzZSX3Y5VXFrUFFKZ29od1VJa1pfTmhsY1VrVWVYb0N4UU9xcU9zYUY0OWZhTTdrVkhqNGg1RVAwYXZjRDJUMFFFT2w3M25QVHJzMWxxZWpXWUJLQ0VCcUt4T0ZLNmIwSGlyVG15eGNySWRlaEFLRVdQS0EtTXRZaGY0bk1TQ1A3VnhSNGtyNmc?oc=5",
+      "published_at": "2026-08-22T19:08:00+00:00",
+      "time": "Sat, 22 Aug 2026 19:08:00 GMT"
     },
     {
       "id": "c3c33fa68ea4c3",
@@ -202,6 +202,16 @@
       "time": "Wed, 19 Aug 2026 03:02:05 GMT"
     },
     {
+      "id": "2ef763e9d4e13b",
+      "title": "Azul Linhas Aéreas empezó a operar vuelos de carga a Perú",
+      "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
+      "category": "Logística",
+      "source": "Aviacionline",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSGRHWnJ5azczalJFUjJZcFdzc0E3Z3hoOTB2enQzNWlHSmI4SzZaWUlLRkFDTW1qZW5Fd0VMc2phZlpmbjRKUGVzQkNmbXhKT2FHV3dwSkhaTWozSnQ2bks2cUg2WVpscTRCVmZuTUZkVHp1QWQ4b1FVZGhMdmFUVDVYbTB0YXdVUWp4cW5WQk5mMllPa1dDT1NoaXdOZXlwbzd0a3g0UGdrM25QRDFkaWFZRjJqZ3BxT0h0MlBuUHFjYkNYTGcxTlhTeUk?oc=5",
+      "published_at": "2026-08-14T12:37:29+00:00",
+      "time": "Fri, 14 Aug 2026 12:37:29 GMT"
+    },
+    {
       "id": "5132f828c0bb55",
       "title": "OSK llegará al Amazonas: la corporación propuso suministrar componentes para la construcción de barcos en Brasil",
       "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
@@ -222,6 +232,16 @@
       "time": "Tue, 18 Aug 2026 10:06:51 GMT"
     },
     {
+      "id": "0fcadb2cac585f",
+      "title": "Reabren el paso Cristo Redentor tras 34 días cerrado: cronograma exclusivo para camiones",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Mendovoz",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNRUVfSWdpcTllZldySzBoeXpwNV9OclB2bHN1R3U5V1hEUlRydlBRdDdfM0V1czVhczJheWVJbk5RclltS3lxTE9Wdmx1SzRlOWUzblFqdHhfZ3lhODdMT0M0cVlzdUQ4UGtjN2oycnBEdHlNbGJraVFPS2dWYnN5em1TSWt4NEtMR2JoS3dHM25jMnduMTlpbGNXZzVpN0t0aGk2cnV3RTVlU2J3cVFCU2hLSDNDWUw1ZzhGeGVqWUdyUW9EUU9BQm5hLTE2dzM0ZEZZZ3d5VmFkNmRBYXhv0gHfAUFVX3lxTE1FRV9JZ2lxOWVmV3JLMGh5enA1X05yUHZsc3VHdTlXWERSVHJ2UFF0N18zRXVzNWFzMmF5ZUluTlFyWW1LeXFMT1Z2bHVLNGU5ZTNuUWp0eF9neWE4N0xPQzRxWXN1RDhQa2M3ajJycER0eU1sYmtpUU9LZ1Zic3l6bVNJa3g0S0xHYmhLd0czbmMyd24xOWlsY1dnNWk3S3RoaTZydXdFNWVTYndxUUJTaEtIM0NZTDVnOEZ4ZWpZR3JRb0RRT0FCbmEtMTZ3MzRkRllnd3lWYWQ2ZEFheG8?oc=5",
+      "published_at": "2026-08-18T01:24:28+00:00",
+      "time": "Tue, 18 Aug 2026 01:24:28 GMT"
+    },
+    {
       "id": "03e6dcbee0a4da",
       "title": "Reabre el Paso Cristo Redentor tras 34 días: operativo especial para liberar 3.500 camiones",
       "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
@@ -230,6 +250,16 @@
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOSnhKN243TW43dmllbGd1SjJ5Wld6aUQyZWptS3RVYWxHLWc4dkRuVUZNSkZDN1IwOGdFZHM4TkcyLTllRUxpamhVTmpURW1sT3BMUzdfOEZBdzFpbGxoU0l2bEhpMDBPZHBRN1EyNEMzQTlZQTFFM2hmTF9ERW1YSWNYTVdZbnprMi10QThZTV9LX3Fqam1XcV9vbTJFQnFFUU12bERORTBWaXZBUC1KZ015M29IeXBQa0NublNDSGpYdw?oc=5",
       "published_at": "2026-08-17T22:52:32+00:00",
       "time": "Mon, 17 Aug 2026 22:52:32 GMT"
+    },
+    {
+      "id": "fe9264f392dc5c",
+      "title": "Paso Cristo Redentor: reabre este martes exclusivamente para camiones tras 34 días de cierre",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "La Voz del Interior",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQeVdjRE1VR2hfS2huXzl4OUxhVTRfckdvWHdyam9lUmk3YTdyeVVjNUo3b3djMktwcVJrSGo3RGxiWlFIbEQxWUxMek5EZG5Valh2a2R5R0Z6MlEyb2pSeW91TzRJNnpXbjJIQ1I5c1ZUV2M3QVhEZHNlRWJLWUs2WUMwU2RFU2I5Qnp2S3FFNHlua2M3QXVGN2czOFNqTC1jYUZGak11d3FWUm0zQXNIRFVXSko2N1V2Mkg3cEt6SXBoYlhob0E?oc=5",
+      "published_at": "2026-08-17T16:46:46+00:00",
+      "time": "Mon, 17 Aug 2026 16:46:46 GMT"
     },
     {
       "id": "b17a8beda966ce",
@@ -288,8 +318,8 @@
       "category": "Remolques",
       "source": "www1.ru",
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQdGh6MjdUZ01aZTg2cVB3UGdzUl9pV2xRSnZYeDNUdHpQNFZ1Z1Y4RXRON3lOZ0h0Nzk5MmlnQ2lCdTJFakxTX2dwSklUelQ2ZVBGRkp2eTVYT2NFZlFfQ1hUUlQ2TFdveWw4ci00YlVhVEFCdDF5VDV6bGZxVGV4enVHbVZ0cW0yMWdGZFJDU09Ea3laMjRiVWpCYURMZXZLSXV4Z29TR1JoVkpERVZ6WjhxSXNTV3R3UE5nU2taUm5wRndaRVMtRHBBemM0U21NV0pkRjdyU3JVYjA2V29MMHFSUdIB6AFBVV95cUxQRlFfRWltT2xxV0RndmlnR1o2czJrUnZvX093UE5RUUZtMFQ4S0tRejFKaTdWN25qMzNVdzI2OVpBVWVDZldIMjFHUHBFS3FuNnBZbjNmamdaM3VTY1pvQTdBbEphbTNNcGRmMEowRnpYNEhSUEVUQi1zOWFWSEI3NGZyQ29nY0dmWjhXS25GclJ3aUZhS0JOUHBPZXFKaVI0MDE0T0FhTzZZSzN1OXhwQVhBekdRdkp3MUlxQjduRmdLOTE5WGJqT0ZveXZCQWJWMFRWQ1l5QW9SXzRrRFNIRTIyZE9MWmcz?oc=5",
-      "published_at": "2026-08-14T08:43:29+00:00",
-      "time": "Fri, 14 Aug 2026 08:43:29 GMT"
+      "published_at": "2026-08-14T07:00:00+00:00",
+      "time": "Fri, 14 Aug 2026 07:00:00 GMT"
     },
     {
       "id": "11bdf4f83bdb68",
@@ -512,16 +542,6 @@
       "time": "Thu, 25 Jun 2026 07:00:00 GMT"
     },
     {
-      "id": "03405c715f7bf7",
-      "title": "Actualizan las reglas para camiones y bitrenes y amplían las configuraciones permitidas",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "Infobae",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQzZjemZKbHVVQjNlV3B1eXBEUUFYNXJzVTFLVEliRmt6akFpQXRNemZweUhvTGhnaEhhVzN2Y1JHX2ZQS2JUaDFRdlBNTXhsOGZDUGRoZG84d2NsZGFkRzBVRUNuRjBqR0VJYUZzb3dNSGRxeUdqX2dDUU83bGo0REtFeWpOWGFJS3pfQWZSQ1pyT1N6dzRfWkV2ZkZsNjZVTkljVFJtQ2RCWGNXN1gzVHRYUWs3Y2xucXdUUkdPRHNCZDRNdF9mc1p30gHkAUFVX3lxTE9wbldvS2w4d3ZuSXk1V2xTU0VJZjJaRXZETFgxRkhwcVhFcUQ3dDVVREdVMXQ3SFpjcmVTTkc3WlBvV0V0ekRtM29RNjBzM0RvOVpBa09nNmhfTFBrWmN1b3libW15S0NrSkg0QmNlV3VwWDNLTVBVM3hhMGlsdm1XUzZiVXVfcENabGZoV2k3c05UVFYzRy03QWdDcmxGazBLMzNTS1oxUEZlei1rRDlHVmJCdi1uTlZaYks5czV1MnJmcV9Gb2t4MnQ3dTU0MHR6c3pscnUxd3VWbjhFSzA2a2gwOQ?oc=5",
-      "published_at": "2026-07-31T07:00:00+00:00",
-      "time": "Fri, 31 Jul 2026 07:00:00 GMT"
-    },
-    {
       "id": "690a1902a3a10a",
       "title": "El Gobierno apuesta por los bitrenes y el GNC para bajar el costo del transporte",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -538,16 +558,6 @@
       "category": "Argentina",
       "source": "Webpicking",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONDlnTm9YYVFPX1J5VUh1Zk9kTE9XdXRSQXhtNGNVZE15T05UQkdIV1ZaQzBHVnVkamQtb3lwbW9neFl4UzRzN1k2ODcxdDhka2MyWVhLZmxpdlBLcEcyNll0NWtyUXpmRnMwRDF3dXlVUWZLUEFCQkJWd0xvN1dDdUhhYmVTZTRCazc2aGxxdTVidG1LYzQ0eTBlbG1LNm5v?oc=5",
-      "published_at": "2026-07-31T07:00:00+00:00",
-      "time": "Fri, 31 Jul 2026 07:00:00 GMT"
-    },
-    {
-      "id": "1d8def5d2ab7bf",
-      "title": "Scania suma 12 camiones Super G460 XT para el transporte minero de alta montaña",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "Revista Parabrisas",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNMUFxTXFUNF9vY0U4YWFkdThvRGt2azdaNU53b3JLMTBsSnJmNW4zN3dBM2lXWWs4a2I5Vjg3c09lLTFndDV4WlVrVEdkN2IwS0JZS3ZkWEVTeEtpa3Z5dkYtWS1oT2NjSmNXQUI5X1dDUXNYaWlZRnBWbVp0MHVnN3FQa3pjOFJNQ1BGUm9SaXdjc0JVTjVmVGxpLXlwV3VQUk1yMWNnZTBSRDVma2hhZkZJSFBNWmJQRGVPSUtkNUROVHFQemF5enNaUUsycDjSAdQBQVVfeXFMT3VWM3pacEE1UnF4cWloR0pZTDJNcUNDSjlJanJHXzhTNnV6MjUxUVlMcWpIWE1qdUttMkhNZ1BLbHBnTy1vR2V6UXpxd293Z3A3V2ZTQjVWVWR2ZnJDYXlDM3dqU0NFcXhFczcwVm92YlRhT1A1dTk4b3R0RElpcnJJYmtoaFVJWUszZEpNUkZmWVlpZVBqS3Bybzhod0pYR29PZ0V1dU5xeFloY3hKNE54cmZrTFZrd1UyYlhoWHZaaTRmN21lX2l0VE9OZzFraTJ5MGo?oc=5",
       "published_at": "2026-07-31T07:00:00+00:00",
       "time": "Fri, 31 Jul 2026 07:00:00 GMT"
     },
@@ -590,16 +600,6 @@
       "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPVVJ5dVBmb2hlNmtaajYzWG8yT2RlOFB2VkFOSHFxYVdmVm9ZVmw0Zk10ZG9NLVlDczcxbkNUd2tQdzdsTWJSOGM1LUw5TGdtR0kxTGpmY0JhcFpPdFJyZ1VEWjBCd0FXNV9taTN6ZFNGRTRNZGpxamFibWoybVEtc01Ccm90MC05dXoyNDY0NWlldVFEbzZBZ29kaDNlVmVmbGZ1U1Z6RnhuX3hsZzUyOTFydFlURDVQV3hRNXJTYVRGb1FIOVZRMWQzWjN6N2xhUmg4dHFsUHNDMTdjWjdDZlliNFFfSzkxMHhjNnU3UWhQbEZhdjI40gH8AUFVX3lxTE00UGVCem5zbGZOenZHNFFFYXh1clV6ZVQtRHNpb09nVk40N3FXaG5IZ3NKUERjUlJJZTFTWDNPbWdNdF9wR3RvekljUl84WEd0Zks0M09mTXJTYmpRa0lSRmctLXNST3pJcDd4NktTX1RPSjBzM0RnN1BOWFBPUXRUX2NZQlRzd0R3bUEtT2R6Tmd0ak9QNjVvWVBxWnRNdVBsVUc1dW8tcjlfQTFTUW5zeWV2UVkweHBreC1MTzZZOHNveDZ5UVJIQVhZdkNyMzlkNG5VUS1GV1dSYUZYWlhNTUJROFBHN3oyRGxRb3RYRmRTTThSM0NialZ4SQ?oc=5",
       "published_at": "2026-07-30T07:00:00+00:00",
       "time": "Thu, 30 Jul 2026 07:00:00 GMT"
-    },
-    {
-      "id": "b134797a8ef2cf",
-      "title": "El transporte pesado argentino: entre la infraestructura pendiente y el recambio de flota",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "Infobae",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUWlhMWw4MmFnOXdDV0JNcnM1WENZcVZqQTlkVHFqZzRkZ1h3ZFktMXVTMExDUG5BWlJJTUJCWGVTcVVFdFA2QVpVVk1rT2VKVExTZ2JtMzVSZHFyeUNIU19mQTlUblhscHZzb19XWUtBc1RGOGtSTFdwZUtmc3hFcGpJMEFhTVY4WW1WRXlaUTlUR3JUUnVwSkw2MHFHUDVLRDdRakxDLTI5YXU2bnYzNEZ3NGJqYnMtTUd4U2NKZzZXNFNzdVFkWEdid9IB5gFBVV95cUxOTlV0LW9Kb25vbE1zQU94OGVNZTMyWjE0eDRnNmFNQ0xGZWNKSUZxVFJxREhWX19LejZjZGx3NHRaZndNUm84NUE4U0lIVmFPLTVRQTA3YTNDd1lkR2pUNWh3Q1lMZDBFWHVRUTVLTWVsd25LRGNocTN5LWxqaDhQT3FTMGREVVpzM2hSRklSa0JlbjFtQmw1RUdOSFhuZ2NmUG1XUE1jOFpyUzBSUjhfMWpjUF9WcVNBa1U0WUpxaDg0NWNEVWtKbmcycndTSnNKZTY2YmZZQ3RBUVNNanNpQ3N4N2RwUQ?oc=5",
-      "published_at": "2026-07-28T07:00:00+00:00",
-      "time": "Tue, 28 Jul 2026 07:00:00 GMT"
     }
   ]
 }
