@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T10:22:37.491445+00:00",
+  "updated_at": "2026-08-24T14:27:54.543143+00:00",
   "items": [
     {
       "id": "6264d6436b96ae",
@@ -102,6 +102,16 @@
       "time": "Thu, 20 Aug 2026 15:07:55 GMT"
     },
     {
+      "id": "fac9fee17f98ed",
+      "title": "Combustibles: por qué hay diferencias de más de $500 por litro entre provincias",
+      "summary": "Información reciente de economía seleccionada por el radar regional de Stylo Camión.",
+      "category": "Economía",
+      "source": "Elonce.com",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQc3AwR0Z6RHBfX2RDWjJIWjktTUFqWkw0cWdZb29RS3VIaFJKV2llcUd6TjBqZE41QUVWN1d1ZzgwaFFSX0p5bS1KOGNuZXJDa0tHMmZoQjBQUGxTM01EUVZlb1YzVHUwX3lfMFdWUy1zZUdXc3lBUjE0RHdkZW1tZFh6T1JmTmlwWm44ZEExbkJzanhRcmtydmx5bHJja1dkOFpvMHU4T0JFMHV6aHhodW9sY9IBrAFBVV95cUxOOWh3R0hXUEcyYnJqV3VtUlhEV2twOWp6VjNCZ0FKWDB2RlBkal9IMmJsZm9jWUxPVGtNTWFFRDZPY1VELU52UU1iWklrQWxMUU5iU29tV2RJSnliWTdXZmcxSGNUeHBqUWhPbW40U21WbHBSNnM1R3N0TDhGU3NOY3VXV3pzaXlFTW81YTEyRHl5Z1BrakxtSHZnQ1AwaVlXVVVlbzZMSkZhaWs4?oc=5",
+      "published_at": "2026-08-24T13:55:08+00:00",
+      "time": "Mon, 24 Aug 2026 13:55:08 GMT"
+    },
+    {
       "id": "a5cc916fb6ed96",
       "title": "Adelantaron para este jueves el cruce de camiones desde Chile hacia Mendoza",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -162,16 +172,6 @@
       "time": "Sat, 22 Aug 2026 12:40:38 GMT"
     },
     {
-      "id": "970db6190ccfc8",
-      "title": "Caos operacional dispara los fletes entre Asia y Sudamérica y deja buques sin espacios",
-      "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
-      "category": "Logística",
-      "source": "MasContainer",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYkRCMnRDMDltYXlweDNXaGRpZTZ2a29KSlp2TVFleVMycGczTTNFVHpxRjUzaVZEQVFOd09aVzJKeTIwLXJTeC1aZzZXMmsyOXVNN3ZuMzM3RGxqNG9ob1RVeDlUdDdhZlppUWd5eHA0WGZwbjJULWhiS2ZqQzA3UzVQSUw4SW9uU01uSmV4RU5hcmk1WG9oOGY5c2t3MTBxQTUzT2sxWUk2RHFUaDBn?oc=5",
-      "published_at": "2026-08-18T01:44:06+00:00",
-      "time": "Tue, 18 Aug 2026 01:44:06 GMT"
-    },
-    {
       "id": "9bed3f7202b261",
       "title": "A un año de su llegada: cómo son los vehículos comerciales de Dongfeng",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -200,16 +200,6 @@
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPVFJZMHI3SzMyc2o0QktSY1RxWS0xcHdWQnMtbUZMUU1wQUlSMVNHclh3WkJsRWVvR2tReFBKNjBVUFROZTN1QVNmOFIyYnY1VllRV2lyNno1SzBkYUd6a2J3RVV0SVA4cF9hOTd1Zy1OM2kxbEZHb2tkZEpjN2ZkZmo0aExabDZJQ0o0b2pTLTNkTnNWVEducWhEUFo0eV9ZSlpIUjhBNWxzQnd4b2RjZDJpZ1NtUEIt?oc=5",
       "published_at": "2026-08-19T03:02:05+00:00",
       "time": "Wed, 19 Aug 2026 03:02:05 GMT"
-    },
-    {
-      "id": "2ef763e9d4e13b",
-      "title": "Azul Linhas Aéreas empezó a operar vuelos de carga a Perú",
-      "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
-      "category": "Logística",
-      "source": "Aviacionline",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSGRHWnJ5azczalJFUjJZcFdzc0E3Z3hoOTB2enQzNWlHSmI4SzZaWUlLRkFDTW1qZW5Fd0VMc2phZlpmbjRKUGVzQkNmbXhKT2FHV3dwSkhaTWozSnQ2bks2cUg2WVpscTRCVmZuTUZkVHp1QWQ4b1FVZGhMdmFUVDVYbTB0YXdVUWp4cW5WQk5mMllPa1dDT1NoaXdOZXlwbzd0a3g0UGdrM25QRDFkaWFZRjJqZ3BxT0h0MlBuUHFjYkNYTGcxTlhTeUk?oc=5",
-      "published_at": "2026-08-14T12:37:29+00:00",
-      "time": "Fri, 14 Aug 2026 12:37:29 GMT"
     },
     {
       "id": "8cc44f144c9f60",
@@ -292,16 +282,6 @@
       "time": "Thu, 13 Aug 2026 07:00:00 GMT"
     },
     {
-      "id": "0832e6c5e6e4c5",
-      "title": "VW Meteor transporta el showcar de la Fórmula 1® de Audi de Brasil",
-      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
-      "category": "Camiones",
-      "source": "autotest.com.ar",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQay1zOHNGQVg0WnQzTGZHYncyTTBWR1JoRW9PS050UDBraDJtMlhUY0tTS01RZUNJS3cteW5LXzVXU3E0QnZBRGpZbVRoOWYzWlNUX1ZPX3N2cXAyXzBoVEpMZkRHVWJBRVpJRTVRSEJYTUowcWxTbEhpQnBWMXZtQXdmNEtWZlg3NWZ3WU5sNjR2M3hSTkNLQU9NT0RRb1JwSm1ldg?oc=5",
-      "published_at": "2026-08-08T17:02:42+00:00",
-      "time": "Sat, 08 Aug 2026 17:02:42 GMT"
-    },
-    {
       "id": "b3094755a36895",
       "title": "Polémica tras la decisión del Gobierno que habilita la circulación de camiones más pesados en las rutas nacionales",
       "summary": "Información reciente de rutas y normativa seleccionada por el radar regional de Stylo Camión.",
@@ -382,16 +362,6 @@
       "time": "Thu, 06 Aug 2026 07:00:00 GMT"
     },
     {
-      "id": "6d254fef6e7595",
-      "title": "El Gobierno cambió por decreto las reglas para el transporte de cargas: más peso, bitrenes y guiño al GNC de Vaca Muerta",
-      "summary": "Información reciente de rutas y normativa seleccionada por el radar regional de Stylo Camión.",
-      "category": "Rutas y normativa",
-      "source": "Diario Río Negro",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNcVJMWnE3SnhldEdtaW1TX3JiOGVjMWJISGlEYkwtdWFJaU44Wk9RVkdMazVqME90bWEwLVRMd05ndHdHZ041V0NraXAwYUdpbWRtbXRITjNXZV9SSHZkQjd6ZVg3Ynp0Z3l5VU96Q1E2dzNOSXlicmtJdUFhY2prSVRNUzR4SDBkWTJpaVhGeXN1NHBaOUhIVkpfblIwSUIzdVd2UjZvSHVTMWZteE11RC0yWEs5MW1vbTAwZEsxaVl2dUhtQUNuY3NhTGRVclhBMzkxWXJIT3NkdHYxSERvS3RUNXhyVVY5LUZqZlhNZmFSUHZwYVVJ0gH_AUFVX3lxTE1FWkRjTlhZN0VLaWdqNXNBcjJINnJMR2U5TE02TWFsaVNuVWNiNmM3aVAxSDZsWThSOGhacFhIdklNZDdJZ19XX1hWenQxNDNtcFlvZmlwVVFrd2pYYklBUGx6enU3anZzTFJfdEpzWWs2Y05FZzNfa0tGdklaZ0pYc0NaOURPbEo3VTZTbWR5bHBYZ1NDM0lmTV96THN6UUxlSHkybks2NzRTWWlfZE9kUGNvMENGY28tMkZpMTg0d2pTRDFGOTZ5ZFVlcUtEYXFEd3dCYTY0YVNlcUo1NFVYNHJlMGd2X1VDdGdUUmhpN1FhbWZCUUhPejhBbVhzaw?oc=5",
-      "published_at": "2026-08-10T07:00:00+00:00",
-      "time": "Mon, 10 Aug 2026 07:00:00 GMT"
-    },
-    {
       "id": "5290c358a67599",
       "title": "Vuelos en Colombia podrían ser más baratos: IATA propone reducir el IVA al 5%",
       "summary": "Información reciente de economía seleccionada por el radar regional de Stylo Camión.",
@@ -468,6 +438,16 @@
       "category": "Camiones",
       "source": "Infobae",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQY2Nta29ocXVLeF9hSnBxdXN0dF9ya3ZIUllPWVV6QWM5RHRHZm5vUUdtakYycXF2dmZ4WlJfSWFZaUJvb0I3dkNNZWJDd1JCSjhEUDljd1JMYkZhMmJxRk54QkJPY3NPdmZHbWwtcXNOUy0zZ2p5LWE4XzRURG51MTRHenhhMWRvS3dsMmVSZnpzSUNMcmVObm9lSjltczdoUXVFb1U4TGtPU1Y5NWhZZ25UNWRFdmVkRklmam5pMDFaMXhaLVRuQl9R0gHkAUFVX3lxTFBDNHVMMDRUaEo5M0FDM3dsLU5MbDZGWDVBbWVzZG1aVzJuZHBaanJJY1RiU2M1X2oxRjRkZ2pRUWlYVlVvTVNnZTFkdDRYcGdIWGstNWE3c3NoaVRPSEF5U0dDM09panhKZ1lvNWVjU0tFdVc3NnBFNVBjV3JPXzZaaVQ3NUJqTDhkdGhMTEdMc3VBOVFwdDVyel8wQ19zMExhd2hJdXNOc1VXUGlVX2ZXeDVvb19aelZ3anFBV29nV0pQeThHZVIycGx5Rko5U0Etbkl6SXYta2xqcFRyTzhXRUZwVQ?oc=5",
+      "published_at": "2026-07-29T07:00:00+00:00",
+      "time": "Wed, 29 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "id": "dc6ed47f7ea67b",
+      "title": "\"Un día de demora\": más de 230 camiones esperan cruzar a Chile por Pino Hachado este miércoles 29",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "Diario Río Negro",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPYjcyblFfcktOT2I4a3JSV0paVm1XWmxOdmxRR2hhckZRRGIxalFwd0tzTHBzR1ozbVNCNGhYVU50SmMwSGtacW9IS0pRS2EzcDk3QWhzX2VvZkhvekE4YWJUeXdYLUJFN3FfRVpKSFZoLTJkUlBfQ3JRUnJxdUFNYnMzNGVJTHk1ZE8wYWZoREp2Z1g1aFZHSTAyX3J0N05aWjR3ZWhiaElYU1BWUWZhUXhvRzQ1UHNWbUhXTjV0RXpyRzYzUzQ0XzBVLWQxS0dIYm9vQ3puSdIB3wFBVV95cUxPQW53NENwX2xQMDltRXZlRGhZcXRZNkYzZDhIWmY3cE9QZlNZVmhqSmpoNzl2Wk5KbGR1X0J5cDM5MXIyd3ZQa0NoQkpKaU5rbUF0R0stXzJfZFhQUzJNMjBCcExXX0FtYjNnekZhcmNoc2NFM0UyUHg2T0R2XzRYX0JWTzFkeTA2ZWlBWnMxTUhoanoyYlhIR044Y2RweDd3SDNrZllaeDRvTzM2eXNWRkw5c1ZObWVBRjA5N3ZlSExfSEQyNEtvZzNsSnYzVFdDLWNMdHI3T2YxZXZidkxz?oc=5",
       "published_at": "2026-07-29T07:00:00+00:00",
       "time": "Wed, 29 Jul 2026 07:00:00 GMT"
     },
@@ -600,6 +580,26 @@
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPeUlWNVBPaHdjdXZkTzdSMlBIUV9paFAyaVVRU0s5MnA3cXpUU0ZfcmNpak55cEVJQ3VLV3NZRVZiX2pjWlZ4UV9MNFZZM1JuX2lPNnloUjd4eVpXd3JoRmVUZHRPaG1aaG80M3YtaHlndGZxa3RQbHZ2SVJTak94cVgyblNURjV1bHE4T1BMZjY?oc=5",
       "published_at": "2026-07-23T13:00:12+00:00",
       "time": "Thu, 23 Jul 2026 13:00:12 GMT"
+    },
+    {
+      "id": "e449620ea31f08",
+      "title": "FOTON se posiciona entre los tres líderes de vehículos comerciales argentinos",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "autotest.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNb2Jxcmhfc3B6LWFtQ050cXNVQ2dvZ25vTWVScFB6TFRYaTF6eGkwTG0yVUxSM2Z1WFdHTTRHdWtMb1JmdVo3OFp1UEpvR05OdE50SzBmSGQ0alYxdkp5TDBVTFpsWlpqT0tpNGVZOTlmM2ZGN0tuOFc0eGl4SEMtTWZvVklXX29WMS1tSFZ3Z1gwWjJudld2SUVKR3hyWUotUGE0Y1ByUXlzMG9vRUdTMXBJRjI?oc=5",
+      "published_at": "2026-07-23T07:00:00+00:00",
+      "time": "Thu, 23 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "id": "ef6c3ac2da344f",
+      "title": "Dongfeng llega a Pilar con un nuevo concesionario oficial en Buenos Aires",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "autotest.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNMVdhSzh2emw5V01iMHh3dldlSi1xREY2TVhpQ0VEajFuVWl2RUFJMnc3eV9zOVp6VUpxNWY2cW04ZVp1RmM3dTNsMmZMM1AzX1JVc05qRmpHTVFoMVNrSzNPZk01bDNXajkyYkdQM3F2YjNpWDMtTVRrLVNDZ19Mc18teWJ6ZlU4Ym8tRDQ5cTU5dDF0MDkxUnRR?oc=5",
+      "published_at": "2026-07-22T07:00:00+00:00",
+      "time": "Wed, 22 Jul 2026 07:00:00 GMT"
     }
   ]
 }
