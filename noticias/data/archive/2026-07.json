@@ -1,6 +1,6 @@
 {
   "month": "2026-07",
-  "updated_at": "2026-08-24T17:53:23.297611+00:00",
+  "updated_at": "2026-08-24T21:48:30.654154+00:00",
   "items": [
     {
       "id": "33f3e95a4e5119",
@@ -35,8 +35,8 @@
     {
       "id": "03405c715f7bf7",
       "title": "Actualizan las reglas para camiones y bitrenes y amplían las configuraciones permitidas",
-      "summary": "Información reciente de rutas y normativa seleccionada por el radar regional de Stylo Camión.",
-      "category": "Rutas y normativa",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
       "source": "Infobae",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQzZjemZKbHVVQjNlV3B1eXBEUUFYNXJzVTFLVEliRmt6akFpQXRNemZweUhvTGhnaEhhVzN2Y1JHX2ZQS2JUaDFRdlBNTXhsOGZDUGRoZG84d2NsZGFkRzBVRUNuRjBqR0VJYUZzb3dNSGRxeUdqX2dDUU83bGo0REtFeWpOWGFJS3pfQWZSQ1pyT1N6dzRfWkV2ZkZsNjZVTkljVFJtQ2RCWGNXN1gzVHRYUWs3Y2xucXdUUkdPRHNCZDRNdF9mc1p30gHkAUFVX3lxTE9wbldvS2w4d3ZuSXk1V2xTU0VJZjJaRXZETFgxRkhwcVhFcUQ3dDVVREdVMXQ3SFpjcmVTTkc3WlBvV0V0ekRtM29RNjBzM0RvOVpBa09nNmhfTFBrWmN1b3libW15S0NrSkg0QmNlV3VwWDNLTVBVM3hhMGlsdm1XUzZiVXVfcENabGZoV2k3c05UVFYzRy03QWdDcmxGazBLMzNTS1oxUEZlei1rRDlHVmJCdi1uTlZaYks5czV1MnJmcV9Gb2t4MnQ3dTU0MHR6c3pscnUxd3VWbjhFSzA2a2gwOQ?oc=5",
       "published_at": "2026-07-31T07:00:00+00:00",
@@ -99,6 +99,16 @@
       "category": "Camiones",
       "source": "Infobae",
       "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOcmVnZzlPNTdzUjZhTzR5Mzh1TUVxUVIwOWhlMk1veDdDSkc2VlQ3ZmhXSklsMzF1ajFWUU1nY1dRTjdXaFFCa0JKaFVLNUtWbEpFUWF3NDJQakhwOC1pV3pjR2twRUlDUjFBdHVMN3dFcDlUZUZkTmZLN0huSVVndW1qbzJLV05HR1NIVVpfZTlWazBqNWllN0tKRGNfazJ4RklJaER1ZWU4Q1gwOWN5Y2hlMFVTVm5TbHluOXhaYTdnM2xhOXhLTTJ6STVnXzFLUmJ2R2s1T2s5LXJmbmFF0gH6AUFVX3lxTE0zX0JIU1dRY1EtbFNUdGlrQXdMNzZGMGtWOWMwWEYzVnpCUVJIZHAxdlpOYlhPanRGa1lraDhOWTNsM190N1RJSDd3RkxKTTV1Ylk4cWdSWk83NG01N2RJbVNtODRDVjY3VTlPaDB2STFDSlluNnlXOUMwUWRIYTJwMXJMYS1md3k5b2NsanBzbUdjT2ZjeEFZN3p5dzFBY2RCSWpDcE0yYVhORXF0T25UOHdWbnJSNW15dHFMZGptaUVGTXVzTjhOV2hzdllZUm9IdTFkWFB2X1FEWFFqX0M0dTVUeEVsd3pBN0hrWTBObmNkWFhFVFRnd0E?oc=5",
+      "published_at": "2026-07-31T07:00:00+00:00",
+      "time": "Fri, 31 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "id": "20758f394a1f21",
+      "title": "Actualizaron las normas del transporte de pasajeros y cargas: los principales cambios",
+      "summary": "Información reciente de rutas y normativa seleccionada por el radar regional de Stylo Camión.",
+      "category": "Rutas y normativa",
+      "source": "Elonce.com",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNcGZ4RGZYdTlfVjNrY3BBOG81LURNdFA1cTE4VDd2dkRJNEwtSS1UYmdjdXhjdXc4UVQ5RWRHdElEWUFDNDdjZXFyNDh4VnFsRTAyRWNvUUdrYm1ybnUybmRwU0VIZFhjNl9nVWViRDB6RWZpOUJINWt4Q2VHanNlQl9oU3hibUFSZG93SXcta3FkbUpETTZQanJQTG1TbWtWeHllMnV1ZmFpN1hUT19vMm5vcUtLV2V1cDhMYtIBtgFBVV95cUxOYmxCQlFSV0NqSFptR25ISWNqcnVqVk5WeUF1eVpqWGZrV3dBLTRDWVlRalB1RzVoXzlLcGRnb3VmU1UxeHVEOGhuRGJrdVBhVkNtbW1FRUJuOExjM0piamN5aVY5bFF0Vy1LUXR0eEk1aklKVUlRV21lU2t3T2pPZGNPZU9Cc0JNaHRUZGdGckRSb2luSHFLMDBjRlpIN2gteWNkaGRNVGt1R0YyR1Z2d3ozdGJGZw?oc=5",
       "published_at": "2026-07-31T07:00:00+00:00",
       "time": "Fri, 31 Jul 2026 07:00:00 GMT"
     },
