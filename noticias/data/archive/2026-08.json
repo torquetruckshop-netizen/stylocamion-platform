@@ -1,6 +1,6 @@
 {
   "month": "2026-08",
-  "updated_at": "2026-08-23T20:58:47.666044+00:00",
+  "updated_at": "2026-08-24T03:38:16.960706+00:00",
   "items": [
     {
       "id": "69bfcf0c84bf4c",
@@ -193,16 +193,6 @@
       "time": "Wed, 19 Aug 2026 21:40:00 GMT"
     },
     {
-      "id": "d0dd38f25237e5",
-      "title": "Paso Cristo Redentor: este jueves se habilita el tránsito de cargas desde Chile hacia Argentina",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "Mendovoz",
-      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNWmdFYnpWOXpxM2RtSERrWmxFMGQtNlAtelZfLUc1Ml92OWwxMXhTMlpjaWFwa0FxZ1hzQVZGYy1kVGhIQ3V6cFVLQ2FJLUFvSklqS19aUndCUGFwMFU4OXZlcXl6RHNJU284RU1aWHJsRlN2STJvdWY4cURMeWJ0WG81ams1SjhDVFR2STBDMDJwaW0zZUptSFBYbVc0ZWhSbU1aZHpHUUdUeHJXTG5RQTFtTzNRSjdvTFBiMDVQb1gyQnlSRElKOU9ZVWEyeGd6dU52Y2NZQUdPeFVqSW9PeWN6STh0aFli0gHoAUFVX3lxTE1aZ0VielY5enEzZG1IRGtabEUwZC02UC16Vl8tRzUyX3Y5bDExeFMyWmNpYXBrQXFnWHNBVkZjLWRUaEhDdXpwVUtDYUktQW9KSWpLX1pSd0JQYXAwVTg5dmVxeXpEc0lTbzhFTVpYcmxGU3ZJMm91ZjhxREx5YnRYbzVqazVKOENUVHZJMEMwMnBpbTNlSm1IUFhtVzRlaFJtTVpkekdRR1R4cldMblFBMW1PM1FKN29MUGIwNVBvWDJCeVJESUo5T1lVYTJ4Z3p1TnZjY1lBR094VWpJb095Y3pJOHRoWWI?oc=5",
-      "published_at": "2026-08-19T21:23:10+00:00",
-      "time": "Wed, 19 Aug 2026 21:23:10 GMT"
-    },
-    {
       "id": "84b91fa44c6d47",
       "title": "Paso Cristo Redentor: ya cruzaron 2.300 camiones a Chile y este jueves comienza el tránsito hacia Argentina",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -241,6 +231,16 @@
       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPSE9jWHNRR1BLNFg3czBjLWVmY181X21Rb0plX0xSdlQ4bVFaR2tCZ2hTNlJrZnp2WjFvUXdLc0JJb0pJS2FvOU9nQmVWNEJrWGhFdUJVM0kzUDVubXIzQVMzWEU0ZUJESDZlb1RxRVltU2lsS0s3ZTNGNlZ5ZGNoWEhITjh3TTBnYkp5d3RRaW9aR1VYQkNNWEQyWS1xNlU0d1JjZHdlZW83dUcwa3VoX2FLd0gtUzluTHp5b1ZXbzNocFVpZzk0NWRCMFZoZ2N2bkHSAdcBQVVfeXFMTWs2MXphOGw4dkdUTkZaVVRHRW9IejRTdjE0RWE2X2t4MWVXVURNRmI0b2ppQkdMYklrQnp3NjZIWHBYV0JBQnRlV29tTmpWNnBLWTcyN3h3dmlzamF3aWw1dUpzYzNWbnpkWHJWTERRbFVfalJRc3ZaSVZ1R1Jhdzg3eGJaSXpianBxM01FaFdBSlpaSXdzLU9iZ1hGQUVmU253U2l4M0pjemhpRVZSNkRfOWhudFhsR1Y0TnBtTHZncHFLb0VTWkd0YjVUWHpjZmxienRGRUk?oc=5",
       "published_at": "2026-08-19T20:59:00+00:00",
       "time": "Wed, 19 Aug 2026 20:59:00 GMT"
+    },
+    {
+      "id": "d0dd38f25237e5",
+      "title": "Paso Cristo Redentor: este jueves se habilita el tránsito de cargas desde Chile hacia Argentina",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Mendovoz",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNWmdFYnpWOXpxM2RtSERrWmxFMGQtNlAtelZfLUc1Ml92OWwxMXhTMlpjaWFwa0FxZ1hzQVZGYy1kVGhIQ3V6cFVLQ2FJLUFvSklqS19aUndCUGFwMFU4OXZlcXl6RHNJU284RU1aWHJsRlN2STJvdWY4cURMeWJ0WG81ams1SjhDVFR2STBDMDJwaW0zZUptSFBYbVc0ZWhSbU1aZHpHUUdUeHJXTG5RQTFtTzNRSjdvTFBiMDVQb1gyQnlSRElKOU9ZVWEyeGd6dU52Y2NZQUdPeFVqSW9PeWN6STh0aFli0gHoAUFVX3lxTE1aZ0VielY5enEzZG1IRGtabEUwZC02UC16Vl8tRzUyX3Y5bDExeFMyWmNpYXBrQXFnWHNBVkZjLWRUaEhDdXpwVUtDYUktQW9KSWpLX1pSd0JQYXAwVTg5dmVxeXpEc0lTbzhFTVpYcmxGU3ZJMm91ZjhxREx5YnRYbzVqazVKOENUVHZJMEMwMnBpbTNlSm1IUFhtVzRlaFJtTVpkekdRR1R4cldMblFBMW1PM1FKN29MUGIwNVBvWDJCeVJESUo5T1lVYTJ4Z3p1TnZjY1lBR094VWpJb095Y3pJOHRoWWI?oc=5",
+      "published_at": "2026-08-19T20:35:22+00:00",
+      "time": "Wed, 19 Aug 2026 20:35:22 GMT"
     },
     {
       "id": "121bf20f6cbb34",

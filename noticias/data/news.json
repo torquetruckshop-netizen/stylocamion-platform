@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T20:58:47.666044+00:00",
+  "updated_at": "2026-08-24T03:38:16.960706+00:00",
   "items": [
     {
       "id": "6264d6436b96ae",
@@ -42,16 +42,6 @@
       "time": "Wed, 19 Aug 2026 21:40:00 GMT"
     },
     {
-      "id": "d0dd38f25237e5",
-      "title": "Paso Cristo Redentor: este jueves se habilita el tránsito de cargas desde Chile hacia Argentina",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "Mendovoz",
-      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNWmdFYnpWOXpxM2RtSERrWmxFMGQtNlAtelZfLUc1Ml92OWwxMXhTMlpjaWFwa0FxZ1hzQVZGYy1kVGhIQ3V6cFVLQ2FJLUFvSklqS19aUndCUGFwMFU4OXZlcXl6RHNJU284RU1aWHJsRlN2STJvdWY4cURMeWJ0WG81ams1SjhDVFR2STBDMDJwaW0zZUptSFBYbVc0ZWhSbU1aZHpHUUdUeHJXTG5RQTFtTzNRSjdvTFBiMDVQb1gyQnlSRElKOU9ZVWEyeGd6dU52Y2NZQUdPeFVqSW9PeWN6STh0aFli0gHoAUFVX3lxTE1aZ0VielY5enEzZG1IRGtabEUwZC02UC16Vl8tRzUyX3Y5bDExeFMyWmNpYXBrQXFnWHNBVkZjLWRUaEhDdXpwVUtDYUktQW9KSWpLX1pSd0JQYXAwVTg5dmVxeXpEc0lTbzhFTVpYcmxGU3ZJMm91ZjhxREx5YnRYbzVqazVKOENUVHZJMEMwMnBpbTNlSm1IUFhtVzRlaFJtTVpkekdRR1R4cldMblFBMW1PM1FKN29MUGIwNVBvWDJCeVJESUo5T1lVYTJ4Z3p1TnZjY1lBR094VWpJb095Y3pJOHRoWWI?oc=5",
-      "published_at": "2026-08-19T21:23:10+00:00",
-      "time": "Wed, 19 Aug 2026 21:23:10 GMT"
-    },
-    {
       "id": "9a60c62abb8797",
       "title": "Paso Cristo Redentor: ya cruzaron 2.870 camiones a Chile y este jueves comienza el tránsito hacia Argentina",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -70,6 +60,16 @@
       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPSE9jWHNRR1BLNFg3czBjLWVmY181X21Rb0plX0xSdlQ4bVFaR2tCZ2hTNlJrZnp2WjFvUXdLc0JJb0pJS2FvOU9nQmVWNEJrWGhFdUJVM0kzUDVubXIzQVMzWEU0ZUJESDZlb1RxRVltU2lsS0s3ZTNGNlZ5ZGNoWEhITjh3TTBnYkp5d3RRaW9aR1VYQkNNWEQyWS1xNlU0d1JjZHdlZW83dUcwa3VoX2FLd0gtUzluTHp5b1ZXbzNocFVpZzk0NWRCMFZoZ2N2bkHSAdcBQVVfeXFMTWs2MXphOGw4dkdUTkZaVVRHRW9IejRTdjE0RWE2X2t4MWVXVURNRmI0b2ppQkdMYklrQnp3NjZIWHBYV0JBQnRlV29tTmpWNnBLWTcyN3h3dmlzamF3aWw1dUpzYzNWbnpkWHJWTERRbFVfalJRc3ZaSVZ1R1Jhdzg3eGJaSXpianBxM01FaFdBSlpaSXdzLU9iZ1hGQUVmU253U2l4M0pjemhpRVZSNkRfOWhudFhsR1Y0TnBtTHZncHFLb0VTWkd0YjVUWHpjZmxienRGRUk?oc=5",
       "published_at": "2026-08-19T20:59:00+00:00",
       "time": "Wed, 19 Aug 2026 20:59:00 GMT"
+    },
+    {
+      "id": "d0dd38f25237e5",
+      "title": "Paso Cristo Redentor: este jueves se habilita el tránsito de cargas desde Chile hacia Argentina",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Mendovoz",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNWmdFYnpWOXpxM2RtSERrWmxFMGQtNlAtelZfLUc1Ml92OWwxMXhTMlpjaWFwa0FxZ1hzQVZGYy1kVGhIQ3V6cFVLQ2FJLUFvSklqS19aUndCUGFwMFU4OXZlcXl6RHNJU284RU1aWHJsRlN2STJvdWY4cURMeWJ0WG81ams1SjhDVFR2STBDMDJwaW0zZUptSFBYbVc0ZWhSbU1aZHpHUUdUeHJXTG5RQTFtTzNRSjdvTFBiMDVQb1gyQnlSRElKOU9ZVWEyeGd6dU52Y2NZQUdPeFVqSW9PeWN6STh0aFli0gHoAUFVX3lxTE1aZ0VielY5enEzZG1IRGtabEUwZC02UC16Vl8tRzUyX3Y5bDExeFMyWmNpYXBrQXFnWHNBVkZjLWRUaEhDdXpwVUtDYUktQW9KSWpLX1pSd0JQYXAwVTg5dmVxeXpEc0lTbzhFTVpYcmxGU3ZJMm91ZjhxREx5YnRYbzVqazVKOENUVHZJMEMwMnBpbTNlSm1IUFhtVzRlaFJtTVpkekdRR1R4cldMblFBMW1PM1FKN29MUGIwNVBvWDJCeVJESUo5T1lVYTJ4Z3p1TnZjY1lBR094VWpJb095Y3pJOHRoWWI?oc=5",
+      "published_at": "2026-08-19T20:35:22+00:00",
+      "time": "Wed, 19 Aug 2026 20:35:22 GMT"
     },
     {
       "id": "3507d9395aa5b3",
@@ -200,16 +200,6 @@
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOZmVMM2JnQ2R2Q0Z5QUh1d0xpdms0aXBfS0FGa0xPZkZHVDBjOU0tYTJHVGJLR2Q3M0drejR5UWRTZ3lRMy1ub1hsMGJlWHE4YUdUUm5DM1ZRZDlUUW1hWnEzVktzRGl0c0pNOFI4N1pxMUR5cnVPU2dRdXlEYXlRZHNHaGprQldBVzRrbzJJb2tJYXRQYktKeFdLWERLNlpiSmw5bjM4RUpkVlNDSWdHX1lsRVM5MWhQYVR1cXRXVHRydGZLQjNaVVhvT3ZGUTJWSHg3ZQ?oc=5",
       "published_at": "2026-08-20T19:10:00+00:00",
       "time": "Thu, 20 Aug 2026 19:10:00 GMT"
-    },
-    {
-      "id": "1fd905f7fd4d4b",
-      "title": "Paso Los Libertadores reabre parcialmente para tránsito de camiones tras 34 días de cierre",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "Data Portuaria",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPVFJZMHI3SzMyc2o0QktSY1RxWS0xcHdWQnMtbUZMUU1wQUlSMVNHclh3WkJsRWVvR2tReFBKNjBVUFROZTN1QVNmOFIyYnY1VllRV2lyNno1SzBkYUd6a2J3RVV0SVA4cF9hOTd1Zy1OM2kxbEZHb2tkZEpjN2ZkZmo0aExabDZJQ0o0b2pTLTNkTnNWVEducWhEUFo0eV9ZSlpIUjhBNWxzQnd4b2RjZDJpZ1NtUEIt?oc=5",
-      "published_at": "2026-08-19T03:02:05+00:00",
-      "time": "Wed, 19 Aug 2026 03:02:05 GMT"
     },
     {
       "id": "2ef763e9d4e13b",
@@ -512,16 +502,6 @@
       "time": "Mon, 03 Aug 2026 07:00:00 GMT"
     },
     {
-      "id": "78afe023d8ff6b",
-      "title": "Más de 650 camiones esperan en Neuquén para cruzar a Chile con temperaturas bajo cero",
-      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
-      "category": "Camiones",
-      "source": "Infobae",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQY2Nta29ocXVLeF9hSnBxdXN0dF9ya3ZIUllPWVV6QWM5RHRHZm5vUUdtakYycXF2dmZ4WlJfSWFZaUJvb0I3dkNNZWJDd1JCSjhEUDljd1JMYkZhMmJxRk54QkJPY3NPdmZHbWwtcXNOUy0zZ2p5LWE4XzRURG51MTRHenhhMWRvS3dsMmVSZnpzSUNMcmVObm9lSjltczdoUXVFb1U4TGtPU1Y5NWhZZ25UNWRFdmVkRklmam5pMDFaMXhaLVRuQl9R0gHkAUFVX3lxTFBDNHVMMDRUaEo5M0FDM3dsLU5MbDZGWDVBbWVzZG1aVzJuZHBaanJJY1RiU2M1X2oxRjRkZ2pRUWlYVlVvTVNnZTFkdDRYcGdIWGstNWE3c3NoaVRPSEF5U0dDM09panhKZ1lvNWVjU0tFdVc3NnBFNVBjV3JPXzZaaVQ3NUJqTDhkdGhMTEdMc3VBOVFwdDVyel8wQ19zMExhd2hJdXNOc1VXUGlVX2ZXeDVvb19aelZ3anFBV29nV0pQeThHZVIycGx5Rko5U0Etbkl6SXYta2xqcFRyTzhXRUZwVQ?oc=5",
-      "published_at": "2026-07-29T07:00:00+00:00",
-      "time": "Wed, 29 Jul 2026 07:00:00 GMT"
-    },
-    {
       "id": "c711812cdec36a",
       "title": "Lambert Remolques fabricó en Concepción del Uruguay el primer bitrén térmico de la Argentina",
       "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
@@ -532,12 +512,32 @@
       "time": "Thu, 25 Jun 2026 07:00:00 GMT"
     },
     {
+      "id": "78afe023d8ff6b",
+      "title": "Más de 650 camiones esperan en Neuquén para cruzar a Chile con temperaturas bajo cero",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQY2Nta29ocXVLeF9hSnBxdXN0dF9ya3ZIUllPWVV6QWM5RHRHZm5vUUdtakYycXF2dmZ4WlJfSWFZaUJvb0I3dkNNZWJDd1JCSjhEUDljd1JMYkZhMmJxRk54QkJPY3NPdmZHbWwtcXNOUy0zZ2p5LWE4XzRURG51MTRHenhhMWRvS3dsMmVSZnpzSUNMcmVObm9lSjltczdoUXVFb1U4TGtPU1Y5NWhZZ25UNWRFdmVkRklmam5pMDFaMXhaLVRuQl9R0gHkAUFVX3lxTFBDNHVMMDRUaEo5M0FDM3dsLU5MbDZGWDVBbWVzZG1aVzJuZHBaanJJY1RiU2M1X2oxRjRkZ2pRUWlYVlVvTVNnZTFkdDRYcGdIWGstNWE3c3NoaVRPSEF5U0dDM09panhKZ1lvNWVjU0tFdVc3NnBFNVBjV3JPXzZaaVQ3NUJqTDhkdGhMTEdMc3VBOVFwdDVyel8wQ19zMExhd2hJdXNOc1VXUGlVX2ZXeDVvb19aelZ3anFBV29nV0pQeThHZVIycGx5Rko5U0Etbkl6SXYta2xqcFRyTzhXRUZwVQ?oc=5",
+      "published_at": "2026-07-29T07:00:00+00:00",
+      "time": "Wed, 29 Jul 2026 07:00:00 GMT"
+    },
+    {
       "id": "03405c715f7bf7",
       "title": "Actualizan las reglas para camiones y bitrenes y amplían las configuraciones permitidas",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
       "category": "Argentina",
       "source": "Infobae",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQzZjemZKbHVVQjNlV3B1eXBEUUFYNXJzVTFLVEliRmt6akFpQXRNemZweUhvTGhnaEhhVzN2Y1JHX2ZQS2JUaDFRdlBNTXhsOGZDUGRoZG84d2NsZGFkRzBVRUNuRjBqR0VJYUZzb3dNSGRxeUdqX2dDUU83bGo0REtFeWpOWGFJS3pfQWZSQ1pyT1N6dzRfWkV2ZkZsNjZVTkljVFJtQ2RCWGNXN1gzVHRYUWs3Y2xucXdUUkdPRHNCZDRNdF9mc1p30gHkAUFVX3lxTE9wbldvS2w4d3ZuSXk1V2xTU0VJZjJaRXZETFgxRkhwcVhFcUQ3dDVVREdVMXQ3SFpjcmVTTkc3WlBvV0V0ekRtM29RNjBzM0RvOVpBa09nNmhfTFBrWmN1b3libW15S0NrSkg0QmNlV3VwWDNLTVBVM3hhMGlsdm1XUzZiVXVfcENabGZoV2k3c05UVFYzRy03QWdDcmxGazBLMzNTS1oxUEZlei1rRDlHVmJCdi1uTlZaYks5czV1MnJmcV9Gb2t4MnQ3dTU0MHR6c3pscnUxd3VWbjhFSzA2a2gwOQ?oc=5",
+      "published_at": "2026-07-31T07:00:00+00:00",
+      "time": "Fri, 31 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "id": "1d8def5d2ab7bf",
+      "title": "Scania suma 12 camiones Super G460 XT para el transporte minero de alta montaña",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Revista Parabrisas",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNMUFxTXFUNF9vY0U4YWFkdThvRGt2azdaNU53b3JLMTBsSnJmNW4zN3dBM2lXWWs4a2I5Vjg3c09lLTFndDV4WlVrVEdkN2IwS0JZS3ZkWEVTeEtpa3Z5dkYtWS1oT2NjSmNXQUI5X1dDUXNYaWlZRnBWbVp0MHVnN3FQa3pjOFJNQ1BGUm9SaXdjc0JVTjVmVGxpLXlwV3VQUk1yMWNnZTBSRDVma2hhZkZJSFBNWmJQRGVPSUtkNUROVHFQemF5enNaUUsycDjSAdQBQVVfeXFMT3VWM3pacEE1UnF4cWloR0pZTDJNcUNDSjlJanJHXzhTNnV6MjUxUVlMcWpIWE1qdUttMkhNZ1BLbHBnTy1vR2V6UXpxd293Z3A3V2ZTQjVWVWR2ZnJDYXlDM3dqU0NFcXhFczcwVm92YlRhT1A1dTk4b3R0RElpcnJJYmtoaFVJWUszZEpNUkZmWVlpZVBqS3Bybzhod0pYR29PZ0V1dU5xeFloY3hKNE54cmZrTFZrd1UyYlhoWHZaaTRmN21lX2l0VE9OZzFraTJ5MGo?oc=5",
       "published_at": "2026-07-31T07:00:00+00:00",
       "time": "Fri, 31 Jul 2026 07:00:00 GMT"
     },
