@@ -1,7 +1,17 @@
 {
   "month": "2026-08",
-  "updated_at": "2026-08-25T21:48:00.918513+00:00",
+  "updated_at": "2026-08-26T03:39:38.022111+00:00",
   "items": [
+    {
+      "id": "fdc65b88c02b98",
+      "title": "Peña apuesta a convertir a Paraguay en un centro logístico regional",
+      "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
+      "category": "Logística",
+      "source": "El Nacional - El diario de los lectores influyentes",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRXpPUGw1U1dUX3RTNGdaU3NncWl2M0xyUElnQVBlZlNpM1haSzF1Z0pPVVZnSmpLSDlRZjVoTzN0djVWVG5uVmVCOW4ta0ZmYVhpZDZEYnc2cUJwcU5RYVRVQ1pIWmFBR1NiaGFCZVdKcl9jUFBJa21PekVGNGZIUEhEUVBmc1dJbXdHUU4zbnVNenV6T29yR0JabzI2Q2d1b3dfb1FxVdIBpwFBVV95cUxPRXpPUGw1U1dUX3RTNGdaU3NncWl2M0xyUElnQVBlZlNpM1haSzF1Z0pPVVZnSmpLSDlRZjVoTzN0djVWVG5uVmVCOW4ta0ZmYVhpZDZEYnc2cUJwcU5RYVRVQ1pIWmFBR1NiaGFCZVdKcl9jUFBJa21PekVGNGZIUEhEUVBmc1dJbXdHUU4zbnVNenV6T29yR0JabzI2Q2d1b3dfb1FxVQ?oc=5",
+      "published_at": "2026-08-25T23:02:00+00:00",
+      "time": "Tue, 25 Aug 2026 23:02:00 GMT"
+    },
     {
       "id": "92efed62123a72",
       "title": "300 camiones para cargar un buque: el caso que reabrió el debate sobre el cabotaje argentino",
@@ -523,16 +533,6 @@
       "time": "Tue, 18 Aug 2026 10:06:51 GMT"
     },
     {
-      "id": "970db6190ccfc8",
-      "title": "Caos operacional dispara los fletes entre Asia y Sudamérica y deja buques sin espacios",
-      "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
-      "category": "Logística",
-      "source": "MasContainer",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYkRCMnRDMDltYXlweDNXaGRpZTZ2a29KSlp2TVFleVMycGczTTNFVHpxRjUzaVZEQVFOd09aVzJKeTIwLXJTeC1aZzZXMmsyOXVNN3ZuMzM3RGxqNG9ob1RVeDlUdDdhZlppUWd5eHA0WGZwbjJULWhiS2ZqQzA3UzVQSUw4SW9uU01uSmV4RU5hcmk1WG9oOGY5c2t3MTBxQTUzT2sxWUk2RHFUaDBn?oc=5",
-      "published_at": "2026-08-18T01:44:06+00:00",
-      "time": "Tue, 18 Aug 2026 01:44:06 GMT"
-    },
-    {
       "id": "0fcadb2cac585f",
       "title": "Reabren el paso Cristo Redentor tras 34 días cerrado: cronograma exclusivo para camiones",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -663,16 +663,6 @@
       "time": "Mon, 17 Aug 2026 17:24:27 GMT"
     },
     {
-      "id": "fe9264f392dc5c",
-      "title": "Paso Cristo Redentor: reabre este martes exclusivamente para camiones tras 34 días de cierre",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "La Voz del Interior",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQeVdjRE1VR2hfS2huXzl4OUxhVTRfckdvWHdyam9lUmk3YTdyeVVjNUo3b3djMktwcVJrSGo3RGxiWlFIbEQxWUxMek5EZG5Valh2a2R5R0Z6MlEyb2pSeW91TzRJNnpXbjJIQ1I5c1ZUV2M3QVhEZHNlRWJLWUs2WUMwU2RFU2I5Qnp2S3FFNHlua2M3QXVGN2czOFNqTC1jYUZGak11d3FWUm0zQXNIRFVXSko2N1V2Mkg3cEt6SXBoYlhob0E?oc=5",
-      "published_at": "2026-08-17T16:46:46+00:00",
-      "time": "Mon, 17 Aug 2026 16:46:46 GMT"
-    },
-    {
       "id": "7cafb9dace1121",
       "title": "Paso Cristo Redentor: reabre este martes exclusivamente para camiones tras 34 días de cierre",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -681,6 +671,26 @@
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQeVdjRE1VR2hfS2huXzl4OUxhVTRfckdvWHdyam9lUmk3YTdyeVVjNUo3b3djMktwcVJrSGo3RGxiWlFIbEQxWUxMek5EZG5Valh2a2R5R0Z6MlEyb2pSeW91TzRJNnpXbjJIQ1I5c1ZUV2M3QVhEZHNlRWJLWUs2WUMwU2RFU2I5Qnp2S3FFNHlua2M3QXVGN2czOFNqTC1jYUZGak11d3FWUm0zQXNIRFVXSko2N1V2Mkg3cEt6SXBoYlhob0E?oc=5",
       "published_at": "2026-08-17T16:46:46+00:00",
       "time": "Mon, 17 Aug 2026 16:46:46 GMT"
+    },
+    {
+      "id": "970db6190ccfc8",
+      "title": "Caos operacional dispara los fletes entre Asia y Sudamérica y deja buques sin espacios",
+      "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
+      "category": "Logística",
+      "source": "MasContainer",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYkRCMnRDMDltYXlweDNXaGRpZTZ2a29KSlp2TVFleVMycGczTTNFVHpxRjUzaVZEQVFOd09aVzJKeTIwLXJTeC1aZzZXMmsyOXVNN3ZuMzM3RGxqNG9ob1RVeDlUdDdhZlppUWd5eHA0WGZwbjJULWhiS2ZqQzA3UzVQSUw4SW9uU01uSmV4RU5hcmk1WG9oOGY5c2t3MTBxQTUzT2sxWUk2RHFUaDBn?oc=5",
+      "published_at": "2026-08-17T07:00:00+00:00",
+      "time": "Mon, 17 Aug 2026 07:00:00 GMT"
+    },
+    {
+      "id": "fe9264f392dc5c",
+      "title": "Paso Cristo Redentor: reabre este martes exclusivamente para camiones tras 34 días de cierre",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "La Voz del Interior",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQeVdjRE1VR2hfS2huXzl4OUxhVTRfckdvWHdyam9lUmk3YTdyeVVjNUo3b3djMktwcVJrSGo3RGxiWlFIbEQxWUxMek5EZG5Valh2a2R5R0Z6MlEyb2pSeW91TzRJNnpXbjJIQ1I5c1ZUV2M3QVhEZHNlRWJLWUs2WUMwU2RFU2I5Qnp2S3FFNHlua2M3QXVGN2czOFNqTC1jYUZGak11d3FWUm0zQXNIRFVXSko2N1V2Mkg3cEt6SXBoYlhob0E?oc=5",
+      "published_at": "2026-08-17T07:00:00+00:00",
+      "time": "Mon, 17 Aug 2026 07:00:00 GMT"
     },
     {
       "id": "d3410bf5b7e641",
