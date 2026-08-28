@@ -1,7 +1,37 @@
 {
   "month": "2026-08",
-  "updated_at": "2026-08-26T14:30:54.738256+00:00",
+  "updated_at": "2026-08-28T01:10:52.674084+00:00",
   "items": [
+    {
+      "id": "e0e0f3558fb5a8",
+      "title": "AXA Truck & Trailer Uptime Solutions refuerza su apuesta por maximizar el tiempo de actividad del transporte por carretera",
+      "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
+      "category": "Remolques",
+      "source": "Camión Actualidad",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPSWd5ckpLTWo4SnRmWjBBTEtWRGhJVVctQXlBYm91ZElhSXJUeVU2bHNJSFJBdE83UDN2TTE3NG5aS1k0cThsNEd2NTZtZ3NfSGVNdHh0U05yY3NYVlA2MmY4V0Fsc3ZmdktnOWdsc1JURi11cFJDaDk3MFhPazA5WXBSM1NRS0NfVzJGNjcyaFJMSHpfcTcxaWFkTHowLUZFemNmbmRvX1hQZXZ4dTJka0VSQWNNSGlZaEE?oc=5",
+      "published_at": "2026-08-27T22:22:18+00:00",
+      "time": "Thu, 27 Aug 2026 22:22:18 GMT"
+    },
+    {
+      "id": "82d92502d317b2",
+      "title": "Paso de Jama con apertura restringida para transporte de carga: cómo será el cruce de camiones de Argentina a Chile",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "todojujuy.com",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQSVZtMjY1eWNQLXNoR3NTZ3NQN2tkdWhldHgyS2Y5NVp5dFlSSWVod19Qel9XbWdoc3lRWkpsZ2g0UG9RdjA2R21XaXhZVXFsN3hLT2Fpd1JZOVYxNVRLeU1hMnpIUmhKOU9nRlNoMGtBVm9TTUVxNzlUSDZ6V3prTVZMMFVRRGNGQmV2blloekxhR2RTRFoxdVNuWlZkUldjX0F6aEVQRk8xSjhwMFFkRkkyakZibGFPTVRaTEh5RmRQMEXSAbMBQVVfeXFMUHRzTmJ6VFBfNzd1cDBsd19NbEoyWGpDSWhzVDRiM2FfVjRnLS1KOUZoMG5zeGhqWTREbjVCQTBFWGdvSWtaRy03T2NkVEgxN2loNHR0cUUxdGJoZUtYWGRReWFMQTlaREo3OVRxYm1WaVczc1NxV0FJeVZJdlVWa0VzdmlKVGxMZ0V6ZEF1T05tWmQ2WXpWSk41R3p4SUlmbkxEZDZBRWtDSmtJZHA0eFgxdlE?oc=5",
+      "published_at": "2026-08-27T12:47:00+00:00",
+      "time": "Thu, 27 Aug 2026 12:47:00 GMT"
+    },
+    {
+      "id": "93afe19d4a7aa4",
+      "title": "Paso de Jama: habilitan de forma restringida el ingreso de camiones de carga desde Chile",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Somos Jujuy",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPdENKWGJLT3NvZDFoSU1hM2l2d2tmWXV1cFdQT2JHNDRYenhRTWRpVjVIOFJuaV9UT3FHV0NjQlZyRlowMkFubjZaQ0FaRFY0TUc5S2RmdVg3aDhiYk04bGo5RC1ZMHFUM0ZaRmt0UVJHYkJjcUk4cUNpZkRkZk44RU1hLVZQaFZhQl9EWDBXdVZzWGxBN0xuZHl6RVhpVE9FMmtSYk1MN21JNndldURv0gG0AUFVX3lxTFB5UGJaYTNWZS1fdUxjaDM0NnYzc1RkZjVhenlMRW5MZG1Jbk14bWdrSlJvZGlfT3JGaHZIMTQ2VFVnbThZMEtWd1VVSG15ajFwNk5LNTdJUmE4cjIxSXE0Q2Q1MlhDZVVMX2NiYjN1UzI0S0Z4NGZQRHdfZTlKVDFudFA2NDNRRS1YdlFBVUd0REhyY3ZGZzhjTGFyZXRKMzM0ZURjSGRMcncyd1lFemp2cFExdQ?oc=5",
+      "published_at": "2026-08-26T18:23:00+00:00",
+      "time": "Wed, 26 Aug 2026 18:23:00 GMT"
+    },
     {
       "id": "80bc13b68fe644",
       "title": "El Gobierno modificó los requisitos de seguridad que deberán cumplir los 0km importados y nacionales",
@@ -31,6 +61,16 @@
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRXpPUGw1U1dUX3RTNGdaU3NncWl2M0xyUElnQVBlZlNpM1haSzF1Z0pPVVZnSmpLSDlRZjVoTzN0djVWVG5uVmVCOW4ta0ZmYVhpZDZEYnc2cUJwcU5RYVRVQ1pIWmFBR1NiaGFCZVdKcl9jUFBJa21PekVGNGZIUEhEUVBmc1dJbXdHUU4zbnVNenV6T29yR0JabzI2Q2d1b3dfb1FxVdIBpwFBVV95cUxPRXpPUGw1U1dUX3RTNGdaU3NncWl2M0xyUElnQVBlZlNpM1haSzF1Z0pPVVZnSmpLSDlRZjVoTzN0djVWVG5uVmVCOW4ta0ZmYVhpZDZEYnc2cUJwcU5RYVRVQ1pIWmFBR1NiaGFCZVdKcl9jUFBJa21PekVGNGZIUEhEUVBmc1dJbXdHUU4zbnVNenV6T29yR0JabzI2Q2d1b3dfb1FxVQ?oc=5",
       "published_at": "2026-08-25T23:02:00+00:00",
       "time": "Tue, 25 Aug 2026 23:02:00 GMT"
+    },
+    {
+      "id": "9304cce4ac8764",
+      "title": "ANFIR y ApexBrasil renuevan programa para ampliar las exportaciones de implementos viales",
+      "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
+      "category": "Remolques",
+      "source": "Tecnologística",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPZ1NOX29EMWc1OTc5U0R6RHpvcTVyZHlTbDlWY1JSZHNaeHV2OHZNSkdWWFNRWkRhdDhpdlpuNm8zV3ZCLWhZSGRYS3JzeU9GLVdpcDY1LWxnQXBrNDB2TnI2blNDbDdaYUdtNFV5cHFnazV2VVdGNmZOZnoySHlPaDhfd1pJdWpreVd3NzFuTjVPM1RwYzF1QWVCOE1OejB0UExtanVrRy0xUVFwQWZTN2ZYcjNqbkU1YUJlYWowSHFPd3Y3UzM5NzBGYUlTMnFvTklKX0hJOUNES0JMTDJ6MDVFNl9UYU5MUFF0MjBvbUpCQQ?oc=5",
+      "published_at": "2026-08-25T17:59:51+00:00",
+      "time": "Tue, 25 Aug 2026 17:59:51 GMT"
     },
     {
       "id": "92efed62123a72",
@@ -108,7 +148,7 @@
       "summary": "Información reciente de economía seleccionada por el radar regional de Stylo Camión.",
       "category": "Economía",
       "source": "Diario El Argentino",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPUC1fWjctUVVOSGhQMlZybFpZVmNsSktnNG5iTzAyRjlITEVycGVVMjZtWWZHamNKMGZCdy04MzduY08wTGxFbk5yY2ZDV25LN0Y0akFIeXlDLWRqYnpPaU1nQThydk5SdGFJMVJBTkVoV3lYeUtQalA2SmpUSHUweHptVW04eHRKbWY1cnZ2YmRTY0NURF9nNWU5YkVNZm5XcDU2c0habWxwYWdTVERDZ1ZXNDdudjh3ZjQyb1ZR0gG2AUFVX3lxTE1KeGNvUzhkRUZ5dVhyT2xDRFU5S3JkZjF0YnpFeTg2bFZ2UXVFazVXTWpZU01zTnZDQTduZjlDSElyNVFUOFZfdGJPWW04T016cXpaMjlyX2VPQnBQSDlLVno2SFlkRWpROV9iQmZBTURpSUQwVnkwazRpTUZkMkhjTm8yR19BTzZ4bHR6bWQ3RkRXSkp4ZFBjU3loSjBvUzg1cUhkakg0eUJRMUNQNkgtbW9DWWxB?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSXVqMWktaEhmX292dGRyb3NrNlUwT19NQUxOcW1uclBvV1VFUERmVzBtamVid2w0Szk1TzRzV21icmhsekpNdDBCUEhTSU0yQk1IcVBvemdNQ0U1UVRXVk4yOFZVMlNodHRZZkxBaUNTN1gtWHpMVHRmOEVPWW8tcGVPYjlRZzZUVGI3MjZnNkZMN2tHN01SbnZaLWNXUTUzYkpQQzdhRi15MUdPMGloSVVQSV9YNlNqWjNB0gG7AUFVX3lxTE1JdWoxaS1oSGZfb3Z0ZHJvc2s2VTBPX01BTE5xbW5yUG9XVUVQRGZXMG1qZWJ3bDRLOTVPNHNXbWJyaGx6Sk10MEJQSFNJTTJCTUhxUG96Z01DRTVRVFdWTjI4VlUyU2h0dFlmTEFpQ1M3WC1YekxUdGY4RU9Zby1wZU9iOVFnNlRUYjcyNmc2Rkw3a0c3TVJudlotY1dRNTNiSlBDN2FGLXkxR08waWhJVVBJX1g2U2paM0E?oc=5",
       "published_at": "2026-08-24T14:24:04+00:00",
       "time": "Mon, 24 Aug 2026 14:24:04 GMT"
     },
@@ -143,16 +183,6 @@
       "time": "Sat, 22 Aug 2026 18:33:04 GMT"
     },
     {
-      "id": "c3c33fa68ea4c3",
-      "title": "Reabrieron el paso Cristo Redentor tras el cruce masivo de transporte de carga",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "Mendovoz",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNN21tbEpDaElxbVQ5d1dkeDJYNTVkSEJHRk5saEFXVlRLZWdRMXkzLTNkbG9yWG9xMGVCU0hlTnRrb0RvT1pTRERSWXdJeDV2OURvNDJCQzVZQ0Y1aGhfMjF4YXZ4UkZsVEt3NWZPX19JMVhXT0pvbUpHWnZscjBTVzVic29IUktMNzBGMnVWZE5PZ0M1NktSd2FXMFFpWGFONVQ4MF9Xc3ctZnNrZF9fQUZqajBPTEplTGthd0M0MTRULUVLMlItU05adnRPWmFiOVZz0gHTAUFVX3lxTE03bW1sSkNoSXFtVDl3V2R4Mlg1NWRIQkdGTmxoQVdWVEtlZ1ExeTMtM2Rsb3JYb3EwZUJTSGVOdGtvRG9PWlNERFJZd0l4NXY5RG80MkJDNVlDRjVoaF8yMXhhdnhSRmxUS3c1Zk9fX0kxWFdPSm9tSkdadmxyMFNXNWJzb0hSS0w3MEYydVZkTk9nQzU2S1J3YVcwUWlYYU41VDgwX1dzdy1mc2tkX19BRmpqME9MSmVMa2F3QzQxNFQtRUsyUi1TTlp2dE9aYWI5VnM?oc=5",
-      "published_at": "2026-08-22T13:24:55+00:00",
-      "time": "Sat, 22 Aug 2026 13:24:55 GMT"
-    },
-    {
       "id": "5315a3d19f183d",
       "title": "El Paso Cristo Redentor vuelve a estar habilitado este fin de semana: qué hay que saber",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -161,6 +191,16 @@
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPZS1LaTZILUdpYUhQTnJnaHY0dTMyMEludWx0WFZDOXZPZ2g2Ul9wVTRPTVYtR2xyeVo1Vnc1eVhmWVktbVdUcG1yZ3BuVC1NbWwxaUtNUUVrenkxY0tuZUprY01BbVItTTAzZW1icGphZ0dBdDZwbnZPZzg4TU4zcDlvZXBsZkMwQXM3ZnJjRUxRWEVEbF81RzhSbWxmcDdzMHBBVDRidTdwY1d5UXZvTmJxcmh0RVp0b2FaQ0hxbHRNbUtaSW10S0FxN01walpOYklfemdrU3prZHNvUWVmUTlWb9IB6AFBVV95cUxPSHFzdmNrb1RDVWpuakhMT2w1MDRtTTRnc1M0NWZDclFnUVpLaTI4a0tpVlU4ZGhZMVJzanZMRUo4QVZ3WlRpd3lXMFJhMDdmcTQzR0lOMGI0Ui0ydzJnVEV3eG82M1BnbFJoRl9tUmJBMDFzTGE0SkI2SUUzWWp1RVJ1a1Z6VG1HUnFrQW1vRmkwakl4XzdJemxhWFZoQ2pHdFJUNnhrQ0JVQ0lqbmRpUnB5ck02RXd3bTVhU2thU0d6RlRGYmhDRzZYMnlNaVhJZmVqYnIxcjlUeEhOV3Q4UVhvWTZudllT?oc=5",
       "published_at": "2026-08-22T12:40:38+00:00",
       "time": "Sat, 22 Aug 2026 12:40:38 GMT"
+    },
+    {
+      "id": "c3c33fa68ea4c3",
+      "title": "Reabrieron el paso Cristo Redentor tras el cruce masivo de transporte de carga",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "MendoVoz",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPQ2NkMlk0cjdJZF9CcFdvWXlhdU9ZQ2c5bkpyWXQ0dHRLeGtkM0hHN0ZiRnU1ZG9fcmE0d294YXNPaExBY3RqbjRZVHJrSDJDTkZRNEpiWC1IY0p0a1d5ZTFWU0JQUXdfbm1hWFQ0S0ZjOVVSMGF6MDRsYlNqYWxZTkJjS25MbmFwdG85M2l2R2Fxb0NLMmNZcDhHZlQ0cXJhTGlrTDY0a3VaczQ3dWVsSWhVbnJYdDcxVVJEMktHSE1ZUDhBVUZjb1NXNUgyQnVoWmNz?oc=5",
+      "published_at": "2026-08-22T10:14:00+00:00",
+      "time": "Sat, 22 Aug 2026 10:14:00 GMT"
     },
     {
       "id": "d83ec031349677",
@@ -363,16 +403,6 @@
       "time": "Wed, 19 Aug 2026 20:59:00 GMT"
     },
     {
-      "id": "d0dd38f25237e5",
-      "title": "Paso Cristo Redentor: este jueves se habilita el tránsito de cargas desde Chile hacia Argentina",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "Mendovoz",
-      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNWmdFYnpWOXpxM2RtSERrWmxFMGQtNlAtelZfLUc1Ml92OWwxMXhTMlpjaWFwa0FxZ1hzQVZGYy1kVGhIQ3V6cFVLQ2FJLUFvSklqS19aUndCUGFwMFU4OXZlcXl6RHNJU284RU1aWHJsRlN2STJvdWY4cURMeWJ0WG81ams1SjhDVFR2STBDMDJwaW0zZUptSFBYbVc0ZWhSbU1aZHpHUUdUeHJXTG5RQTFtTzNRSjdvTFBiMDVQb1gyQnlSRElKOU9ZVWEyeGd6dU52Y2NZQUdPeFVqSW9PeWN6STh0aFli0gHoAUFVX3lxTE1aZ0VielY5enEzZG1IRGtabEUwZC02UC16Vl8tRzUyX3Y5bDExeFMyWmNpYXBrQXFnWHNBVkZjLWRUaEhDdXpwVUtDYUktQW9KSWpLX1pSd0JQYXAwVTg5dmVxeXpEc0lTbzhFTVpYcmxGU3ZJMm91ZjhxREx5YnRYbzVqazVKOENUVHZJMEMwMnBpbTNlSm1IUFhtVzRlaFJtTVpkekdRR1R4cldMblFBMW1PM1FKN29MUGIwNVBvWDJCeVJESUo5T1lVYTJ4Z3p1TnZjY1lBR094VWpJb095Y3pJOHRoWWI?oc=5",
-      "published_at": "2026-08-19T20:35:22+00:00",
-      "time": "Wed, 19 Aug 2026 20:35:22 GMT"
-    },
-    {
       "id": "121bf20f6cbb34",
       "title": "Tras el cruce de casi 2.400 camiones, cambiará el sentido del Paso Cristo Redentor este jueves",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -421,6 +451,16 @@
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOczBfTVAtUGFTQVkxbDFaSWNOQzlGVTBIYW1jOTdQUjF4bGJhTHVadHlXb1VzSXVrMlBwYV9yM1R4ZGxwTVBsRk9kRF9JcE80emZZS3VYZ0JSV0ZMTFVuekkzbkFjMEJZaTEtYm5DN0xyeDJxLUctNkxzOHN6T3F5UU9HSGxYXzczNUQw?oc=5",
       "published_at": "2026-08-19T10:53:30+00:00",
       "time": "Wed, 19 Aug 2026 10:53:30 GMT"
+    },
+    {
+      "id": "d0dd38f25237e5",
+      "title": "Paso Cristo Redentor: este jueves se habilita el tránsito de cargas desde Chile hacia Argentina",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "MendoVoz",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQbW9KaWJTMVV4MFNHanhsSXd6ZXRmOVh2RjJsdXhUTWlNa2EtY0JSVnhhOHFiWjVjWlZXQVpad0hfekpMV3FaUkFuQ2gwcHdkaldXWGNBamJTSDFVN090bEJRTERqMDNLSHptVi1ueWtVVnQ1bWFxWWxDck01bkdsRXJtWkp6QTRhQVdKb3pfLWlFRVZoZy1rREctdDg0V1BWNnl4TXU4cEtiQW12QzJPZHh0bUViLVN5OFJrbWhrMEJ2UUxvaGNqcm1qOTRJR1hOWWN5eUhkRXVHT0cwZE03b3hueEpqMmhy?oc=5",
+      "published_at": "2026-08-19T07:00:00+00:00",
+      "time": "Wed, 19 Aug 2026 07:00:00 GMT"
     },
     {
       "id": "e0bcd735931692",
@@ -503,16 +543,6 @@
       "time": "Tue, 18 Aug 2026 20:17:06 GMT"
     },
     {
-      "id": "3507d9395aa5b3",
-      "title": "Argentina modifica el RIGI ante la privatización de los trenes de carga: qué inversiones podrán ingresar",
-      "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
-      "category": "Logística",
-      "source": "Bloomberg Línea",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPdENXSHROeTZPVG4zVFR3UHNyQXZJbVNFSXM0SDlrTWtkSEJ0Z0Z2cXBWU201TGtzTDlJYk50RXBsd2dTOWNCUDJFNGlHSUplRmpxVDJRMDJnRzJGbkl3enU3Zy1mSHE3ellCemM3Vy1NeG9FanV5S3NOeHZnUVlJcGlGeVRqczVfVzYyRmxQaHktMllJRlVOdDVacFZ0a2w0Njg5LWw2RG00bGJqRFhGQkZ6c2I2Mm1hMVY1ZzhEQ1N4NnRPTTNteFU5TDktMXM2OGdGd04wWUtYTHZyYkxURHN1SG03cFBRaFlDN0c4N3rSAYQCQVVfeXFMUHIwOThHc0h0ZnU2VzE5WUhpeGJ0U3gwLWtjT2FUdkIwaU1VQzJCVk82WmhURlIzWmc1cW5zUkdFWWc5czY0S2F3YlBrQXVTVC1hNzBLVFNHMlZ1aDZsSzk0Q21vMDJwREF4ekoyOFJHcWJjbnJvMEhwQXF1WFowdzNqa0oyWGpDX19VNzNYSmdZY09Gcm90OGlnV3JaMXA4QXhRY3haZC1CaXNKYXVrSWtDSXNNRGxWWXNqR1VJMTIyZHl1V1dCZTdBSkppVGRuLThFS2oxcWE0dWhUXzI0d1d2NXR3aDVpYU96UDJBTlBIR1lzODByXzRjNkFuNWtNeXhiLS0?oc=5",
-      "published_at": "2026-08-18T17:15:54+00:00",
-      "time": "Tue, 18 Aug 2026 17:15:54 GMT"
-    },
-    {
       "id": "f13c8292912cda",
       "title": "Reabre el Paso Cristo Redentor en Mendoza: cómo será hoy el tránsito de camiones entre Argentina y Chile",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -561,6 +591,16 @@
       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNd2gzaThjV1UtSzBuZVJWMzhQTU9CVnZhYVJhT0dJdzlpVGp4bWllbTc1R09IaXhKWHRaU1dVTkN5QmFSSjh6WEVsQ1g4OWpqcm5YbHlYQmphNEZiUHA1dkU0U2lUQ0dub2lIOEdJaTJYRjFVaXpkUVhSZHNWNUVDdDhweE9iVkZWcXZXbDRYRzZxM3BKVFZ6bWxwTDUtVUV4N1BNZkpHYUJDUlZUNjk3UVplZDJTXzQ0UzBvSDlRNjQyLXN4VUR0VXVScEt0RTE3UjVj?oc=5",
       "published_at": "2026-08-18T10:06:51+00:00",
       "time": "Tue, 18 Aug 2026 10:06:51 GMT"
+    },
+    {
+      "id": "3507d9395aa5b3",
+      "title": "Argentina modifica el RIGI ante la privatización de los trenes de carga: qué inversiones podrán ingresar",
+      "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
+      "category": "Logística",
+      "source": "Bloomberg Línea",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPdENXSHROeTZPVG4zVFR3UHNyQXZJbVNFSXM0SDlrTWtkSEJ0Z0Z2cXBWU201TGtzTDlJYk50RXBsd2dTOWNCUDJFNGlHSUplRmpxVDJRMDJnRzJGbkl3enU3Zy1mSHE3ellCemM3Vy1NeG9FanV5S3NOeHZnUVlJcGlGeVRqczVfVzYyRmxQaHktMllJRlVOdDVacFZ0a2w0Njg5LWw2RG00bGJqRFhGQkZ6c2I2Mm1hMVY1ZzhEQ1N4NnRPTTNteFU5TDktMXM2OGdGd04wWUtYTHZyYkxURHN1SG03cFBRaFlDN0c4N3rSAYQCQVVfeXFMUHIwOThHc0h0ZnU2VzE5WUhpeGJ0U3gwLWtjT2FUdkIwaU1VQzJCVk82WmhURlIzWmc1cW5zUkdFWWc5czY0S2F3YlBrQXVTVC1hNzBLVFNHMlZ1aDZsSzk0Q21vMDJwREF4ekoyOFJHcWJjbnJvMEhwQXF1WFowdzNqa0oyWGpDX19VNzNYSmdZY09Gcm90OGlnV3JaMXA4QXhRY3haZC1CaXNKYXVrSWtDSXNNRGxWWXNqR1VJMTIyZHl1V1dCZTdBSkppVGRuLThFS2oxcWE0dWhUXzI0d1d2NXR3aDVpYU96UDJBTlBIR1lzODByXzRjNkFuNWtNeXhiLS0?oc=5",
+      "published_at": "2026-08-18T07:00:00+00:00",
+      "time": "Tue, 18 Aug 2026 07:00:00 GMT"
     },
     {
       "id": "0fcadb2cac585f",
@@ -889,8 +929,8 @@
       "category": "Logística",
       "source": "Infobae",
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNcF9QeDVubmZWZEJTMmZzQTJ0MWVQUkFrT0lISm9zMFJDS01aNm1HMnBTVFdzM09XZ2Zhbk1OajVZQk9uX19YNk5RZEdBaXV6ZnBVbFVQYW5ESHQ4RjduV2o2UHN5cTgwNFVNTFU2N0RXdTVqY1R6UGVQeVFvZ3JVdzRlWGtnWVFCRGRBdlZxMXpNRG9pSlFKUV9GS1UxRGdMbEctRExJTUxJQU1vUjZHRG9senZ3U2F0M0ZFOVBZb0hxY19BZjcyZNIB4wFBVV95cUxNa2xoaEpzV2pORFBDWW9aamZZbldpVEd6TnVtRUVqcjd6T1ZRLVdQdTZfVVlWSUlqNGlhQkx3RmIzV2pmbUZWekZYZkxrLUFyRXVFbEFEOWx1STN5S2k2cG1BTlpqcDBTOFA5eFdqRlhqaVdkcDJxMnNpalltb0ZfT2ktNW1WalJ2SXV4bGJfUFhGRmFSWTl0Nk5BSzZ6Tkt5aGxSNXJIRlMtd3dKWnVLZjV2Q2lYTWhydkZsT3RHVW1HS0VPUlhmSWFtRXBQajVTel9OOE1xWHliQ045RkUxN3pSbw?oc=5",
-      "published_at": "2026-08-13T07:07:00+00:00",
-      "time": "Thu, 13 Aug 2026 07:07:00 GMT"
+      "published_at": "2026-08-13T07:00:00+00:00",
+      "time": "Thu, 13 Aug 2026 07:00:00 GMT"
     },
     {
       "id": "11bdf4f83bdb68",
