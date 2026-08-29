@@ -1,6 +1,6 @@
 {
   "month": "2026-08",
-  "updated_at": "2026-08-29T04:25:10.646612+00:00",
+  "updated_at": "2026-08-29T08:25:17.764304+00:00",
   "items": [
     {
       "id": "e0e0f3558fb5a8",
@@ -353,16 +353,6 @@
       "time": "Wed, 19 Aug 2026 22:00:00 GMT"
     },
     {
-      "id": "2ae2f0974a76fa",
-      "title": "Paso Cristo Redentor: cruzaron más de 2.300 camiones hacia Chile y este jueves se habilita el tránsito hacia Argentina",
-      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
-      "category": "Camiones",
-      "source": "Diario de Cuyo",
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPQU1sNjE1S294U0F2ckFpUWhuYlhRRXE2QWZkVXp4Q2oxU2g1czcyUExNNjJvVENEdE5UTC1MVUNUT1Q0TUljQW93UVVoa0ZsTExac081LUhkeGswdzdHNjVjMjBrNFM4QUdfOVAyT3UwWWRyNzhzVmxQRmVKSjY4bE5tN1FSWlR2c3RHU0MwYVpDc2R4c1hFN3VMVk91TWRhRGVMMkg5TFRabjE3VlE2WFk4Y1VCNkd4VVA1bGo3LW4wLTFXZGlwTWVObmpsZUNkX1RWQVZOUUMzcnUwWlktV25aTDBXUE0?oc=5",
-      "published_at": "2026-08-19T21:40:00+00:00",
-      "time": "Wed, 19 Aug 2026 21:40:00 GMT"
-    },
-    {
       "id": "84b91fa44c6d47",
       "title": "Paso Cristo Redentor: ya cruzaron 2.300 camiones a Chile y este jueves comienza el tránsito hacia Argentina",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -441,6 +431,16 @@
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOczBfTVAtUGFTQVkxbDFaSWNOQzlGVTBIYW1jOTdQUjF4bGJhTHVadHlXb1VzSXVrMlBwYV9yM1R4ZGxwTVBsRk9kRF9JcE80emZZS3VYZ0JSV0ZMTFVuekkzbkFjMEJZaTEtYm5DN0xyeDJxLUctNkxzOHN6T3F5UU9HSGxYXzczNUQw?oc=5",
       "published_at": "2026-08-19T10:53:30+00:00",
       "time": "Wed, 19 Aug 2026 10:53:30 GMT"
+    },
+    {
+      "id": "2ae2f0974a76fa",
+      "title": "Paso Cristo Redentor: cruzaron más de 2.300 camiones hacia Chile y este jueves se habilita el tránsito hacia Argentina",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "Diario de Cuyo",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPQU1sNjE1S294U0F2ckFpUWhuYlhRRXE2QWZkVXp4Q2oxU2g1czcyUExNNjJvVENEdE5UTC1MVUNUT1Q0TUljQW93UVVoa0ZsTExac081LUhkeGswdzdHNjVjMjBrNFM4QUdfOVAyT3UwWWRyNzhzVmxQRmVKSjY4bE5tN1FSWlR2c3RHU0MwYVpDc2R4c1hFN3VMVk91TWRhRGVMMkg5TFRabjE3VlE2WFk4Y1VCNkd4VVA1bGo3LW4wLTFXZGlwTWVObmpsZUNkX1RWQVZOUUMzcnUwWlktV25aTDBXUE0?oc=5",
+      "published_at": "2026-08-19T07:00:00+00:00",
+      "time": "Wed, 19 Aug 2026 07:00:00 GMT"
     },
     {
       "id": "3fcdb0eb041835",
