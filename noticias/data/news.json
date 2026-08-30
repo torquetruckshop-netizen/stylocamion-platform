@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-30T00:24:55.338816+00:00",
+  "updated_at": "2026-08-30T04:25:10.114532+00:00",
   "items": [
     {
       "id": "82d92502d317b2",
@@ -402,16 +402,6 @@
       "time": "Mon, 10 Aug 2026 07:00:00 GMT"
     },
     {
-      "id": "19e682611395ac",
-      "title": "Colombia exigirá revisión técnico-mecánica anual para remolques y semirremolques: habrá multas e inmovilización por incumplir",
-      "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
-      "category": "Remolques",
-      "source": "Infobae",
-      "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOQXhtRUlRTnJaT2hLTkRQUDI4dDVzMlZfNmRweUV3NG5WWGQ2bENjZXdtaHdCZWhfdVVyZ3FaVlZ0ZDJmQ3d5b2hVYWdudkV5TXRIT1VIMjRpRmNCTU1lZWZoWUtjU2RsMmJJV3c4NUtmRDlKNG9NcnhDcjU4TV8yLWctTzV5SlRFdTIxZkpwNVJhMUZGaTVuZnFKNWpVemNkVllyY255b0s4VEs0Qm94RkFXMDhyRjFFRG03Q004bEozcExZcG16Z3NDNmc4V3l0RXFFS215UUdzMEpFWl9Fek9NS0FnV0l5X3hYVXQzVDF0RVFlYXUza3ZSZmVEZ9IBmAJBVV95cUxOWmRIY2t3R0xTQ0ZrNkF0WnQ5VHZVM0tYUGpHUHBnR0tfYXBYNGNLMC1xbi14c2xMRF81TzJod2wxbmpoSndyd2NHdlFLSno2T1c3SnllMzN4QWxwTmZjb2FGYlZ0ekMyQ0ZDNS1FYmhvNTMxYUI3SC0zYi1HRVRiSjNWQmNxMURlTi1TR3o1TU1iSjUta2hoYk04SEFfd2pDQkI3bVlibkZxWnBwdG9CYVlnb3JLNzFLUlRQUTE2eUN3dmVLTDRPSUpZVkRwVi11MlBaNUZ6WmlxTzUwcHZmTHJCWXMyZEg4TC1DNUdOTGl0V1duREtjS3pkd3JpbGFJbUZnTk11ME94YjV5d2hZMGxsRXpyd0h6?oc=5",
-      "published_at": "2026-08-04T07:00:00+00:00",
-      "time": "Tue, 04 Aug 2026 07:00:00 GMT"
-    },
-    {
       "id": "5e7d87d5d5f11a",
       "title": "Petróleo a USD 100: el shock global que puede darle más dólares a la Argentina, pero también traer presión a los surtidores",
       "summary": "Información reciente de economía seleccionada por el radar regional de Stylo Camión.",
@@ -430,6 +420,16 @@
       "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPWUd0U243c0JRSlNBYmhwMU9pVFpoZmZBb29rLXVTdWJTb2wwMHdiSU5WTGV0XzdRNW9fOVhLY2tUVDBZcDNvWEpaRUUzYmdrempsZ0xadS05ODAyUG9EcjhlM1hZSFE3eDVhNVRxblAyVmJtbzZCdlNleXR2ZDhaLXRyWTFJUXhoWFlvRHROWkU4RkJjMy1FM3o1WmY4NEs4ak1sVkVqbEFlejBBTUNjZVpZdVk2X25IT1VpUXBnanpWNk0wS1RqQ1RsRUpaNjE2WXNvQ1p6Ry1BVHJLUlJpeVE1Y0E?oc=5",
       "published_at": "2026-07-23T19:25:31+00:00",
       "time": "Thu, 23 Jul 2026 19:25:31 GMT"
+    },
+    {
+      "id": "19e682611395ac",
+      "title": "Colombia exigirá revisión técnico-mecánica anual para remolques y semirremolques: habrá multas e inmovilización por incumplir",
+      "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
+      "category": "Remolques",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOQXhtRUlRTnJaT2hLTkRQUDI4dDVzMlZfNmRweUV3NG5WWGQ2bENjZXdtaHdCZWhfdVVyZ3FaVlZ0ZDJmQ3d5b2hVYWdudkV5TXRIT1VIMjRpRmNCTU1lZWZoWUtjU2RsMmJJV3c4NUtmRDlKNG9NcnhDcjU4TV8yLWctTzV5SlRFdTIxZkpwNVJhMUZGaTVuZnFKNWpVemNkVllyY255b0s4VEs0Qm94RkFXMDhyRjFFRG03Q004bEozcExZcG16Z3NDNmc4V3l0RXFFS215UUdzMEpFWl9Fek9NS0FnV0l5X3hYVXQzVDF0RVFlYXUza3ZSZmVEZ9IBmAJBVV95cUxOWmRIY2t3R0xTQ0ZrNkF0WnQ5VHZVM0tYUGpHUHBnR0tfYXBYNGNLMC1xbi14c2xMRF81TzJod2wxbmpoSndyd2NHdlFLSno2T1c3SnllMzN4QWxwTmZjb2FGYlZ0ekMyQ0ZDNS1FYmhvNTMxYUI3SC0zYi1HRVRiSjNWQmNxMURlTi1TR3o1TU1iSjUta2hoYk04SEFfd2pDQkI3bVlibkZxWnBwdG9CYVlnb3JLNzFLUlRQUTE2eUN3dmVLTDRPSUpZVkRwVi11MlBaNUZ6WmlxTzUwcHZmTHJCWXMyZEg4TC1DNUdOTGl0V1duREtjS3pkd3JpbGFJbUZnTk11ME94YjV5d2hZMGxsRXpyd0h6?oc=5",
+      "published_at": "2026-08-04T07:00:00+00:00",
+      "time": "Tue, 04 Aug 2026 07:00:00 GMT"
     },
     {
       "id": "bdac2bfd0864c2",
@@ -492,6 +492,16 @@
       "time": "Tue, 21 Jul 2026 07:00:00 GMT"
     },
     {
+      "id": "03405c715f7bf7",
+      "title": "Actualizan las reglas para camiones y bitrenes y amplían las configuraciones permitidas",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQzZjemZKbHVVQjNlV3B1eXBEUUFYNXJzVTFLVEliRmt6akFpQXRNemZweUhvTGhnaEhhVzN2Y1JHX2ZQS2JUaDFRdlBNTXhsOGZDUGRoZG84d2NsZGFkRzBVRUNuRjBqR0VJYUZzb3dNSGRxeUdqX2dDUU83bGo0REtFeWpOWGFJS3pfQWZSQ1pyT1N6dzRfWkV2ZkZsNjZVTkljVFJtQ2RCWGNXN1gzVHRYUWs3Y2xucXdUUkdPRHNCZDRNdF9mc1p30gHkAUFVX3lxTE9wbldvS2w4d3ZuSXk1V2xTU0VJZjJaRXZETFgxRkhwcVhFcUQ3dDVVREdVMXQ3SFpjcmVTTkc3WlBvV0V0ekRtM29RNjBzM0RvOVpBa09nNmhfTFBrWmN1b3libW15S0NrSkg0QmNlV3VwWDNLTVBVM3hhMGlsdm1XUzZiVXVfcENabGZoV2k3c05UVFYzRy03QWdDcmxGazBLMzNTS1oxUEZlei1rRDlHVmJCdi1uTlZaYks5czV1MnJmcV9Gb2t4MnQ3dTU0MHR6c3pscnUxd3VWbjhFSzA2a2gwOQ?oc=5",
+      "published_at": "2026-07-31T07:00:00+00:00",
+      "time": "Fri, 31 Jul 2026 07:00:00 GMT"
+    },
+    {
       "id": "690a1902a3a10a",
       "title": "El Gobierno apuesta por los bitrenes y el GNC para bajar el costo del transporte",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -522,12 +532,12 @@
       "time": "Fri, 31 Jul 2026 07:00:00 GMT"
     },
     {
-      "id": "03405c715f7bf7",
-      "title": "Actualizan las reglas para camiones y bitrenes y amplían las configuraciones permitidas",
+      "id": "3075f5fe67ba00",
+      "title": "Actualizan las reglas para las dimensiones de los vehículos y amplían las facultades de Transporte",
       "summary": "Información reciente de rutas y normativa seleccionada por el radar regional de Stylo Camión.",
       "category": "Rutas y normativa",
-      "source": "Infobae",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQzZjemZKbHVVQjNlV3B1eXBEUUFYNXJzVTFLVEliRmt6akFpQXRNemZweUhvTGhnaEhhVzN2Y1JHX2ZQS2JUaDFRdlBNTXhsOGZDUGRoZG84d2NsZGFkRzBVRUNuRjBqR0VJYUZzb3dNSGRxeUdqX2dDUU83bGo0REtFeWpOWGFJS3pfQWZSQ1pyT1N6dzRfWkV2ZkZsNjZVTkljVFJtQ2RCWGNXN1gzVHRYUWs3Y2xucXdUUkdPRHNCZDRNdF9mc1p30gHkAUFVX3lxTE9wbldvS2w4d3ZuSXk1V2xTU0VJZjJaRXZETFgxRkhwcVhFcUQ3dDVVREdVMXQ3SFpjcmVTTkc3WlBvV0V0ekRtM29RNjBzM0RvOVpBa09nNmhfTFBrWmN1b3libW15S0NrSkg0QmNlV3VwWDNLTVBVM3hhMGlsdm1XUzZiVXVfcENabGZoV2k3c05UVFYzRy03QWdDcmxGazBLMzNTS1oxUEZlei1rRDlHVmJCdi1uTlZaYks5czV1MnJmcV9Gb2t4MnQ3dTU0MHR6c3pscnUxd3VWbjhFSzA2a2gwOQ?oc=5",
+      "source": "Ambito",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPQ0VpLUdxSFZHXzNqOVc0R0FibkZrYmRGUTJMZE9pUVFsaGZjZ3E2NG0xSklhZlN0OGRLZ3k1TkdjZmlVeFVYZGVaLTZxTXgyVGNHczllQmd3VTRjRlR0RkJRcjhYX0h1ZXlkSi1ManBXa0F3YWNSeE4tMzhieVJuSWxvRnNKLV8tQkNoTGhoeHZsQ09UX1dqOTBYY0N1dlBNM0hPV0cyQjVGTG9UTnI5bk5jeXZVbTZlMWhqNWtOTFNaR29ISEtvZmZhOTRQcEZqNUpBWHFnOHRZSnfSAeABQVVfeXFMTjdTSldTZGdEaDBndmZYNGZYbm95RnRQU2xYUDlZbmtVZ3EzME5iOWpzeWJCOTdZTUFQa0ZJTHpwX2NYQk9MVDVjQjJvSnF5dmFDLTYwQ3lZRTV1elFNdkhvM0hHb1BEUFY1cTVHOWpMNndQQW94UndEVERoSXpwQTVzX2RQNkUzWmVTMUJ2cXlyQ3BWTk9IV1ZnRl9rVDZ3LVMzSUU5eTFVYjdsV2laLUtRSE5DNU9Oc3BEYnFxUklMTnZJZ0dpNEdYNEwzaG5DMWRnblhnenI1bGNOSl9vTVE?oc=5",
       "published_at": "2026-07-31T07:00:00+00:00",
       "time": "Fri, 31 Jul 2026 07:00:00 GMT"
     },
@@ -590,16 +600,6 @@
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNMVdhSzh2emw5V01iMHh3dldlSi1xREY2TVhpQ0VEajFuVWl2RUFJMnc3eV9zOVp6VUpxNWY2cW04ZVp1RmM3dTNsMmZMM1AzX1JVc05qRmpHTVFoMVNrSzNPZk01bDNXajkyYkdQM3F2YjNpWDMtTVRrLVNDZ19Mc18teWJ6ZlU4Ym8tRDQ5cTU5dDF0MDkxUnRR?oc=5",
       "published_at": "2026-07-22T07:00:00+00:00",
       "time": "Wed, 22 Jul 2026 07:00:00 GMT"
-    },
-    {
-      "id": "227e07f32595c9",
-      "title": "Transporte en camiones, entre la suba de costos y la caída del traslado de cargas",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "InfoYa",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPVjdwN3RGUXQ4S3ZQV2c5SzZLUXZNbWhDZXl1RC16Y0tUcW9vTl9wZFF3WGZockZ5Rzh5eUdyN1JrTkdXV01ReUdWUTFFNHhoYzhkLTNxUkItdElYanNPamlibEhZY2JTSWdjVmphUzVrWDVrVTVHVHRTeVNkdmYtWjRISElfeW40YlV2UVdldEJ3VUY2TWNuWTdHeXR4WnZFRzJ0UFgtQXBUYU4xa3VJUGZaR3lOQ0M4ZzdELWRaN3FvME55azJZWA?oc=5",
-      "published_at": "2026-07-20T07:00:00+00:00",
-      "time": "Mon, 20 Jul 2026 07:00:00 GMT"
     }
   ]
 }
