@@ -1,7 +1,17 @@
 {
   "month": "2026-08",
-  "updated_at": "2026-08-30T08:24:58.996534+00:00",
+  "updated_at": "2026-08-30T12:25:05.683392+00:00",
   "items": [
+    {
+      "id": "4f08abf5af3ce8",
+      "title": "Paso de Jama: este viernes cruzarán 150 camiones desde Chile hacia la Argentina",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "todojujuy.com",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNMGhETzYxZUdZYkR6dThiM1RuYXUtTXo1d2JnbmkzeDlYYmZ6OGQ5OW52X2tuR2NTT3BlamJURkN2eXJDaGhfUUZIRS1HV1NvSGMyM1BQMUtOREthUXJZMlN1SWMtdzRFQ1pIX1M5eHhDaDRYekEzSFpRS2hycUR2cGx3aS1rYWxZR01DRS1aV3RxQV9QTmN3b2dFOU1sakpjaGNmUl930gGrAUFVX3lxTE9ERjNDYmFkY0cyd2pUXzF6VXRaUlBSRUMydnJ3a0FOWnpCZk91WWVKZjNoeTg4N1BGUW1melppZGdSRXloU1BxS0tqeU0zT3NFeTNuNWs1cm1VNnVkTDlKaDE0bzJXR1lWU3FzWmdESFRhdGxkNEhpN2tEcG5SQWRPWlNNNkI0cmp6X1R2MTdVajVZVmJ6cXBUVk45Y3lGdzBxalc1dmVZTHU3aw?oc=5",
+      "published_at": "2026-08-28T14:15:00+00:00",
+      "time": "Fri, 28 Aug 2026 14:15:00 GMT"
+    },
     {
       "id": "e0e0f3558fb5a8",
       "title": "AXA Truck & Trailer Uptime Solutions refuerza su apuesta por maximizar el tiempo de actividad del transporte por carretera",
@@ -373,16 +383,6 @@
       "time": "Wed, 19 Aug 2026 21:18:00 GMT"
     },
     {
-      "id": "9a60c62abb8797",
-      "title": "Paso Cristo Redentor: ya cruzaron 2.870 camiones a Chile y este jueves comienza el tránsito hacia Argentina",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "Los Andes",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPaEpIYVpIdU5KY1c5SElQTmJINUU4VFQwUDhoX2JRdlJpRHRranhDRkRGYWdzQ2FNUVZOaWtQd012VTNjTGszMEhvMjFQcVBROUxhRTNNc2hTVHFmZFRTSmJhR2dWc3lDY21EQU96T1ZRVGFOWlhGMzBTNHFfeUtnajRBUzBZMWEzT1NVQ3dvcXN0Vkg4amdrekVHajhSMmNoWkdsNnFldVE3SjVUMDN0M3N1VFgwalVPR05sR3NfeS1GM0tpSWpLbFltTEFBckVWY19DbEczbG85UWM?oc=5",
-      "published_at": "2026-08-19T21:18:00+00:00",
-      "time": "Wed, 19 Aug 2026 21:18:00 GMT"
-    },
-    {
       "id": "121bf20f6cbb34",
       "title": "Tras el cruce de casi 2.400 camiones, cambiará el sentido del Paso Cristo Redentor este jueves",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -431,6 +431,16 @@
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOczBfTVAtUGFTQVkxbDFaSWNOQzlGVTBIYW1jOTdQUjF4bGJhTHVadHlXb1VzSXVrMlBwYV9yM1R4ZGxwTVBsRk9kRF9JcE80emZZS3VYZ0JSV0ZMTFVuekkzbkFjMEJZaTEtYm5DN0xyeDJxLUctNkxzOHN6T3F5UU9HSGxYXzczNUQw?oc=5",
       "published_at": "2026-08-19T10:53:30+00:00",
       "time": "Wed, 19 Aug 2026 10:53:30 GMT"
+    },
+    {
+      "id": "9a60c62abb8797",
+      "title": "Paso Cristo Redentor: ya cruzaron 2.870 camiones a Chile y este jueves comienza el tránsito hacia Argentina",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Los Andes",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPaEpIYVpIdU5KY1c5SElQTmJINUU4VFQwUDhoX2JRdlJpRHRranhDRkRGYWdzQ2FNUVZOaWtQd012VTNjTGszMEhvMjFQcVBROUxhRTNNc2hTVHFmZFRTSmJhR2dWc3lDY21EQU96T1ZRVGFOWlhGMzBTNHFfeUtnajRBUzBZMWEzT1NVQ3dvcXN0Vkg4amdrekVHajhSMmNoWkdsNnFldVE3SjVUMDN0M3N1VFgwalVPR05sR3NfeS1GM0tpSWpLbFltTEFBckVWY19DbEczbG85UWM?oc=5",
+      "published_at": "2026-08-19T07:00:00+00:00",
+      "time": "Wed, 19 Aug 2026 07:00:00 GMT"
     },
     {
       "id": "2ae2f0974a76fa",
