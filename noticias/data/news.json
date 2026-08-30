@@ -1,16 +1,6 @@
 {
-  "updated_at": "2026-08-30T12:25:05.683392+00:00",
+  "updated_at": "2026-08-30T16:25:04.757507+00:00",
   "items": [
-    {
-      "id": "4f08abf5af3ce8",
-      "title": "Paso de Jama: este viernes cruzarán 150 camiones desde Chile hacia la Argentina",
-      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
-      "category": "Camiones",
-      "source": "todojujuy.com",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNMGhETzYxZUdZYkR6dThiM1RuYXUtTXo1d2JnbmkzeDlYYmZ6OGQ5OW52X2tuR2NTT3BlamJURkN2eXJDaGhfUUZIRS1HV1NvSGMyM1BQMUtOREthUXJZMlN1SWMtdzRFQ1pIX1M5eHhDaDRYekEzSFpRS2hycUR2cGx3aS1rYWxZR01DRS1aV3RxQV9QTmN3b2dFOU1sakpjaGNmUl930gGrAUFVX3lxTE9ERjNDYmFkY0cyd2pUXzF6VXRaUlBSRUMydnJ3a0FOWnpCZk91WWVKZjNoeTg4N1BGUW1melppZGdSRXloU1BxS0tqeU0zT3NFeTNuNWs1cm1VNnVkTDlKaDE0bzJXR1lWU3FzWmdESFRhdGxkNEhpN2tEcG5SQWRPWlNNNkI0cmp6X1R2MTdVajVZVmJ6cXBUVk45Y3lGdzBxalc1dmVZTHU3aw?oc=5",
-      "published_at": "2026-08-28T14:15:00+00:00",
-      "time": "Fri, 28 Aug 2026 14:15:00 GMT"
-    },
     {
       "id": "82d92502d317b2",
       "title": "Paso de Jama con apertura restringida para transporte de carga: cómo será el cruce de camiones de Argentina a Chile",
@@ -40,6 +30,16 @@
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOG44MHdqZ1VCR3ExMS1zckFod1BLYVVlTnNOVFpWcUthcllReWxidnF6YUxibzBKUGN1VnVJdE9oLXNXOGY0UVM5QmlCSHhqV2p3M3NjOVd0OFZ2bTlqenFtUVBvMXhZb3NDd2pvcmRkaVpQUl96TWtTdUUzUG56NS1hSHNJRHZJVE13ZjMwZTdlcExNNUhyYi1kM1pkcG9iVWlfUVk0N1o5VE9GTW9R?oc=5",
       "published_at": "2026-08-25T03:02:06+00:00",
       "time": "Tue, 25 Aug 2026 03:02:06 GMT"
+    },
+    {
+      "id": "862d36f7ba7627",
+      "title": "Paraguay apuesta a duplicar el movimiento de carga por la Hidrovía y convertirse en un hub regional",
+      "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
+      "category": "Logística",
+      "source": "El Nacional - El diario de los lectores influyentes",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZEhLelRVRXlxOFdHVjBYX2t4eXdHWXpkSlpTZ1hOWGQ0enY3WllhTmN3cGFsTDdHdWdSTTVHMjNzWjlIYnJ0VUxzOFRDa1NQNFBST21iVGQwck15X1F4cVMzOExtbVFYeVp0QkxiN2c2eEVfcGtSc3ZMZW5rTzhJeHNaSUdrX3J5cXZIRXhjcXFVWWpYWjhPb2gxNzNLWmRtbUhnbGpQZnhuRHh6YWV1OEF5MFBVazBKYy1N0gHAAUFVX3lxTFBadDM1OE1aQ0NYajJ3OWNsT0ZteGlOeHZGbmxlVkRIUmtvb0ozWmdqZnNuX3p6N2pmS1RiM2hjOHlKSFQtVGhrb3BzWnVhN0ktMmt5Sk5aLWdCUk1DaFJEQ1NoNTJlSnB1bGFUcEVEdVBRMXZmVENpdXlZR0UzdnFUdkN5THBKQVRZSGdVLW5LWkpmWjBBWnU0TkdWNUVSRFg5THFmUE9fbXpTMUljWGZrUTFKR0pzS0xTWjZIdFF4bQ?oc=5",
+      "published_at": "2026-08-30T11:00:00+00:00",
+      "time": "Sun, 30 Aug 2026 11:00:00 GMT"
     },
     {
       "id": "6264d6436b96ae",
@@ -272,16 +272,6 @@
       "time": "Mon, 17 Aug 2026 22:52:32 GMT"
     },
     {
-      "id": "0fcadb2cac585f",
-      "title": "Reabren el paso Cristo Redentor tras 34 días cerrado: cronograma exclusivo para camiones",
-      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
-      "category": "Argentina",
-      "source": "MendoVoz",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPNm0xQkhHbF9HcC1tOTVBYnZVMmdfZ3JrOE01Z195bF9aVkZhNDJ3cV9fTEo4UFNPRlhkQ2gxNHhteHhYVnZVWjZ3ZUhyenFuWHFKYlZJVUVQb01GbnFvOGVCQkxzWW5leURFNDRiUndZaTU2TGpKMmJoWlJoY01sQjBhZ0NKX2FLMzBqSjFXTld5anZlQjhrRmRRQi1NZUstbDU0dVVyVWZCLW8tV1lKSzBDZ2FUaFdpUUFGVlZZUW42cmkzYUJhZWNaa3lTNjBxZ3NEZ3hVYmprS1JMd2hN?oc=5",
-      "published_at": "2026-08-17T07:00:00+00:00",
-      "time": "Mon, 17 Aug 2026 07:00:00 GMT"
-    },
-    {
       "id": "b17a8beda966ce",
       "title": "Argentina y Chile: el cierre de pasos fronterizos reabre el debate sobre la resiliencia de los corredores bioceánicos",
       "summary": "Información reciente de logística seleccionada por el radar regional de Stylo Camión.",
@@ -302,12 +292,22 @@
       "time": "Mon, 10 Aug 2026 07:00:00 GMT"
     },
     {
+      "id": "c2ae688895cce5",
+      "title": "Nuestra respuesta a los remolques Schmitz: el tren de carretera KamAZ K5 con componentes chinos se dirige a las pruebas",
+      "summary": "Información reciente de remolques seleccionada por el radar regional de Stylo Camión.",
+      "category": "Remolques",
+      "source": "www1.ru",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQdGh6MjdUZ01aZTg2cVB3UGdzUl9pV2xRSnZYeDNUdHpQNFZ1Z1Y4RXRON3lOZ0h0Nzk5MmlnQ2lCdTJFakxTX2dwSklUelQ2ZVBGRkp2eTVYT2NFZlFfQ1hUUlQ2TFdveWw4ci00YlVhVEFCdDF5VDV6bGZxVGV4enVHbVZ0cW0yMWdGZFJDU09Ea3laMjRiVWpCYURMZXZLSXV4Z29TR1JoVkpERVZ6WjhxSXNTV3R3UE5nU2taUm5wRndaRVMtRHBBemM0U21NV0pkRjdyU3JVYjA2V29MMHFSUdIB6AFBVV95cUxQRlFfRWltT2xxV0RndmlnR1o2czJrUnZvX093UE5RUUZtMFQ4S0tRejFKaTdWN25qMzNVdzI2OVpBVWVDZldIMjFHUHBFS3FuNnBZbjNmamdaM3VTY1pvQTdBbEphbTNNcGRmMEowRnpYNEhSUEVUQi1zOWFWSEI3NGZyQ29nY0dmWjhXS25GclJ3aUZhS0JOUHBPZXFKaVI0MDE0T0FhTzZZSzN1OXhwQVhBekdRdkp3MUlxQjduRmdLOTE5WGJqT0ZveXZCQWJWMFRWQ1l5QW9SXzRrRFNIRTIyZE9MWmcz?oc=5",
+      "published_at": "2026-08-14T07:00:00+00:00",
+      "time": "Fri, 14 Aug 2026 07:00:00 GMT"
+    },
+    {
       "id": "11bdf4f83bdb68",
       "title": "Camiones varados en Neuquén: avanzan en tandas desde Zapala y se descomprime el corredor hacia Pino Hachado",
       "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
       "category": "Camiones",
       "source": "Diario Río Negro",
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNc2NaX1QxSTJDaGQ4b3lheW5TYmhuT0c2UGVHZVR5T3EweGZYYWhyNnZzdzY0bDlIeUJPa2RYQVp5WEN4cGc2NlBJZ1dVSjF4b3VjMmZzQklyTDB3ZkhBMzZSclZFX0tVdGZ4dThLSzQtQkR6VmptSUM3ZTNtWloxdTBZSUhUeXloc1otMmdWZlM4alFQaXpMZ2laRlZ6UjZ1dVBwQi1UT3BqanRvQk5UMjdkZjF5SmcyWVNkbk5uWk5GU1pELU41bTY2RUxIbGdjRUdWR2lPT05nREVVMDE1SWRiZzZkLW8?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNc2NaX1QxSTJDaGQ4b3lheW5TYmhuT0c2UGVHZVR5T3EweGZYYWhyNnZzdzY0bDlIeUJPa2RYQVp5WEN4cGc2NlBJZ1dVSjF4b3VjMmZzQklyTDB3ZkhBMzZSclZFX0tVdGZ4dThLSzQtQkR6VmptSUM3ZTNtWloxdTBZSUhUeXloc1otMmdWZlM4alFQaXpMZ2laRlZ6UjZ1dVBwQi1UT3BqanRvQk5UMjdkZjF5SmcyWVNkbk5uWk5GU1pELU41bTY2RUxIbGdjRUdWR2lPT05nREVVMDE1SWRiZzZkLW_SAe8BQVVfeXFMTmlSWmh6eDI5cmlFYkVBVWRRcXg1TnRnWVBHZlNvSUp6anRWYnlQbm1YRHowQ3pBb0ZucWRTS3hJeGJoQzIyMHBEQjNMcWdwOHp0SkVLWlUwTTFCeUtiS2tpQnZRQ0JhZ1Y3M0ZpeC14ZDVNWTlJSzVLZVhGMG9Xa2tpMHNsckdIWnFCV1Y4VjhucU03UHhpQjNDZ2FwVWFkakM0NW1SalZQT3VMY0dVNUhOMmlvb1A3NWJaMWZwTWNoU3dqX0x0ekV3eVIzWWhwVkw0aFFFTmZIY1ZvUkdpYnlPODNncUVBaV9nOG9SQ00?oc=5",
       "published_at": "2026-08-13T07:00:00+00:00",
       "time": "Thu, 13 Aug 2026 07:00:00 GMT"
     },
@@ -340,6 +340,16 @@
       "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQRDF5Mzh1T0NPamhwTjk1QWVJOG9fSTh6OEdIUEZJbXNxdWJ2anI2Z1Z3ekJXMW1xWFUzQWIyNnotYnJXalQ2bW4wZzFUOFhLclhFZjAzdWhWSkxwTVNoNXBsTlZiRE9kd3E5VlpsSjdqYm0zS3FjQkRXRWZQWHVIbEE0U0RvR1lHRUFJX3ZLWWNoVC13a25XUEowalNBdDFONGNUTUgyVHFlZ0xqd1dSRU5VTzFWLV9nRS1yX1JQWGJVNkNLRWlPeEtaLVVyV2hKS0dUYU1YaUZuakllM1BHdGFYQmhwRDV0ckFBT2FrMDhNcG0wUkxsSUhtTkVaUdIBmAJBVV95cUxNVzFEaHYwZWNsNlphTmdjSFFHMGFnc2ZHSHRFSll4MndBOEJtLTBfQUFBMVA5Y1dvQjYzZ2dzeEVWdGptbk5VRC03RUt3ekdqVk5RR3Z6YVFCdzluOGE5U0phdmdCQk5IazMzUWZZUnBGdmQteGZPclFTaDVsSDVlSW1tNjJxMXNfZUg1OXF2RDU4OS1hREplcktkYWNCb2prYTFsdjlXdjJVVGRlY2QxbGVKb0JOZjFWOXItck5DZFV6YlhORXFCRXBZZk9VcGdpWjVBOXBZdHNUMVQ1eldEUTFMWjVSd25pdjFGMEx2TnVZa3A1N2NoLUZ1bWpyeDVIZTVGZWJwN3Z0Nk5JN0VlVjBTYTFFTWFn?oc=5",
       "published_at": "2026-08-08T07:00:00+00:00",
       "time": "Sat, 08 Aug 2026 07:00:00 GMT"
+    },
+    {
+      "id": "d74083fa1f0eb6",
+      "title": "Camiones varados en Neuquén: cómo es el operativo para avanzar en tandas hacia Pino Hachado",
+      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones",
+      "source": "Diario Río Negro",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNOVdvd0xmUGpCcWd0Y2FpdFJKVS1za3V5MDRGQlpHV2dQc2hsWTdPMUVHbkNxU0E4THpPWWJELTdOLU1BUmdoNlZVTU1RZWRDSFRRTzBhcTJvcXFBYTBxOEpVdjZXdEJ4T29GQUJhb2s5M2JIc0paVHZzVnYwQUgwWmxHSndncFhlQUEtRTZQbmp4UGVEbWREcHllRGJZR04tS0FXZG1FZHI5QTBlc25OaFNNVHptZVJFRWRKRW91QWNIRGFXbUFTc2puTnkwVzU3N2fSAdoBQVVfeXFMUE9LRjFCeTRHd2E3V0NCQnNsaXZYeGI4VExJS1RaWWNUM3VKX2J1blZNYWRXbldzTG9qVl9hWVZHWTY2dHZydjhTTkp6TjdQdy1WRFlfVE8yQmNqV1hocGt2dlV2NlhEanNfT0g2ZHNveHVybWRGZndaTFZkaE1Oa2dpV3ItTFAtVC15X2ZyS1lNOGhQUjNhd0xwSTZvaVR4MWc0VG1ocTZqdU8yZU5UWlZWVTN5NFhwVUFRckxfQ3VnZXpmeFBGVEw1WEtfU21wdTFVcjJ1YXkyNXc?oc=5",
+      "published_at": "2026-08-12T07:00:00+00:00",
+      "time": "Wed, 12 Aug 2026 07:00:00 GMT"
     },
     {
       "id": "3ce35941e86028",
@@ -400,16 +410,6 @@
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQQUtpUWw2ZWc3ZlBVc3JtZ2pTODJPcXEyb05Dc2pQbjhic0tJdmdZWWZqaHdGZWV1RW1FZEtGbnNicGFBOGJNSWRxcEF6a0JCYTltR0ktTWdfRE03eWQzRTdNblUybWx5dHlkaWVXYXYtRHgzNEg3YVdmREJ2Q0toY3JDNkMwZlNFNE96WE9pSE5SRjA?oc=5",
       "published_at": "2026-08-10T17:18:22+00:00",
       "time": "Mon, 10 Aug 2026 17:18:22 GMT"
-    },
-    {
-      "id": "6d254fef6e7595",
-      "title": "El Gobierno cambió por decreto las reglas para el transporte de cargas: más peso, bitrenes y guiño al GNC de Vaca Muerta",
-      "summary": "Información reciente de rutas y normativa seleccionada por el radar regional de Stylo Camión.",
-      "category": "Rutas y normativa",
-      "source": "Diario Río Negro",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNcVJMWnE3SnhldEdtaW1TX3JiOGVjMWJISGlEYkwtdWFJaU44Wk9RVkdMazVqME90bWEwLVRMd05ndHdHZ041V0NraXAwYUdpbWRtbXRITjNXZV9SSHZkQjd6ZVg3Ynp0Z3l5VU96Q1E2dzNOSXlicmtJdUFhY2prSVRNUzR4SDBkWTJpaVhGeXN1NHBaOUhIVkpfblIwSUIzdVd2UjZvSHVTMWZteE11RC0yWEs5MW1vbTAwZEsxaVl2dUhtQUNuY3NhTGRVclhBMzkxWXJIT3NkdHYxSERvS3RUNXhyVVY5LUZqZlhNZmFSUHZwYVVJ0gH_AUFVX3lxTE1FWkRjTlhZN0VLaWdqNXNBcjJINnJMR2U5TE02TWFsaVNuVWNiNmM3aVAxSDZsWThSOGhacFhIdklNZDdJZ19XX1hWenQxNDNtcFlvZmlwVVFrd2pYYklBUGx6enU3anZzTFJfdEpzWWs2Y05FZzNfa0tGdklaZ0pYc0NaOURPbEo3VTZTbWR5bHBYZ1NDM0lmTV96THN6UUxlSHkybks2NzRTWWlfZE9kUGNvMENGY28tMkZpMTg0d2pTRDFGOTZ5ZFVlcUtEYXFEd3dCYTY0YVNlcUo1NFVYNHJlMGd2X1VDdGdUUmhpN1FhbWZCUUhPejhBbVhzaw?oc=5",
-      "published_at": "2026-08-10T07:00:00+00:00",
-      "time": "Mon, 10 Aug 2026 07:00:00 GMT"
     },
     {
       "id": "5e7d87d5d5f11a",
@@ -502,6 +502,16 @@
       "time": "Tue, 21 Jul 2026 07:00:00 GMT"
     },
     {
+      "id": "03405c715f7bf7",
+      "title": "Actualizan las reglas para camiones y bitrenes y amplían las configuraciones permitidas",
+      "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
+      "category": "Argentina",
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQzZjemZKbHVVQjNlV3B1eXBEUUFYNXJzVTFLVEliRmt6akFpQXRNemZweUhvTGhnaEhhVzN2Y1JHX2ZQS2JUaDFRdlBNTXhsOGZDUGRoZG84d2NsZGFkRzBVRUNuRjBqR0VJYUZzb3dNSGRxeUdqX2dDUU83bGo0REtFeWpOWGFJS3pfQWZSQ1pyT1N6dzRfWkV2ZkZsNjZVTkljVFJtQ2RCWGNXN1gzVHRYUWs3Y2xucXdUUkdPRHNCZDRNdF9mc1p30gHkAUFVX3lxTE9wbldvS2w4d3ZuSXk1V2xTU0VJZjJaRXZETFgxRkhwcVhFcUQ3dDVVREdVMXQ3SFpjcmVTTkc3WlBvV0V0ekRtM29RNjBzM0RvOVpBa09nNmhfTFBrWmN1b3libW15S0NrSkg0QmNlV3VwWDNLTVBVM3hhMGlsdm1XUzZiVXVfcENabGZoV2k3c05UVFYzRy03QWdDcmxGazBLMzNTS1oxUEZlei1rRDlHVmJCdi1uTlZaYks5czV1MnJmcV9Gb2t4MnQ3dTU0MHR6c3pscnUxd3VWbjhFSzA2a2gwOQ?oc=5",
+      "published_at": "2026-07-31T07:00:00+00:00",
+      "time": "Fri, 31 Jul 2026 07:00:00 GMT"
+    },
+    {
       "id": "690a1902a3a10a",
       "title": "El Gobierno apuesta por los bitrenes y el GNC para bajar el costo del transporte",
       "summary": "Información reciente de argentina seleccionada por el radar regional de Stylo Camión.",
@@ -528,16 +538,6 @@
       "category": "Camiones",
       "source": "Infobae",
       "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOcmVnZzlPNTdzUjZhTzR5Mzh1TUVxUVIwOWhlMk1veDdDSkc2VlQ3ZmhXSklsMzF1ajFWUU1nY1dRTjdXaFFCa0JKaFVLNUtWbEpFUWF3NDJQakhwOC1pV3pjR2twRUlDUjFBdHVMN3dFcDlUZUZkTmZLN0huSVVndW1qbzJLV05HR1NIVVpfZTlWazBqNWllN0tKRGNfazJ4RklJaER1ZWU4Q1gwOWN5Y2hlMFVTVm5TbHluOXhaYTdnM2xhOXhLTTJ6STVnXzFLUmJ2R2s1T2s5LXJmbmFF0gH6AUFVX3lxTE0zX0JIU1dRY1EtbFNUdGlrQXdMNzZGMGtWOWMwWEYzVnpCUVJIZHAxdlpOYlhPanRGa1lraDhOWTNsM190N1RJSDd3RkxKTTV1Ylk4cWdSWk83NG01N2RJbVNtODRDVjY3VTlPaDB2STFDSlluNnlXOUMwUWRIYTJwMXJMYS1md3k5b2NsanBzbUdjT2ZjeEFZN3p5dzFBY2RCSWpDcE0yYVhORXF0T25UOHdWbnJSNW15dHFMZGptaUVGTXVzTjhOV2hzdllZUm9IdTFkWFB2X1FEWFFqX0M0dTVUeEVsd3pBN0hrWTBObmNkWFhFVFRnd0E?oc=5",
-      "published_at": "2026-07-31T07:00:00+00:00",
-      "time": "Fri, 31 Jul 2026 07:00:00 GMT"
-    },
-    {
-      "id": "03405c715f7bf7",
-      "title": "Actualizan las reglas para camiones y bitrenes y amplían las configuraciones permitidas",
-      "summary": "Información reciente de rutas y normativa seleccionada por el radar regional de Stylo Camión.",
-      "category": "Rutas y normativa",
-      "source": "Infobae",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQzZjemZKbHVVQjNlV3B1eXBEUUFYNXJzVTFLVEliRmt6akFpQXRNemZweUhvTGhnaEhhVzN2Y1JHX2ZQS2JUaDFRdlBNTXhsOGZDUGRoZG84d2NsZGFkRzBVRUNuRjBqR0VJYUZzb3dNSGRxeUdqX2dDUU83bGo0REtFeWpOWGFJS3pfQWZSQ1pyT1N6dzRfWkV2ZkZsNjZVTkljVFJtQ2RCWGNXN1gzVHRYUWs3Y2xucXdUUkdPRHNCZDRNdF9mc1p30gHkAUFVX3lxTE9wbldvS2w4d3ZuSXk1V2xTU0VJZjJaRXZETFgxRkhwcVhFcUQ3dDVVREdVMXQ3SFpjcmVTTkc3WlBvV0V0ekRtM29RNjBzM0RvOVpBa09nNmhfTFBrWmN1b3libW15S0NrSkg0QmNlV3VwWDNLTVBVM3hhMGlsdm1XUzZiVXVfcENabGZoV2k3c05UVFYzRy03QWdDcmxGazBLMzNTS1oxUEZlei1rRDlHVmJCdi1uTlZaYks5czV1MnJmcV9Gb2t4MnQ3dTU0MHR6c3pscnUxd3VWbjhFSzA2a2gwOQ?oc=5",
       "published_at": "2026-07-31T07:00:00+00:00",
       "time": "Fri, 31 Jul 2026 07:00:00 GMT"
     },
