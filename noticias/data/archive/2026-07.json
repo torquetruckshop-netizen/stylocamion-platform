@@ -1,6 +1,6 @@
 {
   "month": "2026-07",
-  "updated_at": "2026-08-31T08:25:07.503698+00:00",
+  "updated_at": "2026-08-31T12:25:01.297194+00:00",
   "items": [
     {
       "id": "33f3e95a4e5119",
@@ -213,6 +213,16 @@
       "time": "Tue, 28 Jul 2026 07:00:00 GMT"
     },
     {
+      "id": "98cdebb61827bb",
+      "title": "Vaca Muerta y los señores de la arena: puja por los costos de un negocio de u$s 850 millones",
+      "summary": "Información reciente de logística y puertos seleccionada por el radar regional de Stylo Camión.",
+      "category": "Logística y puertos",
+      "source": "Letra P",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPUEVOMFJNWDJWOFBNV3I0ZkF4cXpGellKNEx3amdEY09PMzZCSkZ1Ykh2Y2F0Zl9uTFVHVWgtRWU5bGpMVEdhTkNMNFNMOHBZYk1XQWQzQlJJQjFQNXg0cjRwa1Z4dk8zaUpXdm9jQ3JnZkpkTWNQcU9SNUJzSGM0T1paNk0xWTFnOHRCR2NMSVp2TERvRmQwQnhMNVdHRGxhUEc4WFVHT3lVV052ZVFPMWxVQ3hEanZDOVNTZnJteVdoRWZRWVZmVTFHM0hTbzNtVXNN?oc=5",
+      "published_at": "2026-07-28T07:00:00+00:00",
+      "time": "Tue, 28 Jul 2026 07:00:00 GMT"
+    },
+    {
       "id": "4631e2d3744528",
       "title": "Cómo será el operativo para rescatar los 1.500 camiones varados por la nieve en el Paso Cristo Redentor",
       "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
@@ -361,6 +371,16 @@
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZ0RNYUR4QURTQm5YRnJld05qSHpCM3dGazMwVEV3QU9Wa1d4TFJ1b1d4LS1iU3hMY2lpeW9uVENTV1JnbFE4eVRLTVZ4LTdNWUhiQ0dYMWZSQkFHa1dsOXJ4dGhyLVpvZmlDRURQcEVnQkcxNDBjZ29tRW1DWHdqdnJoV3pXeW1qaWN6b3JZaFl4MlR5T0NEMXlhbng?oc=5",
       "published_at": "2026-07-11T07:00:00+00:00",
       "time": "Sat, 11 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "id": "eb941459f45ae1",
+      "title": "Vaca Muerta: el incremento de la producción complica el transporte de arena y se exploran soluciones",
+      "summary": "Información reciente de logística y puertos seleccionada por el radar regional de Stylo Camión.",
+      "category": "Logística y puertos",
+      "source": "econojournal.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNeE9PSHczT3E3Y0JBYllJZUhWbWhEOFY4LUh5WmVSUFJYX1dYUEM4cXlfT0tHMV9laVliN3VzMTBvZ1hfRGVpeUkzekJMSjJSdVFKSlNJaHpINXBfdFZpWEU0Q2pfSHN2VEhXczVZOU9TTlFlc3RGRHJmNDJtZjRnZzNDejJWMEJWMDkwUmVNVkZtYUZFTXYtZlpqZkNoVURMWUFFRkJWV0ItZGlmc0g4?oc=5",
+      "published_at": "2026-07-06T07:00:00+00:00",
+      "time": "Mon, 06 Jul 2026 07:00:00 GMT"
     }
   ]
 }
