@@ -9,13 +9,12 @@ from pathlib import Path
 import feedparser
 
 QUERIES = [
-    ("Argentina", 'transporte cargas camiones Argentina when:45d'),
-    ("Camiones", 'camiones pesados Argentina OR Brasil OR Chile OR Uruguay OR Paraguay when:45d'),
-    ("Remolques", 'remolques semirremolques Argentina OR Brasil OR Uruguay when:60d'),
-    ("Logística", 'logística transporte cargas Argentina Sudamérica when:45d'),
-    ("Economía", 'transporte cargas combustible tarifas crédito tasas Argentina when:45d'),
-    ("Rutas y normativa", 'rutas transporte cargas normativa Argentina bitrenes pesos dimensiones when:60d'),
-    ("Región", 'transporte cargas Sudamérica fronteras puertos corredores Mercosur when:45d'),
+    ("Ruta, salud y seguridad", 'camioneros salud sedentarismo estrés sobrepeso alimentación descanso conducción accidentes paradores Argentina when:365d'),
+    ("Camiones y mercado", 'camiones Argentina patentamientos ventas lanzamientos camiones chinos crédito financiación when:120d'),
+    ("Logística y puertos", 'logística última milla puertos descarga Vaca Muerta transporte cargas Argentina when:120d'),
+    ("Técnica y equipos", 'neumáticos repuestos remolques semirremolques tecnología transporte Argentina Sudamérica when:120d'),
+    ("Economía y costos", 'FADEEAC índice costos combustible tarifas tasas crédito camiones Argentina when:120d'),
+    ("Región", 'transporte cargas Sudamérica fronteras puertos corredores Mercosur when:90d'),
 ]
 
 BLOCKED_TERMS = [
@@ -29,9 +28,16 @@ REGIONAL_TERMS = [
 
 TRUSTED_SOURCE_TERMS = [
     'argentina.gob.ar', 'boletín oficial', 'boletin oficial', 'fadeeac', 'arlog',
+    'who.int', 'msal.gob.ar', 'vialidad nacional', 'acara',
 ]
 
-MAX_AGE_DAYS = 75
+STOPWORDS = {
+    'para', 'como', 'desde', 'hasta', 'sobre', 'entre', 'ante', 'tras', 'esta',
+    'este', 'estos', 'estas', 'unas', 'unos', 'nuevo', 'nueva', 'nuevos',
+    'nuevas', 'argentina', 'camion', 'camiones', 'transporte', 'cargas',
+}
+MAX_AGE_DAYS = 365
+MAX_ITEMS_PER_CATEGORY = 10
 OUT = Path(__file__).resolve().parents[1] / 'noticias' / 'data' / 'news.json'
 ARCHIVE_DIR = OUT.parent / 'archive'
 
@@ -47,6 +53,23 @@ def normalize(text):
     text = clean(text).lower()
     text = re.sub(r'[^a-záéíóúüñ0-9 ]+', ' ', text)
     return re.sub(r'\s+', ' ', text).strip()
+
+
+def title_tokens(title):
+    return {
+        token for token in normalize(title).split()
+        if len(token) >= 4 and token not in STOPWORDS
+    }
+
+
+def is_near_duplicate(tokens, previous_token_sets):
+    if len(tokens) < 3:
+        return False
+    for previous in previous_token_sets:
+        overlap = len(tokens & previous)
+        if overlap >= 3 and overlap / min(len(tokens), len(previous)) >= 0.6:
+            return True
+    return False
 
 
 def clean_title(title, source):
@@ -186,18 +209,22 @@ def merge_monthly_archive(items, updated_at):
 def main():
     items = []
     seen_titles = set()
+    seen_token_sets = []
 
     for category, query in QUERIES:
         feed = feedparser.parse(google_news_rss(query))
-        for entry in feed.entries[:20]:
+        for entry in feed.entries[:24]:
             source = clean((entry.get('source') or {}).get('title', 'Fuente externa'))
             title = clean_title(entry.get('title', ''), source)
             summary = clean(entry.get('summary', ''))
             link = entry.get('link', '')
             published_at = published_datetime(entry)
             key = normalize(title)
+            tokens = title_tokens(title)
 
             if not title or not link or not key or key in seen_titles:
+                continue
+            if is_near_duplicate(tokens, seen_token_sets):
                 continue
             if not is_recent(published_at):
                 continue
@@ -205,6 +232,7 @@ def main():
                 continue
 
             seen_titles.add(key)
+            seen_token_sets.append(tokens)
             items.append({
                 'id': article_id(title, source),
                 'title': title,
@@ -221,8 +249,20 @@ def main():
     for item in items:
         item.pop('_score', None)
 
+    buckets = {category: [] for category, _query in QUERIES}
+    for item in items:
+        bucket = buckets[item['category']]
+        if len(bucket) < MAX_ITEMS_PER_CATEGORY:
+            bucket.append(item)
+
+    selected_items = []
+    while any(buckets.values()):
+        for category, _query in QUERIES:
+            if buckets[category]:
+                selected_items.append(buckets[category].pop(0))
+
     updated_at = datetime.now(timezone.utc).isoformat()
-    selected_items = items[:60]
+    selected_items = selected_items[:60]
     payload = {
         'updated_at': updated_at,
         'items': selected_items,
