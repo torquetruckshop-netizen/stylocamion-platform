@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T04:24:58.397525+00:00",
+  "updated_at": "2026-08-31T08:25:07.503698+00:00",
   "items": [
     {
       "id": "4f08abf5af3ce8",
@@ -412,6 +412,16 @@
       "time": "Mon, 10 Aug 2026 23:03:13 GMT"
     },
     {
+      "id": "d7de51af05b483",
+      "title": "El Gobierno amplía pesos y medidas para camiones y bitrenes",
+      "summary": "Información reciente de rutas y normativa seleccionada por el radar regional de Stylo Camión.",
+      "category": "Rutas y normativa",
+      "source": "Diario El Norte - San Nicolás",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQQUtpUWw2ZWc3ZlBVc3JtZ2pTODJPcXEyb05Dc2pQbjhic0tJdmdZWWZqaHdGZWV1RW1FZEtGbnNicGFBOGJNSWRxcEF6a0JCYTltR0ktTWdfRE03eWQzRTdNblUybWx5dHlkaWVXYXYtRHgzNEg3YVdmREJ2Q0toY3JDNkMwZlNFNE96WE9pSE5SRjA?oc=5",
+      "published_at": "2026-08-10T17:18:22+00:00",
+      "time": "Mon, 10 Aug 2026 17:18:22 GMT"
+    },
+    {
       "id": "5e7d87d5d5f11a",
       "title": "Petróleo a USD 100: el shock global que puede darle más dólares a la Argentina, pero también traer presión a los surtidores",
       "summary": "Información reciente de economía seleccionada por el radar regional de Stylo Camión.",
@@ -582,24 +592,14 @@
       "time": "Tue, 28 Jul 2026 07:00:00 GMT"
     },
     {
-      "id": "ec406e5c908646",
-      "title": "Ventas globales de camiones chinos: el récord histórico que confirma el avance de sus fabricantes",
+      "id": "4631e2d3744528",
+      "title": "Cómo será el operativo para rescatar los 1.500 camiones varados por la nieve en el Paso Cristo Redentor",
       "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
       "category": "Camiones",
-      "source": "SuperTruck.com.ar",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPeUlWNVBPaHdjdXZkTzdSMlBIUV9paFAyaVVRU0s5MnA3cXpUU0ZfcmNpak55cEVJQ3VLV3NZRVZiX2pjWlZ4UV9MNFZZM1JuX2lPNnloUjd4eVpXd3JoRmVUZHRPaG1aaG80M3YtaHlndGZxa3RQbHZ2SVJTak94cVgyblNURjV1bHE4T1BMZjY?oc=5",
-      "published_at": "2026-07-23T13:00:12+00:00",
-      "time": "Thu, 23 Jul 2026 13:00:12 GMT"
-    },
-    {
-      "id": "e449620ea31f08",
-      "title": "FOTON se posiciona entre los tres líderes de vehículos comerciales argentinos",
-      "summary": "Información reciente de camiones seleccionada por el radar regional de Stylo Camión.",
-      "category": "Camiones",
-      "source": "autotest.com.ar",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNb2Jxcmhfc3B6LWFtQ050cXNVQ2dvZ25vTWVScFB6TFRYaTF6eGkwTG0yVUxSM2Z1WFdHTTRHdWtMb1JmdVo3OFp1UEpvR05OdE50SzBmSGQ0alYxdkp5TDBVTFpsWlpqT0tpNGVZOTlmM2ZGN0tuOFc0eGl4SEMtTWZvVklXX29WMS1tSFZ3Z1gwWjJudld2SUVKR3hyWUotUGE0Y1ByUXlzMG9vRUdTMXBJRjI?oc=5",
-      "published_at": "2026-07-23T07:00:00+00:00",
-      "time": "Thu, 23 Jul 2026 07:00:00 GMT"
+      "source": "Infobae",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPeDZ3R1RyQlhTamZfQWdGR1JmYzFocTZRd0RSRmZnZUlZZWdSMHB6VGFwWjVUM1dVVXZmUnkxbHJrcnF2eDZDdkZjRkFWc05vWElJaHZFR2tsd1NrN3NyMWJzZFZmalljOWg4QUsxbWk3TFF6LUVRS09wUTgtWVJ0Q21LV0FzY2dCLWxraUNkVGN1ZnFtbEYyb2NOSENLQTZ3VVRiNTJPclVvX2Y2RmVlVVNDWVJfNFcwNWZxSTNCTkFNM3F5RENGenlhWVdCYzNUcTN3UGU3a05MZDNFbGdWedIB-wFBVV95cUxON0N3MEV5TjQwWWhmVGtSY0RrOWJIZEVvd0FJZ1NId3FtRDd4UzNZaDR2MTdkTW1TVGpJRzhYVlMzaERCc3ZnQXdmeFlKY2hENFlTN0J2QWVrU0NJOHhocGxSM1JWVGNVbXFtN2JuVExsMm5IOFJ3Sm9aaU16aTVNbXo3UThGSC1VSndvVlUwYnI3V040VXJpbzNnX0FRNWktckhaQUlTTERDMU5PVHFxb0JjMTF2NmxHM1NWS2tyQjVnM29ybk1pWHotdkNUVzRiOU5JclJWMHE1Qk96ZHR1MHFqTmN0SzJTOFRyeDA0bDlrYndiNDRtb29MUQ?oc=5",
+      "published_at": "2026-07-25T07:00:00+00:00",
+      "time": "Sat, 25 Jul 2026 07:00:00 GMT"
     }
   ]
 }
