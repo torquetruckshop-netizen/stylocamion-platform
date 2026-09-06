@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-05T20:28:32.149519+00:00",
+  "updated_at": "2026-09-06T00:41:41.297502+00:00",
   "items": [
     {
       "id": "ef5d983435828c",
@@ -22,14 +22,24 @@
       "time": "Tue, 28 Jul 2026 07:00:00 GMT"
     },
     {
-      "id": "8fba8c3987b728",
+      "id": "d41a4955c65cf7",
       "title": "Di Gilio REAC: Cuando el remolque piensa",
       "summary": "Información reciente de técnica y equipos seleccionada por el radar regional de Stylo Camión.",
       "category": "Técnica y equipos",
-      "source": "EspacioT",
+      "source": "espaciot.cl",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBVVm40Zzlwa19fNTlLZ3dXbF8yVW1tdllfa2dKSkJJamhMalQ4dENVMlF3Y1dVOHZKcnU0SUloR3luUWlfbHhBOW5zTHotZW54UHVOVmdPbTd0VmtLZUxjYWhqMzRSR0pTSWljQURxeXBUTEl3aV9IWg?oc=5",
       "published_at": "2026-05-26T07:00:00+00:00",
       "time": "Tue, 26 May 2026 07:00:00 GMT"
+    },
+    {
+      "id": "7645ebf4ad4c40",
+      "title": "Brasil: Cordenonsi abre vacantes para camioneros en operaciones nacionales y del Mercosur",
+      "summary": "Información reciente de región seleccionada por el radar regional de Stylo Camión.",
+      "category": "Región",
+      "source": "Prensa Mercosur",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNNVQ4aWFqSnlVNlRWSExMN0FwMml5TWlEbnBTeHZ0bFRVQlFSaG4yUXNRbTlXdl80eGxYZ0FaRDliUVh5c1RIUmFDS19LRWlOdV92MlN4cS1Mc1VNWlJJNml2MDAtcFlrdENleHc4b1NvaE5ma1hvQ18zbWlibUtxcm5OY0ttc1RYVGhTNmF3bEtIR2s2ME1oTFozVm1PbE5kaDhhNjlBelVqVUhoYVlxNEw1ckp2X0NYZk5SYTJnRWRzRHlUSmc?oc=5",
+      "published_at": "2026-08-31T17:31:11+00:00",
+      "time": "Mon, 31 Aug 2026 17:31:11 GMT"
     },
     {
       "id": "eb941459f45ae1",
