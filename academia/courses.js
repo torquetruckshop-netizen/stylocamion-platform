@@ -1,12 +1,12 @@
 window.STYLO_COURSES = [
   {
-    id:"cpe-granos",
-    title:"Carta de Porte Electrónica: control documental para transporte de granos",
-    category:"Agro",
-    level:"Intermedio",
-    duration:"30 min",
-    objective:"Que el transportista entienda qué debe verificar en la documentación electrónica asociada a un viaje de granos o derivados antes de iniciar la operación, sin asumir tareas administrativas que corresponden a otros intervinientes.",
-    lessons:[
+    "id": "cpe-granos",
+    "title": "Carta de Porte Electrónica: control documental para transporte de granos",
+    "category": "Agro",
+    "level": "Intermedio",
+    "duration": "30 min",
+    "objective": "Que el transportista entienda qué debe verificar en la documentación electrónica asociada a un viaje de granos o derivados antes de iniciar la operación, sin asumir tareas administrativas que corresponden a otros intervinientes.",
+    "lessons": [
       "Qué función cumple la Carta de Porte Electrónica.",
       "Diferencia general entre granos y derivados granarios.",
       "Datos esenciales a contrastar: origen, destino, vehículo, intervinientes y mercadería.",
@@ -14,26 +14,29 @@ window.STYLO_COURSES = [
       "Qué hacer cuando la información del viaje no coincide con la documentación.",
       "Contingencias y cuándo debe intervenir el responsable administrativo."
     ],
-    worksheet:"Control documental agro: fecha, dominio, origen, destino, tipo de carga, número de documento, coincidencia de datos, observaciones y responsable de la verificación.",
-    evaluation:[
+    "worksheet": "Control documental agro: fecha, dominio, origen, destino, tipo de carga, número de documento, coincidencia de datos, observaciones y responsable de la verificación.",
+    "evaluation": [
       "La patente informada no coincide con la unidad asignada. ¿Se inicia el viaje? — No; debe aclararse antes.",
       "¿Conviene basarse en requisitos legales memorizados? — No; hay que consultar la fuente oficial vigente.",
       "¿El chofer debe modificar por su cuenta una documentación incorrecta? — No."
     ],
-    next:"Documentación y trazabilidad de cargas agroalimentarias",
-    safety:"La normativa puede cambiar. El curso debe remitir siempre a ARCA y a los responsables administrativos de la operación para validar requisitos vigentes.",
-    sources:[
-      {label:"ARCA — Carta de Porte Electrónica",url:"https://arca.gob.ar/actividadesAgropecuarias/sector-agro/carta-porte-electronica/"}
+    "next": "Documentación y trazabilidad de cargas agroalimentarias",
+    "safety": "La normativa puede cambiar. El curso debe remitir siempre a ARCA y a los responsables administrativos de la operación para validar requisitos vigentes.",
+    "sources": [
+      {
+        "label": "ARCA — Carta de Porte Electrónica",
+        "url": "https://arca.gob.ar/actividadesAgropecuarias/sector-agro/carta-porte-electronica/"
+      }
     ]
   },
   {
-    id:"cadena-frio",
-    title:"Cadena de frío: control operativo y trazabilidad",
-    category:"Refrigerados",
-    level:"Básico–Intermedio",
-    duration:"35 min",
-    objective:"Comprender cómo funciona una operación refrigerada y aprender a registrar información relevante sin intervenir técnicamente sobre equipos frigoríficos.",
-    lessons:[
+    "id": "cadena-frio",
+    "title": "Cadena de frío: control operativo y trazabilidad",
+    "category": "Refrigerados",
+    "level": "Básico–Intermedio",
+    "duration": "35 min",
+    "objective": "Comprender cómo funciona una operación refrigerada y aprender a registrar información relevante sin intervenir técnicamente sobre equipos frigoríficos.",
+    "lessons": [
       "Qué significa mantener una cadena de frío.",
       "Producto, vehículo y documentación: tres controles diferentes.",
       "Registro de condiciones al recibir y entregar la carga.",
@@ -41,26 +44,29 @@ window.STYLO_COURSES = [
       "Trazabilidad: quién recibió, cuándo y en qué condición.",
       "Escalamiento ante una anomalía."
     ],
-    worksheet:"Registro de carga refrigerada: producto, origen, destino, equipo, hora de recepción, condición informada, registros disponibles, observaciones, hora de entrega y responsable receptor.",
-    evaluation:[
+    "worksheet": "Registro de carga refrigerada: producto, origen, destino, equipo, hora de recepción, condición informada, registros disponibles, observaciones, hora de entrega y responsable receptor.",
+    "evaluation": [
       "¿Todos los alimentos refrigerados utilizan la misma condición de conservación? — No.",
       "Ante una anomalía importante, ¿se continúa normalmente? — No; debe informarse y seguirse el protocolo correspondiente.",
       "¿Para qué sirve la trazabilidad? — Para reconstruir qué ocurrió durante la operación."
     ],
-    next:"Buenas prácticas en distribución de alimentos",
-    safety:"No se enseña reparación de equipos frigoríficos ni se fijan temperaturas universales. Los rangos dependen del producto, la especificación sanitaria y la normativa aplicable.",
-    sources:[
-      {label:"SENASA — Transporte de productos de origen animal y alimenticios",url:"https://www.argentina.gob.ar/node/151565"}
+    "next": "Buenas prácticas en distribución de alimentos",
+    "safety": "No se enseña reparación de equipos frigoríficos ni se fijan temperaturas universales. Los rangos dependen del producto, la especificación sanitaria y la normativa aplicable.",
+    "sources": [
+      {
+        "label": "SENASA — Transporte de productos de origen animal y alimenticios",
+        "url": "https://www.argentina.gob.ar/node/151565"
+      }
     ]
   },
   {
-    id:"operacion-terminales",
-    title:"Operación en puertos, plantas y centros logísticos",
-    category:"Logística",
-    level:"Básico",
-    duration:"30 min",
-    objective:"Preparar al transportista para comprender los procesos de ingreso, espera, documentación y egreso de grandes centros operativos sin enseñar maniobras específicas de conducción.",
-    lessons:[
+    "id": "operacion-terminales",
+    "title": "Operación en puertos, plantas y centros logísticos",
+    "category": "Logística",
+    "level": "Básico",
+    "duration": "30 min",
+    "objective": "Preparar al transportista para comprender los procesos de ingreso, espera, documentación y egreso de grandes centros operativos sin enseñar maniobras específicas de conducción.",
+    "lessons": [
       "Cómo funciona un sistema de turnos.",
       "Qué revisar antes de llegar.",
       "Llegada, acreditación y asignación de espera.",
@@ -68,24 +74,24 @@ window.STYLO_COURSES = [
       "Normas internas y señalización del establecimiento.",
       "Cierre de la operación y comprobantes."
     ],
-    worksheet:"Ingreso a planta: turno, establecimiento, horario asignado, llegada, ingreso, inicio de operación, finalización, salida, tiempo total de espera y observaciones.",
-    evaluation:[
+    "worksheet": "Ingreso a planta: turno, establecimiento, horario asignado, llegada, ingreso, inicio de operación, finalización, salida, tiempo total de espera y observaciones.",
+    "evaluation": [
       "Llegás antes del turno. ¿El horario real de llegada debe registrarse? — Sí.",
       "¿Las reglas de una terminal pueden asumirse válidas para todas las demás? — No.",
       "¿Por qué registrar las esperas? — Porque tienen impacto operativo y económico."
     ],
-    next:"Demoras y estadías: cómo medir su costo real",
-    safety:"Las reglas operativas cambian entre plantas y terminales. Deben respetarse siempre la señalización y los procedimientos del establecimiento.",
-    sources:[]
+    "next": "Demoras y estadías: cómo medir su costo real",
+    "safety": "Las reglas operativas cambian entre plantas y terminales. Deben respetarse siempre la señalización y los procedimientos del establecimiento.",
+    "sources": []
   },
   {
-    id:"rendimiento-combustible",
-    title:"Rendimiento de combustible: convertir datos en decisiones",
-    category:"Economía",
-    level:"Intermedio",
-    duration:"40 min",
-    objective:"Enseñar al dueño o administrador de una unidad a analizar consumo y rendimiento desde los datos, sin entrar en manipulación de combustibles ni reparaciones.",
-    lessons:[
+    "id": "rendimiento-combustible",
+    "title": "Rendimiento de combustible: convertir datos en decisiones",
+    "category": "Economía",
+    "level": "Intermedio",
+    "duration": "40 min",
+    "objective": "Enseñar al dueño o administrador de una unidad a analizar consumo y rendimiento desde los datos, sin entrar en manipulación de combustibles ni reparaciones.",
+    "lessons": [
       "Qué información necesitamos registrar.",
       "Kilómetros recorridos versus kilómetros productivos.",
       "Litros por distancia y rendimiento promedio.",
@@ -93,24 +99,24 @@ window.STYLO_COURSES = [
       "Ruta, peso, tránsito y condiciones de operación como variables.",
       "Cómo detectar desvíos que justifican una revisión profesional."
     ],
-    worksheet:"Rendimiento mensual por unidad: dominio, km inicial, km final, km recorridos, litros registrados, viajes realizados, toneladas transportadas, rendimiento, promedio histórico y observaciones.",
-    evaluation:[
+    "worksheet": "Rendimiento mensual por unidad: dominio, km inicial, km final, km recorridos, litros registrados, viajes realizados, toneladas transportadas, rendimiento, promedio histórico y observaciones.",
+    "evaluation": [
       "Dos camiones con trabajos distintos consumen diferente. ¿Eso demuestra una falla? — No.",
       "¿Conviene comparar un solo viaje o una tendencia? — Una tendencia.",
       "¿Qué dato falta si conocemos solamente los litros? — La distancia y el contexto operativo."
     ],
-    next:"Tablero económico por camión",
-    safety:"Un desvío sostenido puede justificar una revisión de gestión o inspección técnica. El curso no diagnostica fallas mecánicas.",
-    sources:[]
+    "next": "Tablero económico por camión",
+    "safety": "Un desvío sostenido puede justificar una revisión de gestión o inspección técnica. El curso no diagnostica fallas mecánicas.",
+    "sources": []
   },
   {
-    id:"reclamos-incidencias",
-    title:"Daños, faltantes y reclamos: cómo documentar una incidencia",
-    category:"Gestión",
-    level:"Intermedio",
-    duration:"35 min",
-    objective:"Enseñar al transportista a construir un registro objetivo cuando aparece un problema con una carga, evitando discusiones basadas solamente en recuerdos o mensajes dispersos.",
-    lessons:[
+    "id": "reclamos-incidencias",
+    "title": "Daños, faltantes y reclamos: cómo documentar una incidencia",
+    "category": "Gestión",
+    "level": "Intermedio",
+    "duration": "35 min",
+    "objective": "Enseñar al transportista a construir un registro objetivo cuando aparece un problema con una carga, evitando discusiones basadas solamente en recuerdos o mensajes dispersos.",
+    "lessons": [
       "Incidencia, daño y reclamo: no son necesariamente lo mismo.",
       "Construir una cronología.",
       "Fotografías, documentos y registros digitales.",
@@ -118,14 +124,162 @@ window.STYLO_COURSES = [
       "Comunicación profesional de la incidencia.",
       "Cuándo escalar a empresa, aseguradora, asesor legal o autoridad."
     ],
-    worksheet:"Registro de incidencia de carga: fecha y hora, lugar, unidad, viaje, tipo de carga, descripción objetiva, personas intervinientes, fotografías/documentos, comunicación realizada, número de reclamo y estado.",
-    evaluation:[
+    "worksheet": "Registro de incidencia de carga: fecha y hora, lugar, unidad, viaje, tipo de carga, descripción objetiva, personas intervinientes, fotografías/documentos, comunicación realizada, número de reclamo y estado.",
+    "evaluation": [
       "¿Conviene escribir 'el cliente tuvo la culpa'? — No; registrar hechos verificables.",
       "¿Las fotos reemplazan toda la documentación? — No.",
       "¿Cuándo corresponde asesoramiento profesional? — Cuando existen consecuencias jurídicas, contractuales, aseguradoras o regulatorias."
     ],
-    next:"Seguros de transporte y gestión de reclamos",
-    safety:"Academy enseña a registrar hechos y ordenar evidencia, no a determinar culpables ni emitir conclusiones jurídicas.",
-    sources:[]
+    "next": "Seguros de transporte y gestión de reclamos",
+    "safety": "Academy enseña a registrar hechos y ordenar evidencia, no a determinar culpables ni emitir conclusiones jurídicas.",
+    "sources": []
+  },
+  {
+    "id": "rto-control-documental",
+    "title": "RTO y control documental de la unidad: checklist antes de salir",
+    "category": "Documentación",
+    "level": "Básico",
+    "duration": "30 min",
+    "objective": "Ayudar al chofer o responsable de flota a verificar, antes del viaje, que la unidad tenga su documentación técnica y operativa vigente, sin reemplazar el control de la empresa ni la consulta a la autoridad competente.",
+    "lessons": [
+      "Qué representa la Revisión Técnica Obligatoria y por qué su vigencia debe verificarse antes de cada operación.",
+      "Cómo distinguir certificado, constancia digital y otros documentos operativos de la unidad.",
+      "Qué datos conviene contrastar: dominio, identificación de la unidad, fecha de vigencia y tipo de servicio.",
+      "Cómo registrar una observación documental sin alterar ni completar por cuenta propia documentación oficial.",
+      "Qué hacer si falta una constancia, hay datos inconsistentes o existen dudas sobre la vigencia.",
+      "Cómo conservar una rutina simple de control documental en flotas pequeñas."
+    ],
+    "worksheet": "Checklist documental de unidad: dominio, tipo de equipo, RTO/CRT, vigencia, seguro, documentación del viaje, observaciones, responsable de control y estado final antes de salida.",
+    "evaluation": [
+      "¿Una foto vieja de un certificado alcanza para demostrar vigencia? — No; debe verificarse la documentación vigente y su correspondencia con la unidad.",
+      "¿El chofer debería corregir por su cuenta un dato oficial inconsistente? — No.",
+      "Si existen dudas sobre la validez de una constancia, ¿qué corresponde? — Escalar a la empresa y consultar la fuente oficial."
+    ],
+    "next": "Control documental integral para flotas pequeñas",
+    "safety": "Los requisitos pueden variar por jurisdicción, tipo de transporte y actualización normativa. El curso es educativo y no sustituye a CNRT, Secretaría de Transporte, aseguradoras ni otras autoridades competentes.",
+    "sources": [
+      {
+        "label": "Argentina.gob.ar — Resolución 32/2026 sobre Revisión Técnica Obligatoria",
+        "url": "https://www.argentina.gob.ar/normativa/nacional/norma-426358/texto"
+      },
+      {
+        "label": "Argentina.gob.ar — Modernización del sistema RTO, 3 de junio de 2026",
+        "url": "https://www.argentina.gob.ar/node/503707"
+      }
+    ]
+  },
+  {
+    "id": "fatiga-alerta-ruta",
+    "title": "Fatiga en ruta: reconocer señales y tomar decisiones seguras",
+    "category": "Salud y seguridad",
+    "level": "Básico",
+    "duration": "35 min",
+    "objective": "Enseñar a reconocer señales frecuentes de fatiga y somnolencia, planificar descansos y saber cuándo dejar de conducir y pedir apoyo, sin convertir el curso en diagnóstico médico.",
+    "lessons": [
+      "Por qué la fatiga afecta atención, percepción, tiempo de respuesta y toma de decisiones.",
+      "Señales que no conviene normalizar: pérdida de concentración, parpadeo frecuente, reacciones lentas o dificultad para interpretar el entorno.",
+      "Planificación preventiva del viaje: descanso previo, pausas y organización realista de horarios.",
+      "Factores que pueden aumentar el cansancio, como jornadas prolongadas, monotonía o falta de sueño.",
+      "Qué hacer ante somnolencia o deterioro de la atención: detener la conducción en un lugar seguro y comunicar la situación.",
+      "Cuándo corresponde consultar a un profesional de salud, especialmente ante fatiga persistente o medicación que pueda producir somnolencia."
+    ],
+    "worksheet": "Autocontrol de alerta en viaje: hora, horas de descanso previo, señales percibidas, última pausa, nivel subjetivo de atención, decisión tomada y persona avisada si fue necesario.",
+    "evaluation": [
+      "¿La fatiga solo importa cuando aparece sueño intenso? — No; puede afectar la atención y las decisiones antes.",
+      "Si aparecen señales claras de somnolencia, ¿conviene 'aguantar un poco más'? — No; corresponde detener la conducción de forma segura.",
+      "¿Academy puede diagnosticar una causa médica de fatiga? — No; una fatiga persistente requiere consulta profesional."
+    ],
+    "next": "Sueño, turnos y organización saludable del trabajo en ruta",
+    "safety": "Ante somnolencia, pérdida de atención o deterioro del estado de alerta, no se debe continuar conduciendo. Si la fatiga es persistente o puede estar vinculada con una condición de salud o medicación, corresponde consulta profesional.",
+    "sources": [
+      {
+        "label": "ANSV — Fatiga y estrés en la conducción de vehículos",
+        "url": "https://www.argentina.gob.ar/seguridadvial/observatoriovialnacional/fatiga-y-estres-en-la-conduccion-de-vehiculos"
+      }
+    ]
+  },
+  {
+    "id": "frontera-atit",
+    "title": "Cruce de frontera por carretera: preparar una operación bajo ATIT",
+    "category": "Internacional",
+    "level": "Intermedio",
+    "duration": "40 min",
+    "objective": "Dar una visión práctica de cómo preparar documentalmente una operación internacional terrestre dentro del marco ATIT, entendiendo qué revisar y a quién escalar dudas aduaneras o de habilitación.",
+    "lessons": [
+      "Qué es el Acuerdo de Transporte Internacional Terrestre (ATIT) y qué tipo de operaciones alcanza.",
+      "Diferencia entre documentación del transportista, de la unidad y de la carga.",
+      "Qué función cumple el MIC/DTA dentro del tránsito aduanero internacional.",
+      "Cómo preparar un checklist previo de empresa, unidad, carga, ruta y aduana antes de llegar a frontera.",
+      "Digitalización y sistemas informáticos: por qué conviene verificar el procedimiento vigente antes de cada operación.",
+      "Qué hacer ante inconsistencias, rechazos o dudas: no improvisar y escalar al operador aduanero, empresa o autoridad competente."
+    ],
+    "worksheet": "Checklist de operación internacional: país de origen/destino, empresa habilitada, unidad, documentación de carga, MIC/DTA o registro equivalente, aduana/paso previsto, observaciones y responsable de validación.",
+    "evaluation": [
+      "¿El MIC/DTA reemplaza cualquier otro documento en todos los casos? — No; cada operación debe validarse según su régimen y autoridades intervinientes.",
+      "¿Conviene asumir que un procedimiento de frontera es idéntico en todos los países? — No.",
+      "Ante una inconsistencia aduanera, ¿el chofer debe improvisar una solución documental? — No; debe escalarla."
+    ],
+    "next": "Trazabilidad internacional y gestión documental de frontera",
+    "safety": "El curso no sustituye a despachantes, agentes de transporte aduanero, autoridades aduaneras ni organismos de transporte. Los procedimientos cambian y deben verificarse con la normativa y sistemas oficiales vigentes.",
+    "sources": [
+      {
+        "label": "Argentina.gob.ar — Resolución 829/2026, actualización aduanera del ATIT",
+        "url": "https://www.argentina.gob.ar/normativa/nacional/norma-426484/texto"
+      },
+      {
+        "label": "ARCA — SINTIA, manuales de tránsito internacional aduanero",
+        "url": "https://www.arca.gob.ar/USAduaneros/sintia/manuales.asp"
+      }
+    ]
+  },
+  {
+    "id": "comprobante-entrega",
+    "title": "Comprobante de entrega: cerrar un viaje sin perder trazabilidad",
+    "category": "Operación",
+    "level": "Básico",
+    "duration": "30 min",
+    "objective": "Enseñar a documentar de forma ordenada el cierre de una entrega para reducir confusiones posteriores y facilitar la administración del viaje.",
+    "lessons": [
+      "Qué información mínima conviene registrar al finalizar una entrega.",
+      "Cómo separar datos del viaje, datos de recepción y observaciones.",
+      "Uso de remitos, constancias digitales o comprobantes internos sin duplicar información innecesaria.",
+      "Cómo dejar asentadas diferencias objetivas de horario, cantidad informada o condición de recepción sin atribuir responsabilidades.",
+      "Protección básica de datos: registrar solo lo necesario y evitar difundir documentación sensible.",
+      "Cómo archivar el comprobante para que administración pueda encontrarlo después."
+    ],
+    "worksheet": "Cierre de entrega: viaje, unidad, origen, destino, hora de llegada, hora de recepción, receptor, documento asociado, observaciones objetivas, evidencia disponible y estado administrativo.",
+    "evaluation": [
+      "¿Conviene guardar únicamente una foto suelta sin asociarla al viaje? — No.",
+      "¿El comprobante de entrega debería incluir opiniones sobre culpabilidad? — No; conviene registrar hechos y datos.",
+      "¿Para qué sirve un cierre documental ordenado? — Para facilitar trazabilidad, administración y resolución de diferencias."
+    ],
+    "next": "Digitalización simple de remitos y documentación de viaje",
+    "safety": "No se deben publicar ni compartir datos personales o documentos sensibles fuera de los canales autorizados por la empresa. Si existe un conflicto contractual, corresponde escalarlo al área administrativa o legal.",
+    "sources": []
+  },
+  {
+    "id": "kilometros-vacios",
+    "title": "Kilómetros vacíos: medirlos para mejorar la rentabilidad",
+    "category": "Economía",
+    "level": "Intermedio",
+    "duration": "35 min",
+    "objective": "Enseñar a medir los kilómetros recorridos sin carga y convertir ese dato en una señal de gestión para mejorar la planificación comercial y operativa.",
+    "lessons": [
+      "Diferencia entre kilómetros totales, productivos y vacíos.",
+      "Cómo calcular el porcentaje de kilómetros vacíos sobre el recorrido total.",
+      "Por qué un porcentaje aislado no alcanza: tipo de operación, corredor, estacionalidad y retorno disponible.",
+      "Cómo comparar viajes, unidades y corredores sin sacar conclusiones apresuradas.",
+      "Cómo registrar oportunidades de retorno y causas frecuentes de viajes sin carga.",
+      "Cómo usar la tendencia para decidir dónde buscar carga de regreso, renegociar circuitos o revisar la planificación."
+    ],
+    "worksheet": "Control de kilómetros vacíos: fecha, unidad, corredor, km totales, km productivos, km vacíos, porcentaje de vacío, motivo, oportunidad de retorno detectada y observaciones.",
+    "evaluation": [
+      "Si una unidad hizo 1.000 km y 250 fueron vacíos, ¿qué porcentaje del recorrido fue vacío? — 25%.",
+      "¿Un viaje con kilómetros vacíos demuestra por sí solo mala gestión? — No; hay que analizar el contexto y la tendencia.",
+      "¿Qué aporta medir este indicador en el tiempo? — Permite detectar patrones y oportunidades de mejora."
+    ],
+    "next": "Rentabilidad por corredor y por cliente",
+    "safety": "El curso trabaja con indicadores de gestión. Las decisiones comerciales deben considerar costos completos, contratos, disponibilidad real de cargas y condiciones operativas.",
+    "sources": []
   }
 ];
