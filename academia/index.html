@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stylo Camión Academy: cursos cortos y prácticos para choferes y transportistas." />
+  <meta name="theme-color" content="#081425" />
+  <title>Stylo Camión Academy | Formación en ruta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="https://stylocamion.com/" aria-label="Stylo Camión, inicio">
+      <span class="brand-mark">SC</span>
+      <span>STYLO CAMIÓN <strong>ACADEMY</strong></span>
+    </a>
+    <nav class="menu" aria-label="Navegación Academy">
+      <a href="#cursos">Cursos</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="https://stylocamion.com/biblioteca/cursos">Biblioteca</a>
+      <a href="https://stylocamion.com/">Stylo Camión</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">FORMACIÓN PRÁCTICA PARA EL TRANSPORTE</p>
+        <h1>Aprendé.<br><span>Aplicalo en ruta.</span></h1>
+        <p class="hero-text">Cursos cortos para choferes, transportistas y pequeñas flotas. Contenido pensado para Argentina y Latinoamérica, con material práctico, evaluaciones y rutas de aprendizaje.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#cursos">Explorar cursos</a>
+          <a class="button secondary" href="#como-funciona">Cómo funciona</a>
+        </div>
+      </div>
+      <aside class="hero-panel">
+        <p>NUEVO LOTE</p>
+        <strong>5 cursos publicados</strong>
+        <ul>
+          <li>Agro y documentación</li>
+          <li>Cadena de frío</li>
+          <li>Operación logística</li>
+          <li>Economía de flota</li>
+          <li>Gestión de incidencias</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="cursos" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CATÁLOGO ABIERTO</p>
+          <h2>Cursos nuevos</h2>
+        </div>
+        <p>Academy está preparada para crecer sin límite. Usá el buscador o filtrá por categoría.</p>
+      </div>
+
+      <div class="toolbar" role="search">
+        <label class="search">
+          <span>Buscar</span>
+          <input id="searchInput" type="search" placeholder="Ej.: agro, frío, combustible..." autocomplete="off" />
+        </label>
+        <div id="filters" class="filters" aria-label="Filtros de cursos"></div>
+      </div>
+
+      <div id="courseGrid" class="course-grid" aria-live="polite"></div>
+      <section id="courseDetail" class="course-detail" hidden></section>
+    </section>
+
+    <section id="como-funciona" class="section how">
+      <div>
+        <p class="eyebrow">MODELO ACADEMY</p>
+        <h2>Microaprendizaje útil</h2>
+      </div>
+      <div class="steps">
+        <article><span>01</span><h3>Microlecciones</h3><p>Contenido breve, claro y directamente relacionado con el trabajo del transporte.</p></article>
+        <article><span>02</span><h3>Ficha práctica</h3><p>Cada curso propone un recurso descargable o una herramienta aplicable.</p></article>
+        <article><span>03</span><h3>Evaluación</h3><p>Preguntas cortas para comprobar comprensión, sin convertir el curso en un examen pesado.</p></article>
+        <article><span>04</span><h3>Continuidad</h3><p>Al finalizar, el alumno recibe un siguiente curso recomendado para seguir una ruta de aprendizaje.</p></article>
+      </div>
+    </section>
+
+    <section class="notice">
+      <strong>Importante</strong>
+      <p>Los contenidos de seguridad, mecánica, salud y normativa son educativos. Ante una falla crítica, situación sanitaria o duda legal, corresponde recurrir a personal competente y consultar fuentes oficiales vigentes.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Stylo Camión Academy</strong> · Formación en ruta</p>
+    <p>Parte del ecosistema Stylo Camión.</p>
+    <p>© <span id="year"></span> Stylo Camión.</p>
+  </footer>
+
+  <script src="courses.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
