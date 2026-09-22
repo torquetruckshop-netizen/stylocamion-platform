@@ -3,12 +3,38 @@ const grid = document.querySelector("#courseGrid");
 const filters = document.querySelector("#filters");
 const searchInput = document.querySelector("#searchInput");
 const detail = document.querySelector("#courseDetail");
+const routeGrid = document.querySelector("#routeGrid");
+const courseCount = document.querySelector("#courseCount");
 
 const categories = ["Todos", ...new Set(courses.map(course => course.category))];
 let activeCategory = "Todos";
 
+const learningRoutes = [
+  {name:"Operación segura", description:"Documentación, descanso, control de la unidad y cierre correcto de cada viaje.", categories:["Documentación","Salud y seguridad","Operación"]},
+  {name:"Logística profesional", description:"Ingreso a plantas, trazabilidad, incidencias y procesos que ordenan una operación.", categories:["Logística","Gestión","Operación"]},
+  {name:"Rentabilidad del camión", description:"Aprendé a medir consumo, kilómetros improductivos y variables que afectan el resultado.", categories:["Economía"]},
+  {name:"Cargas especiales", description:"Formación específica para agro, refrigerados y otras operaciones que requieren controles particulares.", categories:["Agro","Refrigerados"]},
+  {name:"Transporte internacional", description:"Preparación documental y operativa para viajes por carretera entre países de la región.", categories:["Internacional"]}
+];
+
 function escapeHtml(value){
   return String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[char]));
+}
+
+function renderRoutes(){
+  if(!routeGrid) return;
+  routeGrid.innerHTML = learningRoutes.map((route,index) => {
+    const routeCourses = courses.filter(course => route.categories.includes(course.category));
+    return '<article class="route-card"><span class="route-number">0'+(index+1)+'</span><p class="route-label">RUTA DE APRENDIZAJE</p><h3>'+escapeHtml(route.name)+'</h3><p>'+escapeHtml(route.description)+'</p><div class="route-footer"><strong>'+routeCourses.length+' cursos disponibles</strong><button type="button" data-route="'+index+'">Ver ruta</button></div></article>';
+  }).join("");
+  routeGrid.querySelectorAll("[data-route]").forEach(button => button.addEventListener("click", () => {
+    const route = learningRoutes[Number(button.dataset.route)];
+    activeCategory = "Todos";
+    searchInput.value = "";
+    renderFilters();
+    renderCourses(route.categories);
+    document.querySelector("#cursos")?.scrollIntoView({behavior:"smooth"});
+  }));
 }
 
 function renderFilters(){
@@ -20,12 +46,13 @@ function renderFilters(){
   }));
 }
 
-function renderCourses(){
+function renderCourses(routeCategories = null){
   const term = (searchInput.value || "").trim().toLowerCase();
   const visible = courses.filter(course => {
     const categoryOk = activeCategory === "Todos" || course.category === activeCategory;
+    const routeOk = !routeCategories || routeCategories.includes(course.category);
     const haystack = [course.title,course.category,course.level,course.objective,...course.lessons].join(" ").toLowerCase();
-    return categoryOk && (!term || haystack.includes(term));
+    return categoryOk && routeOk && (!term || haystack.includes(term));
   });
 
   if(!visible.length){
@@ -56,5 +83,7 @@ function openCourse(id){
 searchInput?.addEventListener("input", renderCourses);
 const year = document.querySelector("#year");
 if(year) year.textContent = new Date().getFullYear();
+if(courseCount) courseCount.textContent = String(courses.length);
+renderRoutes();
 renderFilters();
 renderCourses();
