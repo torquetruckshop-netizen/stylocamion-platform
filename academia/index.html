@@ -18,6 +18,7 @@
       <span>STYLO CAMIÓN <strong>ACADEMY</strong></span>
     </a>
     <nav class="menu" aria-label="Navegación Academy">
+      <a href="#rutas">Rutas</a>
       <a href="#cursos">Cursos</a>
       <a href="#como-funciona">Cómo funciona</a>
       <a href="https://stylocamion.com/biblioteca/cursos">Biblioteca</a>
@@ -38,7 +39,7 @@
       </div>
       <aside class="hero-panel">
         <p>NUEVO LOTE</p>
-        <strong>5 cursos publicados</strong>
+        <strong><span id="courseCount">0</span> cursos disponibles</strong>
         <ul>
           <li>Agro y documentación</li>
           <li>Cadena de frío</li>
@@ -47,6 +48,17 @@
           <li>Gestión de incidencias</li>
         </ul>
       </aside>
+    </section>
+
+    <section id="rutas" class="section routes-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">APRENDER CON ORDEN</p>
+          <h2>Rutas de aprendizaje</h2>
+        </div>
+        <p>En lugar de recorrer cursos sueltos, elegí un objetivo. Academy agrupa el contenido disponible y va completando cada ruta a medida que se incorporan nuevos cursos.</p>
+      </div>
+      <div id="routeGrid" class="route-grid"></div>
     </section>
 
     <section id="cursos" class="section">
