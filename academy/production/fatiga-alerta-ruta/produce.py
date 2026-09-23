@@ -222,7 +222,6 @@ def draw_visual(d, kind):
         d.arc((900,270,1140,510), -90, 225, fill=CYAN, width=18)
         d.text((960,345), "6 s", font=font(52, True), fill=WHITE)
     elif kind == "stop":
-        d.octagon = None
         d.ellipse((915,175,1135,395), fill=RED, outline=WHITE, width=8)
         d.text((957,245), "PARE", font=font(46, True), fill=WHITE)
         truck(d, 850, 470, .85)
