@@ -7,6 +7,12 @@ on:
     paths:
       - 'academy/production/fatiga-alerta-ruta/**'
       - '.github/workflows/academy-fatiga-video.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'academy/production/fatiga-alerta-ruta/**'
+      - '.github/workflows/academy-fatiga-video.yml'
   workflow_dispatch:
 
 permissions:
