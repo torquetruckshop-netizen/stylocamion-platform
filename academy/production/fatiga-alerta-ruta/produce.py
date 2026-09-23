@@ -123,6 +123,7 @@ SCENES = [
 ]
 
 SOURCES = [
+    ("Agencia Nacional de Seguridad Vial — Fatiga y estrés en la conducción", "https://www.argentina.gob.ar/seguridadvial/observatoriovialnacional/fatiga-y-estres-en-la-conduccion-de-vehiculos", "consultada el 23/09/2026"),
     ("NHTSA — Drowsy Driving", "https://www.nhtsa.gov/risky-driving/drowsy-driving", "consultada el 23/09/2026"),
     ("CDC/NIOSH — Long-Haul Truck Drivers", "https://www.cdc.gov/niosh/motor-vehicle/long-haul-truck-drivers/index.html", "actualizada 29/07/2024; consultada el 23/09/2026"),
 ]
