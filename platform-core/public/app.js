@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 async function init() {
   bindEvents();
+  trackPageview();
   try {
     state.config = await api('/api/public-config');
     state.products = await api('/api/products');
@@ -81,10 +82,75 @@ function renderAccount() {
     ? state.account.orders.map(orderCard).join('')
     : '<p>Todavía no tenés compras. Elegí un servicio para empezar.</p>';
   document.querySelectorAll('[data-qr]').forEach((button) => button.addEventListener('click', recoverQr));
+  checkAdminAccess();
   if (location.pathname.startsWith('/validar/')) {
     $('#account').classList.add('hidden');
     $('#validator').classList.remove('hidden');
   }
+}
+
+async function checkAdminAccess() {
+  try {
+    const snapshot = await api('/api/admin/snapshot');
+    $('#admin-link')?.classList.remove('hidden');
+    if (location.pathname === '/admin') renderAdmin(snapshot);
+  } catch (error) {
+    if (location.pathname === '/admin') {
+      $('#account')?.classList.add('hidden');
+      showNotice('Este panel es exclusivo para administradores autorizados.', true);
+    }
+  }
+}
+
+function renderAdmin(snapshot) {
+  $('#account')?.classList.add('hidden');
+  $('#admin-panel')?.classList.remove('hidden');
+  const orders = snapshot.orders || [];
+  const approved = orders.filter((item) => item.status === 'approved');
+  const revenue = approved.reduce((sum, item) => sum + Number(item.amount || 0), 0);
+  const active = (snapshot.entitlements || []).filter((item) => item.status === 'active').length;
+  const usedQr = (snapshot.qr || []).filter((item) => item.status === 'used').length;
+  const analytics = snapshot.analytics || { pageviews: 0, uniqueSessions: 0, topPages: [] };
+  const metrics = [
+    ['Visitas · 30 días', analytics.pageviews || 0],
+    ['Sesiones únicas', analytics.uniqueSessions || 0],
+    ['Usuarios registrados', (snapshot.profiles || []).length],
+    ['Órdenes totales', orders.length],
+    ['Órdenes aprobadas', approved.length],
+    ['Ingresos aprobados', money(revenue)],
+    ['Accesos activos', active],
+    ['QR utilizados', usedQr],
+  ];
+  $('#admin-metrics').innerHTML = metrics.map(([label,value]) => `<article class="metric"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></article>`).join('');
+  $('#top-pages').innerHTML = analytics.topPages?.length
+    ? analytics.topPages.map((item) => `<div><span>${escapeHtml(item.path)}</span><strong>${escapeHtml(item.views)}</strong></div>`).join('')
+    : '<p>Aún no hay visitas registradas en este período.</p>';
+  const activity = (snapshot.audit || []).slice(0, 12);
+  $('#admin-activity').innerHTML = activity.length
+    ? activity.map((item) => `<div><span>${escapeHtml(item.action)}<small>${escapeHtml(new Date(item.createdAt).toLocaleString('es-AR'))}</small></span><strong>${escapeHtml(item.result)}</strong></div>`).join('')
+    : '<p>Aún no hay actividad administrativa registrada.</p>';
+}
+
+function analyticsSessionId() {
+  const key = 'stylo-anon-session-v1';
+  let id = localStorage.getItem(key);
+  if (!id) {
+    id = crypto.randomUUID();
+    localStorage.setItem(key, id);
+  }
+  return id;
+}
+
+function trackPageview() {
+  let referrerHost = null;
+  try { referrerHost = document.referrer ? new URL(document.referrer).hostname : null; } catch {}
+  fetch('/api/analytics/pageview', {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ sessionId: analyticsSessionId(), path: location.pathname, referrerHost }),
+    keepalive: true,
+  }).catch(() => {});
 }
 
 function showProfile() {
