@@ -37,6 +37,19 @@ export function createPlatformServer({
         return json(res, 200, publicConfig);
       }
 
+      if (req.method === 'POST' && url.pathname === '/api/analytics/pageview') {
+        const input = await readJson(req);
+        const path = typeof input.path === 'string' && input.path.startsWith('/') ? input.path.slice(0, 200) : '/';
+        const sessionId = typeof input.sessionId === 'string' && /^[a-f0-9-]{16,64}$/i.test(input.sessionId) ? input.sessionId : null;
+        const referrerHost = typeof input.referrerHost === 'string' ? input.referrerHost.slice(0, 120) : null;
+        if (!sessionId) throw new Error('ANALYTICS_SESSION_INVALID');
+        if (typeof adminService.store.recordPageview === 'function') {
+          await adminService.store.recordPageview({ sessionId, path, referrerHost, createdAt: new Date().toISOString() });
+        }
+        res.writeHead(204, { 'Cache-Control': 'no-store' });
+        return res.end();
+      }
+
       if (req.method === 'GET' && url.pathname === '/api/products') {
         return json(res, 200, Object.values(PRODUCTS)
           .filter((product) => product.enabled && product.amount !== null)
@@ -193,7 +206,7 @@ async function serveFile(res, fileUrl, contentType) {
 }
 
 function staticAsset(pathname) {
-  if (pathname === '/' || pathname.startsWith('/validar/')) {
+  if (pathname === '/' || pathname === '/admin' || pathname.startsWith('/validar/')) {
     return { file: 'index.html', type: 'text/html; charset=utf-8' };
   }
   if (pathname === '/app.js') return { file: 'app.js', type: 'text/javascript; charset=utf-8' };
