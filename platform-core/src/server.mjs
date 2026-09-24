@@ -114,11 +114,7 @@ export function createPlatformServer({
       const qrImage = url.pathname.match(/^\/api\/orders\/([^/]+)\/qr\.svg$/);
       if (req.method === 'GET' && qrImage) {
         const user = await auth.authenticate(toRequest(req));
-        const credentials = await orderService.recoverQrs({ orderId: qrImage[1], userId: user.id });
-        const credential = url.searchParams.get('qr')
-          ? credentials.find((item) => item.id === url.searchParams.get('qr'))
-          : credentials[0];
-        if (!credential) throw new Error('QR_NOT_FOUND');
+        const credential = await orderService.recoverQr({ orderId: qrImage[1], userId: user.id });
         const svg = await QRCode.toString(credential.payload, {
           type: 'svg', width: 360, margin: 2,
           color: { dark: '#111111ff', light: '#ffffffff' },
