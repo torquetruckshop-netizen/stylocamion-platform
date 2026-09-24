@@ -72,7 +72,7 @@ test('API comparte una cuenta y protege el panel administrativo', async (t) => {
   const admin = await fetch(`${base}/api/admin/snapshot`, {
     headers: { Authorization: 'Bearer admin-token' },
   });
-  assert.equal(admin.status, 200);
+  assert.equal(admin.status, 200, await admin.clone().text());
 });
 
 test('la sesión unificada emite una cookie segura para todos los subdominios', async (t) => {
