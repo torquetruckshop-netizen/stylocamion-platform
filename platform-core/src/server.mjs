@@ -37,6 +37,19 @@ export function createPlatformServer({
         return json(res, 200, publicConfig);
       }
 
+      if (req.method === 'POST' && url.pathname === '/api/analytics/pageview') {
+        const input = await readJson(req);
+        const path = typeof input.path === 'string' && input.path.startsWith('/') ? input.path.slice(0, 200) : '/';
+        const sessionId = typeof input.sessionId === 'string' && /^[a-f0-9-]{16,64}$/i.test(input.sessionId) ? input.sessionId : null;
+        const referrerHost = typeof input.referrerHost === 'string' ? input.referrerHost.slice(0, 120) : null;
+        if (!sessionId) throw new Error('ANALYTICS_SESSION_INVALID');
+        if (typeof adminService.store.recordPageview === 'function') {
+          await adminService.store.recordPageview({ sessionId, path, referrerHost, createdAt: new Date().toISOString() });
+        }
+        res.writeHead(204, { 'Cache-Control': 'no-store' });
+        return res.end();
+      }
+
       if (req.method === 'GET' && url.pathname === '/api/products') {
         return json(res, 200, Object.values(PRODUCTS)
           .filter((product) => product.enabled && product.amount !== null)
@@ -101,11 +114,7 @@ export function createPlatformServer({
       const qrImage = url.pathname.match(/^\/api\/orders\/([^/]+)\/qr\.svg$/);
       if (req.method === 'GET' && qrImage) {
         const user = await auth.authenticate(toRequest(req));
-        const credentials = await orderService.recoverQrs({ orderId: qrImage[1], userId: user.id });
-        const credential = url.searchParams.get('qr')
-          ? credentials.find((item) => item.id === url.searchParams.get('qr'))
-          : credentials[0];
-        if (!credential) throw new Error('QR_NOT_FOUND');
+        const credential = await orderService.recoverQr({ orderId: qrImage[1], userId: user.id });
         const svg = await QRCode.toString(credential.payload, {
           type: 'svg', width: 360, margin: 2,
           color: { dark: '#111111ff', light: '#ffffffff' },
@@ -193,7 +202,7 @@ async function serveFile(res, fileUrl, contentType) {
 }
 
 function staticAsset(pathname) {
-  if (pathname === '/' || pathname.startsWith('/validar/')) {
+  if (pathname === '/' || pathname === '/admin' || pathname.startsWith('/validar/')) {
     return { file: 'index.html', type: 'text/html; charset=utf-8' };
   }
   if (pathname === '/app.js') return { file: 'app.js', type: 'text/javascript; charset=utf-8' };

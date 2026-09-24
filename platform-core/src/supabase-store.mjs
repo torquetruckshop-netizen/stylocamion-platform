@@ -8,6 +8,7 @@ const TABLES = Object.freeze({
   qr: 'platform_event_qr',
   audit: 'platform_admin_audit',
   sessions: 'platform_sessions',
+  pageviews: 'platform_pageviews',
 });
 
 export class SupabaseStore {
@@ -223,18 +224,42 @@ export class SupabaseStore {
     return rows.length > 0;
   }
 
+  async recordPageview(pageview) {
+    await this.request(TABLES.pageviews, {
+      method: 'POST', prefer: 'return=minimal',
+      body: {
+        session_id: pageview.sessionId,
+        path: pageview.path,
+        referrer_host: pageview.referrerHost ?? null,
+        created_at: pageview.createdAt,
+      },
+    });
+  }
+
   async adminSnapshot() {
-    const [profiles, orders, entitlements, qr, audit] = await Promise.all([
+    const cutoff = new Date(Date.now() - 30 * 86400000).toISOString();
+    const [profiles, orders, entitlements, qr, audit, pageviews] = await Promise.all([
       this.request(TABLES.profiles, { query: { select: '*', order: 'created_at.desc' } }),
       this.request(TABLES.orders, { query: { select: '*', order: 'created_at.desc' } }),
       this.request(TABLES.entitlements, { query: { select: '*', order: 'starts_at.desc' } }),
       this.request(TABLES.qr, { query: { select: publicQrColumns(), order: 'issued_at.desc' } }),
       this.request(TABLES.audit, { query: { select: '*', order: 'created_at.desc', limit: 1000 } }),
+      this.request(TABLES.pageviews, { query: { select: 'session_id,path,created_at', created_at: `gte.${cutoff}`, order: 'created_at.desc', limit: 10000 } }),
     ]);
+    const topPages = Object.entries(pageviews.reduce((acc, item) => {
+      acc[item.path] = (acc[item.path] ?? 0) + 1;
+      return acc;
+    }, {})).sort((a,b) => b[1]-a[1]).slice(0,10).map(([path,views]) => ({ path, views }));
     return {
       profiles: profiles.map(profileFromRow), orders: orders.map(orderFromRow),
       entitlements: entitlements.map(entitlementFromRow), qr: qr.map(qrFromRow),
       audit: audit.map(auditFromRow),
+      analytics: {
+        periodDays: 30,
+        pageviews: pageviews.length,
+        uniqueSessions: new Set(pageviews.map((item) => item.session_id)).size,
+        topPages,
+      },
     };
   }
 

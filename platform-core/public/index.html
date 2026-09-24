@@ -10,7 +10,10 @@
 <body>
   <header class="topbar">
     <a class="brand" href="/" aria-label="Stylo Camión">STYLO <span>CAMIÓN</span></a>
-    <button id="logout" class="quiet hidden" type="button">Salir</button>
+    <div class="header-actions">
+      <a id="admin-link" class="admin-link hidden" href="/admin">Panel admin</a>
+      <button id="logout" class="quiet hidden" type="button">Salir</button>
+    </div>
   </header>
 
   <main class="shell">
@@ -76,6 +79,25 @@
       <div id="products" class="product-grid"></div>
       <h2>Mis compras y accesos</h2>
       <div id="orders" class="stack"></div>
+    </section>
+
+    <section id="admin-panel" class="hidden">
+      <div class="account-heading">
+        <div><p class="eyebrow">CONTROL · ESTADÍSTICAS</p><h2>Panel de administración</h2></div>
+        <a class="quiet-link" href="/">Volver a Mi Stylo</a>
+      </div>
+      <div id="admin-metrics" class="metric-grid"></div>
+      <div class="admin-grid">
+        <section class="card">
+          <h2>Páginas más vistas · 30 días</h2>
+          <div id="top-pages" class="stats-list"></div>
+        </section>
+        <section class="card">
+          <h2>Actividad reciente</h2>
+          <div id="admin-activity" class="stats-list"></div>
+        </section>
+      </div>
+      <p class="privacy-note">Estadísticas de navegación sin almacenamiento de dirección IP. Las sesiones son identificadores anónimos del navegador.</p>
     </section>
 
     <section id="validator" class="card hidden">

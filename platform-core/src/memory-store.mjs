@@ -8,6 +8,7 @@ export class MemoryStore {
     this.qrByHash = new Map();
     this.audit = [];
     this.sessions = new Map();
+    this.pageviews = [];
   }
 
   async upsertProfile(profile) {
@@ -115,13 +116,30 @@ export class MemoryStore {
     this.audit.push(structuredClone(entry));
   }
 
+  async recordPageview(pageview) {
+    this.pageviews.push(structuredClone(pageview));
+  }
+
   async adminSnapshot() {
+    const now = Date.now();
+    const cutoff = now - 30 * 86400000;
+    const recent = this.pageviews.filter((item) => new Date(item.createdAt).getTime() >= cutoff);
+    const topPages = Object.entries(recent.reduce((acc, item) => {
+      acc[item.path] = (acc[item.path] ?? 0) + 1;
+      return acc;
+    }, {})).sort((a,b) => b[1]-a[1]).slice(0,10).map(([path,views]) => ({ path, views }));
     return {
       profiles: [...this.profiles.values()].map((item) => structuredClone(item)),
       orders: [...this.orders.values()].map((item) => structuredClone(item)),
       entitlements: [...this.entitlements.values()].map((item) => structuredClone(item)),
       qr: [...this.qrByHash.values()].map(({ tokenHash, tokenCiphertext, ...item }) => structuredClone(item)),
       audit: this.audit.map((item) => structuredClone(item)),
+      analytics: {
+        periodDays: 30,
+        pageviews: recent.length,
+        uniqueSessions: new Set(recent.map((item) => item.sessionId)).size,
+        topPages,
+      },
     };
   }
 
