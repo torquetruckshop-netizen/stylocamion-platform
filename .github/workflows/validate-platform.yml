@@ -24,3 +24,8 @@ jobs:
           node --check academia/courses.js
       - name: Platform invariants
         run: node scripts/validate-platform.mjs
+      - name: Platform core tests
+        working-directory: platform-core
+        run: |
+          npm ci
+          npm test
