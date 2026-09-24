@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Entrar · Stylo Cargas</title>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<style>
+:root{--bg:#091017;--panel:#111a22;--line:#273542;--text:#f6f8fa;--muted:#9aa9b5;--accent:#63b7ff;--ok:#34c985;--danger:#ff6b6b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}.wrap{max-width:540px;margin:0 auto;padding:26px 18px 60px}.brand{display:flex;align-items:center;gap:10px;margin-bottom:26px}.mark{width:34px;height:34px;border-radius:10px;background:var(--accent)}.brand strong{font-size:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}h1{font-size:30px;line-height:1.05;margin:8px 0 9px}.lead{color:var(--muted);line-height:1.45;margin:0 0 20px}.fields{display:grid;gap:13px}.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}.field input,.field select{width:100%;background:#0a1219;color:var(--text);border:1px solid var(--line);border-radius:11px;padding:12px;font-size:15px}.btn{width:100%;border:0;border-radius:12px;padding:13px 15px;font-weight:800;font-size:15px;cursor:pointer}.primary{background:var(--accent);color:#06131e}.secondary{background:#17232d;color:var(--text);border:1px solid var(--line)}.note{font-size:12px;color:var(--muted);line-height:1.45;margin-top:14px}.status{display:none;padding:12px;border-radius:12px;margin-top:14px;font-size:13px}.status.ok{display:block;background:#10271f;color:#b8f1d6}.status.err{display:block;background:#2b1717;color:#ffc5c5}.sep{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;margin:18px 0}.sep:before,.sep:after{content:"";height:1px;background:var(--line);flex:1}.google{min-height:42px;margin:10px 0}.profile{display:none;align-items:center;gap:10px;padding:10px;border:1px solid var(--line);border-radius:12px;margin:12px 0}.profile.show{display:flex}.profile img{width:38px;height:38px;border-radius:50%;object-fit:cover}.profile small{display:block;color:var(--muted)}.fine{font-size:11px;color:var(--muted);margin-top:18px}.badge{display:inline-block;font-size:11px;padding:4px 7px;border-radius:999px;background:#17232d;color:var(--muted);margin-bottom:8px}.linked{font-size:12px;color:#b8f1d6;margin:8px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><span class="mark"></span><strong>Stylo Cargas</strong></div>
+  <div class="card">
+    <span class="badge">Acceso inmediato</span>
+    <div class="eyebrow">Cuenta Stylo</div>
+    <h1>Entrá a Stylo.<br>Sin trámites.</h1>
+    <p class="lead">Para empezar sólo necesitamos tu WhatsApp y cómo vas a usar Stylo. Google es opcional y puede vincularse después.</p>
+
+    <div class="fields">
+      <div class="field"><label>WhatsApp</label><input id="phone" inputmode="tel" placeholder="+54 9 ..." autocomplete="tel"></div>
+      <div class="field"><label>¿Cómo vas a usar Stylo?</label><select id="role"><option value="TRANSPORTISTA">Transportista</option><option value="DADOR_CARGA">Dador de carga</option><option value="FLETERO">Fletero</option><option value="EMPRESA">Empresa</option></select></div>
+      <div class="field"><label>Empresa <span style="opacity:.7">(opcional)</span></label><input id="company" placeholder="Nombre de la empresa"></div>
+      <button id="finish" class="btn primary" type="button">Entrar a Stylo</button>
+    </div>
+
+    <div class="sep">opcional</div>
+    <div class="eyebrow">Vincular identidad Google</div>
+    <p class="note" style="margin-top:7px">No es necesario para entrar. Sirve para recuperar y reconocer tu cuenta más adelante.</p>
+    <div id="googleBtn" class="google"></div>
+    <button id="googleFallback" class="btn secondary" type="button" style="display:none" disabled>Google se habilitará próximamente</button>
+    <div id="googleProfile" class="profile"><img id="avatar" alt=""><div><strong id="profileName"></strong><small id="profileEmail"></small></div></div>
+    <div id="googleLinked" class="linked" style="display:none">Cuenta Google lista para vincular.</div>
+
+    <div id="status" class="status"></div>
+    <p class="note">El acceso se habilita automáticamente. Stylo revisa la cuenta después y puede observar, suspender o dar de baja si corresponde.</p>
+    <p class="fine">La sesión queda recordada en el dispositivo. Google no reemplaza la verificación de empresa, documentación, vehículos o cargas.</p>
+  </div>
+</div>
+<script>
+const API=window.STYLO_API_BASE || 'http://localhost:8788';
+const CLIENT_ID=window.STYLO_GOOGLE_CLIENT_ID || '';
+let googleCredential=null;
+function showStatus(text,ok=true){const el=document.getElementById('status');el.className='status '+(ok?'ok':'err');el.textContent=text}
+function decodeGoogleCredential(credential){
+  const part=credential.split('.')[1].replace(/-/g,'+').replace(/_/g,'/');
+  return JSON.parse(decodeURIComponent(atob(part).split('').map(c=>'%' + ('00'+c.charCodeAt(0).toString(16)).slice(-2)).join('')));
+}
+function handleCredentialResponse(response){
+  googleCredential=response.credential;
+  const payload=decodeGoogleCredential(response.credential);
+  document.getElementById('profileName').textContent=payload.name || 'Cuenta Google';
+  document.getElementById('profileEmail').textContent=payload.email || '';
+  if(payload.picture){document.getElementById('avatar').src=payload.picture;document.getElementById('avatar').style.display='block'}else document.getElementById('avatar').style.display='none';
+  document.getElementById('googleProfile').classList.add('show');
+  document.getElementById('googleLinked').style.display='block';
+}
+window.addEventListener('load',async()=>{
+  try{
+    const r=await fetch(API+'/me',{credentials:'include'});
+    if(r.ok){showStatus('Tu sesión ya está activa. Podés seguir usando Stylo.');}
+  }catch{}
+  if(!CLIENT_ID || !window.google?.accounts?.id){document.getElementById('googleFallback').style.display='block';return}
+  google.accounts.id.initialize({client_id:CLIENT_ID,callback:handleCredentialResponse});
+  google.accounts.id.renderButton(document.getElementById('googleBtn'),{theme:'outline',size:'large',shape:'rectangular',text:'continue_with',width:490});
+});
+document.getElementById('finish').addEventListener('click',async()=>{
+  const phone=document.getElementById('phone').value.trim();
+  if(!phone) return showStatus('Ingresá tu WhatsApp para entrar.',false);
+  const payload={phone,role:document.getElementById('role').value,company:document.getElementById('company').value,country:'AR',remember:true,platform:'WEB_PWA'};
+  const endpoint=googleCredential?'/users/register/google':'/users/register';
+  if(googleCredential) payload.credential=googleCredential;
+  try{
+    const r=await fetch(API+endpoint,{method:'POST',credentials:'include',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});
+    const data=await r.json();
+    if(!r.ok) throw new Error(data.message || data.error || 'No se pudo ingresar a Stylo');
+    showStatus('Listo. Ya estás dentro de Stylo y este dispositivo queda recordado.');
+  }catch(e){showStatus(e.message,false)}
+});
+</script>
+</body>
+</html>

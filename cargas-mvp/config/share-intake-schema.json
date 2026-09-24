@@ -1,0 +1,38 @@
+{
+  "version": "0.1.0",
+  "purpose": "Contrato unico de entrada para contenido compartido con Stylo Cargas",
+  "sources": [
+    "WHATSAPP_FORWARD",
+    "WHATSAPP_DIRECT",
+    "PWA_SHARE",
+    "NATIVE_SHARE_EXTENSION",
+    "MANUAL_UPLOAD"
+  ],
+  "content_types": [
+    "TEXT",
+    "AUDIO",
+    "IMAGE",
+    "DOCUMENT"
+  ],
+  "required": ["source", "content_type", "received_at"],
+  "fields": {
+    "source": "string",
+    "content_type": "string",
+    "text": "string|null",
+    "media_reference": "string|null",
+    "sender_reference": "string|null",
+    "operation_channel_id": "string|null",
+    "received_at": "datetime",
+    "metadata": "object"
+  },
+  "processing": [
+    "receive",
+    "transcribe_if_audio",
+    "classify",
+    "extract_load_fields",
+    "deduplicate",
+    "ask_missing_fields",
+    "publish_or_ignore",
+    "match_against_fleet"
+  ]
+}
