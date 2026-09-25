@@ -3,18 +3,17 @@ import fs from "node:fs";
 const read = (path) => fs.readFileSync(path, "utf8");
 const fail = (message) => { console.error("VALIDATION ERROR:", message); process.exitCode = 1; };
 
-const base = read("academia/courses-base.js");
-const extra = read("academia/courses.js");
+const catalog = read("academia/courses.js");
 const academyIndex = read("academia/index.html");
 const home = read("index.html");
 
-const ids = [...base.matchAll(/"id"\s*:\s*"([^"]+)"/g), ...extra.matchAll(/"id"\s*:\s*"([^"]+)"/g)].map(m => m[1]);
+const ids = [...catalog.matchAll(/"id"\s*:\s*"([^"]+)"/g)].map(m => m[1]);
 const dupes = ids.filter((id, i) => ids.indexOf(id) !== i);
 
 if (ids.length < 20) fail(`Academy should expose at least 20 courses; found ${ids.length}.`);
 if (dupes.length) fail(`Duplicate Academy course IDs: ${[...new Set(dupes)].join(", ")}`);
 
-for (const asset of ["courses-base.js", "courses.js", "app.js"]) {
+for (const asset of ["courses.js", "app.js"]) {
   if (!academyIndex.includes(`src="${asset}"`)) fail(`academia/index.html is missing ${asset}`);
 }
 
