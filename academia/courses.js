@@ -143,5 +143,134 @@ window.STYLO_COURSES.push(
     "next": "Flujo de caja por viaje: cobrar tarde también tiene costo",
     "safety": "Los indicadores son señales de gestión y no diagnósticos mecánicos, legales ni financieros. Un desvío debe analizarse en contexto y derivarse a personal competente cuando corresponda.",
     "sources": []
+  },
+  {
+    "id": "cotizacion-comercial-transporte",
+    "title": "Cotizaciones comerciales: presentar un servicio con claridad",
+    "category": "Economía",
+    "level": "Básico–Intermedio",
+    "duration": "30 min",
+    "objective": "Enseñar a preparar una cotización clara y comparable, separando alcance, precio, condiciones y vigencia para reducir malos entendidos con el cliente.",
+    "lessons": [
+      "Definir qué servicio se está cotizando y qué queda fuera del alcance.",
+      "Presentar precio, moneda, impuestos y conceptos adicionales de forma separada.",
+      "Indicar vigencia de la propuesta y condiciones necesarias para confirmarla.",
+      "Aclarar forma y plazo de pago sin mezclarlo con el precio del servicio.",
+      "Registrar cambios solicitados por el cliente y conservar la versión aceptada."
+    ],
+    "worksheet": "Modelo de cotización: cliente, fecha, servicio, alcance, precio, impuestos, adicionales, forma de pago, vigencia, versión y aceptación.",
+    "evaluation": [
+      "¿Conviene mezclar todos los conceptos en un único importe sin aclaraciones? — No.",
+      "¿Una cotización debería indicar su vigencia? — Sí.",
+      "¿Los cambios posteriores deben quedar registrados? — Sí."
+    ],
+    "next": "Costos por viaje: calcular el resultado antes de aceptar una carga",
+    "safety": "Contenido educativo. Para aspectos contables, impositivos, contractuales o legales, corresponde consultar a personal competente.",
+    "sources": []
+  },
+  {
+    "id": "alta-cliente-legajo-comercial",
+    "title": "Alta de clientes: armar un legajo comercial ordenado",
+    "category": "Gestión",
+    "level": "Básico",
+    "duration": "30 min",
+    "objective": "Crear un proceso simple para registrar datos comerciales y administrativos de un nuevo cliente sin depender de mensajes dispersos ni pedir información innecesaria.",
+    "lessons": [
+      "Separar datos de identificación comercial, facturación, contactos y condiciones acordadas.",
+      "Definir un contacto operativo y otro administrativo cuando la empresa lo permita.",
+      "Registrar documentos recibidos y su fecha sin duplicarlos en múltiples canales.",
+      "Guardar solamente la información necesaria para la relación comercial.",
+      "Revisar el legajo periódicamente y actualizar cambios de contactos o datos."
+    ],
+    "worksheet": "Legajo de cliente: razón social, identificación fiscal, domicilio comercial, contactos, condición de pago, documentación requerida, canal autorizado y fecha de revisión.",
+    "evaluation": [
+      "¿Conviene guardar datos que no son necesarios para trabajar con el cliente? — No.",
+      "¿Operaciones y administración pueden requerir contactos distintos? — Sí.",
+      "¿Un legajo sirve aunque nunca se actualice? — No."
+    ],
+    "next": "Comunicación operativa con clientes y dadores de carga",
+    "safety": "Los datos comerciales y personales deben almacenarse en canales autorizados y con acceso limitado. Ante dudas sobre privacidad o conservación documental, corresponde consultar la normativa y al responsable competente.",
+    "sources": []
+  },
+  {
+    "id": "publicar-unidad-usada",
+    "title": "Publicar una unidad usada: ficha comercial, fotos y datos verificables",
+    "category": "Gestión",
+    "level": "Básico",
+    "duration": "30 min",
+    "objective": "Ayudar a preparar una publicación de venta clara y profesional, usando datos verificables y evitando descripciones ambiguas o promesas que no puedan demostrarse.",
+    "lessons": [
+      "Reunir marca, modelo, año, configuración, kilometraje informado y equipamiento relevante.",
+      "Seleccionar fotos actuales y representativas de la unidad.",
+      "Distinguir datos objetivos de opiniones comerciales y usar descripciones precisas.",
+      "Ordenar antecedentes disponibles sin presentarlos como una garantía técnica.",
+      "Actualizar o retirar la publicación cuando cambie el estado de la oferta."
+    ],
+    "worksheet": "Ficha de publicación: unidad, año, configuración, kilometraje informado, equipamiento, antecedentes, observaciones, precio, contacto y fecha de actualización.",
+    "evaluation": [
+      "¿Una descripción comercial debería afirmar algo que no puede verificarse? — No.",
+      "¿Las fotos deberían ser actuales y representativas? — Sí.",
+      "¿Una publicación desactualizada puede generar problemas? — Sí."
+    ],
+    "next": "RTO y control documental de la unidad: checklist antes de salir",
+    "safety": "La publicación comercial no reemplaza una inspección técnica, una revisión registral ni los trámites legales de compraventa. Antes de una operación concreta deben verificarse los requisitos vigentes en los canales oficiales.",
+    "sources": [
+      {
+        "label": "Argentina.gob.ar — DNRPA, Registros de la Propiedad Automotor",
+        "url": "https://www.argentina.gob.ar/node/118742"
+      },
+      {
+        "label": "Argentina.gob.ar — Transferencia de dominio de un automotor",
+        "url": "https://www.argentina.gob.ar/node/37023"
+      }
+    ]
+  },
+  {
+    "id": "compras-proveedores-matriz",
+    "title": "Compras y proveedores: comparar ofertas con una matriz simple",
+    "category": "Economía",
+    "level": "Básico–Intermedio",
+    "duration": "35 min",
+    "objective": "Enseñar a comparar ofertas de proveedores por costo total, plazo, garantía y condiciones, evitando decidir solamente por el precio inicial.",
+    "lessons": [
+      "Definir exactamente qué producto o servicio necesita la empresa antes de pedir precios.",
+      "Solicitar cotizaciones comparables con la misma información de base.",
+      "Separar precio, impuestos, envío, plazo de entrega y condiciones de pago.",
+      "Registrar garantía, devolución y soporte cuando correspondan.",
+      "Actualizar la evaluación del proveedor con el resultado real de la compra."
+    ],
+    "worksheet": "Matriz de proveedores: necesidad, proveedor, precio, impuestos, envío, plazo, forma de pago, garantía, devolución, soporte, observaciones y decisión.",
+    "evaluation": [
+      "¿La oferta más barata es siempre la mejor? — No.",
+      "¿Las cotizaciones deben compararse sobre la misma necesidad? — Sí.",
+      "¿Conviene registrar el resultado real después de comprar? — Sí."
+    ],
+    "next": "Flujo de caja por viaje: cobrar tarde también tiene costo",
+    "safety": "El curso es de gestión de compras. Cuando una adquisición requiera especificaciones técnicas, homologaciones o compatibilidades, debe intervenir personal competente.",
+    "sources": []
+  },
+  {
+    "id": "incorporacion-nuevo-chofer",
+    "title": "Incorporación de un nuevo chofer: bienvenida, canales y documentación interna",
+    "category": "Gestión",
+    "level": "Básico",
+    "duration": "35 min",
+    "objective": "Ordenar el ingreso de una nueva persona al equipo para que conozca responsables, canales, documentación interna y reglas de trabajo antes de asumir tareas operativas.",
+    "lessons": [
+      "Preparar una ficha de ingreso con los datos necesarios para la relación de trabajo.",
+      "Presentar responsables de operaciones, administración, mantenimiento y seguridad.",
+      "Explicar qué canales se usan para instrucciones, documentación, novedades y consultas.",
+      "Entregar políticas internas y registrar su recepción sin reemplazar la capacitación formal requerida.",
+      "Programar una revisión inicial para resolver dudas y verificar que la información esté completa."
+    ],
+    "worksheet": "Checklist de incorporación: datos básicos, responsable directo, contactos internos, canales autorizados, documentación recibida, políticas entregadas, capacitaciones pendientes y fecha de revisión.",
+    "evaluation": [
+      "¿La bienvenida informal reemplaza la documentación y capacitación necesarias? — No.",
+      "¿Conviene definir desde el inicio los canales autorizados? — Sí.",
+      "¿El proceso debería incluir una revisión posterior? — Sí."
+    ],
+    "next": "Comunicación operativa con clientes y dadores de carga",
+    "safety": "El curso no sustituye obligaciones laborales, médicas, habilitaciones ni capacitaciones exigibles. La empresa debe verificar los requisitos aplicables con sus profesionales y autoridades competentes.",
+    "sources": []
   }
 );
