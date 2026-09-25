@@ -99,12 +99,16 @@ function renderCourses(routeCategories = null){
     return;
   }
 
-  grid.innerHTML = visible.map(course => {
+  grid.innerHTML = '<div class="course-index">'+visible.map(course => {
     const status = studentProgress[course.id] || "not-started";
-    return '<article class="course-card"><div class="meta"><span class="category">'+escapeHtml(course.category)+'</span><span>'+escapeHtml(course.duration)+'</span></div><span class="status '+status+'">'+statusLabel(status)+'</span><h3>'+escapeHtml(course.title)+'</h3><p>'+escapeHtml(course.objective)+'</p><div class="meta"><span>'+escapeHtml(course.level)+'</span><span>'+course.lessons.length+' microlecciones</span></div><button type="button" data-course="'+escapeHtml(course.id)+'">Ver curso</button></article>';
-  }).join("");
+    return '<a class="course-row" href="#curso-'+escapeHtml(course.id)+'" data-course="'+escapeHtml(course.id)+'"><span class="course-row-category">'+escapeHtml(course.category)+'</span><span class="course-row-title">'+escapeHtml(course.title)+'</span><span class="course-row-meta">'+escapeHtml(course.duration)+' · '+escapeHtml(course.level)+'</span><span class="status '+status+'">'+statusLabel(status)+'</span><span class="course-row-open">Abrir curso →</span></a>';
+  }).join("")+'</div>';
 
-  grid.querySelectorAll("[data-course]").forEach(button => button.addEventListener("click", () => openCourse(button.dataset.course)));
+  grid.querySelectorAll("[data-course]").forEach(link => link.addEventListener("click", (event) => {
+    event.preventDefault();
+    openCourse(link.dataset.course);
+    history.replaceState(null, "", "#curso-"+link.dataset.course);
+  }));
 }
 
 function openCourse(id){
