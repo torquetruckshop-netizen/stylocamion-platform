@@ -8,3 +8,5 @@
 .course-row-open{font-size:12px;font-weight:800;white-space:nowrap}
 .course-row .status{justify-self:start;white-space:nowrap}
 @media(max-width:820px){.course-row{grid-template-columns:1fr auto;gap:6px 12px;padding:14px 4px}.course-row-category{grid-column:1}.course-row-title{grid-column:1/-1;font-size:15px}.course-row-meta{grid-column:1}.course-row .status{grid-column:2;grid-row:1}.course-row-open{grid-column:2;grid-row:3}}
+
+.course-video{margin:22px 0 28px}.course-video h4{margin:0 0 10px}.course-video video{display:block;width:100%;max-height:70vh;background:#000;border:1px solid var(--line);border-radius:16px}
