@@ -1,0 +1,47 @@
+name: Publicar video Academy Fatiga
+
+on:
+  push:
+    branches:
+      - feature/academy-video-fatiga-visible-20260925
+    paths:
+      - 'academy/production/fatiga-alerta-ruta/**'
+      - '.github/workflows/academy-video-fatiga-publish.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-video:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/academy-video-fatiga-visible-20260925
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Instalar producción
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+          python -m pip install --upgrade pip
+          python -m pip install pillow edge-tts
+      - name: Generar video
+        run: python academy/production/fatiga-alerta-ruta/produce.py
+      - name: Publicar MP4 dentro de Academy
+        run: |
+          mkdir -p academia/media
+          cp academy/production/fatiga-alerta-ruta/output/Stylo-Camion-Academy-Fatiga-en-Ruta-Con-Audio-v01.mp4 academia/media/fatiga-en-ruta.mp4
+          cp academy/production/fatiga-alerta-ruta/output/Stylo-Camion-Academy-Fatiga-en-Ruta-v01.srt academia/media/fatiga-en-ruta.srt
+          test "$(stat -c%s academia/media/fatiga-en-ruta.mp4)" -gt 1000000
+      - name: Guardar video en la rama
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add academia/media/fatiga-en-ruta.mp4 academia/media/fatiga-en-ruta.srt
+          git commit -m "Publish Academy fatigue video" || exit 0
+          git push origin feature/academy-video-fatiga-visible-20260925
