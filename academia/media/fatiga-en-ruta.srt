@@ -1,0 +1,827 @@
+1
+00:00:00,000 --> 00:00:03,285
+Son las cuatro y veinte de la mañana.
+
+2
+00:00:03,285 --> 00:00:07,391
+Venís de una jornada larga, la ruta está monótona y
+
+3
+00:00:07,391 --> 00:00:11,497
+faltan, según el tablero, cuarenta minutos para el próximo punto
+
+4
+00:00:11,497 --> 00:00:11,907
+previsto.
+
+5
+00:00:11,907 --> 00:00:13,960
+Pasaste una salida sin verla.
+
+6
+00:00:13,960 --> 00:00:16,835
+En una curva corregiste un poco tarde.
+
+7
+00:00:16,835 --> 00:00:20,941
+Y hay algo más incómodo: no recordás con claridad los
+
+8
+00:00:20,941 --> 00:00:21,762
+últimos kilómetros.
+
+9
+00:00:21,762 --> 00:00:25,868
+La tentación es conocida: abrir la ventanilla, subir la música
+
+10
+00:00:25,868 --> 00:00:26,689
+y aguantar.
+
+11
+00:00:26,689 --> 00:00:28,742
+Este curso propone otra decisión.
+
+12
+00:00:28,742 --> 00:00:32,848
+Vamos a reconocer la fatiga antes de que se convierta
+
+13
+00:00:32,848 --> 00:00:36,954
+en un microsueño, separar medidas reales de trucos que apenas
+
+14
+00:00:36,954 --> 00:00:41,060
+distraen y armar un protocolo práctico para detenerse sin improvisar.
+
+15
+00:00:41,060 --> 00:00:45,166
+No reemplaza una consulta médica ni las reglas de la
+
+16
+00:00:45,166 --> 00:00:49,272
+empresa o de la jurisdicción: sirve para tomar decisiones seguras.
+
+17
+00:00:49,272 --> 00:00:51,785
+Fatiga no significa solamente quedarse dormido.
+
+18
+00:00:51,785 --> 00:00:55,974
+Mucho antes puede reducir la atención, enlentecer la decisión y
+
+19
+00:00:55,974 --> 00:00:58,069
+achicar el margen para corregir.
+
+20
+00:00:58,069 --> 00:01:02,258
+En un camión, esa pérdida de margen pesa: hay masa,
+
+21
+00:01:02,258 --> 00:01:06,447
+distancia de frenado, tránsito alrededor y una cabina que puede
+
+22
+00:01:06,447 --> 00:01:10,635
+sentirse estable aunque el conductor ya no esté procesando todo.
+
+23
+00:01:10,635 --> 00:01:14,824
+Por eso el criterio no es esperar el cabeceo final.
+
+24
+00:01:14,824 --> 00:01:19,013
+El criterio es detectar cambios respecto de tu estado normal:
+
+25
+00:01:19,013 --> 00:01:23,202
+más esfuerzo para sostener la vista, lectura tardía de carteles,
+
+26
+00:01:23,202 --> 00:01:27,391
+dificultad para mantener una trayectoria pareja o decisiones que antes
+
+27
+00:01:27,391 --> 00:01:29,904
+eran automáticas y ahora demandan concentración.
+
+28
+00:01:29,904 --> 00:01:32,837
+Una sola señal puede tener otra causa.
+
+29
+00:01:32,837 --> 00:01:37,026
+Varias señales juntas, durante una jornada exigente, justifican actuar como
+
+30
+00:01:37,026 --> 00:01:39,120
+si la alerta estuviera comprometida.
+
+31
+00:01:39,120 --> 00:01:41,575
+Las señales útiles son observables.
+
+32
+00:01:41,575 --> 00:01:42,557
+Bostezos repetidos.
+
+33
+00:01:42,557 --> 00:01:46,975
+Parpadeo frecuente o dificultad para mantener los ojos abiertos.
+
+34
+00:01:46,975 --> 00:01:48,939
+Cabeza que cuesta sostener.
+
+35
+00:01:48,939 --> 00:01:52,376
+Deriva dentro del carril o correcciones bruscas.
+
+36
+00:01:52,376 --> 00:01:56,304
+Carteles, salidas o referencias que aparecen demasiado tarde.
+
+37
+00:01:56,304 --> 00:02:01,213
+Y las lagunas de memoria: no poder reconstruir un tramo
+
+38
+00:02:01,213 --> 00:02:02,195
+recién recorrido.
+
+39
+00:02:02,195 --> 00:02:05,141
+Ninguna aplicación necesita convencerte de eso.
+
+40
+00:02:05,141 --> 00:02:10,051
+Si tu propio registro muestra dos o más cambios, la
+
+41
+00:02:10,051 --> 00:02:13,488
+decisión prudente es buscar una detención segura.
+
+42
+00:02:13,488 --> 00:02:17,415
+No hace falta demostrar que estás al límite.
+
+43
+00:02:17,415 --> 00:02:22,325
+Al contrario: cuanto antes interrumpís la exposición, más opciones conservás.
+
+44
+00:02:22,325 --> 00:02:27,235
+El error frecuente es convertir cada señal en una discusión:
+
+45
+00:02:27,235 --> 00:02:31,653
+“fue el viento”, “fue un pozo”, “ya falta poco”.
+
+46
+00:02:31,653 --> 00:02:36,072
+Esa negociación consume justamente la capacidad que está disminuyendo.
+
+47
+00:02:36,072 --> 00:02:39,843
+La autoridad vial de Estados Unidos, NHTSA, identifica dos períodos
+
+48
+00:02:39,843 --> 00:02:43,613
+comunes en siniestros asociados a somnolencia: entre medianoche y las
+
+49
+00:02:43,613 --> 00:02:47,384
+seis de la mañana, y hacia el final de la
+
+50
+00:02:47,384 --> 00:02:47,761
+tarde.
+
+51
+00:02:47,761 --> 00:02:51,531
+Coinciden con descensos naturales del estado de alerta, pero no
+
+52
+00:02:51,531 --> 00:02:53,040
+son un reloj mágico.
+
+53
+00:02:53,040 --> 00:02:56,810
+La fatiga puede aparecer a cualquier hora si dormiste poco,
+
+54
+00:02:56,810 --> 00:03:00,581
+acumulaste jornadas irregulares, atravesás una ruta monótona o tomaste una
+
+55
+00:03:00,581 --> 00:03:02,089
+medicación que provoca somnolencia.
+
+56
+00:03:02,089 --> 00:03:05,860
+Para un plan de viaje, esos períodos sirven como zonas
+
+57
+00:03:05,860 --> 00:03:06,991
+de atención reforzada.
+
+58
+00:03:06,991 --> 00:03:10,761
+No para prometer que fuera de ellos todo está bien.
+
+59
+00:03:10,761 --> 00:03:14,532
+La pregunta práctica es: ¿en qué momento de mi recorrido
+
+60
+00:03:14,532 --> 00:03:18,302
+voy a estar más expuesto y cuál es el lugar
+
+61
+00:03:18,302 --> 00:03:21,696
+seguro anterior donde podría detenerme si las señales aparecen?
+
+62
+00:03:21,696 --> 00:03:25,937
+Abrir la ventanilla, lavarse la cara, mascar chicle o subir
+
+63
+00:03:25,937 --> 00:03:29,755
+la música pueden cambiar la sensación durante unos minutos.
+
+64
+00:03:29,755 --> 00:03:31,875
+No recuperan el sueño perdido.
+
+65
+00:03:31,875 --> 00:03:36,117
+El café tampoco convierte a una persona muy privada de
+
+66
+00:03:36,117 --> 00:03:38,237
+sueño en un conductor seguro.
+
+67
+00:03:38,237 --> 00:03:42,479
+NHTSA advierte que, aun con cafeína, pueden aparecer microsueños de
+
+68
+00:03:42,479 --> 00:03:43,327
+pocos segundos.
+
+69
+00:03:43,327 --> 00:03:47,568
+A velocidad de ruta, unos segundos sin procesar el entorno
+
+70
+00:03:47,568 --> 00:03:51,386
+alcanzan para recorrer una distancia enorme sin control consciente.
+
+71
+00:03:51,386 --> 00:03:55,627
+La cafeína puede formar parte de una medida corta y
+
+72
+00:03:55,627 --> 00:03:59,868
+planificada, pero no debe usarse como permiso para extender una
+
+73
+00:03:59,868 --> 00:04:01,989
+jornada que ya dio señales.
+
+74
+00:04:01,989 --> 00:04:04,958
+Tampoco mezcles estimulantes ni improvises con medicamentos.
+
+75
+00:04:04,958 --> 00:04:09,199
+Si una etiqueta advierte somnolencia, consultá al profesional o al
+
+76
+00:04:09,199 --> 00:04:10,896
+farmacéutico antes de conducir.
+
+77
+00:04:10,896 --> 00:04:12,236
+Volvamos al caso.
+
+78
+00:04:12,236 --> 00:04:16,701
+Pasaste una salida, corregiste tarde y no recordás con claridad
+
+79
+00:04:16,701 --> 00:04:18,041
+el último tramo.
+
+80
+00:04:18,041 --> 00:04:22,506
+El próximo parador previsto está a cuarenta minutos, pero hay
+
+81
+00:04:22,506 --> 00:04:26,079
+un área habilitada y segura a pocos kilómetros.
+
+82
+00:04:26,079 --> 00:04:27,419
+Elegí una respuesta.
+
+83
+00:04:27,419 --> 00:04:31,884
+Opción A: música fuerte y seguir hasta el plan original.
+
+84
+00:04:31,884 --> 00:04:36,350
+Opción B: detenerte en el primer lugar seguro y reevaluar.
+
+85
+00:04:36,350 --> 00:04:40,369
+Opción C: acelerar para reducir el tiempo de exposición.
+
+86
+00:04:40,369 --> 00:04:42,602
+Tenés seis segundos para decidir.
+
+87
+00:04:42,602 --> 00:04:44,834
+La respuesta es la B.
+
+88
+00:04:44,834 --> 00:04:47,514
+Las señales ya muestran alerta deteriorada.
+
+89
+00:04:47,514 --> 00:04:51,979
+Acelerar aumenta el costo de un error y la música
+
+90
+00:04:51,979 --> 00:04:53,319
+no recupera capacidad.
+
+91
+00:04:53,319 --> 00:04:57,785
+La maniobra correcta es señalizar con anticipación, salir sin apuro,
+
+92
+00:04:57,785 --> 00:05:02,250
+estacionar en un sitio habilitado y seguro, asegurar el vehículo
+
+93
+00:05:02,250 --> 00:05:05,376
+y recién entonces decidir el siguiente paso.
+
+94
+00:05:05,376 --> 00:05:11,376
+[Pausa para pensar]
+
+95
+00:05:11,376 --> 00:05:14,270
+“Parar” no significa detenerse en cualquier banquina.
+
+96
+00:05:14,270 --> 00:05:18,403
+Si todavía tenés control, buscá el primer punto habilitado, iluminado
+
+97
+00:05:18,403 --> 00:05:21,297
+y compatible con el tamaño del conjunto.
+
+98
+00:05:21,297 --> 00:05:25,431
+Señalizá temprano, bajá la velocidad de forma progresiva y evitá
+
+99
+00:05:25,431 --> 00:05:26,258
+maniobras repentinas.
+
+100
+00:05:26,258 --> 00:05:30,391
+Una vez estacionado, aplicá el procedimiento de aseguramiento que corresponda
+
+101
+00:05:30,391 --> 00:05:32,458
+al vehículo y al lugar.
+
+102
+00:05:32,458 --> 00:05:36,592
+Si la somnolencia es intensa o la conducción ya es
+
+103
+00:05:36,592 --> 00:05:40,726
+inestable, la prioridad es salir del flujo con el menor
+
+104
+00:05:40,726 --> 00:05:42,793
+riesgo posible y pedir asistencia.
+
+105
+00:05:42,793 --> 00:05:46,927
+No existe un único lugar correcto para todas las rutas;
+
+106
+00:05:46,927 --> 00:05:49,407
+por eso conviene planificar alternativas antes.
+
+107
+00:05:49,407 --> 00:05:53,541
+El objetivo es no cambiar un riesgo por otro: evitar
+
+108
+00:05:53,541 --> 00:05:57,674
+seguir con alerta baja, pero también evitar una detención expuesta
+
+109
+00:05:57,674 --> 00:05:59,328
+o una reincorporación apurada.
+
+110
+00:05:59,328 --> 00:06:03,410
+Como medida de corto plazo, NHTSA propone tomar una o
+
+111
+00:06:03,410 --> 00:06:07,492
+dos tazas de café y hacer una siesta breve, de
+
+112
+00:06:07,492 --> 00:06:11,166
+unos veinte minutos, en un lugar seguro y designado.
+
+113
+00:06:11,166 --> 00:06:15,248
+La cafeína tarda un tiempo en actuar y la pausa
+
+114
+00:06:15,248 --> 00:06:18,106
+puede mejorar transitoriamente el estado de alerta.
+
+115
+00:06:18,106 --> 00:06:20,147
+La palabra clave es transitoriamente.
+
+116
+00:06:20,147 --> 00:06:24,229
+No reemplaza dormir lo necesario ni garantiza que puedas completar
+
+117
+00:06:24,229 --> 00:06:25,045
+el viaje.
+
+118
+00:06:25,045 --> 00:06:29,127
+Al despertar, date tiempo para despejarte y evaluá señales concretas
+
+119
+00:06:29,127 --> 00:06:30,352
+antes de volver.
+
+120
+00:06:30,352 --> 00:06:34,434
+Si persisten los párpados pesados, la confusión, el cabeceo o
+
+121
+00:06:34,434 --> 00:06:36,883
+la dificultad para enfocar, no retomes.
+
+122
+00:06:36,883 --> 00:06:40,965
+Comunicá la demora, reorganizá la jornada o buscá relevo y
+
+123
+00:06:40,965 --> 00:06:41,373
+asistencia.
+
+124
+00:06:41,373 --> 00:06:45,455
+La hora de llegada nunca compensa el riesgo de circular
+
+125
+00:06:45,455 --> 00:06:46,680
+sin capacidad suficiente.
+
+126
+00:06:46,680 --> 00:06:49,952
+La prevención más efectiva empieza antes del contacto.
+
+127
+00:06:49,952 --> 00:06:54,043
+NIOSH, el instituto estadounidense de seguridad y salud ocupacional, recomienda
+
+128
+00:06:54,043 --> 00:06:58,133
+que los conductores de larga distancia procuren siete horas o
+
+129
+00:06:58,133 --> 00:07:02,224
+más de sueño y planifiquen tiempo suficiente para el recorrido.
+
+130
+00:07:02,224 --> 00:07:06,315
+Para la empresa, el mismo enfoque implica evitar cronogramas irreales.
+
+131
+00:07:06,315 --> 00:07:10,405
+Antes de salir, revisá cuatro cosas: cuánto dormiste de verdad,
+
+132
+00:07:10,405 --> 00:07:14,496
+no cuánto tiempo estuviste en la cama; qué horario crítico
+
+133
+00:07:14,496 --> 00:07:18,586
+vas a atravesar; si alguna medicación o sustancia puede reducir
+
+134
+00:07:18,586 --> 00:07:22,677
+la alerta; y dónde están las alternativas seguras de parada.
+
+135
+00:07:22,677 --> 00:07:26,767
+Sumá agua y comidas razonables, pero sin convertir alimentos o
+
+136
+00:07:26,767 --> 00:07:28,403
+suplementos en una cura.
+
+137
+00:07:28,403 --> 00:07:32,494
+El sueño suficiente sigue siendo la protección central frente a
+
+138
+00:07:32,494 --> 00:07:33,312
+la somnolencia.
+
+139
+00:07:33,312 --> 00:07:37,870
+Si la somnolencia aparece con frecuencia pese a reservar tiempo
+
+140
+00:07:37,870 --> 00:07:40,149
+para dormir, no la normalices.
+
+141
+00:07:40,149 --> 00:07:44,707
+Ronquidos intensos, pausas respiratorias observadas, despertares con sensación de ahogo,
+
+142
+00:07:44,707 --> 00:07:48,353
+cefalea matinal o cansancio persistente merecen evaluación profesional.
+
+143
+00:07:48,353 --> 00:07:52,911
+Pueden tener múltiples causas; este curso no diagnostica apnea del
+
+144
+00:07:52,911 --> 00:07:54,734
+sueño ni indica tratamientos.
+
+145
+00:07:54,734 --> 00:07:59,292
+Registrá horarios, síntomas y contexto, y consultá a un profesional
+
+146
+00:07:59,292 --> 00:08:00,204
+de salud.
+
+147
+00:08:00,204 --> 00:08:04,762
+También revisá con el prescriptor o farmacéutico cualquier medicamento que
+
+148
+00:08:04,762 --> 00:08:05,673
+advierta somnolencia.
+
+149
+00:08:05,673 --> 00:08:09,320
+No suspendas ni cambies dosis por tu cuenta.
+
+150
+00:08:09,320 --> 00:08:13,877
+Para una empresa, facilitar la consulta y evitar castigar el
+
+151
+00:08:13,877 --> 00:08:15,701
+reporte temprano mejora seguridad.
+
+152
+00:08:15,701 --> 00:08:20,259
+Ocultar el problema para cumplir un horario puede convertir una
+
+153
+00:08:20,259 --> 00:08:24,816
+condición tratable en un riesgo sostenido para el conductor y
+
+154
+00:08:24,816 --> 00:08:25,728
+para terceros.
+
+155
+00:08:25,728 --> 00:08:26,588
+Segundo ejercicio.
+
+156
+00:08:26,588 --> 00:08:30,889
+El viaje comienza a las diez y media de la
+
+157
+00:08:30,889 --> 00:08:31,319
+noche.
+
+158
+00:08:31,319 --> 00:08:35,620
+El tramo más monótono cae entre las dos y las
+
+159
+00:08:35,620 --> 00:08:37,341
+cuatro de la mañana.
+
+160
+00:08:37,341 --> 00:08:41,642
+El conductor durmió poco la noche anterior, pero el horario
+
+161
+00:08:41,642 --> 00:08:42,932
+comercial parece ajustado.
+
+162
+00:08:42,932 --> 00:08:46,373
+¿Cuál es la mejor acción antes de arrancar?
+
+163
+00:08:46,373 --> 00:08:48,523
+Opción A: cargar bebidas energizantes.
+
+164
+00:08:48,523 --> 00:08:52,394
+Opción B: mantener el plan y decidir en ruta.
+
+165
+00:08:52,394 --> 00:08:56,695
+Opción C: comunicar el riesgo, revisar el horario y asegurar
+
+166
+00:08:56,695 --> 00:08:58,845
+descanso suficiente o un relevo.
+
+167
+00:08:58,845 --> 00:09:00,136
+Tenés seis segundos.
+
+168
+00:09:00,136 --> 00:09:02,286
+La respuesta es la C.
+
+169
+00:09:02,286 --> 00:09:06,587
+El riesgo ya es visible antes del viaje: poco sueño,
+
+170
+00:09:06,587 --> 00:09:08,307
+horario nocturno y monotonía.
+
+171
+00:09:08,307 --> 00:09:12,178
+La planificación debe corregirlo antes de exponer al conductor.
+
+172
+00:09:12,178 --> 00:09:16,479
+La cafeína no compensa una deuda importante de sueño y
+
+173
+00:09:16,479 --> 00:09:19,920
+esperar a que aparezcan señales reduce las alternativas.
+
+174
+00:09:19,920 --> 00:09:25,920
+[Pausa para pensar]
+
+175
+00:09:25,920 --> 00:09:29,195
+La ficha práctica queda en cuatro bloques.
+
+176
+00:09:29,195 --> 00:09:33,872
+Antes: anotá horas reales de sueño, franja del recorrido, medicaciones
+
+177
+00:09:33,872 --> 00:09:37,147
+revisadas y dos lugares alternativos de parada.
+
+178
+00:09:37,147 --> 00:09:41,825
+Durante: observá bostezos, parpadeo, trayectoria, carteles omitidos y memoria del
+
+179
+00:09:41,825 --> 00:09:42,293
+tramo.
+
+180
+00:09:42,293 --> 00:09:46,971
+Decisión: si aparecen señales combinadas, identificá el primer lugar seguro,
+
+181
+00:09:46,971 --> 00:09:50,713
+comunicá la demora y detenete sin maniobras bruscas.
+
+182
+00:09:50,713 --> 00:09:53,520
+Regreso: reevaluá después de la pausa.
+
+183
+00:09:53,520 --> 00:09:57,262
+Si la alerta no es estable, no retomes.
+
+184
+00:09:57,262 --> 00:10:01,004
+Registrá qué ocurrió para mejorar el próximo plan.
+
+185
+00:10:01,004 --> 00:10:05,682
+Esta ficha no reemplaza el procedimiento de la empresa ni
+
+186
+00:10:05,682 --> 00:10:07,086
+la normativa aplicable.
+
+187
+00:10:07,086 --> 00:10:11,764
+Su valor está en hacer visible una decisión que suele
+
+188
+00:10:11,764 --> 00:10:15,038
+quedar librada al momento de mayor cansancio.
+
+189
+00:10:15,038 --> 00:10:19,716
+Completala antes del viaje y dejala accesible, sin manipularla mientras
+
+190
+00:10:19,716 --> 00:10:20,184
+conducís.
+
+191
+00:10:20,184 --> 00:10:20,690
+Cierre.
+
+192
+00:10:20,690 --> 00:10:23,727
+Cinco preguntas para comprobar el criterio.
+
+193
+00:10:23,727 --> 00:10:27,270
+Uno: ¿la fatiga empieza cuando te dormís?
+
+194
+00:10:27,270 --> 00:10:31,320
+No; puede degradar atención y decisión mucho antes.
+
+195
+00:10:31,320 --> 00:10:35,369
+Dos: ¿ventana abierta y música fuerte recuperan alerta?
+
+196
+00:10:35,369 --> 00:10:35,875
+No.
+
+197
+00:10:35,875 --> 00:10:39,924
+Tres: ¿café y siesta corta reemplazan sueño suficiente?
+
+198
+00:10:39,924 --> 00:10:44,480
+No; son una medida temporal en un lugar seguro.
+
+199
+00:10:44,480 --> 00:10:47,011
+Cuatro: ¿qué señales justifican actuar?
+
+200
+00:10:47,011 --> 00:10:52,072
+Correcciones tardías, deriva, salidas omitidas, párpados pesados o lagunas de
+
+201
+00:10:52,072 --> 00:10:53,591
+memoria, especialmente combinadas.
+
+202
+00:10:53,591 --> 00:10:58,652
+Cinco: ¿qué hacés si la somnolencia persiste o se repite?
+
+203
+00:10:58,652 --> 00:11:03,714
+No seguís improvisando: reorganizás el viaje y consultás a un
+
+204
+00:11:03,714 --> 00:11:04,220
+profesional.
+
+205
+00:11:04,220 --> 00:11:07,257
+La experiencia no se demuestra aguantando.
+
+206
+00:11:07,257 --> 00:11:12,319
+Se demuestra conservando margen, comunicando a tiempo y eligiendo una
+
+207
+00:11:12,319 --> 00:11:16,368
+parada antes de que el cuerpo la imponga.

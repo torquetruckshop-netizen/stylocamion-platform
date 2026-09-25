@@ -1,0 +1,42 @@
+name: Publicar video Academy Fatiga
+
+on:
+  push:
+    branches:
+      - feature/academy-video-fatiga-visible-20260925
+    paths:
+      - '.github/workflows/academy-video-fatiga-publish.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: academy-video-fatiga-publish
+  cancel-in-progress: true
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  publish-video:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/academy-video-fatiga-visible-20260925
+      - name: Recuperar video ya producido
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/academy-fatiga academia/media
+          gh run download 35857410699 --repo ${{ github.repository }} --name Stylo-Camion-Academy-Fatiga-2026-09-23 --dir /tmp/academy-fatiga
+          cp /tmp/academy-fatiga/Stylo-Camion-Academy-Fatiga-en-Ruta-Con-Audio-v01.mp4 academia/media/fatiga-en-ruta.mp4
+          cp /tmp/academy-fatiga/Stylo-Camion-Academy-Fatiga-en-Ruta-v01.srt academia/media/fatiga-en-ruta.srt
+          test "$(stat -c%s academia/media/fatiga-en-ruta.mp4)" -gt 1000000
+      - name: Guardar video en Academy
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add academia/media/fatiga-en-ruta.mp4 academia/media/fatiga-en-ruta.srt
+          git commit -m "Publish Academy fatigue video" || exit 0
+          git push origin feature/academy-video-fatiga-visible-20260925
