@@ -170,6 +170,7 @@ window.STYLO_COURSES = [
   },
   {
     "id": "fatiga-alerta-ruta",
+    "video": "media/fatiga-en-ruta.mp4",
     "title": "Fatiga en ruta: reconocer señales y tomar decisiones seguras",
     "category": "Salud y seguridad",
     "level": "Básico",
