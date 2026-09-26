@@ -1,0 +1,64 @@
+name: Producir curso Academy - Fatiga
+
+on:
+  push:
+    branches:
+      - academy-fatiga-video-2026-09-23
+    paths:
+      - 'academy/production/fatiga-alerta-ruta/**'
+      - '.github/workflows/academy-fatiga-video.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'academy/production/fatiga-alerta-ruta/**'
+      - '.github/workflows/academy-fatiga-video.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  produce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Recuperar código
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependencias
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core zip
+          python -m pip install --upgrade pip
+          python -m pip install pillow edge-tts
+
+      - name: Generar video y materiales
+        run: python academy/production/fatiga-alerta-ruta/produce.py
+
+      - name: Verificar streams y duración
+        run: |
+          VIDEO=academy/production/fatiga-alerta-ruta/output/Stylo-Camion-Academy-Fatiga-en-Ruta-Con-Audio-v01.mp4
+          ffprobe -v error -show_entries stream=index,codec_name,codec_type,width,height,channels -show_entries format=duration,size -of json "$VIDEO" | tee academy/production/fatiga-alerta-ruta/output/FFPROBE-Fatiga-en-Ruta-v01.json
+          ffmpeg -v error -i "$VIDEO" -f null -
+          test "$(stat -c%s "$VIDEO")" -gt 1000000
+
+      - name: Empaquetar materiales
+        run: |
+          cd academy/production/fatiga-alerta-ruta
+          zip -r Stylo-Camion-Academy-Fatiga-en-Ruta-Materiales-v01.zip output -x 'output/*.mp4'
+          cp Stylo-Camion-Academy-Fatiga-en-Ruta-Materiales-v01.zip output/
+
+      - name: Publicar artefacto verificado
+        uses: actions/upload-artifact@v4
+        with:
+          name: Stylo-Camion-Academy-Fatiga-2026-09-23
+          path: academy/production/fatiga-alerta-ruta/output/
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 0
