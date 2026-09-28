@@ -1,0 +1,1 @@
+{"scripts":{"check:evento":"node --check api/evento/_lib.js && node --check api/evento/create-order.js && node --check api/evento/mp-webhook.js && node --check api/evento/order.js && node --check api/evento/ticket.js && node --check api/evento/validate.js && node --check evento/app.js && node --check evento/validar/validar.js"},"private":true}
