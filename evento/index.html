@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#08111f" />
+  <title>Entradas | La Feria del Usado con Ruedas 2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">STYLO CAMIÓN</a>
+    <nav><a href="/evento/validar/">Validar QR</a><a href="https://stylocamion.com/">Volver</a></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Autódromo de Rafaela · 5 al 8 de febrero de 2027</p>
+      <h1>La Feria del Usado con Ruedas</h1>
+      <p class="lead">Comprá online, recibí tu código y presentalo en el ingreso. La compra anticipada puede incluir beneficios como la Caja Ruta Stylo Camión.</p>
+      <div class="hero-badges"><span>QR / código único</span><span>Pago Mercado Pago</span><span>Validación en puerta</span></div>
+    </section>
+    <section class="grid">
+      <div class="panel products"><h2>Elegí qué querés comprar</h2><div class="product-list" id="productList"></div></div>
+      <form class="panel form" id="orderForm">
+        <h2>Datos para emitir el código</h2>
+        <input type="hidden" name="product_code" id="productCode" value="caja_ruta_vehiculo" />
+        <label>Nombre y apellido<input name="buyer_name" autocomplete="name" required placeholder="Ej. Juan Pérez" /></label>
+        <label>WhatsApp<input name="buyer_phone" autocomplete="tel" required placeholder="Ej. +54 9 343 0000000" /></label>
+        <label>Email <span>opcional</span><input name="buyer_email" type="email" autocomplete="email" placeholder="tu@email.com" /></label>
+        <label>DNI / CUIT <span>opcional</span><input name="buyer_document" placeholder="Solo para control interno" /></label>
+        <div class="row">
+          <label>Tipo de vehículo<select name="vehicle_type" id="vehicleType"><option value="camion">Camión</option><option value="auto_pickup">Auto / Pick-up</option><option value="moto">Moto</option><option value="sin_vehiculo">Sin vehículo</option></select></label>
+          <label>Patente / identificación<input name="vehicle_plate" id="vehiclePlate" placeholder="Ej. AB123CD" /></label>
+        </div>
+        <label>Observaciones <span>opcional</span><textarea name="notes" rows="3" placeholder="Ej. llega con semirremolque, retira Caja Ruta, etc."></textarea></label>
+        <div class="summary"><div><span>Producto seleccionado</span><strong id="summaryName">Caja Ruta Stylo Camión + ingreso vehicular</strong></div><div><span>Total</span><strong id="summaryAmount">$20.000</strong></div></div>
+        <button class="primary" type="submit" id="submitButton">Pagar con Mercado Pago</button>
+        <p class="fineprint">Después del pago aprobado, el sistema genera un código único para mostrar en el teléfono. Si WhatsApp automático no está configurado, el código se puede recuperar desde la pantalla de confirmación.</p>
+        <div class="status" id="formStatus" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
