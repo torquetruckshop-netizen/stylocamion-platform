@@ -17,10 +17,12 @@ Módulo inicial para cobrar entradas, ingresos vehiculares, estacionamiento y Ca
 ## Regla de uso del código
 
 - El mismo código/QR es válido para los 4 días del evento.
-- El primer escaneo con acción `checkin` registra el primer ingreso.
-- Los siguientes escaneos con acción `checkin` registran reingresos válidos, no bloquean el acceso.
-- Cada ingreso/reingreso queda guardado en `event_access_logs`.
-- La Caja Ruta, cuando el producto la incluye, se puede entregar una sola vez. Ese control es independiente del ingreso/reingreso.
+- El código permite **máximo 1 ingreso por día**.
+- El control diario se calcula con fecha argentina (`America/Argentina/Buenos_Aires`).
+- Si el código ya registró ingreso aceptado en la fecha actual, un nuevo `checkin` queda bloqueado con estado `already_checked_in_today`.
+- Al día siguiente, el mismo código vuelve a quedar habilitado.
+- Cada consulta, ingreso rechazado, ingreso aceptado y entrega de Caja Ruta queda guardado en `event_access_logs`.
+- La Caja Ruta, cuando el producto la incluye, se puede entregar una sola vez. Ese control es independiente del ingreso diario.
 
 ## Variables de entorno necesarias
 
@@ -68,5 +70,5 @@ Tablas creadas:
 - El QR/código solo se genera si Mercado Pago confirma pago aprobado.
 - El monto pagado debe coincidir con la orden interna.
 - La validación en puerta requiere `VALIDATOR_PIN`.
-- Cada consulta, ingreso, reingreso y entrega de caja queda registrada en `event_access_logs`.
+- El ingreso queda limitado a 1 vez por día por código.
 - La Caja Ruta tiene control separado de entrega para evitar doble retiro.

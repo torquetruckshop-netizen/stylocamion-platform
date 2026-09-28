@@ -17,11 +17,10 @@ function render(data, ok = true) {
   const status = data.status || (ok ? 'ok' : 'error');
   const labels = {
     valid: 'ENTRADA VÁLIDA',
-    valid_for_event: 'ENTRADA VÁLIDA · 4 DÍAS',
-    checked_in: 'INGRESO REGISTRADO',
-    reentry_registered: 'REINGRESO VÁLIDO REGISTRADO',
-    repeat_checkin: 'REINGRESO VÁLIDO REGISTRADO',
-    already_checked_in: 'ENTRADA VÁLIDA PARA REINGRESO',
+    valid_for_event: 'ENTRADA VÁLIDA · 1 INGRESO POR DÍA',
+    checked_in: 'INGRESO DE HOY REGISTRADO',
+    daily_checkin_registered: 'INGRESO DEL DÍA REGISTRADO',
+    already_checked_in_today: 'ATENCIÓN: YA INGRESÓ HOY',
     box_delivered: 'CAJA RUTA ENTREGADA',
     already_delivered: 'ATENCIÓN: CAJA YA ENTREGADA',
     not_paid: 'NO FIGURA PAGADA',
@@ -29,7 +28,7 @@ function render(data, ok = true) {
   };
 
   const statusLabel = labels[status] || (ok ? 'OPERACIÓN OK' : 'NO VÁLIDA');
-  const warn = status === 'already_delivered';
+  const warn = status === 'already_delivered' || status === 'already_checked_in_today';
   result.className = `validation-result show ${ok ? 'ok' : 'bad'} ${warn ? 'warn' : ''}`;
 
   if (!ticket) {
@@ -39,12 +38,16 @@ function render(data, ok = true) {
 
   const checkInCount = Number(ticket.checked_in_count || 0);
   const ingresoTexto = checkInCount > 0
-    ? `${checkInCount} ingreso${checkInCount === 1 ? '' : 's'} / reingreso${checkInCount === 1 ? '' : 's'} registrado${checkInCount === 1 ? '' : 's'}`
+    ? `${checkInCount} ingreso${checkInCount === 1 ? '' : 's'} registrado${checkInCount === 1 ? '' : 's'} en total`
     : 'Pendiente de primer ingreso';
   const primerIngreso = ticket.checked_in_at ? new Date(ticket.checked_in_at).toLocaleString('es-AR') : 'Sin registrar';
+  const daily = data.daily || {};
+  const ingresoHoy = daily.already_checked_in_today ? 'Ya registrado hoy' : 'Pendiente hoy';
+  const fechaControl = daily.event_date || 'Fecha actual Argentina';
 
   result.innerHTML = `
     <h2>${statusLabel}</h2>
+    ${data.error ? `<p>${data.error}</p>` : ''}
     ${data.message ? `<p>${data.message}</p>` : ''}
     <dl>
       <dt>Código</dt><dd>${ticket.ticket_code}</dd>
@@ -52,7 +55,9 @@ function render(data, ok = true) {
       <dt>Titular</dt><dd>${ticket.buyer_name}</dd>
       <dt>WhatsApp</dt><dd>${ticket.buyer_phone || '-'}</dd>
       <dt>Vehículo</dt><dd>${ticket.vehicle_type || '-'} ${ticket.vehicle_plate ? '· ' + ticket.vehicle_plate : ''}</dd>
-      <dt>Validez</dt><dd>Habilitado para los 4 días del evento</dd>
+      <dt>Regla</dt><dd>Válido 4 días · máximo 1 ingreso por día</dd>
+      <dt>Fecha control</dt><dd>${fechaControl}</dd>
+      <dt>Ingreso de hoy</dt><dd>${ingresoHoy}</dd>
       <dt>Movimientos</dt><dd>${ingresoTexto}</dd>
       <dt>Primer ingreso</dt><dd>${primerIngreso}</dd>
       <dt>Caja Ruta</dt><dd>${ticket.includes_box ? (ticket.box_delivered_at ? 'Entregada' : 'Pendiente') : 'No incluida'}</dd>
