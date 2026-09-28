@@ -1,5 +1,7 @@
 const {
+  argentinaDateString,
   assertValidatorPin,
+  getAcceptedCheckinsForDate,
   getOrderByTicketCode,
   handleError,
   insertAccessLog,
@@ -20,6 +22,7 @@ module.exports = async function handler(req, res) {
     const code = String(body.code || req.query?.code || '').trim().toUpperCase();
     const action = String(body.action || req.query?.action || 'lookup').trim();
     const validator = String(body.validator || req.query?.validator || 'acceso').trim().slice(0, 80);
+    const eventDate = argentinaDateString();
 
     if (!code) return json(res, 400, { ok: false, error: 'Falta código.' });
 
@@ -40,17 +43,48 @@ module.exports = async function handler(req, res) {
       });
     }
 
+    const todayCheckins = await getAcceptedCheckinsForDate(code, eventDate);
+    const alreadyCheckedInToday = todayCheckins.length > 0;
+
     if (req.method === 'GET' || action === 'lookup') {
-      await insertAccessLog({ order_id: order.id, ticket_code: code, action: 'lookup', validator, result: 'ok' });
+      await insertAccessLog({
+        order_id: order.id,
+        ticket_code: code,
+        action: 'lookup',
+        validator,
+        result: alreadyCheckedInToday ? 'already_today' : 'ok',
+        details: { event_date: eventDate, today_checkins: todayCheckins.length },
+      });
       return json(res, 200, {
         ok: true,
-        status: 'valid_for_event',
-        message: 'Código pagado y habilitado para los 4 días del evento.',
+        status: alreadyCheckedInToday ? 'already_checked_in_today' : 'valid_for_event',
+        message: alreadyCheckedInToday
+          ? 'Este código ya registró ingreso hoy. Vuelve a quedar habilitado mañana.'
+          : 'Código pagado. Habilitado para 1 ingreso por día durante los 4 días del evento.',
+        daily: { event_date: eventDate, already_checked_in_today: alreadyCheckedInToday, today_checkins: todayCheckins.length },
         ticket: validatorView(order),
       });
     }
 
     if (action === 'checkin') {
+      if (alreadyCheckedInToday) {
+        await insertAccessLog({
+          order_id: order.id,
+          ticket_code: code,
+          action: 'checkin',
+          validator,
+          result: 'already_today',
+          details: { event_date: eventDate, today_checkins: todayCheckins.length },
+        });
+        return json(res, 409, {
+          ok: false,
+          status: 'already_checked_in_today',
+          error: 'Este código ya ingresó hoy. Puede volver a ingresar mañana con el mismo código.',
+          daily: { event_date: eventDate, already_checked_in_today: true, today_checkins: todayCheckins.length },
+          ticket: validatorView(order),
+        });
+      }
+
       const checkedInCount = Number(order.checked_in_count || 0) + 1;
       const firstCheckInAt = order.checked_in_at || new Date().toISOString();
       order = await updateOrder(order.id, {
@@ -63,16 +97,17 @@ module.exports = async function handler(req, res) {
         ticket_code: code,
         action: 'checkin',
         validator,
-        result: checkedInCount > 1 ? 'reentry_ok' : 'ok',
-        details: { checked_in_count: checkedInCount },
+        result: 'daily_checkin_ok',
+        details: { event_date: eventDate, checked_in_count: checkedInCount },
       });
 
       return json(res, 200, {
         ok: true,
-        status: checkedInCount > 1 ? 'reentry_registered' : 'checked_in',
-        message: checkedInCount > 1
-          ? 'Reingreso válido registrado. El código sigue habilitado para el evento.'
-          : 'Ingreso registrado. El código queda habilitado para reingresos durante el evento.',
+        status: checkedInCount === 1 ? 'checked_in' : 'daily_checkin_registered',
+        message: checkedInCount === 1
+          ? 'Ingreso registrado para hoy. El código vuelve a habilitarse mañana.'
+          : 'Ingreso del día registrado. El código sigue vigente para los próximos días del evento.',
+        daily: { event_date: eventDate, already_checked_in_today: true, today_checkins: 1 },
         ticket: validatorView(order),
       });
     }
