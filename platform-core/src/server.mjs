@@ -85,6 +85,18 @@ export function createPlatformServer({
         return json(res, 200, await accountService.summary(user.id));
       }
 
+      // Ruta reuses the platform session. Profile roles never grant wallet access.
+      if (req.method === 'GET' && url.pathname === '/api/ruta/access') {
+        const user = await auth.authenticate(toRequest(req));
+        const account = await accountService.summary(user.id);
+        return json(res, 200, {
+          user: { id: user.id, displayName: account.profile.displayName ?? null },
+          mode: 'preparation',
+          capabilities: { transfer: false, payQr: false, assignFunds: false },
+          reason: 'RUTA_PILOT_NOT_ENABLED',
+        });
+      }
+
       if (req.method === 'POST' && url.pathname === '/api/orders') {
         const user = await auth.authenticate(toRequest(req));
         const input = await readJson(req);
@@ -202,6 +214,8 @@ async function serveFile(res, fileUrl, contentType) {
 }
 
 function staticAsset(pathname) {
+  if (pathname === '/ruta') return { file: 'ruta.html', type: 'text/html; charset=utf-8' };
+  if (pathname === '/ruta.js') return { file: 'ruta.js', type: 'text/javascript; charset=utf-8' };
   if (pathname === '/' || pathname === '/admin' || pathname.startsWith('/validar/')) {
     return { file: 'index.html', type: 'text/html; charset=utf-8' };
   }

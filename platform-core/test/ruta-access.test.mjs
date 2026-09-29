@@ -1,0 +1,35 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { createPlatformServer } from '../src/server.mjs';
+import { PlatformAuth } from '../src/auth.mjs';
+import { MemoryStore } from '../src/memory-store.mjs';
+import { AccountService } from '../src/account-service.mjs';
+
+test('Ruta reutiliza sesión, ignora identidad enviada y no deriva permisos financieros de roles', async t => {
+  const store = new MemoryStore();
+  const user = { id: 'driver-one', phone: '+5493430000000' };
+  const auth = new PlatformAuth({ store, supabaseAuth: { authenticate: async () => user } });
+  const accounts = new AccountService({ store });
+  await accounts.bootstrap({ user, displayName: 'Chofer prueba', roles: ['driver','company'], termsVersion: 'test-v1' });
+  const session = await auth.createSession(new Request('https://test.local'));
+  const server = createPlatformServer({ auth, accountService: accounts, staticDir: new URL('../public/', import.meta.url) });
+  server.listen(0, '127.0.0.1');
+  await new Promise(resolve => server.once('listening', resolve));
+  t.after(() => server.close());
+  const base = `http://127.0.0.1:${server.address().port}`;
+  assert.equal((await fetch(base+'/api/ruta/access')).status,401);
+  const cookie = `stylo-platform-auth=${session.token}`;
+  const response = await fetch(base+'/api/ruta/access?userId=other&role=admin', { headers: { Cookie: cookie } });
+  assert.equal(response.status,200);
+  assert.equal(response.headers.get('cache-control'),'no-store');
+  const result = await response.json();
+  assert.equal(result.user.id,user.id);
+  assert.deepEqual(result.capabilities,{transfer:false,payQr:false,assignFunds:false});
+  assert.equal(result.mode,'preparation');
+  const page = await fetch(base+'/ruta');
+  assert.equal(page.status,200);
+  assert.match(await page.text(),/Mi Stylo/);
+  assert.equal((await fetch(base+'/ruta.js')).status,200);
+  await auth.revokeSession(new Request('https://test.local', {headers:{Cookie:cookie}}));
+  assert.equal((await fetch(base+'/api/ruta/access',{headers:{Cookie:cookie}})).status,401);
+});
