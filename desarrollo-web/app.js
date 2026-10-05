@@ -3,7 +3,7 @@ const PRICES={
   profesional:{name:"Profesional",price:790000,detail:"Hasta 8 secciones, formularios comerciales, SEO inicial, integración de redes, analítica y dominio."},
   premium:{name:"Premium",price:1190000,detail:"Experiencia avanzada, arquitectura personalizada, automatizaciones, integraciones y acompañamiento de lanzamiento."}
 };
-const STYLO_WA="5493435355221";
+const STYLO_WA="5493435343413";
 const money=n=>new Intl.NumberFormat("es-AR",{style:"currency",currency:"ARS",maximumFractionDigits:0}).format(n);
 const form=document.getElementById("quoteForm");
 const result=document.getElementById("result");
