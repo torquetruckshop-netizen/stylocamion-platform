@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pago | Stylo Desarrollo Web</title>
+<style>
+body{margin:0;background:#071019;color:#f4f7fa;font-family:Inter,system-ui,sans-serif;min-height:100vh;display:grid;place-items:center;padding:24px}
+.card{max-width:680px;width:100%;border:1px solid #223243;background:#0e1924;padding:34px;box-sizing:border-box}
+.kicker{color:#2ce5ff;font-size:11px;letter-spacing:.16em;font-weight:800}.status{font-size:42px;margin:12px 0}.muted{color:#91a0ae;line-height:1.6}.btn{display:inline-flex;margin-top:20px;padding:14px 18px;background:#2ce5ff;color:#051019;text-decoration:none;font-weight:800}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="kicker">STYLO DESARROLLO WEB</div>
+  <h1 class="status" id="title">Consultando pago…</h1>
+  <p class="muted" id="message">Estamos verificando el estado de tu operación.</p>
+  <a class="btn" href="https://wa.me/5493435343413?text=Hola%20Lic.%20Francisco%20Spoturno%2C%20te%20contacto%20por%20STYLO%20DESARROLLO%20WEB." target="_blank" rel="noopener">CONTACTAR A FRANCISCO</a>
+</div>
+<script>
+const id=new URLSearchParams(location.search).get('order_id');
+const title=document.getElementById('title'), message=document.getElementById('message');
+if(!id){title.textContent='No encontramos la orden';message.textContent='Contactanos por WhatsApp para revisar el pago.'}
+else fetch('/api/desarrollo-web/status?order_id='+encodeURIComponent(id)).then(r=>r.json()).then(d=>{
+  if(!d.ok) throw new Error(d.error||'Error');
+  const s=d.order.status;
+  if(s==='paid'){title.textContent='Pago aprobado';message.textContent='Recibimos tu pago correctamente. El equipo de Stylo Desarrollo Web continuará el contacto comercial por WhatsApp.'}
+  else if(s==='pending'){title.textContent='Pago en proceso';message.textContent='Mercado Pago todavía está procesando la operación. Podés volver a consultar o escribirnos por WhatsApp.'}
+  else if(s==='rejected'){title.textContent='Pago rechazado';message.textContent='La operación no fue aprobada. Podés intentar nuevamente o contactarnos.'}
+  else{title.textContent='Operación no completada';message.textContent='El pago figura como '+s+'. Contactanos si necesitás ayuda.'}
+}).catch(()=>{title.textContent='No pudimos verificar el pago';message.textContent='Contactanos por WhatsApp y lo revisamos.'});
+</script>
+</body></html>
