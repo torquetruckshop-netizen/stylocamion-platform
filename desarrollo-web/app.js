@@ -35,3 +35,11 @@ form.addEventListener("submit",e=>{
 document.getElementById("editBtn").addEventListener("click",()=>{
   result.hidden=true;form.hidden=false;form.scrollIntoView({behavior:"smooth",block:"start"});
 });
+document.querySelectorAll(".plan-select").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    const value=btn.dataset.plan;
+    const radio=document.querySelector('input[name="plan"][value="'+value+'"]');
+    if(radio) radio.checked=true;
+    document.getElementById("cotizador").scrollIntoView({behavior:"smooth",block:"start"});
+  });
+});
