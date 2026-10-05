@@ -6,11 +6,11 @@ const PRICES={
 const STYLO_WA="5493435343413";
 const money=n=>new Intl.NumberFormat("es-AR",{style:"currency",currency:"ARS",maximumFractionDigits:0}).format(n);
 const form=document.getElementById("quoteForm");
-const result=document.getElementById("result");
+const result=document.getElementById("result");\nlet currentQuote=null;
 form.addEventListener("submit",e=>{
   e.preventDefault();
   const d=Object.fromEntries(new FormData(form).entries());
-  const p=PRICES[d.plan]||PRICES.esencial;
+  const p=PRICES[d.plan]||PRICES.esencial;\n  currentQuote={...d,plan:d.plan};
   document.getElementById("resultCompany").textContent=d.empresa;
   document.getElementById("resultPlan").textContent=p.name;
   document.getElementById("resultPrice").textContent=money(p.price)+" + IVA";
@@ -43,3 +43,27 @@ document.querySelectorAll(".plan-select").forEach(btn=>{
     document.getElementById("cotizador").scrollIntoView({behavior:"smooth",block:"start"});
   });
 });
+
+const mpPayBtn=document.getElementById("mpPayBtn");
+if(mpPayBtn){
+  mpPayBtn.addEventListener("click",async()=>{
+    if(!currentQuote) return;
+    const original=mpPayBtn.textContent;
+    mpPayBtn.disabled=true;
+    mpPayBtn.textContent="ABRIENDO MERCADO PAGO…";
+    try{
+      const response=await fetch("/api/desarrollo-web/create-order",{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify(currentQuote)
+      });
+      const data=await response.json();
+      if(!response.ok||!data.ok||!data.checkout_url) throw new Error(data.error||"No se pudo iniciar el pago.");
+      location.href=data.checkout_url;
+    }catch(error){
+      alert(error.message||"No se pudo iniciar Mercado Pago.");
+      mpPayBtn.disabled=false;
+      mpPayBtn.textContent=original;
+    }
+  });
+}
