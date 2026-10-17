@@ -1,0 +1,82 @@
+{
+  "version": "0.1.0",
+  "load": {
+    "required": ["id", "source", "origin", "destination", "cargo_type", "status", "created_at"],
+    "fields": {
+      "id": "string",
+      "source": "whatsapp_direct|group_forward|operator|form|other",
+      "origin": "location",
+      "destination": "location",
+      "cargo_type": "string",
+      "weight_tn": "number|null",
+      "equipment_required": "string|null",
+      "pickup_at": "datetime|null",
+      "price": "money|null",
+      "shipper_id": "string|null",
+      "status": "DETECTADA|EN_VALIDACION|PUBLICADA|BUSCANDO|PREASIGNADA|ADJUDICADA|EN_CAMINO_A_CARGA|EN_CARGA|EN_TRANSITO|EN_DESTINO|DESCARGANDO|ENTREGADA|A_EVALUAR|CERRADA|BLOQUEADA",
+      "traffic_light": "GREEN|YELLOW|RED",
+      "assigned_vehicle_id": "string|null",
+      "assigned_carrier_id": "string|null"
+    }
+  },
+  "carrier": {
+    "required": ["id", "name", "status"],
+    "fields": {
+      "id": "string",
+      "name": "string",
+      "tax_id": "string|null",
+      "status": "ACTIVE|SUSPENDED|BLOCKED",
+      "reputation_score": "number",
+      "completed_operations": "number"
+    }
+  },
+  "vehicle": {
+    "required": ["id", "carrier_id", "plate", "equipment_type"],
+    "fields": {
+      "id": "string",
+      "carrier_id": "string",
+      "plate": "string",
+      "equipment_type": "string",
+      "capacity_tn": "number|null",
+      "availability": "AVAILABLE|BUSY|OFFLINE",
+      "location": "geo|null",
+      "location_source": "PHONE_GPS|TELEMATICS|MANUAL|null",
+      "location_updated_at": "datetime|null",
+      "document_state": "GREEN|YELLOW|RED"
+    }
+  },
+  "document_check": {
+    "fields": {
+      "entity_type": "LOAD|CARRIER|VEHICLE|DRIVER",
+      "entity_id": "string",
+      "document_type": "string",
+      "status": "VALID|EXPIRING|EXPIRED|MISSING|NOT_APPLICABLE",
+      "expires_at": "date|null",
+      "source": "string|null",
+      "verified_at": "datetime|null"
+    }
+  },
+  "match": {
+    "fields": {
+      "load_id": "string",
+      "vehicle_id": "string",
+      "distance_km": "number",
+      "equipment_score": "number",
+      "documents_score": "number",
+      "availability_score": "number",
+      "distance_score": "number",
+      "reputation_score": "number",
+      "total_score": "number",
+      "decision": "CANDIDATE|CONTACTED|ACCEPTED|REJECTED|TIMEOUT|ASSIGNED"
+    }
+  },
+  "event": {
+    "fields": {
+      "load_id": "string",
+      "type": "string",
+      "actor": "AI|STYLO|SHIPPER|CARRIER|DRIVER|SYSTEM",
+      "created_at": "datetime",
+      "payload": "object"
+    }
+  }
+}

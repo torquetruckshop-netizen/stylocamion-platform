@@ -1,0 +1,18 @@
+{
+  "name": "stylo-cargas-mvp-api",
+  "version": "0.2.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "start:staging": "node src/server-staging.mjs",
+    "start:whatsapp": "node src/whatsapp-gateway.mjs",
+    "check:staging": "node scripts/check-staging.mjs",
+    "build:bootstrap": "node scripts/build-bootstrap.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0",
+    "google-auth-library": "10.5.0"
+  }
+}
