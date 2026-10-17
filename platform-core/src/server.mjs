@@ -10,15 +10,32 @@ import { MercadoPagoClient } from './mercadopago.mjs';
 import { OrderService } from './order-service.mjs';
 import { PRODUCTS } from './catalog.mjs';
 import { inspectProductionConfig } from './config.mjs';
+import { AcademyService } from './academy-service.mjs';
+import { MemoryAcademyStore, SupabaseAcademyStore } from './academy-store.mjs';
+import { academyRoute } from './academy-routes.mjs';
+import { ACADEMY_COURSES } from './academy-courses.mjs';
 
 export function createPlatformServer({
   auth, accountService, orderService, adminService, paymentClient,
-  publicConfig = {}, sessionCookie = {}, staticDir = null,
+  publicConfig = {}, sessionCookie = {}, staticDir = null, academyService = null,
   readinessCheck = async () => ({ ok: true }),
 }) {
   return createServer(async (req, res) => {
     try {
       const url = new URL(req.url, 'http://localhost');
+      if (url.pathname === '/api/academy' || url.pathname.startsWith('/api/academy/')) {
+        if (!academyService) return json(res, 503, { error: 'ACADEMY_CONFIGURATION_PENDING' });
+        const user = await auth.authenticate(toRequest(req));
+        try {
+          return json(res, 200, await academyRoute({ req, url, user, service: academyService, readJson }));
+        } catch (error) {
+          if (!error.message.startsWith('ACADEMY_')) {
+            console.error('[academy] operation failed');
+            return json(res, 503, { error: 'ACADEMY_UNAVAILABLE' });
+          }
+          throw error;
+        }
+      }
       if (req.method === 'GET' && url.pathname === '/health') {
         return json(res, 200, { ok: true, ready: true, mode: 'operational', service: 'stylo-platform-core' });
       }
@@ -202,6 +219,9 @@ async function serveFile(res, fileUrl, contentType) {
 }
 
 function staticAsset(pathname) {
+  if (pathname === '/academia-flota' || pathname === '/academia-flota/') return { file: 'academy/index.html', type: 'text/html; charset=utf-8' };
+  if (pathname === '/academy/app.js') return { file: 'academy/app.js', type: 'text/javascript; charset=utf-8' };
+  if (pathname === '/academy/styles.css') return { file: 'academy/styles.css', type: 'text/css; charset=utf-8' };
   if (pathname === '/' || pathname === '/admin' || pathname.startsWith('/validar/')) {
     return { file: 'index.html', type: 'text/html; charset=utf-8' };
   }
@@ -211,6 +231,8 @@ function staticAsset(pathname) {
 }
 
 function statusFor(code) {
+  if (/ACADEMY_RETRY_LATER/.test(code)) return 429;
+  if (/ACADEMY_CONFLICT|ACADEMY_ASSIGNMENT_EXISTS/.test(code)) return 409;
   if (/AUTH_REQUIRED|AUTH_INVALID/.test(code)) return 401;
   if (/ADMIN_REQUIRED|FORBIDDEN/.test(code)) return 403;
   if (/NOT_FOUND/.test(code)) return 404;
@@ -321,11 +343,17 @@ if (process.argv[1] === new URL(import.meta.url).pathname) {
   });
   const server = createPlatformServer({
     auth,
+    academyService: process.env.ACADEMY_FLOTA_ENABLED === 'true' ? new AcademyService({
+      store: production ? new SupabaseAcademyStore(store) : new MemoryAcademyStore(store),
+      courses: ACADEMY_COURSES,
+      pilotOwnerIds: new Set(String(process.env.ACADEMY_PILOT_OWNER_IDS ?? '').split(',').map((id) => id.trim()).filter(Boolean)),
+    }) : null,
     accountService: new AccountService({ store }),
     orderService,
     paymentClient,
     adminService: new AdminService({ store, adminIds: admins }),
     publicConfig: {
+      academyFlotaEnabled: process.env.ACADEMY_FLOTA_ENABLED === 'true',
       supabaseUrl,
       supabasePublishableKey: supabaseAuthKey,
       accountTermsVersion: process.env.ACCOUNT_TERMS_VERSION ?? 'general-2026-08-v1',
