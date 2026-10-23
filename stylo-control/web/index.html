@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>STYLO CONTROL · Preview</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">STYLO CAMIÓN · ADMINISTRACIÓN PRIVADA</div>
+        <h1>STYLO CONTROL</h1>
+        <p class="subtitle">Operación, crecimiento y salud de la plataforma en un solo lugar.</p>
+      </div>
+      <div class="mode">
+        <span class="status-dot"></span>
+        <span id="modeLabel">PREVIEW · DATOS DEMO</span>
+      </div>
+    </header>
+
+    <section class="hero-grid" id="heroMetrics"></section>
+
+    <section class="layout">
+      <div class="main-column">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="section-kicker">OPERACIÓN</span>
+              <h2>Cargas</h2>
+            </div>
+            <span class="pill">Últimos 30 días</span>
+          </div>
+          <div class="metric-grid" id="loadsMetrics"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="section-kicker">NEGOCIO</span>
+              <h2>Ventas e ingresos</h2>
+            </div>
+          </div>
+          <div class="metric-grid" id="businessMetrics"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="section-kicker">INTELIGENCIA</span>
+              <h2>IA y telemetría</h2>
+            </div>
+          </div>
+          <div class="metric-grid" id="aiMetrics"></div>
+        </section>
+      </div>
+
+      <aside class="side-column">
+        <section class="panel health-panel">
+          <div class="panel-head compact">
+            <div>
+              <span class="section-kicker">SISTEMAS</span>
+              <h2>Estado</h2>
+            </div>
+          </div>
+          <div id="healthList" class="health-list"></div>
+        </section>
+
+        <section class="panel investor-card">
+          <span class="section-kicker">INVESTOR VIEW</span>
+          <h2>Snapshot agregado</h2>
+          <p>Vista separada para compartir crecimiento y tracción sin exponer datos de clientes.</p>
+          <div class="privacy-note">Sin nombres · sin teléfonos · sin patentes · sin mensajes</div>
+        </section>
+      </aside>
+    </section>
+
+    <footer>
+      Preview de desarrollo. No contiene datos reales ni credenciales.
+    </footer>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
