@@ -1,0 +1,42 @@
+{
+  "name": "stylo_cargas_intake",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "message_type",
+      "origin",
+      "destination",
+      "cargo_type",
+      "weight_tn",
+      "equipment_required",
+      "pickup_at_text",
+      "price_text",
+      "missing_fields",
+      "confidence"
+    ],
+    "properties": {
+      "message_type": {
+        "type": "string",
+        "enum": ["LOAD", "AVAILABLE_TRUCK", "QUESTION", "NOISE"]
+      },
+      "origin": {"type": ["string", "null"]},
+      "destination": {"type": ["string", "null"]},
+      "cargo_type": {"type": ["string", "null"]},
+      "weight_tn": {"type": ["number", "null"]},
+      "equipment_required": {"type": ["string", "null"]},
+      "pickup_at_text": {"type": ["string", "null"]},
+      "price_text": {"type": ["string", "null"]},
+      "missing_fields": {
+        "type": "array",
+        "items": {"type": "string"}
+      },
+      "confidence": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
+    }
+  }
+}

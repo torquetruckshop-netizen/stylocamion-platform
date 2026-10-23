@@ -1,0 +1,175 @@
+{
+  "scenario": "Piloto Malabrigo - Rosario - retornos",
+  "notes": [
+    "Los Volvo FH se modelan como chasis con acoplado de 4 ejes habilitado para 52.5 t PBTC; PBTC no equivale a carga útil.",
+    "Las capacidades de carga reales deben completarse según tara, configuración y normativa aplicable.",
+    "Camión 11 se conserva como ejemplo adicional Sider 28 tn informado por el usuario."
+  ],
+  "fleet": [
+    {
+      "unit": "Camión 01",
+      "tractor": "Volvo FH",
+      "equipment": "chasis + acoplado 4 ejes",
+      "pbtc_tn": 52.5,
+      "cargo_profiles": ["cereal", "carga general"],
+      "current_status": "EN_VIAJE",
+      "current_route": "Malabrigo -> Rosario",
+      "expected_available_location": "Rosario",
+      "expected_available_at": "2026-08-14T10:30:00-03:00",
+      "preferred_destinations": ["Santa Fe", "Entre Ríos", "Córdoba", "Malabrigo"],
+      "ownership": "OWN",
+      "documents": "GREEN"
+    },
+    {
+      "unit": "Camión 02",
+      "tractor": "Volvo FH",
+      "equipment": "chasis + acoplado 4 ejes",
+      "pbtc_tn": 52.5,
+      "cargo_profiles": ["cereal", "carga general"],
+      "current_status": "DESCARGANDO",
+      "expected_available_location": "Rosario",
+      "expected_available_at": "2026-08-14T09:45:00-03:00",
+      "preferred_destinations": ["Rafaela", "Santa Fe", "Paraná", "Malabrigo"],
+      "ownership": "OWN",
+      "documents": "GREEN"
+    },
+    {
+      "unit": "Camión 03",
+      "tractor": "Volvo FH",
+      "equipment": "chasis + acoplado 4 ejes",
+      "pbtc_tn": 52.5,
+      "cargo_profiles": ["cereal", "carga general"],
+      "current_status": "DISPONIBLE",
+      "expected_available_location": "Rosario",
+      "expected_available_at": "2026-08-14T07:30:00-03:00",
+      "preferred_destinations": ["Córdoba", "Santa Fe", "Entre Ríos"],
+      "ownership": "OWN",
+      "documents": "GREEN"
+    },
+    {
+      "unit": "Camión 04",
+      "tractor": "Volvo FH",
+      "equipment": "chasis + acoplado 4 ejes",
+      "pbtc_tn": 52.5,
+      "cargo_profiles": ["cereal", "carga general"],
+      "current_status": "EN_VIAJE",
+      "current_route": "Malabrigo -> Rosario",
+      "expected_available_location": "Rosario",
+      "expected_available_at": "2026-08-14T12:15:00-03:00",
+      "preferred_destinations": ["Paraná", "Rafaela", "Santa Fe"],
+      "ownership": "OWN",
+      "documents": "GREEN"
+    },
+    {
+      "unit": "Camión 05",
+      "tractor": "Volvo FH",
+      "equipment": "chasis + acoplado 4 ejes",
+      "pbtc_tn": 52.5,
+      "cargo_profiles": ["cereal", "carga general"],
+      "current_status": "CARGANDO",
+      "current_route": "Malabrigo -> Rosario",
+      "expected_available_location": "Rosario",
+      "expected_available_at": "2026-08-14T14:00:00-03:00",
+      "preferred_destinations": ["Córdoba", "Entre Ríos", "norte de Santa Fe"],
+      "ownership": "OWN",
+      "documents": "GREEN"
+    },
+    {
+      "unit": "Camión 11",
+      "tractor": null,
+      "equipment": "sider",
+      "capacity_tn": 28,
+      "cargo_profiles": ["carga general"],
+      "current_status": "DESCARGANDO",
+      "expected_available_location": "Córdoba",
+      "expected_available_at": "2026-08-14T15:00:00-03:00",
+      "preferred_destinations": ["Santa Fe", "Entre Ríos"],
+      "ownership": "OWN",
+      "documents": "GREEN"
+    }
+  ],
+  "sample_messages": [
+    {
+      "id": "MSG-001",
+      "source": "GROUP_FORWARD",
+      "text": "Rosario a Rafaela, cereal, chasis con acoplado, carga 10:30. Consultar tarifa.",
+      "expected_classification": "LOAD"
+    },
+    {
+      "id": "MSG-002",
+      "source": "GROUP_FORWARD",
+      "text": "Hay carga general Rosario a Paraná para hoy 11 hs, equipo chasis y acoplado.",
+      "expected_classification": "LOAD"
+    },
+    {
+      "id": "MSG-003",
+      "source": "WHATSAPP_DIRECT",
+      "text": "Busco camión Rosario - Córdoba esta tarde, carga general, 28 tn aprox.",
+      "expected_classification": "LOAD"
+    },
+    {
+      "id": "MSG-004",
+      "source": "GROUP_FORWARD",
+      "text": "Cereal San Lorenzo a Reconquista, carga al mediodía, necesito chasis con acoplado.",
+      "expected_classification": "LOAD"
+    },
+    {
+      "id": "MSG-005",
+      "source": "GROUP_FORWARD",
+      "text": "Carga Rosario a Santa Fe, general, hoy 13:00. Hay lugar para un equipo.",
+      "expected_classification": "LOAD"
+    },
+    {
+      "id": "MSG-006",
+      "source": "WHATSAPP_DIRECT",
+      "text": "Córdoba a Paraná, carga general, sider 28 tn, hoy 17 hs.",
+      "expected_classification": "LOAD"
+    },
+    {
+      "id": "MSG-007",
+      "source": "GROUP_FORWARD",
+      "text": "Buenas, alguien tiene el contacto de una gomería en Rosario?",
+      "expected_classification": "IGNORE"
+    },
+    {
+      "id": "MSG-008",
+      "source": "GROUP_FORWARD",
+      "text": "Tengo equipo vacío en Rosario después de las 12, chasis con acoplado, busca retorno al norte.",
+      "expected_classification": "VEHICLE_AVAILABLE"
+    },
+    {
+      "id": "MSG-009",
+      "source": "GROUP_FORWARD",
+      "text": "Rosario a Malabrigo, cereal, para hoy 15 hs. Falta confirmar toneladas.",
+      "expected_classification": "LOAD_INCOMPLETE"
+    },
+    {
+      "id": "MSG-010",
+      "source": "WHATSAPP_DIRECT",
+      "text": "Necesito dos camiones Rosario a Santa Fe mañana temprano, cereal, chasis con acoplado.",
+      "expected_classification": "LOAD"
+    }
+  ],
+  "expected_matches": [
+    {
+      "vehicle": "Camión 02",
+      "message": "MSG-001",
+      "reason": "Queda disponible en Rosario antes de la carga y el destino Rafaela es conveniente."
+    },
+    {
+      "vehicle": "Camión 03",
+      "message": "MSG-002",
+      "reason": "Ya está disponible en Rosario y Paraná está dentro de sus destinos preferidos."
+    },
+    {
+      "vehicle": "Camión 04",
+      "message": "MSG-005",
+      "reason": "Disponibilidad prevista en Rosario y destino Santa Fe compatible con continuidad."
+    },
+    {
+      "vehicle": "Camión 11",
+      "message": "MSG-006",
+      "reason": "Sider 28 tn, queda vacío en Córdoba a las 15 y la carga sale a las 17 hacia Entre Ríos."
+    }
+  ]
+}

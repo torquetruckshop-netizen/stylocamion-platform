@@ -1,0 +1,44 @@
+openapi: 3.1.0
+info:
+  title: Stylo Cargas Share Intake API
+  version: 0.1.0
+paths:
+  /share/intake:
+    post:
+      summary: Recibe contenido compartido con Stylo Cargas
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [source, content_type, received_at]
+              properties:
+                source:
+                  type: string
+                  enum: [WHATSAPP_FORWARD, WHATSAPP_DIRECT, PWA_SHARE, NATIVE_SHARE_EXTENSION, MANUAL_UPLOAD]
+                content_type:
+                  type: string
+                  enum: [TEXT, AUDIO, IMAGE, DOCUMENT]
+                text: { type: [string, 'null'] }
+                media_reference: { type: [string, 'null'] }
+                sender_reference: { type: [string, 'null'] }
+                operation_channel_id: { type: [string, 'null'] }
+                received_at: { type: string, format: date-time }
+                metadata:
+                  type: object
+                  additionalProperties: true
+      responses:
+        '202':
+          description: Contenido aceptado para procesamiento
+  /share/intake/{id}:
+    get:
+      summary: Consulta el resultado de clasificación y normalización
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Estado del procesamiento
