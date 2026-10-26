@@ -1,0 +1,144 @@
+openapi: 3.1.0
+info:
+  title: Stylo Cargas MVP API
+  version: 0.1.0
+  description: API inicial para ingesta, validación, matching, adjudicación, tracking y excepciones.
+servers:
+  - url: https://api.example.invalid/cargas
+paths:
+  /intake/messages:
+    post:
+      summary: Recibe un mensaje de una fuente externa
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IntakeMessage'
+      responses:
+        '202':
+          description: Mensaje aceptado para clasificación
+  /loads:
+    get:
+      summary: Lista cargas por estado o semáforo
+      parameters:
+        - in: query
+          name: status
+          schema: { type: string }
+        - in: query
+          name: traffic_light
+          schema: { type: string, enum: [GREEN, YELLOW, RED] }
+      responses:
+        '200':
+          description: Lista de cargas
+  /loads/{loadId}/match:
+    post:
+      summary: Ejecuta matching de una carga
+      parameters:
+        - $ref: '#/components/parameters/LoadId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                initial_radius_km: { type: number, default: 50 }
+                max_radius_km: { type: number, default: 300 }
+                automatic_threshold: { type: number, default: 90 }
+      responses:
+        '200':
+          description: Ranking de candidatos
+  /loads/{loadId}/assign:
+    post:
+      summary: Adjudica una unidad a una carga
+      parameters:
+        - $ref: '#/components/parameters/LoadId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [vehicle_id]
+              properties:
+                vehicle_id: { type: string }
+                mode: { type: string, enum: [MANUAL, ASSISTED, AUTONOMOUS] }
+      responses:
+        '200':
+          description: Adjudicación registrada
+        '409':
+          description: La carga o unidad ya no están disponibles
+        '422':
+          description: Falló una regla crítica de compliance
+  /loads/{loadId}/events:
+    post:
+      summary: Registra un evento de trazabilidad
+      parameters:
+        - $ref: '#/components/parameters/LoadId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoadEvent'
+      responses:
+        '201':
+          description: Evento registrado
+  /vehicles/{vehicleId}/location:
+    post:
+      summary: Actualiza ubicación de una unidad
+      parameters:
+        - in: path
+          name: vehicleId
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [lat, lon, captured_at, source]
+              properties:
+                lat: { type: number }
+                lon: { type: number }
+                captured_at: { type: string, format: date-time }
+                source: { type: string, enum: [PHONE_GPS, TELEMATICS, MANUAL] }
+      responses:
+        '202':
+          description: Ubicación aceptada
+  /exceptions:
+    get:
+      summary: Lista operaciones que requieren intervención Stylo
+      responses:
+        '200':
+          description: Excepciones activas
+components:
+  parameters:
+    LoadId:
+      in: path
+      name: loadId
+      required: true
+      schema: { type: string }
+  schemas:
+    IntakeMessage:
+      type: object
+      required: [source, raw_text, received_at]
+      properties:
+        source:
+          type: string
+          enum: [WHATSAPP_DIRECT, GROUP_FORWARD, OPERATOR, FORM, OTHER]
+        sender_id: { type: string }
+        raw_text: { type: string }
+        received_at: { type: string, format: date-time }
+        metadata: { type: object, additionalProperties: true }
+    LoadEvent:
+      type: object
+      required: [type, actor, created_at]
+      properties:
+        type: { type: string }
+        actor:
+          type: string
+          enum: [AI, STYLO, SHIPPER, CARRIER, DRIVER, SYSTEM]
+        created_at: { type: string, format: date-time }
+        payload: { type: object, additionalProperties: true }

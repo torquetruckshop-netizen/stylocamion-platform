@@ -1,0 +1,110 @@
+openapi: 3.1.0
+info:
+  title: Stylo Cargas Fleet Dashboard API
+  version: 0.1.0
+paths:
+  /organizations/{organizationId}/fleet/today:
+    get:
+      summary: Devuelve Mi Flota Hoy con próxima disponibilidad y mejor oportunidad
+      parameters:
+        - in: path
+          name: organizationId
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Resumen operativo de flota
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  generated_at: { type: string, format: date-time }
+                  vehicles:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/FleetRow'
+  /vehicles/{vehicleId}/availability:
+    post:
+      summary: Informa cuándo y dónde quedará disponible una unidad
+      parameters:
+        - in: path
+          name: vehicleId
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [available_from]
+              properties:
+                available_from: { type: string, format: date-time }
+                available_until: { type: string, format: date-time }
+                expected_location_name: { type: string }
+                expected_lat: { type: number }
+                expected_lon: { type: number }
+                preferred_destinations:
+                  type: array
+                  items: { type: string }
+                source:
+                  type: string
+                  enum: [MANUAL, GPS_PREDICTION, TELEMATICS, TRIP_DESTINATION]
+      responses:
+        '202': { description: Disponibilidad registrada y búsqueda programada }
+  /vehicles/{vehicleId}/opportunities:
+    get:
+      summary: Lista oportunidades ordenadas por continuidad logística
+      parameters:
+        - in: path
+          name: vehicleId
+          required: true
+          schema: { type: string }
+        - in: query
+          name: limit
+          schema: { type: integer, default: 10 }
+      responses:
+        '200':
+          description: Oportunidades rankeadas
+  /loads/{loadId}/escalate:
+    post:
+      summary: Escala búsqueda desde flota propia a red privada o Red Stylo
+      parameters:
+        - in: path
+          name: loadId
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [target]
+              properties:
+                target:
+                  type: string
+                  enum: [PRIVATE_NETWORK, STYLO_NETWORK]
+      responses:
+        '202': { description: Escalamiento iniciado }
+components:
+  schemas:
+    FleetRow:
+      type: object
+      required: [vehicle_id, plate, equipment_type, availability, document_state, opportunity_count, attention]
+      properties:
+        vehicle_id: { type: string }
+        plate: { type: string }
+        equipment_type: { type: string }
+        availability: { type: string }
+        location: { type: object, additionalProperties: true }
+        document_state: { type: string, enum: [GREEN, YELLOW, RED] }
+        available_from: { type: [string, 'null'], format: date-time }
+        expected_location_name: { type: [string, 'null'] }
+        preferred_destinations:
+          type: array
+          items: { type: string }
+        opportunity_count: { type: integer }
+        best_opportunity: { type: [object, 'null'], additionalProperties: true }
+        attention: { type: string, enum: [GREEN, YELLOW, RED] }

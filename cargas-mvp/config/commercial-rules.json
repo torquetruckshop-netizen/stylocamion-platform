@@ -1,0 +1,24 @@
+{
+  "version": "0.1.0",
+  "currency_default": "ARS",
+  "platform_fee": {
+    "type": "PERCENTAGE",
+    "rate": 3,
+    "charge_event": "OPERATION_COMPLETED",
+    "payer": "SHIPPER",
+    "minimum_fee": 0
+  },
+  "revenue_states": [
+    "ESTIMATED",
+    "ACCRUED",
+    "INVOICED",
+    "PAID",
+    "WAIVED",
+    "CANCELLED"
+  ],
+  "rules": {
+    "do_not_accrue_before_delivery": true,
+    "require_final_freight_amount": true,
+    "preserve_full_audit_trail": true
+  }
+}
