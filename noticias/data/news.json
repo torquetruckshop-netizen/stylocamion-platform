@@ -1,4 +1,45 @@
 {
-  "updated_at": "2026-10-27T20:46:22.985537+00:00",
-  "items": []
+  "updated_at": "2026-10-28T05:52:11.273262+00:00",
+  "items": [
+    {
+      "id": "b133918d97b367",
+      "title": "Expo Auto Chino: los visitantes podrán financiar en el lugar",
+      "summary": "Información reciente de camiones y mercado seleccionada por el radar regional de Stylo Camión.",
+      "category": "Camiones y mercado",
+      "source": "El Economista - Últimas noticias económicas y financieras",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNRE9XWVdfR2VpZy12azYzZURfWnA1SWo1Z3U3anFVQlRSMjNmeUd3NEZwWlFBN2Y4ZGpxWVYyYkNNc2NXbk83cjI0b3NDSEVRbDgxUGc2d01Sei10TU9HVHVrcVZOcEZ6d01jT09jWnl3aHVZQ1BMeGdYWmFnTlB5NkNJQVprbmVtWFMxcWxNajBGTzho0gGaAUFVX3lxTE16aDY4aGxZWi1haXVNdUJWWG9kUjRlek9RS21KSTBTb1BzcHZ3UWxpQXQ3YmpCOTVEcW5JRmJWV0hlazhMcGt4cUdXYWFYQ2dMWjh0cXRBcEJlSTZaRTRZMlk1dFlFTnZic0NLSXlzLV9hZWJRaFRmVXNpOC13VVBIZDZ1aXB3NzlhMTV5YW5zcEltX0tQajFzOXc?oc=5",
+      "published_at": "2026-09-29T07:00:00+00:00",
+      "time": "Tue, 29 Sep 2026 07:00:00 GMT"
+    },
+    {
+      "id": "68708919341641",
+      "title": "Vaca Muerta: la arena cuesta US$ 22 en origen y llega a US$ 145 al pozo por la logística",
+      "summary": "Información reciente de logística y puertos seleccionada por el radar regional de Stylo Camión.",
+      "category": "Logística y puertos",
+      "source": "ArgenPorts",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNMUdyN0dBVnJ5enZZZ2RJcmp3eGpMMnNqSW5IZlViRS13bUlfWXdHcHJucVNFRkpWYnNiMm9oOUV0bjdOQVpfRVBjZkhxbVZ0UF9mRHZGSFhPV1FXWmdXMUJ1ZC1ySXFGeDU4YVFOY0ZrYmlSTnFpWU5UMnJ5T0tsOFB1bmktSnNaM3huclY2WWhBRXVCcmZyc3MtclhFSzhBblNWNUZCaVZzT09mU1FoWHV1MWk?oc=5",
+      "published_at": "2026-10-08T07:00:00+00:00",
+      "time": "Thu, 08 Oct 2026 07:00:00 GMT"
+    },
+    {
+      "id": "98cdebb61827bb",
+      "title": "Vaca Muerta y los señores de la arena: puja por los costos de un negocio de u$s 850 millones",
+      "summary": "Información reciente de logística y puertos seleccionada por el radar regional de Stylo Camión.",
+      "category": "Logística y puertos",
+      "source": "Letra P",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPUEVOMFJNWDJWOFBNV3I0ZkF4cXpGellKNEx3amdEY09PMzZCSkZ1Ykh2Y2F0Zl9uTFVHVWgtRWU5bGpMVEdhTkNMNFNMOHBZYk1XQWQzQlJJQjFQNXg0cjRwa1Z4dk8zaUpXdm9jQ3JnZkpkTWNQcU9SNUJzSGM0T1paNk0xWTFnOHRCR2NMSVp2TERvRmQwQnhMNVdHRGxhUEc4WFVHT3lVV052ZVFPMWxVQ3hEanZDOVNTZnJteVdoRWZRWVZmVTFHM0hTbzNtVXNN?oc=5",
+      "published_at": "2026-07-28T07:00:00+00:00",
+      "time": "Tue, 28 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "id": "eb941459f45ae1",
+      "title": "Vaca Muerta: el incremento de la producción complica el transporte de arena y se exploran soluciones",
+      "summary": "Información reciente de logística y puertos seleccionada por el radar regional de Stylo Camión.",
+      "category": "Logística y puertos",
+      "source": "econojournal.com.ar",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNeE9PSHczT3E3Y0JBYllJZUhWbWhEOFY4LUh5WmVSUFJYX1dYUEM4cXlfT0tHMV9laVliN3VzMTBvZ1hfRGVpeUkzekJMSjJSdVFKSlNJaHpINXBfdFZpWEU0Q2pfSHN2VEhXczVZOU9TTlFlc3RGRHJmNDJtZjRnZzNDejJWMEJWMDkwUmVNVkZtYUZFTXYtZlpqZkNoVURMWUFFRkJWV0ItZGlmc0g4?oc=5",
+      "published_at": "2026-07-06T07:00:00+00:00",
+      "time": "Mon, 06 Jul 2026 07:00:00 GMT"
+    }
+  ]
 }
