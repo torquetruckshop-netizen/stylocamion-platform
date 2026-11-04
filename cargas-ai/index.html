@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111820">
+  <title>CARGAS IA | Stylo Camión</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="brand">STYLO CAMIÓN <span>CARGAS IA</span></div>
+      <p class="eyebrow">CENTRAL INTELIGENTE DE OPERACIONES</p>
+      <h1>Decinos qué necesitás transportar.</h1>
+      <p class="sub">Stylo interpreta la carga, detecta lo que falta y prepara el matching, retornos y alertas.</p>
+    </header>
+
+    <section class="composer">
+      <label for="loadText">Escribí como hablás normalmente</label>
+      <textarea id="loadText" rows="5" placeholder="Ej.: Tengo 28 toneladas de soja de Crespo a Rosario para mañana"></textarea>
+      <div class="actions">
+        <button id="analyzeBtn">Analizar carga</button>
+        <button id="clearBtn" class="ghost">Limpiar</button>
+      </div>
+    </section>
+
+    <section id="result" class="result hidden" aria-live="polite">
+      <div class="result-head">
+        <h2>Carga preparada</h2>
+        <span id="statusBadge" class="badge"></span>
+      </div>
+      <div id="fields" class="grid"></div>
+      <div class="agents">
+        <h3>Agentes activos</h3>
+        <div class="agent-grid">
+          <article><strong>Orquestador</strong><span id="a-orch"></span></article>
+          <article><strong>Alta inteligente</strong><span id="a-load"></span></article>
+          <article><strong>Matching</strong><span id="a-match"></span></article>
+          <article><strong>Radar de retornos</strong><span id="a-return"></span></article>
+          <article><strong>Alertas</strong><span id="a-alert"></span></article>
+        </div>
+      </div>
+      <p id="message" class="message"></p>
+      <button id="publishBtn" class="primary" disabled>Publicar y buscar camión</button>
+      <p class="note">MVP: la publicación real se habilitará al conectar este orquestador con la base operativa actual de CARGAS.</p>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
