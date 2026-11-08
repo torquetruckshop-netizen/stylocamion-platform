@@ -1,0 +1,18 @@
+name: Noticias Intelligence
+on:
+  pull_request:
+    paths:
+      - 'noticias/intelligence/**'
+      - '.github/workflows/noticias-intelligence.yml'
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: noticias/intelligence
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
