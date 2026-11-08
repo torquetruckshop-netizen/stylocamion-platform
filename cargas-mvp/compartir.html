@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Compartir con Stylo</title>
+<style>
+:root{--bg:#0a0d11;--panel:#11161c;--line:#28303a;--text:#f4f7fb;--muted:#97a2ae;--red:#e3342f;--green:#25c67a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}.wrap{max-width:760px;margin:auto;padding:20px}.brand{font-size:24px;font-weight:900}.brand span{color:var(--red)}.sub{color:var(--muted);margin:5px 0 18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:16px;margin-bottom:12px}.input{width:100%;background:#0c1014;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:11px}.btn{border:0;border-radius:10px;background:var(--red);color:white;padding:10px 13px;font-weight:800;cursor:pointer}.result{display:none}.ok{color:var(--green)}.kv{display:grid;grid-template-columns:140px 1fr;gap:7px;font-size:13px}.kv div:nth-child(odd){color:var(--muted)}.small{font-size:11px;color:var(--muted)}
+</style></head>
+<body><div class="wrap"><div class="brand">STYLO <span>CARGAS</span></div><div class="sub">Compartir con Stylo · entrada de prueba</div>
+<div class="card"><h2>Texto o mensaje reenviado</h2><textarea id="text" class="input" rows="6">Rosario a Paraná, carga general, chasis con acoplado, hoy 11 hs.</textarea><br><br><button class="btn" onclick="processText()">Procesar con Stylo</button></div>
+<div class="card"><h2>Audio o archivo</h2><input id="file" class="input" type="file" accept="audio/*,.ogg,.mp3,.m4a,.wav"><p class="small">En el MVP esta pantalla sólo registra el archivo. La transcripción automática se conecta después al backend.</p></div>
+<div id="result" class="card result"><div class="ok"><b>Contenido recibido</b></div><br><div class="kv"><div>Clasificación</div><div id="classification">—</div><div>Origen</div><div id="origin">—</div><div>Destino</div><div id="destination">—</div><div>Equipo</div><div id="equipment">—</div><div>Estado</div><div id="status">—</div></div></div>
+</div>
+<script>
+function processText(){const t=document.getElementById('text').value.trim();const route=t.match(/([A-Za-zÁÉÍÓÚáéíóúÑñ ]+)\s+(?:a|->|→)\s+([A-Za-zÁÉÍÓÚáéíóúÑñ ]+?)(?=,|\.|$)/);const eq=/sider/i.test(t)?'sider':/chasis/i.test(t)?'chasis + acoplado':/batea/i.test(t)?'batea':'sin definir';document.getElementById('classification').textContent=route?'CARGA':'REVISAR';document.getElementById('origin').textContent=route?route[1].trim():'—';document.getElementById('destination').textContent=route?route[2].trim():'—';document.getElementById('equipment').textContent=eq;document.getElementById('status').textContent=route&&eq!=='sin definir'?'LISTA PARA VALIDAR':'FALTAN DATOS';document.getElementById('result').style.display='block';}
+</script></body></html>

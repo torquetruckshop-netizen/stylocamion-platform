@@ -1,0 +1,33 @@
+{
+  "organization": {
+    "name": "TRANSPORTE PILOTO",
+    "tax_id": null
+  },
+  "own_fleet": [
+    {
+      "plate": "",
+      "equipment_type": "",
+      "capacity_tn": null,
+      "driver_name": "",
+      "availability": "OFFLINE",
+      "expected_empty_location": "",
+      "expected_empty_at": null
+    }
+  ],
+  "private_network": [
+    {
+      "carrier_name": "",
+      "contact_reference": "",
+      "equipment_types": [],
+      "priority": 100,
+      "allow_auto_offer": true
+    }
+  ],
+  "policy": {
+    "search_own_fleet_first": true,
+    "escalate_to_private_network": true,
+    "escalate_to_stylo_network": false,
+    "automatic_offer_minimum_score": 90,
+    "offer_timeout_minutes": 5
+  }
+}

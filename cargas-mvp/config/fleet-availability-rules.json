@@ -1,0 +1,19 @@
+{
+  "version": "0.1.0",
+  "availability_sources": ["MANUAL", "GPS", "TELEMATICS", "AI_INFERRED"],
+  "default_search_before_available_minutes": 120,
+  "location_freshness_minutes": 15,
+  "search_radius_km": {
+    "initial": 50,
+    "steps": [50, 100, 200, 300]
+  },
+  "search_order": ["OWN_FLEET", "PRIVATE_NETWORK", "STYLO_NETWORK"],
+  "rules": {
+    "start_search_before_empty": true,
+    "require_document_green": true,
+    "require_equipment_match": true,
+    "allow_private_network_escalation": true,
+    "allow_stylo_network_escalation": false,
+    "owner_can_override_escalation": true
+  }
+}

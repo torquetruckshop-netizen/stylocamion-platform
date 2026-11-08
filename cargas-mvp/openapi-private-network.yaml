@@ -1,0 +1,77 @@
+openapi: 3.1.0
+info:
+  title: Stylo Cargas Private Network API
+  version: 0.1.0
+paths:
+  /organizations/{organizationId}/fleet:
+    get:
+      summary: Lista flota propia y disponibilidad
+      parameters:
+        - in: path
+          name: organizationId
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Flota propia }
+  /organizations/{organizationId}/private-network:
+    get:
+      summary: Lista fleteros de la red privada
+      parameters:
+        - in: path
+          name: organizationId
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Red privada }
+    post:
+      summary: Vincula o invita un transportista a la red privada
+      parameters:
+        - in: path
+          name: organizationId
+          required: true
+          schema: { type: string }
+      responses:
+        '201': { description: Invitación creada }
+  /vehicles/{vehicleId}/availability:
+    post:
+      summary: Informa cuándo y dónde quedará disponible una unidad
+      parameters:
+        - in: path
+          name: vehicleId
+          required: true
+          schema: { type: string }
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [available_from]
+              properties:
+                available_from: { type: string, format: date-time }
+                available_until: { type: string, format: date-time }
+                expected_location_name: { type: string }
+                preferred_destinations:
+                  type: array
+                  items: { type: string }
+      responses:
+        '201': { description: Disponibilidad registrada }
+  /loads/{loadId}/search-plan:
+    post:
+      summary: Ejecuta búsqueda escalonada en flota, red privada y Red Stylo
+      parameters:
+        - in: path
+          name: loadId
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Plan y candidatos }
+  /loads/{loadId}/private-offers:
+    post:
+      summary: Envía propuesta cerrada a un candidato de red privada
+      parameters:
+        - in: path
+          name: loadId
+          required: true
+          schema: { type: string }
+      responses:
+        '202': { description: Oferta enviada }

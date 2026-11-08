@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "principle": "silent_by_default_notify_by_exception",
+  "channels": ["SILENT", "PUSH", "WHATSAPP", "PUSH_WHATSAPP"],
+  "rules": {
+    "LOAD_DETECTED": { "channel": "SILENT", "priority": "LOW" },
+    "MESSAGE_IGNORED": { "channel": "SILENT", "priority": "LOW" },
+    "MATCH_BELOW_THRESHOLD": { "channel": "SILENT", "priority": "LOW" },
+    "MATCH_STRONG": { "channel": "PUSH", "priority": "NORMAL", "min_score": 90 },
+    "TRUCK_AVAILABLE_SOON_WITH_MATCH": { "channel": "PUSH", "priority": "HIGH", "lead_minutes_max": 120, "min_score": 90 },
+    "ACTION_REQUIRED": { "channel": "PUSH_WHATSAPP", "priority": "HIGH" },
+    "DOCUMENT_BLOCK": { "channel": "PUSH_WHATSAPP", "priority": "CRITICAL" },
+    "NO_CARRIER_BEFORE_EXPIRY": { "channel": "PUSH_WHATSAPP", "priority": "CRITICAL" },
+    "OPERATION_INCIDENT": { "channel": "PUSH_WHATSAPP", "priority": "CRITICAL" },
+    "ASSIGNMENT_CONFIRMED": { "channel": "PUSH", "priority": "NORMAL" },
+    "DELIVERY_CONFIRMED": { "channel": "SILENT", "priority": "LOW" }
+  }
+}

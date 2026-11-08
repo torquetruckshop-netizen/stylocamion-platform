@@ -1,0 +1,14 @@
+{
+  "mode": "AUTONOMOUS",
+  "minimum_auto_match_score": 90,
+  "initial_radius_km": 50,
+  "maximum_radius_km": 300,
+  "require_green_load": true,
+  "require_green_vehicle": true,
+  "require_available_vehicle": true,
+  "maximum_location_age_minutes": 15,
+  "response_timeout_minutes": 5,
+  "fallback_to_next_candidate": true,
+  "yellow_action": "AI_REVIEW",
+  "red_action": "STYLO_REVIEW"
+}
