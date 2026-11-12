@@ -71,6 +71,7 @@ async function loadAccount() {
 }
 
 function renderAccount() {
+  $('#academy-flota-card')?.classList.toggle('hidden', !state.config?.academyFlotaEnabled);
   $('#login-card').classList.add('hidden');
   $('#profile-card').classList.add('hidden');
   $('#account').classList.remove('hidden');
